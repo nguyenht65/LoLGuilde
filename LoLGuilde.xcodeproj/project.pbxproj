@@ -97,6 +97,7 @@
 		3654D777271FE6EB00BBB9EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3654D78F271FF17F00BBB9EB /* Objects */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +155,13 @@
 				3654D78D271FEED300BBB9EB /* HomeCellViewModel.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3654D78F271FF17F00BBB9EB /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		D3B7C0F3B306BE49279DAF97 /* Pods */ = {
