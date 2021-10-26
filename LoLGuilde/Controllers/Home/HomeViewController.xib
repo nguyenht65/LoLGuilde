@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,23 +15,101 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClX-A7-a6g">
-                    <rect key="frame" x="186" y="350" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-Eq-T3x" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="woR-Na-RFt">
+                            <rect key="frame" x="10" y="50" width="370" height="666"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRa-uJ-lGu" userLabel="LOL View">
+                                    <rect key="frame" x="0.0" y="0.0" width="370" height="313"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YMw-rq-iJB">
+                                            <rect key="frame" x="10" y="10" width="350" height="293"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lolLogo-1" translatesAutoresizingMaskIntoConstraints="NO" id="7q7-vj-tm4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="279.33333333333331"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyl-RN-KVh" userLabel="lolButton">
+                                                    <rect key="frame" x="76.666666666666686" y="289.33333333333331" width="197" height="3.6666666666666856"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="arrow.forward.circle.fill" catalog="system" title="Tap here to know more" imagePadding="5"/>
+                                                    <connections>
+                                                        <action selector="moveToLOLButton:" destination="-1" eventType="touchUpInside" id="XHP-Vm-s0U"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <constraints>
+                                        <constraint firstItem="YMw-rq-iJB" firstAttribute="top" secondItem="kRa-uJ-lGu" secondAttribute="top" constant="10" id="1sn-pS-vFk"/>
+                                        <constraint firstItem="YMw-rq-iJB" firstAttribute="leading" secondItem="kRa-uJ-lGu" secondAttribute="leading" constant="10" id="3gd-QV-0Xe"/>
+                                        <constraint firstAttribute="trailing" secondItem="YMw-rq-iJB" secondAttribute="trailing" constant="10" id="DW1-nI-2LG"/>
+                                        <constraint firstAttribute="bottom" secondItem="YMw-rq-iJB" secondAttribute="bottom" constant="10" id="H1q-Rt-jEx"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SZ-mn-xf6" userLabel="TFT View">
+                                    <rect key="frame" x="0.0" y="353" width="370" height="313"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3DS-mN-pZW">
+                                            <rect key="frame" x="10" y="10" width="350" height="293"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="IIX-A8-Hv3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="277.66666666666669"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4O3-CT-gN3" userLabel="tftButton">
+                                                    <rect key="frame" x="76.666666666666686" y="287.66666666666663" width="197" height="5.3333333333333144"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="arrow.forward.circle.fill" catalog="system" title="Tap here to know more" imagePadding="5"/>
+                                                    <connections>
+                                                        <action selector="moveToTFTButton:" destination="-1" eventType="touchUpInside" id="M50-x3-HWK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="3DS-mN-pZW" secondAttribute="trailing" constant="10" id="1dm-oO-6nm"/>
+                                        <constraint firstItem="3DS-mN-pZW" firstAttribute="top" secondItem="6SZ-mn-xf6" secondAttribute="top" constant="10" id="XB4-yH-Uvy"/>
+                                        <constraint firstItem="3DS-mN-pZW" firstAttribute="leading" secondItem="6SZ-mn-xf6" secondAttribute="leading" constant="10" id="f2c-ae-FlG"/>
+                                        <constraint firstAttribute="bottom" secondItem="3DS-mN-pZW" secondAttribute="bottom" constant="10" id="yZZ-vA-D3z"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="woR-Na-RFt" secondAttribute="trailing" constant="10" id="TOH-Uh-sOf"/>
+                        <constraint firstAttribute="bottom" secondItem="woR-Na-RFt" secondAttribute="bottom" constant="50" id="sMS-jq-cfC"/>
+                        <constraint firstItem="woR-Na-RFt" firstAttribute="leading" secondItem="mSj-Eq-T3x" secondAttribute="leading" constant="10" id="ucL-II-5I6"/>
+                        <constraint firstItem="woR-Na-RFt" firstAttribute="top" secondItem="mSj-Eq-T3x" secondAttribute="top" constant="50" id="zyK-Wq-GTb"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="132" y="100"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mSj-Eq-T3x" secondAttribute="trailing" id="QBI-lH-NHL"/>
+                <constraint firstItem="mSj-Eq-T3x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a9k-It-uoy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mSj-Eq-T3x" secondAttribute="bottom" id="cSS-iQ-ZL3"/>
+                <constraint firstItem="mSj-Eq-T3x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lOP-2x-Jhd"/>
+            </constraints>
+            <point key="canvasLocation" x="288.80000000000001" y="105.66502463054188"/>
         </view>
     </objects>
     <resources>
+        <image name="arrow.forward.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="lolLogo-1" width="1280" height="831"/>
+        <image name="tftLogo" width="1411" height="734"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

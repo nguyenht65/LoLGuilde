@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362DE5082726B7CE00D3FC71 /* LOLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DE5062726B7CE00D3FC71 /* LOLViewController.swift */; };
+		362DE5092726B7CE00D3FC71 /* LOLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362DE5072726B7CE00D3FC71 /* LOLViewController.xib */; };
 		3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D762271FE42300BBB9EB /* AppDelegate.swift */; };
 		3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D764271FE42300BBB9EB /* SceneDelegate.swift */; };
 		3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3654D76B271FE42400BBB9EB /* Assets.xcassets */; };
@@ -16,13 +18,14 @@
 		3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D781271FEACA00BBB9EB /* BaseTabBarController.swift */; };
 		3654D786271FEB7500BBB9EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D784271FEB7500BBB9EB /* HomeViewController.swift */; };
 		3654D787271FEB7500BBB9EB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3654D785271FEB7500BBB9EB /* HomeViewController.xib */; };
-		3654D78B271FEEC000BBB9EB /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D789271FEEC000BBB9EB /* HomeCell.swift */; };
-		3654D78C271FEEC000BBB9EB /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3654D78A271FEEC000BBB9EB /* HomeCell.xib */; };
-		3654D78E271FEED300BBB9EB /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D78D271FEED300BBB9EB /* HomeCellViewModel.swift */; };
+		36574EFE27280B6C00C27774 /* TFTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574EFC27280B6C00C27774 /* TFTViewController.swift */; };
+		36574EFF27280B6C00C27774 /* TFTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574EFD27280B6C00C27774 /* TFTViewController.xib */; };
 		87E109F25E1944CD199057A5 /* Pods_LoLGuilde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		362DE5062726B7CE00D3FC71 /* LOLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLViewController.swift; sourceTree = "<group>"; };
+		362DE5072726B7CE00D3FC71 /* LOLViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LOLViewController.xib; sourceTree = "<group>"; };
 		3654D75F271FE42300BBB9EB /* LoLGuilde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLGuilde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3654D762271FE42300BBB9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3654D764271FE42300BBB9EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,9 +37,8 @@
 		3654D781271FEACA00BBB9EB /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		3654D784271FEB7500BBB9EB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3654D785271FEB7500BBB9EB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		3654D789271FEEC000BBB9EB /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		3654D78A271FEEC000BBB9EB /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
-		3654D78D271FEED300BBB9EB /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
+		36574EFC27280B6C00C27774 /* TFTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTViewController.swift; sourceTree = "<group>"; };
+		36574EFD27280B6C00C27774 /* TFTViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFTViewController.xib; sourceTree = "<group>"; };
 		7F30D1743EE12A3B4C62F217 /* Pods-LoLGuilde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.release.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.release.xcconfig"; sourceTree = "<group>"; };
 		B503EAE8A47C33115A40BD5B /* Pods-LoLGuilde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.debug.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLGuilde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +56,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		362DE5042726B75700D3FC71 /* LOL */ = {
+			isa = PBXGroup;
+			children = (
+				362DE5062726B7CE00D3FC71 /* LOLViewController.swift */,
+				362DE5072726B7CE00D3FC71 /* LOLViewController.xib */,
+			);
+			path = LOL;
+			sourceTree = "<group>";
+		};
+		362DE5052726B76C00D3FC71 /* TFT */ = {
+			isa = PBXGroup;
+			children = (
+				36574EFC27280B6C00C27774 /* TFTViewController.swift */,
+				36574EFD27280B6C00C27774 /* TFTViewController.xib */,
+			);
+			path = TFT;
+			sourceTree = "<group>";
+		};
 		3654D756271FE42300BBB9EB = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +141,8 @@
 		3654D77B271FE9C400BBB9EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				362DE5052726B76C00D3FC71 /* TFT */,
+				362DE5042726B75700D3FC71 /* LOL */,
 				3654D783271FEAF300BBB9EB /* Home */,
 				3654D77C271FE9D200BBB9EB /* Base */,
 			);
@@ -140,21 +162,10 @@
 		3654D783271FEAF300BBB9EB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3654D788271FEE9300BBB9EB /* Cell */,
 				3654D784271FEB7500BBB9EB /* HomeViewController.swift */,
 				3654D785271FEB7500BBB9EB /* HomeViewController.xib */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		3654D788271FEE9300BBB9EB /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				3654D789271FEEC000BBB9EB /* HomeCell.swift */,
-				3654D78A271FEEC000BBB9EB /* HomeCell.xib */,
-				3654D78D271FEED300BBB9EB /* HomeCellViewModel.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		3654D78F271FF17F00BBB9EB /* Objects */ = {
@@ -241,9 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362DE5092726B7CE00D3FC71 /* LOLViewController.xib in Resources */,
 				3654D76F271FE42400BBB9EB /* LaunchScreen.storyboard in Resources */,
+				36574EFF27280B6C00C27774 /* TFTViewController.xib in Resources */,
 				3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */,
-				3654D78C271FEEC000BBB9EB /* HomeCell.xib in Resources */,
 				3654D787271FEB7500BBB9EB /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362DE5082726B7CE00D3FC71 /* LOLViewController.swift in Sources */,
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
-				3654D78B271FEEC000BBB9EB /* HomeCell.swift in Sources */,
 				3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */,
 				3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */,
 				3654D780271FEA6E00BBB9EB /* BaseNavigationController.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* HomeViewController.swift in Sources */,
 				3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */,
-				3654D78E271FEED300BBB9EB /* HomeCellViewModel.swift in Sources */,
+				36574EFE27280B6C00C27774 /* TFTViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +463,7 @@
 				INFOPLIST_FILE = LoLGuilde/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,7 +475,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -479,6 +492,7 @@
 				INFOPLIST_FILE = LoLGuilde/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,7 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

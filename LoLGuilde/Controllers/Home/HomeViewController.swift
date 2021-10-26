@@ -9,9 +9,9 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
 
@@ -22,4 +22,16 @@ class HomeViewController: BaseViewController {
     override func setupData() {
         
     }
+    
+    @IBAction func moveToLOLButton(_ sender: UIButton) {
+        let vc = LOLViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    @IBAction func moveToTFTButton(_ sender: Any) {
+        let vc = TFTViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
+
