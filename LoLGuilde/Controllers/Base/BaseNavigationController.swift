@@ -11,6 +11,7 @@ class BaseNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavi()
     }
     
     func setupNavi() { }

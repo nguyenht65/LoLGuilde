@@ -22,16 +22,16 @@
                     <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="woR-Na-RFt">
-                            <rect key="frame" x="10" y="50" width="370" height="666"/>
+                            <rect key="frame" x="0.0" y="50" width="390" height="666"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRa-uJ-lGu" userLabel="LOL View">
-                                    <rect key="frame" x="0.0" y="0.0" width="370" height="313"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="313"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lolLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7q7-vj-tm4">
-                                            <rect key="frame" x="10" y="15" width="350" height="283"/>
+                                            <rect key="frame" x="30" y="40" width="330" height="233"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyl-RN-KVh" userLabel="lolButton">
-                                            <rect key="frame" x="10" y="15" width="350" height="283"/>
+                                            <rect key="frame" x="30" y="40" width="330" height="233"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
@@ -41,23 +41,23 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Wyl-RN-KVh" firstAttribute="leading" secondItem="7q7-vj-tm4" secondAttribute="leading" id="0et-qs-Qqc"/>
-                                        <constraint firstAttribute="bottom" secondItem="7q7-vj-tm4" secondAttribute="bottom" constant="15" id="7iI-ej-Udl"/>
+                                        <constraint firstAttribute="bottom" secondItem="7q7-vj-tm4" secondAttribute="bottom" constant="40" id="7iI-ej-Udl"/>
                                         <constraint firstItem="Wyl-RN-KVh" firstAttribute="trailing" secondItem="7q7-vj-tm4" secondAttribute="trailing" id="T24-rh-c98"/>
                                         <constraint firstItem="Wyl-RN-KVh" firstAttribute="bottom" secondItem="7q7-vj-tm4" secondAttribute="bottom" id="Yv8-ag-kbE"/>
-                                        <constraint firstAttribute="trailing" secondItem="7q7-vj-tm4" secondAttribute="trailing" constant="10" id="kLb-rm-x9Q"/>
-                                        <constraint firstItem="7q7-vj-tm4" firstAttribute="leading" secondItem="kRa-uJ-lGu" secondAttribute="leading" constant="10" id="qX4-Qj-HRY"/>
-                                        <constraint firstItem="7q7-vj-tm4" firstAttribute="top" secondItem="kRa-uJ-lGu" secondAttribute="top" constant="15" id="wSX-oa-8PS"/>
+                                        <constraint firstAttribute="trailing" secondItem="7q7-vj-tm4" secondAttribute="trailing" constant="30" id="kLb-rm-x9Q"/>
+                                        <constraint firstItem="7q7-vj-tm4" firstAttribute="leading" secondItem="kRa-uJ-lGu" secondAttribute="leading" constant="30" id="qX4-Qj-HRY"/>
+                                        <constraint firstItem="7q7-vj-tm4" firstAttribute="top" secondItem="kRa-uJ-lGu" secondAttribute="top" constant="40" id="wSX-oa-8PS"/>
                                         <constraint firstItem="Wyl-RN-KVh" firstAttribute="top" secondItem="7q7-vj-tm4" secondAttribute="top" id="zVf-vc-9BA"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SZ-mn-xf6" userLabel="TFT View">
-                                    <rect key="frame" x="0.0" y="353" width="370" height="313"/>
+                                    <rect key="frame" x="0.0" y="353" width="390" height="313"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="IIX-A8-Hv3">
-                                            <rect key="frame" x="10" y="15" width="350" height="283"/>
+                                            <rect key="frame" x="30" y="40" width="330" height="233"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4O3-CT-gN3" userLabel="tftButton">
-                                            <rect key="frame" x="10" y="15" width="350" height="283"/>
+                                            <rect key="frame" x="30" y="40" width="330" height="233"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
@@ -66,12 +66,12 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="IIX-A8-Hv3" firstAttribute="top" secondItem="6SZ-mn-xf6" secondAttribute="top" constant="15" id="4UX-Rc-7ph"/>
+                                        <constraint firstItem="IIX-A8-Hv3" firstAttribute="top" secondItem="6SZ-mn-xf6" secondAttribute="top" constant="40" id="4UX-Rc-7ph"/>
                                         <constraint firstItem="4O3-CT-gN3" firstAttribute="trailing" secondItem="IIX-A8-Hv3" secondAttribute="trailing" id="4Zz-CI-yEr"/>
                                         <constraint firstItem="4O3-CT-gN3" firstAttribute="leading" secondItem="IIX-A8-Hv3" secondAttribute="leading" id="Af1-lX-orF"/>
-                                        <constraint firstItem="IIX-A8-Hv3" firstAttribute="leading" secondItem="6SZ-mn-xf6" secondAttribute="leading" constant="10" id="Hkv-aR-eaM"/>
-                                        <constraint firstAttribute="trailing" secondItem="IIX-A8-Hv3" secondAttribute="trailing" constant="10" id="Mrh-sA-wBX"/>
-                                        <constraint firstAttribute="bottom" secondItem="IIX-A8-Hv3" secondAttribute="bottom" constant="15" id="el4-4H-6Vj"/>
+                                        <constraint firstItem="IIX-A8-Hv3" firstAttribute="leading" secondItem="6SZ-mn-xf6" secondAttribute="leading" constant="30" id="Hkv-aR-eaM"/>
+                                        <constraint firstAttribute="trailing" secondItem="IIX-A8-Hv3" secondAttribute="trailing" constant="30" id="Mrh-sA-wBX"/>
+                                        <constraint firstAttribute="bottom" secondItem="IIX-A8-Hv3" secondAttribute="bottom" constant="40" id="el4-4H-6Vj"/>
                                         <constraint firstItem="4O3-CT-gN3" firstAttribute="top" secondItem="IIX-A8-Hv3" secondAttribute="top" id="mMT-Eq-yZc"/>
                                         <constraint firstItem="4O3-CT-gN3" firstAttribute="bottom" secondItem="IIX-A8-Hv3" secondAttribute="bottom" id="xVI-s8-mnQ"/>
                                     </constraints>
@@ -81,9 +81,9 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="woR-Na-RFt" secondAttribute="trailing" constant="10" id="TOH-Uh-sOf"/>
+                        <constraint firstAttribute="trailing" secondItem="woR-Na-RFt" secondAttribute="trailing" id="TOH-Uh-sOf"/>
                         <constraint firstAttribute="bottom" secondItem="woR-Na-RFt" secondAttribute="bottom" constant="50" id="sMS-jq-cfC"/>
-                        <constraint firstItem="woR-Na-RFt" firstAttribute="leading" secondItem="mSj-Eq-T3x" secondAttribute="leading" constant="10" id="ucL-II-5I6"/>
+                        <constraint firstItem="woR-Na-RFt" firstAttribute="leading" secondItem="mSj-Eq-T3x" secondAttribute="leading" id="ucL-II-5I6"/>
                         <constraint firstItem="woR-Na-RFt" firstAttribute="top" secondItem="mSj-Eq-T3x" secondAttribute="top" constant="50" id="zyK-Wq-GTb"/>
                     </constraints>
                 </view>
