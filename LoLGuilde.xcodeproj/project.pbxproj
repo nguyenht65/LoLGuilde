@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		362DE5082726B7CE00D3FC71 /* LOLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DE5062726B7CE00D3FC71 /* LOLViewController.swift */; };
-		362DE5092726B7CE00D3FC71 /* LOLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362DE5072726B7CE00D3FC71 /* LOLViewController.xib */; };
 		3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D762271FE42300BBB9EB /* AppDelegate.swift */; };
 		3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D764271FE42300BBB9EB /* SceneDelegate.swift */; };
 		3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3654D76B271FE42400BBB9EB /* Assets.xcassets */; };
@@ -18,14 +16,22 @@
 		3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D781271FEACA00BBB9EB /* BaseTabBarController.swift */; };
 		3654D786271FEB7500BBB9EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D784271FEB7500BBB9EB /* HomeViewController.swift */; };
 		3654D787271FEB7500BBB9EB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3654D785271FEB7500BBB9EB /* HomeViewController.xib */; };
-		36574EFE27280B6C00C27774 /* TFTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574EFC27280B6C00C27774 /* TFTViewController.swift */; };
-		36574EFF27280B6C00C27774 /* TFTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574EFD27280B6C00C27774 /* TFTViewController.xib */; };
+		36574F032729022100C27774 /* LOLChampionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F012729022100C27774 /* LOLChampionsViewController.swift */; };
+		36574F042729022100C27774 /* LOLChampionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574F022729022100C27774 /* LOLChampionsViewController.xib */; };
+		36574F082729031A00C27774 /* LOLItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F062729031A00C27774 /* LOLItemsViewController.swift */; };
+		36574F092729031A00C27774 /* LOLItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574F072729031A00C27774 /* LOLItemsViewController.xib */; };
+		36574F0B27290F3E00C27774 /* LOLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F0A27290F3E00C27774 /* LOLTabBarController.swift */; };
+		36574F0F27291AAF00C27774 /* LOLRunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F0D27291AAF00C27774 /* LOLRunesViewController.swift */; };
+		36574F1027291AAF00C27774 /* LOLRunesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574F0E27291AAF00C27774 /* LOLRunesViewController.xib */; };
+		36574F122729274D00C27774 /* TFTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F112729274D00C27774 /* TFTTabBarController.swift */; };
+		36574F172729297800C27774 /* TFTChampionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F152729297800C27774 /* TFTChampionsViewController.swift */; };
+		36574F182729297800C27774 /* TFTChampionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574F162729297800C27774 /* TFTChampionsViewController.xib */; };
+		36574F1B2729298600C27774 /* TFTItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F192729298600C27774 /* TFTItemsViewController.swift */; };
+		36574F1C2729298600C27774 /* TFTItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574F1A2729298600C27774 /* TFTItemsViewController.xib */; };
 		87E109F25E1944CD199057A5 /* Pods_LoLGuilde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		362DE5062726B7CE00D3FC71 /* LOLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLViewController.swift; sourceTree = "<group>"; };
-		362DE5072726B7CE00D3FC71 /* LOLViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LOLViewController.xib; sourceTree = "<group>"; };
 		3654D75F271FE42300BBB9EB /* LoLGuilde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLGuilde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3654D762271FE42300BBB9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3654D764271FE42300BBB9EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,8 +43,18 @@
 		3654D781271FEACA00BBB9EB /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		3654D784271FEB7500BBB9EB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3654D785271FEB7500BBB9EB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		36574EFC27280B6C00C27774 /* TFTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTViewController.swift; sourceTree = "<group>"; };
-		36574EFD27280B6C00C27774 /* TFTViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFTViewController.xib; sourceTree = "<group>"; };
+		36574F012729022100C27774 /* LOLChampionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLChampionsViewController.swift; sourceTree = "<group>"; };
+		36574F022729022100C27774 /* LOLChampionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LOLChampionsViewController.xib; sourceTree = "<group>"; };
+		36574F062729031A00C27774 /* LOLItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLItemsViewController.swift; sourceTree = "<group>"; };
+		36574F072729031A00C27774 /* LOLItemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LOLItemsViewController.xib; sourceTree = "<group>"; };
+		36574F0A27290F3E00C27774 /* LOLTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLTabBarController.swift; sourceTree = "<group>"; };
+		36574F0D27291AAF00C27774 /* LOLRunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLRunesViewController.swift; sourceTree = "<group>"; };
+		36574F0E27291AAF00C27774 /* LOLRunesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LOLRunesViewController.xib; sourceTree = "<group>"; };
+		36574F112729274D00C27774 /* TFTTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTTabBarController.swift; sourceTree = "<group>"; };
+		36574F152729297800C27774 /* TFTChampionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTChampionsViewController.swift; sourceTree = "<group>"; };
+		36574F162729297800C27774 /* TFTChampionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFTChampionsViewController.xib; sourceTree = "<group>"; };
+		36574F192729298600C27774 /* TFTItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTItemsViewController.swift; sourceTree = "<group>"; };
+		36574F1A2729298600C27774 /* TFTItemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFTItemsViewController.xib; sourceTree = "<group>"; };
 		7F30D1743EE12A3B4C62F217 /* Pods-LoLGuilde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.release.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.release.xcconfig"; sourceTree = "<group>"; };
 		B503EAE8A47C33115A40BD5B /* Pods-LoLGuilde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.debug.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLGuilde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,8 +75,10 @@
 		362DE5042726B75700D3FC71 /* LOL */ = {
 			isa = PBXGroup;
 			children = (
-				362DE5062726B7CE00D3FC71 /* LOLViewController.swift */,
-				362DE5072726B7CE00D3FC71 /* LOLViewController.xib */,
+				36574F0C27291A9800C27774 /* Runes */,
+				36574F052729030300C27774 /* Items */,
+				36574F00272901F800C27774 /* Champions */,
+				36574F0A27290F3E00C27774 /* LOLTabBarController.swift */,
 			);
 			path = LOL;
 			sourceTree = "<group>";
@@ -68,8 +86,9 @@
 		362DE5052726B76C00D3FC71 /* TFT */ = {
 			isa = PBXGroup;
 			children = (
-				36574EFC27280B6C00C27774 /* TFTViewController.swift */,
-				36574EFD27280B6C00C27774 /* TFTViewController.xib */,
+				36574F142729288800C27774 /* Items */,
+				36574F132729287C00C27774 /* Champions */,
+				36574F112729274D00C27774 /* TFTTabBarController.swift */,
 			);
 			path = TFT;
 			sourceTree = "<group>";
@@ -175,6 +194,51 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		36574F00272901F800C27774 /* Champions */ = {
+			isa = PBXGroup;
+			children = (
+				36574F012729022100C27774 /* LOLChampionsViewController.swift */,
+				36574F022729022100C27774 /* LOLChampionsViewController.xib */,
+			);
+			path = Champions;
+			sourceTree = "<group>";
+		};
+		36574F052729030300C27774 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				36574F062729031A00C27774 /* LOLItemsViewController.swift */,
+				36574F072729031A00C27774 /* LOLItemsViewController.xib */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		36574F0C27291A9800C27774 /* Runes */ = {
+			isa = PBXGroup;
+			children = (
+				36574F0D27291AAF00C27774 /* LOLRunesViewController.swift */,
+				36574F0E27291AAF00C27774 /* LOLRunesViewController.xib */,
+			);
+			path = Runes;
+			sourceTree = "<group>";
+		};
+		36574F132729287C00C27774 /* Champions */ = {
+			isa = PBXGroup;
+			children = (
+				36574F152729297800C27774 /* TFTChampionsViewController.swift */,
+				36574F162729297800C27774 /* TFTChampionsViewController.xib */,
+			);
+			path = Champions;
+			sourceTree = "<group>";
+		};
+		36574F142729288800C27774 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				36574F192729298600C27774 /* TFTItemsViewController.swift */,
+				36574F1A2729298600C27774 /* TFTItemsViewController.xib */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		D3B7C0F3B306BE49279DAF97 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,11 +316,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362DE5092726B7CE00D3FC71 /* LOLViewController.xib in Resources */,
+				36574F042729022100C27774 /* LOLChampionsViewController.xib in Resources */,
 				3654D76F271FE42400BBB9EB /* LaunchScreen.storyboard in Resources */,
-				36574EFF27280B6C00C27774 /* TFTViewController.xib in Resources */,
+				36574F1C2729298600C27774 /* TFTItemsViewController.xib in Resources */,
+				36574F092729031A00C27774 /* LOLItemsViewController.xib in Resources */,
+				36574F182729297800C27774 /* TFTChampionsViewController.xib in Resources */,
 				3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */,
 				3654D787271FEB7500BBB9EB /* HomeViewController.xib in Resources */,
+				36574F1027291AAF00C27774 /* LOLRunesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,14 +376,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362DE5082726B7CE00D3FC71 /* LOLViewController.swift in Sources */,
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
 				3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */,
 				3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */,
+				36574F0F27291AAF00C27774 /* LOLRunesViewController.swift in Sources */,
+				36574F172729297800C27774 /* TFTChampionsViewController.swift in Sources */,
+				36574F1B2729298600C27774 /* TFTItemsViewController.swift in Sources */,
 				3654D780271FEA6E00BBB9EB /* BaseNavigationController.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* HomeViewController.swift in Sources */,
 				3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */,
-				36574EFE27280B6C00C27774 /* TFTViewController.swift in Sources */,
+				36574F0B27290F3E00C27774 /* LOLTabBarController.swift in Sources */,
+				36574F082729031A00C27774 /* LOLItemsViewController.swift in Sources */,
+				36574F032729022100C27774 /* LOLChampionsViewController.swift in Sources */,
+				36574F122729274D00C27774 /* TFTTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

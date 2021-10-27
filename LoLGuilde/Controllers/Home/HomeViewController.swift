@@ -23,15 +23,16 @@ class HomeViewController: BaseViewController {
         
     }
     
+
     @IBAction func moveToLOLButton(_ sender: UIButton) {
-        let vc = LOLViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let tabBarController = LOLTabBarController()
+        self.navigationController?.pushViewController(tabBarController, animated: true)
     }
     
     
     @IBAction func moveToTFTButton(_ sender: Any) {
-        let vc = TFTViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let tabBarController = TFTTabBarController()
+        self.navigationController?.pushViewController(tabBarController, animated: true)
     }
 }
 
