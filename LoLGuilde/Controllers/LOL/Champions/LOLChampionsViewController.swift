@@ -17,8 +17,9 @@ class LOLChampionsViewController: BaseViewController {
     
     private let urlChampion = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/data/en_US/champion.json"
     private let disposeBag = DisposeBag()
-    //    private var champions = BehaviorRelay<[Champion]>(value: [])
-    private var champions: [Champion] = []
+    private var champions = BehaviorRelay<[Champion]>(value: [])
+//    private var champions: [Champion] = []
+    private let musicsFileURL = cachedFileURL("lolChampions.json")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,7 @@ class LOLChampionsViewController: BaseViewController {
                 let dictionary = self.convertToDictionary(data: data)
                 if let _listChampions = dictionary?["data"] as? [String: NSDictionary] {
                     for champion in _listChampions {
-                        //                        let championName = champion.key
+                        //let championName = champion.key
                         let championInfor = champion.value
                         if let newChampion = Champion(dictionary: championInfor) {
                             listChampions.append(newChampion)
@@ -70,15 +71,16 @@ class LOLChampionsViewController: BaseViewController {
             .filter { objects in
                 return !objects.isEmpty
             }
-            .subscribe(onNext: { champions in
+            .subscribe(onNext: { newChampions in
                 DispatchQueue.main.async {
-                    self.champions = champions
+                    self.champions.accept(newChampions)
                     self.championsTableView.reloadData()
                 }
             })
             .disposed(by: disposeBag)
     }
     
+    // convert data to dictionary
     func convertToDictionary(data: Data) -> [String: Any]? {
         do {
             return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
@@ -87,21 +89,32 @@ class LOLChampionsViewController: BaseViewController {
         }
         return nil
     }
+    
+    // create path
+//    static func cachedFileURL(_ fileName: String) -> URL {
+//        return FileManager.default
+//            .urls(for: .cachesDirectory, in: .allDomainsMask)
+//            .first!
+//            .appendingPathComponent(fileName)
+//    }
 }
 
 extension LOLChampionsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return champions.count
+        return champions.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LOLChampionsCell
-        let item = champions[indexPath.row]
+        let item = champions.value[indexPath.row]
         cell.nameLabel.text = item.name
         cell.titleLabel.text = item.title
         let urlString = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
         cell.championImageView.sd_setImage(with: URL(string: urlString), placeholderImage: UIImage(named: "lolLogo"))
         return cell
     }
-    
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 }

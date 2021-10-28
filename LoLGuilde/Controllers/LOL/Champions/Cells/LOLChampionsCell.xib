@@ -12,7 +12,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="KGk-i7-Jjw" customClass="LOLChampionsCell" customModule="LoLGuilde" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="224" height="59"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="224" height="59"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -20,7 +20,6 @@
                         <rect key="frame" x="10" y="5" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Ekf-zQ-62T"/>
-                            <constraint firstAttribute="width" secondItem="Q4f-97-Y8H" secondAttribute="height" multiplier="1:1" id="H62-sG-Ey8"/>
                             <constraint firstAttribute="height" constant="50" id="O72-kz-L8v"/>
                         </constraints>
                     </imageView>
@@ -38,11 +37,11 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Q4f-97-Y8H" secondAttribute="bottom" constant="5" id="6N8-K9-Rdv"/>
                     <constraint firstItem="mI1-i7-sjH" firstAttribute="leading" secondItem="Q4f-97-Y8H" secondAttribute="trailing" constant="20" id="CXY-QX-DoG"/>
                     <constraint firstItem="crS-Hu-LuF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="GPM-gA-12k"/>
                     <constraint firstItem="mI1-i7-sjH" firstAttribute="top" secondItem="crS-Hu-LuF" secondAttribute="bottom" constant="5" id="SuA-4e-fYN"/>
                     <constraint firstItem="crS-Hu-LuF" firstAttribute="leading" secondItem="Q4f-97-Y8H" secondAttribute="trailing" constant="20" id="laL-EL-qg6"/>
+                    <constraint firstAttribute="bottom" secondItem="Q4f-97-Y8H" secondAttribute="bottom" constant="5" id="nN7-vO-GJS"/>
                     <constraint firstItem="Q4f-97-Y8H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="vky-Xa-652"/>
                     <constraint firstItem="Q4f-97-Y8H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zwb-SH-qVj"/>
                 </constraints>
@@ -53,7 +52,7 @@
                 <outlet property="nameLabel" destination="crS-Hu-LuF" id="Z3d-64-OH2"/>
                 <outlet property="titleLabel" destination="mI1-i7-sjH" id="YPJ-HH-SrK"/>
             </connections>
-            <point key="canvasLocation" x="62.318840579710148" y="76.004464285714278"/>
+            <point key="canvasLocation" x="62.318840579710148" y="77.34375"/>
         </tableViewCell>
     </objects>
     <resources>

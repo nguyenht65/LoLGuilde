@@ -16,7 +16,6 @@ class Champion {
     public var blurb : String?
 //    public var info : Info?
     public var image : Image?
-//    public var tags : Array<String>?
     public var partype : String?
 //    public var stats : Stats?
 //    var image: UIImage
@@ -31,13 +30,10 @@ class Champion {
         blurb = dictionary["blurb"] as? String
 //        if (dictionary["info"] != nil) { info = Info(dictionary: dictionary["info"] as! NSDictionary) }
         if (dictionary["image"] != nil) { image = Image(dictionary: dictionary["image"] as! NSDictionary) }
-//        if (dictionary["tags"] != nil) { tags = Tags.modelsFromDictionaryArray(dictionary["tags"] as! NSArray) }
         partype = dictionary["partype"] as? String
 //        if (dictionary["stats"] != nil) { stats = Stats(dictionary: dictionary["stats"] as! NSDictionary) }
     }
 }
 
-struct championData {
 
-}
 
