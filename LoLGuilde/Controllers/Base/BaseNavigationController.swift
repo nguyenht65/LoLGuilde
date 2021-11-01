@@ -13,6 +13,6 @@ class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
         setupNavi()
     }
-    
+
     func setupNavi() { }
 }
