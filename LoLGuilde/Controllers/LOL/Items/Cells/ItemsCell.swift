@@ -21,12 +21,15 @@ class ItemsCell: UICollectionViewCell {
         let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/item/\(item.image?.full ?? "")"
         itemImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
         itemNameLabel.text = item.name
-        if (item.into?.isEmpty) != nil {
-            itemImageView.layer.borderColor = UIColor.gray.cgColor
+        if item.into?.isEmpty != nil && item.from?.isEmpty != nil {
+            itemImageView.layer.borderColor = UIColor.systemYellow.cgColor
+        }
+        else if item.into?.isEmpty != nil {
+            itemImageView.layer.borderColor = UIColor.systemGray.cgColor
         } else if item.from?.isEmpty != nil {
-            itemImageView.layer.borderColor = UIColor.yellow.cgColor
+            itemImageView.layer.borderColor = UIColor.systemRed.cgColor
         } else {
-            itemImageView.layer.borderColor = UIColor.systemPink.cgColor
+            itemImageView.layer.borderColor = UIColor.systemMint.cgColor
         }
     }
     
