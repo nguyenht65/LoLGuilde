@@ -27,7 +27,7 @@ class ItemsCell: UICollectionViewCell {
         else if item.into?.isEmpty != nil {
             itemImageView.layer.borderColor = UIColor.systemGray.cgColor
         } else if item.from?.isEmpty != nil {
-            itemImageView.layer.borderColor = UIColor.systemRed.cgColor
+            itemImageView.layer.borderColor = UIColor.systemPink.cgColor
         } else {
             itemImageView.layer.borderColor = UIColor.systemMint.cgColor
         }
