@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3622CF7C272949D5005912CD /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3622CF7B272949D5005912CD /* Champion.swift */; };
+		363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FEDCE273037F600A1B6BE /* SpellsViewController.swift */; };
+		363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363FEDCF273037F600A1B6BE /* SpellsViewController.xib */; };
 		3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D762271FE42300BBB9EB /* AppDelegate.swift */; };
 		3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D764271FE42300BBB9EB /* SceneDelegate.swift */; };
 		3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3654D76B271FE42400BBB9EB /* Assets.xcassets */; };
@@ -17,6 +19,11 @@
 		3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D781271FEACA00BBB9EB /* BaseTabBarController.swift */; };
 		3654D786271FEB7500BBB9EB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D784271FEB7500BBB9EB /* SplashViewController.swift */; };
 		3654D787271FEB7500BBB9EB /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3654D785271FEB7500BBB9EB /* SplashViewController.xib */; };
+		3657135C272FF76900F44595 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3657135B272FF76900F44595 /* Item.swift */; };
+		3657135E272FF79100F44595 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3657135D272FF79100F44595 /* Info.swift */; };
+		36571360272FF79F00F44595 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3657135F272FF79F00F44595 /* Stats.swift */; };
+		36571363272FFA1500F44595 /* ItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36571361272FFA1500F44595 /* ItemsCell.swift */; };
+		36571364272FFA1500F44595 /* ItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36571362272FFA1500F44595 /* ItemsCell.xib */; };
 		36574F032729022100C27774 /* ChampionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F012729022100C27774 /* ChampionsViewController.swift */; };
 		36574F042729022100C27774 /* ChampionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574F022729022100C27774 /* ChampionsViewController.xib */; };
 		36574F082729031A00C27774 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F062729031A00C27774 /* ItemsViewController.swift */; };
@@ -26,12 +33,12 @@
 		36574F1027291AAF00C27774 /* RunesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574F0E27291AAF00C27774 /* RunesViewController.xib */; };
 		36574F21272935D000C27774 /* ChampionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574F1F272935D000C27774 /* ChampionsCell.swift */; };
 		36574F22272935D000C27774 /* ChampionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36574F20272935D000C27774 /* ChampionsCell.xib */; };
+		365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B2BB42731153B0012C667 /* ItemsViewModel.swift */; };
 		368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */; };
 		368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66A272DD52C00A1FC9F /* Helper.swift */; };
 		368CD674272DDAC500A1FC9F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66E272DDAC500A1FC9F /* UIViewController.swift */; };
 		368CD677272DDAC500A1FC9F /* UISegmentedControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD671272DDAC500A1FC9F /* UISegmentedControlExtension.swift */; };
-		368CD67D272F097A00A1FC9F /* SummonersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD67B272F097A00A1FC9F /* SummonersViewController.swift */; };
-		368CD67E272F097A00A1FC9F /* SummonersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368CD67C272F097A00A1FC9F /* SummonersViewController.xib */; };
+		368CE0D827307A4500C3DA27 /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CE0D727307A4500C3DA27 /* Gold.swift */; };
 		36BB5D752729F13400001491 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D742729F13400001491 /* Image.swift */; };
 		36BB5D78272AA03300001491 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D77272AA03300001491 /* Networking.swift */; };
 		36BB5D7A272AA04400001491 /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D79272AA04400001491 /* NetworkingResult.swift */; };
@@ -39,11 +46,15 @@
 		36BEA658272FCF7A00B75B39 /* ScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA657272FCF7A00B75B39 /* ScreenHelper.swift */; };
 		36BEA65B272FDCF600B75B39 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA65A272FDCF600B75B39 /* TabBarItem.swift */; };
 		36BEA65D272FDDCD00B75B39 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA65C272FDDCD00B75B39 /* CustomTabBar.swift */; };
+		36BEA661272FF4A200B75B39 /* ChampionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA65F272FF4A200B75B39 /* ChampionInfoViewController.swift */; };
+		36BEA662272FF4A200B75B39 /* ChampionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BEA660272FF4A200B75B39 /* ChampionInfoViewController.xib */; };
 		87E109F25E1944CD199057A5 /* Pods_LoLGuilde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3622CF7B272949D5005912CD /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		363FEDCE273037F600A1B6BE /* SpellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewController.swift; sourceTree = "<group>"; };
+		363FEDCF273037F600A1B6BE /* SpellsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsViewController.xib; sourceTree = "<group>"; };
 		3654D75F271FE42300BBB9EB /* LoLGuilde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLGuilde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3654D762271FE42300BBB9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3654D764271FE42300BBB9EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +66,11 @@
 		3654D781271FEACA00BBB9EB /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		3654D784271FEB7500BBB9EB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3654D785271FEB7500BBB9EB /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		3657135B272FF76900F44595 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		3657135D272FF79100F44595 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		3657135F272FF79F00F44595 /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		36571361272FFA1500F44595 /* ItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCell.swift; sourceTree = "<group>"; };
+		36571362272FFA1500F44595 /* ItemsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsCell.xib; sourceTree = "<group>"; };
 		36574F012729022100C27774 /* ChampionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewController.swift; sourceTree = "<group>"; };
 		36574F022729022100C27774 /* ChampionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChampionsViewController.xib; sourceTree = "<group>"; };
 		36574F062729031A00C27774 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
@@ -64,12 +80,12 @@
 		36574F0E27291AAF00C27774 /* RunesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunesViewController.xib; sourceTree = "<group>"; };
 		36574F1F272935D000C27774 /* ChampionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsCell.swift; sourceTree = "<group>"; };
 		36574F20272935D000C27774 /* ChampionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChampionsCell.xib; sourceTree = "<group>"; };
+		365B2BB42731153B0012C667 /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
 		368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewModel.swift; sourceTree = "<group>"; };
 		368CD66A272DD52C00A1FC9F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		368CD66E272DDAC500A1FC9F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		368CD671272DDAC500A1FC9F /* UISegmentedControlExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControlExtension.swift; sourceTree = "<group>"; };
-		368CD67B272F097A00A1FC9F /* SummonersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonersViewController.swift; sourceTree = "<group>"; };
-		368CD67C272F097A00A1FC9F /* SummonersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummonersViewController.xib; sourceTree = "<group>"; };
+		368CE0D727307A4500C3DA27 /* Gold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
 		36BB5D742729F13400001491 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		36BB5D77272AA03300001491 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		36BB5D79272AA04400001491 /* NetworkingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
@@ -77,6 +93,8 @@
 		36BEA657272FCF7A00B75B39 /* ScreenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHelper.swift; sourceTree = "<group>"; };
 		36BEA65A272FDCF600B75B39 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		36BEA65C272FDDCD00B75B39 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		36BEA65F272FF4A200B75B39 /* ChampionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionInfoViewController.swift; sourceTree = "<group>"; };
+		36BEA660272FF4A200B75B39 /* ChampionInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChampionInfoViewController.xib; sourceTree = "<group>"; };
 		7F30D1743EE12A3B4C62F217 /* Pods-LoLGuilde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.release.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.release.xcconfig"; sourceTree = "<group>"; };
 		B503EAE8A47C33115A40BD5B /* Pods-LoLGuilde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.debug.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLGuilde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +115,7 @@
 		362DE5042726B75700D3FC71 /* LOL */ = {
 			isa = PBXGroup;
 			children = (
-				368CD679272F092F00A1FC9F /* Summoners */,
+				368CD679272F092F00A1FC9F /* Spells */,
 				36574F0C27291A9800C27774 /* Runes */,
 				36574F052729030300C27774 /* Items */,
 				36574F00272901F800C27774 /* Champions */,
@@ -206,8 +224,12 @@
 		3654D78F271FF17F00BBB9EB /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				368CE0D727307A4500C3DA27 /* Gold.swift */,
 				3622CF7B272949D5005912CD /* Champion.swift */,
 				36BB5D742729F13400001491 /* Image.swift */,
+				3657135B272FF76900F44595 /* Item.swift */,
+				3657135D272FF79100F44595 /* Info.swift */,
+				3657135F272FF79F00F44595 /* Stats.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -215,6 +237,7 @@
 		36574F00272901F800C27774 /* Champions */ = {
 			isa = PBXGroup;
 			children = (
+				36BEA65E272FF43C00B75B39 /* ChampionsDetail */,
 				36574F1E272934F600C27774 /* Cells */,
 				36574F012729022100C27774 /* ChampionsViewController.swift */,
 				36574F022729022100C27774 /* ChampionsViewController.xib */,
@@ -226,8 +249,10 @@
 		36574F052729030300C27774 /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				36BEA663272FF5DA00B75B39 /* Cells */,
 				36574F062729031A00C27774 /* ItemsViewController.swift */,
 				36574F072729031A00C27774 /* ItemsViewController.xib */,
+				365B2BB42731153B0012C667 /* ItemsViewModel.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -268,13 +293,13 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
-		368CD679272F092F00A1FC9F /* Summoners */ = {
+		368CD679272F092F00A1FC9F /* Spells */ = {
 			isa = PBXGroup;
 			children = (
-				368CD67B272F097A00A1FC9F /* SummonersViewController.swift */,
-				368CD67C272F097A00A1FC9F /* SummonersViewController.xib */,
+				363FEDCE273037F600A1B6BE /* SpellsViewController.swift */,
+				363FEDCF273037F600A1B6BE /* SpellsViewController.xib */,
 			);
-			path = Summoners;
+			path = Spells;
 			sourceTree = "<group>";
 		};
 		36BB5D76272AA01A00001491 /* Networking */ = {
@@ -294,6 +319,24 @@
 				36BEA65C272FDDCD00B75B39 /* CustomTabBar.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		36BEA65E272FF43C00B75B39 /* ChampionsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				36BEA65F272FF4A200B75B39 /* ChampionInfoViewController.swift */,
+				36BEA660272FF4A200B75B39 /* ChampionInfoViewController.xib */,
+			);
+			path = ChampionsDetail;
+			sourceTree = "<group>";
+		};
+		36BEA663272FF5DA00B75B39 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				36571361272FFA1500F44595 /* ItemsCell.swift */,
+				36571362272FFA1500F44595 /* ItemsCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D3B7C0F3B306BE49279DAF97 /* Pods */ = {
@@ -375,10 +418,12 @@
 			files = (
 				36574F042729022100C27774 /* ChampionsViewController.xib in Resources */,
 				3654D76F271FE42400BBB9EB /* LaunchScreen.storyboard in Resources */,
+				36BEA662272FF4A200B75B39 /* ChampionInfoViewController.xib in Resources */,
 				36574F22272935D000C27774 /* ChampionsCell.xib in Resources */,
+				36571364272FFA1500F44595 /* ItemsCell.xib in Resources */,
 				36574F092729031A00C27774 /* ItemsViewController.xib in Resources */,
-				368CD67E272F097A00A1FC9F /* SummonersViewController.xib in Resources */,
 				3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */,
+				363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */,
 				3654D787271FEB7500BBB9EB /* SplashViewController.xib in Resources */,
 				36574F1027291AAF00C27774 /* RunesViewController.xib in Resources */,
 			);
@@ -436,9 +481,12 @@
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
 				3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */,
 				36BB5D78272AA03300001491 /* Networking.swift in Sources */,
+				3657135E272FF79100F44595 /* Info.swift in Sources */,
 				36574F21272935D000C27774 /* ChampionsCell.swift in Sources */,
+				36571363272FFA1500F44595 /* ItemsCell.swift in Sources */,
 				36BEA65D272FDDCD00B75B39 /* CustomTabBar.swift in Sources */,
 				3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */,
+				36BEA661272FF4A200B75B39 /* ChampionInfoViewController.swift in Sources */,
 				36BEA65B272FDCF600B75B39 /* TabBarItem.swift in Sources */,
 				368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */,
 				36574F0F27291AAF00C27774 /* RunesViewController.swift in Sources */,
@@ -448,15 +496,19 @@
 				368CD677272DDAC500A1FC9F /* UISegmentedControlExtension.swift in Sources */,
 				36BB5D7A272AA04400001491 /* NetworkingResult.swift in Sources */,
 				36BB5D752729F13400001491 /* Image.swift in Sources */,
+				36571360272FF79F00F44595 /* Stats.swift in Sources */,
+				365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */,
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* SplashViewController.swift in Sources */,
 				368CD674272DDAC500A1FC9F /* UIViewController.swift in Sources */,
 				3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */,
+				3657135C272FF76900F44595 /* Item.swift in Sources */,
 				36574F0B27290F3E00C27774 /* TabBarController.swift in Sources */,
 				36574F082729031A00C27774 /* ItemsViewController.swift in Sources */,
 				36BEA658272FCF7A00B75B39 /* ScreenHelper.swift in Sources */,
+				368CE0D827307A4500C3DA27 /* Gold.swift in Sources */,
 				36574F032729022100C27774 /* ChampionsViewController.swift in Sources */,
-				368CD67D272F097A00A1FC9F /* SummonersViewController.swift in Sources */,
+				363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +657,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -634,7 +686,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

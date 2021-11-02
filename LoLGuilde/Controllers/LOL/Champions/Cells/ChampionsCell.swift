@@ -22,7 +22,7 @@ class ChampionsCell: UITableViewCell {
     func setupData(item: Champion) {
         nameLabel.text = item.name
         titleLabel.text = item.title
-        let urlString = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
-        championImageView.sd_setImage(with: URL(string: urlString), placeholderImage: UIImage(named: "lolLogo"))
+        let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
+        championImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
     }
 }

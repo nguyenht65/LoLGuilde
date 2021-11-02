@@ -8,21 +8,22 @@
 import UIKit
 
 enum TabItem: String, CaseIterable {
-    case champions = "champion"
-    case items = "item"
-    case runes = "rune"
-    case summoners = "summoner"
+    case champions = "champions"
+    case items = "items"
+    case runes = "runes"
+    case spells = "spells"
 
     var viewController: UIViewController {
         switch self {
         case .champions:
-            return ChampionsViewController()
+            let navi = UINavigationController(rootViewController: ChampionsViewController())
+            return navi
         case .items:
             return ItemsViewController()
         case .runes:
             return RunesViewController()
-        case .summoners:
-            return SummonersViewController()
+        case .spells:
+            return SpellsViewController()
         }
     }
 
@@ -31,11 +32,11 @@ enum TabItem: String, CaseIterable {
         case .champions:
             return UIImage(named: "ic_tb1")!
         case .items:
-            return UIImage(named: "ic_tb2")!
+            return UIImage(named: "ic_tb1")!
         case .runes:
             return UIImage(named: "ic_tb1")!
-        case .summoners:
-            return UIImage(named: "ic_tb2")!
+        case .spells:
+            return UIImage(named: "ic_tb1")!
         }
     }
 

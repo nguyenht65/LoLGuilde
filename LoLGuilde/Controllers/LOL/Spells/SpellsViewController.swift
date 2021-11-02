@@ -1,5 +1,5 @@
 //
-//  SummonersViewController.swift
+//  SpellsViewController.swift
 //  LoLGuilde
 //
 //  Created by Bang on 01/11/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SummonersViewController: BaseViewController {
+class SpellsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

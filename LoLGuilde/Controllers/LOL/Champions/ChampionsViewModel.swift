@@ -19,15 +19,15 @@ class ChampionsViewModel: ChampionsProtocol {
     
     private let urlChampion = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/data/en_US/champion.json"
     private let disposeBag = DisposeBag()
-    private let championsFileURL = Helper.cachedFileURL("lolChampions.json")
+    private let championsFileURL = Helper.cachedFileURL("champions.json")
     var champions = BehaviorRelay<[Champion]>(value: [])
-    var view: ChampionsViewProtocol?
+    var championView: ChampionsViewProtocol?
     
     func processChampions(_ newChampions: [Champion]) {
         // update API
         DispatchQueue.main.async {
             self.champions.accept(newChampions)
-            self.view?.getChampionsSuccess()
+            self.championView?.getChampionsSuccess()
         }
         // save data to file
         let encoder = JSONEncoder()

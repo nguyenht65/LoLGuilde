@@ -19,7 +19,7 @@ class BaseTabBarController: UITabBarController {
 
     func loadTabBar() {
         // create and load custom tab bar
-        let tabbarItems: [TabItem] = [.champions, .items, .runes, .summoners]
+        let tabbarItems: [TabItem] = [.champions, .items, .runes, .spells]
         setupCustomTabMenu(tabbarItems, completion: { viewControllers in
             self.viewControllers = viewControllers
         })

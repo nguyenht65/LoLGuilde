@@ -19,11 +19,12 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     func getChampionsSuccess() {
         self.championsTableView.reloadData()
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        championsViewModel.view = self
+        championsViewModel.championView = self
     }
-    
+
     override func setupUI() {
         let nib = UINib(nibName: ChampionsCell.className, bundle: .main)
         championsTableView.register(nib, forCellReuseIdentifier: "cell")
@@ -36,6 +37,10 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         championsViewModel.readChampionsCache()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
 }
 
 extension ChampionsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -52,5 +57,10 @@ extension ChampionsViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let championInfoVC = ChampionInfoViewController()
+        self.navigationController?.pushViewController(championInfoVC, animated: true)
     }
 }

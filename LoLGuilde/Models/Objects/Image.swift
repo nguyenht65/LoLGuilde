@@ -11,33 +11,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 import Foundation
 
 public class Image: Codable {
-	public var full : String?
-	public var sprite : String?
-	public var group : String?
-	public var x : Int?
-	public var y : Int?
-	public var w : Int?
-	public var h : Int?
-
-/**
-    Returns an array of models based on given dictionary.
-    
-    Sample usage:
-    let image_list = Image.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
-
-    - parameter array:  NSArray from JSON dictionary.
-
-    - returns: Array of Image Instances.
-*/
-    public class func modelsFromDictionaryArray(array:NSArray) -> [Image]
-    {
-        var models:[Image] = []
-        for item in array
-        {
-            models.append(Image(dictionary: item as! NSDictionary)!)
-        }
-        return models
-    }
+    public var full : String?
+    public var sprite : String?
+    public var group : String?
+    public var x : Int?
+    public var y : Int?
+    public var w : Int?
+    public var h : Int?
 
 /**
     Constructs the object based on the given dictionary.
@@ -49,33 +29,36 @@ public class Image: Codable {
 
     - returns: Image Instance.
 */
-	required public init?(dictionary: NSDictionary) {
-		full = dictionary["full"] as? String
-		sprite = dictionary["sprite"] as? String
-		group = dictionary["group"] as? String
-		x = dictionary["x"] as? Int
-		y = dictionary["y"] as? Int
-		w = dictionary["w"] as? Int
-		h = dictionary["h"] as? Int
-	}
+    required public init?(dictionary: NSDictionary) {
 
-		
+        full = dictionary["full"] as? String
+        sprite = dictionary["sprite"] as? String
+        group = dictionary["group"] as? String
+        x = dictionary["x"] as? Int
+        y = dictionary["y"] as? Int
+        w = dictionary["w"] as? Int
+        h = dictionary["h"] as? Int
+    }
+
+        
 /**
     Returns the dictionary representation for the current instance.
     
     - returns: NSDictionary.
 */
-	public func dictionaryRepresentation() -> NSDictionary {
-		let dictionary = NSMutableDictionary()
+    public func dictionaryRepresentation() -> NSDictionary {
 
-		dictionary.setValue(self.full, forKey: "full")
-		dictionary.setValue(self.sprite, forKey: "sprite")
-		dictionary.setValue(self.group, forKey: "group")
-		dictionary.setValue(self.x, forKey: "x")
-		dictionary.setValue(self.y, forKey: "y")
-		dictionary.setValue(self.w, forKey: "w")
-		dictionary.setValue(self.h, forKey: "h")
-		return dictionary
-	}
+        let dictionary = NSMutableDictionary()
+
+        dictionary.setValue(self.full, forKey: "full")
+        dictionary.setValue(self.sprite, forKey: "sprite")
+        dictionary.setValue(self.group, forKey: "group")
+        dictionary.setValue(self.x, forKey: "x")
+        dictionary.setValue(self.y, forKey: "y")
+        dictionary.setValue(self.w, forKey: "w")
+        dictionary.setValue(self.h, forKey: "h")
+
+        return dictionary
+    }
 
 }

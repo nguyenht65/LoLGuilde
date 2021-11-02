@@ -15,9 +15,9 @@ class BaseViewController: UIViewController {
         setupUI()
     }
 
-    func setupData() {} // xử lý Data (load, fetch,..)
+    func setupData() { } // xử lý Data (load, fetch,..)
 
-    func setupUI() {} // xử lý UI lúc khởi tạo VC
+    func setupUI() { } // xử lý UI lúc khởi tạo VC
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -28,6 +28,9 @@ class BaseViewController: UIViewController {
        AppUtility.lockOrientation(.portrait)
        // Or to rotate and lock
 //        AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
    }
 
    override func viewWillDisappear(_ animated: Bool) {
