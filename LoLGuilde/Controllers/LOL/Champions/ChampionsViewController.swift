@@ -60,7 +60,15 @@ extension ChampionsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = championsViewModel.champions.value[indexPath.row]
+        
         let championInfoVC = ChampionInfoViewController()
+        championInfoVC._name = item.name ?? ""
+        championInfoVC._title = item.title ?? ""
+        championInfoVC._tag = item.tags ?? []
+        let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
+        championInfoVC._urlStringImage = urlStringImage
         self.navigationController?.pushViewController(championInfoVC, animated: true)
     }
 }

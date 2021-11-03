@@ -60,6 +60,7 @@ class ChampionsViewModel: ChampionsProtocol {
                     for champion in _listChampions {
                         //let championName = champion.key
                         let championInfor = champion.value
+                        print(championInfor)
                         if let newChampion = Champion(dictionary: championInfor) {
                             listChampions.append(newChampion)
                         }
