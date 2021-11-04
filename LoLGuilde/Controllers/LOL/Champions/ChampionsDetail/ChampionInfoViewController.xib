@@ -12,9 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChampionInfoViewController" customModule="LoLGuilde" customModuleProvider="target">
             <connections>
                 <outlet property="championImageView" destination="f7S-4Z-HV4" id="rVJ-65-1yd"/>
+                <outlet property="infoView" destination="Iku-mI-gfG" id="A9L-gU-cQw"/>
                 <outlet property="nameLabel" destination="5ve-pr-eBT" id="Qyv-ce-aO8"/>
                 <outlet property="segmentedControl" destination="rgd-DZ-j5a" id="nSq-ma-JhH"/>
-                <outlet property="tagLabel" destination="EBb-Tt-0FG" id="5tu-MM-F3L"/>
+                <outlet property="tag1Label" destination="yyU-Ay-Ns3" id="lvi-SL-ljL"/>
+                <outlet property="tag2Label" destination="ze0-c9-cDE" id="B0e-TZ-ppx"/>
                 <outlet property="titleLabel" destination="MzW-XH-XxT" id="F3O-YJ-2hg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,12 +36,15 @@
                         <segment title="Skins"/>
                     </segments>
                     <color key="selectedSegmentTintColor" name="selectedSegmented"/>
+                    <connections>
+                        <action selector="changeSegmentedControl:" destination="-1" eventType="valueChanged" id="zjH-Me-DcF"/>
+                    </connections>
                 </segmentedControl>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iku-mI-gfG">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iku-mI-gfG" userLabel="Info View">
                     <rect key="frame" x="0.0" y="205" width="390" height="540"/>
                     <color key="backgroundColor" name="textColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGg-Z4-53i">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGg-Z4-53i" userLabel="Champion View">
                     <rect key="frame" x="0.0" y="54" width="390" height="100"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aatrox" translatesAutoresizingMaskIntoConstraints="NO" id="f7S-4Z-HV4">
@@ -61,27 +66,36 @@
                             <color key="textColor" name="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBb-Tt-0FG">
-                            <rect key="frame" x="110" y="62" width="280" height="0.0"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyU-Ay-Ns3">
+                            <rect key="frame" x="110" y="62" width="35" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="systemYellowColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze0-c9-cDE">
+                            <rect key="frame" x="155" y="62" width="37.333333333333343" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemGrayColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" name="backgroundColor"/>
                     <constraints>
-                        <constraint firstItem="EBb-Tt-0FG" firstAttribute="top" secondItem="MzW-XH-XxT" secondAttribute="bottom" constant="5" id="0GM-DI-hr4"/>
-                        <constraint firstAttribute="trailing" secondItem="EBb-Tt-0FG" secondAttribute="trailing" id="3OW-LJ-QNi"/>
                         <constraint firstAttribute="trailing" secondItem="5ve-pr-eBT" secondAttribute="trailing" id="40w-QW-eh2"/>
                         <constraint firstItem="MzW-XH-XxT" firstAttribute="leading" secondItem="f7S-4Z-HV4" secondAttribute="trailing" constant="15" id="6BB-BS-yiu"/>
                         <constraint firstAttribute="height" constant="100" id="7DZ-xE-ntI"/>
+                        <constraint firstItem="yyU-Ay-Ns3" firstAttribute="top" secondItem="MzW-XH-XxT" secondAttribute="bottom" constant="5" id="7vX-hK-ne8"/>
                         <constraint firstAttribute="trailing" secondItem="MzW-XH-XxT" secondAttribute="trailing" id="AvM-yS-Oac"/>
+                        <constraint firstItem="yyU-Ay-Ns3" firstAttribute="leading" secondItem="f7S-4Z-HV4" secondAttribute="trailing" constant="15" id="BBL-Rx-Pxn"/>
                         <constraint firstItem="f7S-4Z-HV4" firstAttribute="leading" secondItem="HGg-Z4-53i" secondAttribute="leading" constant="20" id="FPM-gE-fYL"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ze0-c9-cDE" secondAttribute="trailing" id="GyV-bf-4dU"/>
                         <constraint firstItem="5ve-pr-eBT" firstAttribute="leading" secondItem="f7S-4Z-HV4" secondAttribute="trailing" constant="15" id="Lwa-Bx-U5P"/>
+                        <constraint firstItem="ze0-c9-cDE" firstAttribute="top" secondItem="MzW-XH-XxT" secondAttribute="bottom" constant="5" id="M0G-FO-Toj"/>
                         <constraint firstItem="f7S-4Z-HV4" firstAttribute="centerY" secondItem="HGg-Z4-53i" secondAttribute="centerY" id="eCg-m6-Gji"/>
                         <constraint firstItem="5ve-pr-eBT" firstAttribute="top" secondItem="HGg-Z4-53i" secondAttribute="top" constant="10" id="kXd-zy-FaN"/>
                         <constraint firstItem="MzW-XH-XxT" firstAttribute="top" secondItem="5ve-pr-eBT" secondAttribute="bottom" constant="5" id="mNg-aI-lWl"/>
-                        <constraint firstItem="EBb-Tt-0FG" firstAttribute="leading" secondItem="f7S-4Z-HV4" secondAttribute="trailing" constant="15" id="sFW-F7-DQg"/>
+                        <constraint firstItem="ze0-c9-cDE" firstAttribute="top" secondItem="MzW-XH-XxT" secondAttribute="bottom" constant="5" id="v2h-Ve-Okk"/>
+                        <constraint firstItem="ze0-c9-cDE" firstAttribute="leading" secondItem="yyU-Ay-Ns3" secondAttribute="trailing" constant="10" id="vwo-y0-VB1"/>
                     </constraints>
                 </view>
             </subviews>
@@ -116,6 +130,9 @@
         <namedColor name="textColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

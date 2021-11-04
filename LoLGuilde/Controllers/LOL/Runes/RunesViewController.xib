@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,22 +19,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rune" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVn-hb-Mag">
-                    <rect key="frame" x="148" y="428" width="39" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zr2-LM-U7C">
+                    <rect key="frame" x="0.0" y="54" width="414" height="32"/>
+                    <segments>
+                        <segment title="1"/>
+                        <segment title="2"/>
+                        <segment title="3"/>
+                        <segment title="4"/>
+                        <segment title="5"/>
+                    </segments>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-nE-cqE">
+                    <rect key="frame" x="0.0" y="95" width="414" height="702"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundColor"/>
-            <point key="canvasLocation" x="132" y="107"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zr2-LM-U7C" secondAttribute="trailing" id="C1K-TZ-hs2"/>
+                <constraint firstItem="eCa-nE-cqE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="I1C-0J-coA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eCa-nE-cqE" secondAttribute="bottom" constant="65" id="J3k-mQ-69B"/>
+                <constraint firstItem="zr2-LM-U7C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O1t-gz-mV1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eCa-nE-cqE" secondAttribute="trailing" id="RdD-Bg-4ba"/>
+                <constraint firstItem="zr2-LM-U7C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="bvV-sQ-20L"/>
+                <constraint firstItem="eCa-nE-cqE" firstAttribute="top" secondItem="zr2-LM-U7C" secondAttribute="bottom" constant="10" id="y2N-EL-WzY"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
         </view>
     </objects>
     <resources>
         <namedColor name="backgroundColor">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

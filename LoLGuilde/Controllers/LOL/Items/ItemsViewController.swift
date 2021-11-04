@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ItemsViewProtocol {
-    func getItemSuccess()
+    func getItemsSuccess()
 }
 
 class ItemsViewController: BaseViewController, ItemsViewProtocol {
@@ -16,7 +16,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     @IBOutlet weak var itemCollectionView: UICollectionView!
     let itemsViewModel: ItemsViewModel = ItemsViewModel()
 
-    func getItemSuccess() {
+    func getItemsSuccess() {
         self.itemCollectionView.reloadData()
     }
 

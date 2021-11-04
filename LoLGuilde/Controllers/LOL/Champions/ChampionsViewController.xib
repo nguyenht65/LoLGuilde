@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChampionsViewController" customModule="LoLGuilde" customModuleProvider="target">
             <connections>
                 <outlet property="championsTableView" destination="AQH-IB-nmF" id="746-l6-ucc"/>
+                <outlet property="searchBar" destination="nSc-KC-r6v" id="Tlo-Rx-5Pb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -10,6 +10,9 @@
 		3622CF7C272949D5005912CD /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3622CF7B272949D5005912CD /* Champion.swift */; };
 		363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FEDCE273037F600A1B6BE /* SpellsViewController.swift */; };
 		363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363FEDCF273037F600A1B6BE /* SpellsViewController.xib */; };
+		36453AB827331AD400F7413A /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36453AB727331AD400F7413A /* GeneralView.swift */; };
+		36453ABA27331CE000F7413A /* GeneralView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36453AB927331CE000F7413A /* GeneralView.xib */; };
+		36453ABC27331DC000F7413A /* UIViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36453ABB27331DC000F7413A /* UIViewExtentions.swift */; };
 		3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D762271FE42300BBB9EB /* AppDelegate.swift */; };
 		3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654D764271FE42300BBB9EB /* SceneDelegate.swift */; };
 		3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3654D76B271FE42400BBB9EB /* Assets.xcassets */; };
@@ -36,7 +39,7 @@
 		365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B2BB42731153B0012C667 /* ItemsViewModel.swift */; };
 		368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */; };
 		368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66A272DD52C00A1FC9F /* Helper.swift */; };
-		368CD674272DDAC500A1FC9F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66E272DDAC500A1FC9F /* UIViewController.swift */; };
+		368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */; };
 		368CE0D827307A4500C3DA27 /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CE0D727307A4500C3DA27 /* Gold.swift */; };
 		36BB5D752729F13400001491 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D742729F13400001491 /* Image.swift */; };
 		36BB5D78272AA03300001491 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D77272AA03300001491 /* Networking.swift */; };
@@ -47,6 +50,10 @@
 		36BEA65D272FDDCD00B75B39 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA65C272FDDCD00B75B39 /* CustomTabBar.swift */; };
 		36BEA661272FF4A200B75B39 /* ChampionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA65F272FF4A200B75B39 /* ChampionInfoViewController.swift */; };
 		36BEA662272FF4A200B75B39 /* ChampionInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36BEA660272FF4A200B75B39 /* ChampionInfoViewController.xib */; };
+		36DB67CC2733C8D00063F6DB /* SpellsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67CA2733C8D00063F6DB /* SpellsCell.swift */; };
+		36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67CB2733C8D00063F6DB /* SpellsCell.xib */; };
+		36DB67CF2733CB870063F6DB /* SpellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67CE2733CB870063F6DB /* SpellsViewModel.swift */; };
+		36DB67D12733D2450063F6DB /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D02733D2450063F6DB /* Spell.swift */; };
 		87E109F25E1944CD199057A5 /* Pods_LoLGuilde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +61,9 @@
 		3622CF7B272949D5005912CD /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		363FEDCE273037F600A1B6BE /* SpellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewController.swift; sourceTree = "<group>"; };
 		363FEDCF273037F600A1B6BE /* SpellsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsViewController.xib; sourceTree = "<group>"; };
+		36453AB727331AD400F7413A /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
+		36453AB927331CE000F7413A /* GeneralView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralView.xib; sourceTree = "<group>"; };
+		36453ABB27331DC000F7413A /* UIViewExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtentions.swift; sourceTree = "<group>"; };
 		3654D75F271FE42300BBB9EB /* LoLGuilde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLGuilde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3654D762271FE42300BBB9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3654D764271FE42300BBB9EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +92,7 @@
 		365B2BB42731153B0012C667 /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
 		368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewModel.swift; sourceTree = "<group>"; };
 		368CD66A272DD52C00A1FC9F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		368CD66E272DDAC500A1FC9F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
 		368CE0D727307A4500C3DA27 /* Gold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
 		36BB5D742729F13400001491 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		36BB5D77272AA03300001491 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -93,6 +103,10 @@
 		36BEA65C272FDDCD00B75B39 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		36BEA65F272FF4A200B75B39 /* ChampionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionInfoViewController.swift; sourceTree = "<group>"; };
 		36BEA660272FF4A200B75B39 /* ChampionInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChampionInfoViewController.xib; sourceTree = "<group>"; };
+		36DB67CA2733C8D00063F6DB /* SpellsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsCell.swift; sourceTree = "<group>"; };
+		36DB67CB2733C8D00063F6DB /* SpellsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsCell.xib; sourceTree = "<group>"; };
+		36DB67CE2733CB870063F6DB /* SpellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewModel.swift; sourceTree = "<group>"; };
+		36DB67D02733D2450063F6DB /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		7F30D1743EE12A3B4C62F217 /* Pods-LoLGuilde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.release.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.release.xcconfig"; sourceTree = "<group>"; };
 		B503EAE8A47C33115A40BD5B /* Pods-LoLGuilde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.debug.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLGuilde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +139,8 @@
 		36453AB327326E9200F7413A /* General */ = {
 			isa = PBXGroup;
 			children = (
+				36453AB727331AD400F7413A /* GeneralView.swift */,
+				36453AB927331CE000F7413A /* GeneralView.xib */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -256,6 +272,7 @@
 				3657135B272FF76900F44595 /* Item.swift */,
 				3657135D272FF79100F44595 /* Info.swift */,
 				3657135F272FF79F00F44595 /* Stats.swift */,
+				36DB67D02733D2450063F6DB /* Spell.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -313,7 +330,8 @@
 		368CD66C272DDAC500A1FC9F /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				368CD66E272DDAC500A1FC9F /* UIViewController.swift */,
+				368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */,
+				36453ABB27331DC000F7413A /* UIViewExtentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -321,8 +339,10 @@
 		368CD679272F092F00A1FC9F /* Spells */ = {
 			isa = PBXGroup;
 			children = (
+				36DB67C92733C39A0063F6DB /* Cell */,
 				363FEDCE273037F600A1B6BE /* SpellsViewController.swift */,
 				363FEDCF273037F600A1B6BE /* SpellsViewController.xib */,
+				36DB67CE2733CB870063F6DB /* SpellsViewModel.swift */,
 			);
 			path = Spells;
 			sourceTree = "<group>";
@@ -366,6 +386,15 @@
 				36571362272FFA1500F44595 /* ItemsCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		36DB67C92733C39A0063F6DB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				36DB67CA2733C8D00063F6DB /* SpellsCell.swift */,
+				36DB67CB2733C8D00063F6DB /* SpellsCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D3B7C0F3B306BE49279DAF97 /* Pods */ = {
@@ -447,6 +476,7 @@
 			files = (
 				36574F042729022100C27774 /* ChampionsViewController.xib in Resources */,
 				3654D76F271FE42400BBB9EB /* LaunchScreen.storyboard in Resources */,
+				36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */,
 				36BEA662272FF4A200B75B39 /* ChampionInfoViewController.xib in Resources */,
 				36574F22272935D000C27774 /* ChampionsCell.xib in Resources */,
 				36571364272FFA1500F44595 /* ItemsCell.xib in Resources */,
@@ -454,6 +484,7 @@
 				3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */,
 				363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */,
 				3654D787271FEB7500BBB9EB /* SplashViewController.xib in Resources */,
+				36453ABA27331CE000F7413A /* GeneralView.xib in Resources */,
 				36574F1027291AAF00C27774 /* RunesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,10 +538,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DB67D12733D2450063F6DB /* Spell.swift in Sources */,
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
 				3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */,
 				36BB5D78272AA03300001491 /* Networking.swift in Sources */,
 				3657135E272FF79100F44595 /* Info.swift in Sources */,
+				36DB67CC2733C8D00063F6DB /* SpellsCell.swift in Sources */,
 				36574F21272935D000C27774 /* ChampionsCell.swift in Sources */,
 				36571363272FFA1500F44595 /* ItemsCell.swift in Sources */,
 				36BEA65D272FDDCD00B75B39 /* CustomTabBar.swift in Sources */,
@@ -524,15 +557,18 @@
 				3654D780271FEA6E00BBB9EB /* BaseNavigationController.swift in Sources */,
 				36BB5D7A272AA04400001491 /* NetworkingResult.swift in Sources */,
 				36BB5D752729F13400001491 /* Image.swift in Sources */,
+				36453AB827331AD400F7413A /* GeneralView.swift in Sources */,
 				36571360272FF79F00F44595 /* Stats.swift in Sources */,
 				365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */,
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* SplashViewController.swift in Sources */,
-				368CD674272DDAC500A1FC9F /* UIViewController.swift in Sources */,
+				368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */,
 				3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */,
 				3657135C272FF76900F44595 /* Item.swift in Sources */,
 				36574F0B27290F3E00C27774 /* TabBarController.swift in Sources */,
 				36574F082729031A00C27774 /* ItemsViewController.swift in Sources */,
+				36453ABC27331DC000F7413A /* UIViewExtentions.swift in Sources */,
+				36DB67CF2733CB870063F6DB /* SpellsViewModel.swift in Sources */,
 				36BEA658272FCF7A00B75B39 /* ScreenHelper.swift in Sources */,
 				368CE0D827307A4500C3DA27 /* Gold.swift in Sources */,
 				36574F032729022100C27774 /* ChampionsViewController.swift in Sources */,

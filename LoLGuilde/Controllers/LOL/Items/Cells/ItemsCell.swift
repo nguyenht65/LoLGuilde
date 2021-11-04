@@ -12,6 +12,7 @@ class ItemsCell: UICollectionViewCell {
 
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()

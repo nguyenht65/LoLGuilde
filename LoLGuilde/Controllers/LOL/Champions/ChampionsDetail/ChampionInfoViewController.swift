@@ -11,8 +11,10 @@ class ChampionInfoViewController: BaseViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var tagLabel: UILabel!
+    @IBOutlet weak var tag1Label: UILabel!
+    @IBOutlet weak var tag2Label: UILabel!
     @IBOutlet weak var championImageView: UIImageView!
+    @IBOutlet var infoView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var _name: String = ""
@@ -22,7 +24,6 @@ class ChampionInfoViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -36,14 +37,23 @@ class ChampionInfoViewController: BaseViewController {
     override func setupData() {
         nameLabel.text = _name
         titleLabel.text = _title
-        for t in _tag {
-            tagLabel.text?.append(contentsOf: t + " ")
+        tag1Label.text = _tag[0]
+        if _tag.count > 1 {
+            tag2Label.text = _tag[1]
+        } else {
+            tag2Label.text = ""
         }
         championImageView.sd_setImage(with: URL(string: _urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
 
+    @IBAction func changeSegmentedControl(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 2 {
+            infoView = GeneralView()
+        }
+        print(sender.selectedSegmentIndex)
+    }
 }

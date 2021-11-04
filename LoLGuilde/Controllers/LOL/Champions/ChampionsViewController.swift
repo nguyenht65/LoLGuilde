@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
+import RxCocoa
 
 protocol ChampionsViewProtocol {
     func getChampionsSuccess()
@@ -13,6 +16,7 @@ protocol ChampionsViewProtocol {
 
 class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var championsTableView: UITableView!
     private let championsViewModel: ChampionsViewModel = ChampionsViewModel()
     
@@ -64,11 +68,12 @@ extension ChampionsViewController: UITableViewDelegate, UITableViewDataSource {
         let item = championsViewModel.champions.value[indexPath.row]
         
         let championInfoVC = ChampionInfoViewController()
+        let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
+        championInfoVC._urlStringImage = urlStringImage
         championInfoVC._name = item.name ?? ""
         championInfoVC._title = item.title ?? ""
         championInfoVC._tag = item.tags ?? []
-        let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
-        championInfoVC._urlStringImage = urlStringImage
+
         self.navigationController?.pushViewController(championInfoVC, animated: true)
     }
 }

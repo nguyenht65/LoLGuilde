@@ -27,7 +27,7 @@ class ItemsViewModel: ItemsProtocol {
         // update API
         DispatchQueue.main.async {
             self.items.accept(newItems)
-            self.itemView?.getItemSuccess()
+            self.itemView?.getItemsSuccess()
         }
         // save data to file
         let encoder = JSONEncoder()
