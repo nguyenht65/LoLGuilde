@@ -70,10 +70,7 @@ extension ChampionsViewController: UITableViewDelegate, UITableViewDataSource {
         let championInfoVC = ChampionInfoViewController()
         let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
         championInfoVC._urlStringImage = urlStringImage
-        championInfoVC._name = item.name ?? ""
-        championInfoVC._title = item.title ?? ""
-        championInfoVC._tag = item.tags ?? []
-
+        championInfoVC.champion = item
         self.navigationController?.pushViewController(championInfoVC, animated: true)
     }
 }

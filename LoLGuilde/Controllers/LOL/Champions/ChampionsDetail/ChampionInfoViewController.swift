@@ -17,11 +17,8 @@ class ChampionInfoViewController: BaseViewController {
     @IBOutlet weak var infoStackView: UIStackView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
-    var _name: String = ""
-    var _title: String = ""
+    var champion: Champion!
     var _urlStringImage: String = ""
-    var _tag: [String] = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
         let generalView = GeneralView(frame: infoStackView.bounds)
@@ -36,11 +33,11 @@ class ChampionInfoViewController: BaseViewController {
     }
 
     override func setupData() {
-        nameLabel.text = _name
-        titleLabel.text = _title
-        tag1Label.text = _tag[0]
-        if _tag.count > 1 {
-            tag2Label.text = _tag[1]
+        nameLabel.text = champion.name
+        titleLabel.text = champion.title
+        tag1Label.text = champion.tags?[0]
+        if champion.tags?.count ?? 1 > 1 {
+            tag2Label.text = champion.tags?[1]
         } else {
             tag2Label.text = ""
         }
@@ -63,6 +60,7 @@ class ChampionInfoViewController: BaseViewController {
             infoStackView.addSubview(skillsView)
         } else if sender.selectedSegmentIndex == 2 {
             let loreView = LoreView(frame: infoStackView.bounds)
+            loreView.setupData(item: champion)
             infoStackView.addSubview(loreView)
         } else {
             let skinsView = SkinsView(frame: infoStackView.bounds)

@@ -9,8 +9,7 @@ import UIKit
 
 class LoreView: BaseView {
 
-    @IBOutlet weak var loreLabel: UILabel!
-
+    @IBOutlet weak var loreTextView: UITextView!
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -20,6 +19,6 @@ class LoreView: BaseView {
     }
 
     func setupData(item: Champion) {
-        loreLabel.text = item.lore
+        loreTextView.text = item.lore
     }
 }
