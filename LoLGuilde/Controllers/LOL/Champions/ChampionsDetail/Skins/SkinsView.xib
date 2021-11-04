@@ -8,14 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralView" customModule="LoLGuilde" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SkinsView" customModule="LoLGuilde" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nb-er-SIN">
-                    <rect key="frame" x="177.5" y="437.5" width="59.5" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6d-GO-Fde">
+                    <rect key="frame" x="186.5" y="437.5" width="41" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" name="textColor"/>
                     <nil key="highlightedColor"/>
@@ -24,10 +24,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="9Nb-er-SIN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1R2-AS-Edq"/>
-                <constraint firstItem="9Nb-er-SIN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YRR-yR-6B4"/>
+                <constraint firstItem="h6d-GO-Fde" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2ZK-5b-Itm"/>
+                <constraint firstItem="h6d-GO-Fde" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2tW-6F-ZaN"/>
             </constraints>
-            <point key="canvasLocation" x="128.2608695652174" y="196.20535714285714"/>
+            <point key="canvasLocation" x="132" y="86"/>
         </view>
     </objects>
     <resources>

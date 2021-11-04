@@ -6,10 +6,9 @@
 //
 
 import Foundation
- 
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
-public class Spell: Codable {
+public class Spells: Codable {
     public var id : String?
     public var name : String?
     public var description : String?
@@ -33,15 +32,33 @@ public class Spell: Codable {
     public var image : Image?
     public var resource : String?
 
+/**
+    Returns an array of models based on given dictionary.
+     
+    Sample usage:
+    let spells_list = Spells.modelsFromDictionaryArray(someDictionaryArrayFromJSON)
 
+    - parameter array:  NSArray from JSON dictionary.
+
+    - returns: Array of Spells Instances.
+*/
+    public class func modelsFromDictionaryArray(array:NSArray) -> [Spells]
+    {
+        var models:[Spells] = []
+        for item in array
+        {
+            models.append(Spells(dictionary: item as! NSDictionary)!)
+        }
+        return models
+    }
 /**
     Constructs the object based on the given dictionary.
-    
+     
     Sample usage:
     let summonerBarrier = SummonerBarrier(someDictionaryFromJSON)
-
+     
     - parameter dictionary:  NSDictionary from JSON.
-
+     
     - returns: SummonerBarrier Instance.
 */
     required public init?(dictionary: NSDictionary) {
@@ -70,16 +87,14 @@ public class Spell: Codable {
         resource = dictionary["resource"] as? String
     }
 
-        
 /**
     Returns the dictionary representation for the current instance.
-    
+ 
     - returns: NSDictionary.
 */
     public func dictionaryRepresentation() -> NSDictionary {
 
         let dictionary = NSMutableDictionary()
-
         dictionary.setValue(self.id, forKey: "id")
         dictionary.setValue(self.name, forKey: "name")
         dictionary.setValue(self.description, forKey: "description")

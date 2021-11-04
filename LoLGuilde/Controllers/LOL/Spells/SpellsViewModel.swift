@@ -11,7 +11,7 @@ import RxRelay
 import RxCocoa
 
 protocol SpellsProtocol {
-    func processSpells(_ newSpell: [Spell])
+    func processSpells(_ newSpell: [Spells])
     func loadAPI()
 }
 
@@ -20,10 +20,10 @@ class SpellsViewModel: SpellsProtocol {
     private let urlSpell = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/data/en_US/summoner.json"
     private let disposeBag = DisposeBag()
     private let spellsFileURL = Helper.cachedFileURL("spells.json")
-    var spells = BehaviorRelay<[Spell]>(value: [])
+    var spells = BehaviorRelay<[Spells]>(value: [])
     var spellsView: SpellsViewProtocol?
 
-    func processSpells(_ newSpells: [Spell]) {
+    func processSpells(_ newSpells: [Spells]) {
         // update API
         DispatchQueue.main.async {
             self.spells.accept(newSpells)
@@ -53,13 +53,13 @@ class SpellsViewModel: SpellsProtocol {
             .filter { response, _ -> Bool in
                 return 200..<300 ~= response.statusCode
             }
-            .map { _, data -> [Spell] in
-                var listSpells: [Spell] = []
+            .map { _, data -> [Spells] in
+                var listSpells: [Spells] = []
                 let dictionary = Helper.convertToDictionary(data: data)
                 if let _listSpells = dictionary?["data"] as? [String: NSDictionary] {
                     for spell in _listSpells {
                         let spellInfor = spell.value
-                        if let newSpells = Spell(dictionary: spellInfor) {
+                        if let newSpells = Spells(dictionary: spellInfor) {
                             listSpells.append(newSpells)
                         }
                     }
@@ -78,7 +78,7 @@ class SpellsViewModel: SpellsProtocol {
     func readItemsCache() {
         let decoder = JSONDecoder()
         if let spellData = try? Data(contentsOf: spellsFileURL),
-           let preSpells = try? decoder.decode([Spell].self, from: spellData) {
+           let preSpells = try? decoder.decode([Spells].self, from: spellData) {
             self.spells.accept(preSpells)
         }
     }

@@ -17,7 +17,7 @@ class SpellsCell: UICollectionViewCell {
         setupUI()
     }
 
-    func setupData(item: Spell){
+    func setupData(item: Spells){
         spellNameLabel.text = item.name
         let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.image?.full ?? "")"
         spellImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "tc_tb1"))

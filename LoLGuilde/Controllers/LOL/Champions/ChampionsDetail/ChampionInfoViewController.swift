@@ -14,17 +14,18 @@ class ChampionInfoViewController: BaseViewController {
     @IBOutlet weak var tag1Label: UILabel!
     @IBOutlet weak var tag2Label: UILabel!
     @IBOutlet weak var championImageView: UIImageView!
-    @IBOutlet var infoView: UIView!
+    @IBOutlet weak var infoStackView: UIStackView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
+
     var _name: String = ""
     var _title: String = ""
     var _urlStringImage: String = ""
     var _tag: [String] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let generalView = GeneralView(frame: infoStackView.bounds)
+        infoStackView.addSubview(generalView)
     }
 
     override func setupUI() {
@@ -33,7 +34,7 @@ class ChampionInfoViewController: BaseViewController {
         segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key : Any], for: .normal)
         segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key : Any], for: .selected)
     }
-    
+
     override func setupData() {
         nameLabel.text = _name
         titleLabel.text = _title
@@ -51,8 +52,21 @@ class ChampionInfoViewController: BaseViewController {
     }
 
     @IBAction func changeSegmentedControl(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 2 {
-            infoView = GeneralView()
+        for i in infoStackView.arrangedSubviews {
+            i.removeFromSuperview()
+        }
+        if sender.selectedSegmentIndex == 0 {
+            let generalView = GeneralView(frame: infoStackView.bounds)
+            infoStackView.addSubview(generalView)
+        } else if sender.selectedSegmentIndex == 1 {
+            let skillsView = SkillsView(frame: infoStackView.bounds)
+            infoStackView.addSubview(skillsView)
+        } else if sender.selectedSegmentIndex == 2 {
+            let loreView = LoreView(frame: infoStackView.bounds)
+            infoStackView.addSubview(loreView)
+        } else {
+            let skinsView = SkinsView(frame: infoStackView.bounds)
+            infoStackView.addSubview(skinsView)
         }
         print(sender.selectedSegmentIndex)
     }

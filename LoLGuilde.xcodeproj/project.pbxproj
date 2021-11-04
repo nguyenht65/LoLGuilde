@@ -53,7 +53,16 @@
 		36DB67CC2733C8D00063F6DB /* SpellsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67CA2733C8D00063F6DB /* SpellsCell.swift */; };
 		36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67CB2733C8D00063F6DB /* SpellsCell.xib */; };
 		36DB67CF2733CB870063F6DB /* SpellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67CE2733CB870063F6DB /* SpellsViewModel.swift */; };
-		36DB67D12733D2450063F6DB /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D02733D2450063F6DB /* Spell.swift */; };
+		36DB67D12733D2450063F6DB /* Spells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D02733D2450063F6DB /* Spells.swift */; };
+		36DB67D32734508E0063F6DB /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D22734508E0063F6DB /* SkillsView.swift */; };
+		36DB67D52734509B0063F6DB /* LoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D42734509B0063F6DB /* LoreView.swift */; };
+		36DB67D9273450C60063F6DB /* SkillsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67D8273450C60063F6DB /* SkillsView.xib */; };
+		36DB67DB273450D00063F6DB /* LoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67DA273450D00063F6DB /* LoreView.xib */; };
+		36DB67DF2734512F0063F6DB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67DE2734512F0063F6DB /* BaseView.swift */; };
+		36DB67E1273452B90063F6DB /* SkinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E0273452B90063F6DB /* SkinsView.swift */; };
+		36DB67E3273452C10063F6DB /* SkinsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67E2273452C10063F6DB /* SkinsView.xib */; };
+		36DB67E527345A820063F6DB /* Skins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E427345A820063F6DB /* Skins.swift */; };
+		36DB67E727345A940063F6DB /* Passive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E627345A940063F6DB /* Passive.swift */; };
 		87E109F25E1944CD199057A5 /* Pods_LoLGuilde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,7 +115,16 @@
 		36DB67CA2733C8D00063F6DB /* SpellsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsCell.swift; sourceTree = "<group>"; };
 		36DB67CB2733C8D00063F6DB /* SpellsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsCell.xib; sourceTree = "<group>"; };
 		36DB67CE2733CB870063F6DB /* SpellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewModel.swift; sourceTree = "<group>"; };
-		36DB67D02733D2450063F6DB /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		36DB67D02733D2450063F6DB /* Spells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spells.swift; sourceTree = "<group>"; };
+		36DB67D22734508E0063F6DB /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
+		36DB67D42734509B0063F6DB /* LoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoreView.swift; sourceTree = "<group>"; };
+		36DB67D8273450C60063F6DB /* SkillsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsView.xib; sourceTree = "<group>"; };
+		36DB67DA273450D00063F6DB /* LoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoreView.xib; sourceTree = "<group>"; };
+		36DB67DE2734512F0063F6DB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		36DB67E0273452B90063F6DB /* SkinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinsView.swift; sourceTree = "<group>"; };
+		36DB67E2273452C10063F6DB /* SkinsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinsView.xib; sourceTree = "<group>"; };
+		36DB67E427345A820063F6DB /* Skins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skins.swift; sourceTree = "<group>"; };
+		36DB67E627345A940063F6DB /* Passive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passive.swift; sourceTree = "<group>"; };
 		7F30D1743EE12A3B4C62F217 /* Pods-LoLGuilde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.release.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.release.xcconfig"; sourceTree = "<group>"; };
 		B503EAE8A47C33115A40BD5B /* Pods-LoLGuilde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.debug.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLGuilde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +166,8 @@
 		36453AB42732E2E900F7413A /* Skills */ = {
 			isa = PBXGroup;
 			children = (
+				36DB67D22734508E0063F6DB /* SkillsView.swift */,
+				36DB67D8273450C60063F6DB /* SkillsView.xib */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
@@ -155,15 +175,19 @@
 		36453AB52732E2F100F7413A /* Lore */ = {
 			isa = PBXGroup;
 			children = (
+				36DB67D42734509B0063F6DB /* LoreView.swift */,
+				36DB67DA273450D00063F6DB /* LoreView.xib */,
 			);
 			path = Lore;
 			sourceTree = "<group>";
 		};
-		36453AB62732E2FC00F7413A /* Spells */ = {
+		36453AB62732E2FC00F7413A /* Skins */ = {
 			isa = PBXGroup;
 			children = (
+				36DB67E0273452B90063F6DB /* SkinsView.swift */,
+				36DB67E2273452C10063F6DB /* SkinsView.xib */,
 			);
-			path = Spells;
+			path = Skins;
 			sourceTree = "<group>";
 		};
 		3654D756271FE42300BBB9EB = {
@@ -250,6 +274,7 @@
 				3654D77D271FEA1100BBB9EB /* BaseViewController.swift */,
 				3654D77F271FEA6E00BBB9EB /* BaseNavigationController.swift */,
 				3654D781271FEACA00BBB9EB /* BaseTabBarController.swift */,
+				36DB67DE2734512F0063F6DB /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -266,13 +291,15 @@
 		3654D78F271FF17F00BBB9EB /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				36DB67E627345A940063F6DB /* Passive.swift */,
+				36DB67E427345A820063F6DB /* Skins.swift */,
 				368CE0D727307A4500C3DA27 /* Gold.swift */,
 				3622CF7B272949D5005912CD /* Champion.swift */,
 				36BB5D742729F13400001491 /* Image.swift */,
 				3657135B272FF76900F44595 /* Item.swift */,
 				3657135D272FF79100F44595 /* Info.swift */,
 				3657135F272FF79F00F44595 /* Stats.swift */,
-				36DB67D02733D2450063F6DB /* Spell.swift */,
+				36DB67D02733D2450063F6DB /* Spells.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -369,7 +396,7 @@
 		36BEA65E272FF43C00B75B39 /* ChampionsDetail */ = {
 			isa = PBXGroup;
 			children = (
-				36453AB62732E2FC00F7413A /* Spells */,
+				36453AB62732E2FC00F7413A /* Skins */,
 				36453AB52732E2F100F7413A /* Lore */,
 				36453AB42732E2E900F7413A /* Skills */,
 				36453AB327326E9200F7413A /* General */,
@@ -475,12 +502,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				36574F042729022100C27774 /* ChampionsViewController.xib in Resources */,
+				36DB67E3273452C10063F6DB /* SkinsView.xib in Resources */,
 				3654D76F271FE42400BBB9EB /* LaunchScreen.storyboard in Resources */,
 				36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */,
 				36BEA662272FF4A200B75B39 /* ChampionInfoViewController.xib in Resources */,
 				36574F22272935D000C27774 /* ChampionsCell.xib in Resources */,
 				36571364272FFA1500F44595 /* ItemsCell.xib in Resources */,
 				36574F092729031A00C27774 /* ItemsViewController.xib in Resources */,
+				36DB67D9273450C60063F6DB /* SkillsView.xib in Resources */,
+				36DB67DB273450D00063F6DB /* LoreView.xib in Resources */,
 				3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */,
 				363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */,
 				3654D787271FEB7500BBB9EB /* SplashViewController.xib in Resources */,
@@ -538,18 +568,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36DB67D12733D2450063F6DB /* Spell.swift in Sources */,
+				36DB67D12733D2450063F6DB /* Spells.swift in Sources */,
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
 				3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */,
 				36BB5D78272AA03300001491 /* Networking.swift in Sources */,
 				3657135E272FF79100F44595 /* Info.swift in Sources */,
 				36DB67CC2733C8D00063F6DB /* SpellsCell.swift in Sources */,
+				36DB67D52734509B0063F6DB /* LoreView.swift in Sources */,
 				36574F21272935D000C27774 /* ChampionsCell.swift in Sources */,
 				36571363272FFA1500F44595 /* ItemsCell.swift in Sources */,
 				36BEA65D272FDDCD00B75B39 /* CustomTabBar.swift in Sources */,
 				3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */,
 				36BEA661272FF4A200B75B39 /* ChampionInfoViewController.swift in Sources */,
 				36BEA65B272FDCF600B75B39 /* TabBarItem.swift in Sources */,
+				36DB67D32734508E0063F6DB /* SkillsView.swift in Sources */,
 				368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */,
 				36574F0F27291AAF00C27774 /* RunesViewController.swift in Sources */,
 				3622CF7C272949D5005912CD /* Champion.swift in Sources */,
@@ -562,16 +594,20 @@
 				365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */,
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* SplashViewController.swift in Sources */,
+				36DB67E1273452B90063F6DB /* SkinsView.swift in Sources */,
+				36DB67DF2734512F0063F6DB /* BaseView.swift in Sources */,
 				368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */,
 				3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */,
 				3657135C272FF76900F44595 /* Item.swift in Sources */,
 				36574F0B27290F3E00C27774 /* TabBarController.swift in Sources */,
+				36DB67E727345A940063F6DB /* Passive.swift in Sources */,
 				36574F082729031A00C27774 /* ItemsViewController.swift in Sources */,
 				36453ABC27331DC000F7413A /* UIViewExtentions.swift in Sources */,
 				36DB67CF2733CB870063F6DB /* SpellsViewModel.swift in Sources */,
 				36BEA658272FCF7A00B75B39 /* ScreenHelper.swift in Sources */,
 				368CE0D827307A4500C3DA27 /* Gold.swift in Sources */,
 				36574F032729022100C27774 /* ChampionsViewController.swift in Sources */,
+				36DB67E527345A820063F6DB /* Skins.swift in Sources */,
 				363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

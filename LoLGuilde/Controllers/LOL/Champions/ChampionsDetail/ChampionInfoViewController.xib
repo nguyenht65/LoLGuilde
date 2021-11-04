@@ -12,13 +12,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChampionInfoViewController" customModule="LoLGuilde" customModuleProvider="target">
             <connections>
                 <outlet property="championImageView" destination="f7S-4Z-HV4" id="rVJ-65-1yd"/>
-                <outlet property="infoView" destination="Iku-mI-gfG" id="A9L-gU-cQw"/>
+                <outlet property="infoStackView" destination="6BH-tl-hoV" id="kUq-Ot-fLK"/>
                 <outlet property="nameLabel" destination="5ve-pr-eBT" id="Qyv-ce-aO8"/>
                 <outlet property="segmentedControl" destination="rgd-DZ-j5a" id="nSq-ma-JhH"/>
                 <outlet property="tag1Label" destination="yyU-Ay-Ns3" id="lvi-SL-ljL"/>
                 <outlet property="tag2Label" destination="ze0-c9-cDE" id="B0e-TZ-ppx"/>
                 <outlet property="titleLabel" destination="MzW-XH-XxT" id="F3O-YJ-2hg"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="lsQ-f5-UOG"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -40,10 +40,9 @@
                         <action selector="changeSegmentedControl:" destination="-1" eventType="valueChanged" id="zjH-Me-DcF"/>
                     </connections>
                 </segmentedControl>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iku-mI-gfG" userLabel="Info View">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6BH-tl-hoV">
                     <rect key="frame" x="0.0" y="205" width="390" height="540"/>
-                    <color key="backgroundColor" name="textColor"/>
-                </view>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGg-Z4-53i" userLabel="Champion View">
                     <rect key="frame" x="0.0" y="54" width="390" height="100"/>
                     <subviews>
@@ -67,13 +66,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyU-Ay-Ns3">
-                            <rect key="frame" x="110" y="62" width="35" height="21"/>
+                            <rect key="frame" x="110" y="62.000000000000007" width="35" height="20.333333333333336"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="systemYellowColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze0-c9-cDE">
-                            <rect key="frame" x="155" y="62" width="37.333333333333343" height="21"/>
+                            <rect key="frame" x="155" y="62.000000000000007" width="37.333333333333343" height="20.333333333333336"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="systemGrayColor"/>
                             <nil key="highlightedColor"/>
@@ -102,16 +101,16 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
+                <constraint firstItem="6BH-tl-hoV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0tj-bZ-cx8"/>
                 <constraint firstItem="rgd-DZ-j5a" firstAttribute="top" secondItem="HGg-Z4-53i" secondAttribute="bottom" constant="10" id="DsT-hu-BlZ"/>
                 <constraint firstItem="HGg-Z4-53i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HMM-Ni-6Va"/>
-                <constraint firstItem="Iku-mI-gfG" firstAttribute="top" secondItem="rgd-DZ-j5a" secondAttribute="bottom" constant="10" id="IOm-kJ-CwG"/>
                 <constraint firstItem="HGg-Z4-53i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Jam-gX-QzY"/>
-                <constraint firstItem="Iku-mI-gfG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lls-Oq-dps"/>
-                <constraint firstItem="Iku-mI-gfG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Shk-5A-GTI"/>
                 <constraint firstItem="rgd-DZ-j5a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Uhz-cq-JGZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HGg-Z4-53i" secondAttribute="trailing" id="Vnp-aQ-Gz1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Iku-mI-gfG" secondAttribute="bottom" constant="65" id="Z9m-Im-MsZ"/>
+                <constraint firstItem="6BH-tl-hoV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fOi-xT-bXS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rgd-DZ-j5a" secondAttribute="trailing" id="pnF-sY-hWL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6BH-tl-hoV" secondAttribute="bottom" constant="65" id="qs8-nd-Fb2"/>
+                <constraint firstItem="6BH-tl-hoV" firstAttribute="top" secondItem="rgd-DZ-j5a" secondAttribute="bottom" constant="10" id="rrF-KB-hIu"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="81.696428571428569"/>
         </view>

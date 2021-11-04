@@ -19,7 +19,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var championsTableView: UITableView!
     private let championsViewModel: ChampionsViewModel = ChampionsViewModel()
-    
+
     func getChampionsSuccess() {
         self.championsTableView.reloadData()
     }
@@ -35,7 +35,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         championsTableView.delegate = self
         championsTableView.dataSource = self
     }
-    
+
     override func setupData() {
         championsViewModel.loadAPI()
         championsViewModel.readChampionsCache()
@@ -62,7 +62,7 @@ extension ChampionsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = championsViewModel.champions.value[indexPath.row]

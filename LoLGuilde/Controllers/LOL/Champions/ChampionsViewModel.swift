@@ -17,7 +17,7 @@ protocol ChampionsProtocol {
 
 class ChampionsViewModel: ChampionsProtocol {
     
-    private let urlChampion = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/data/en_US/champion.json"
+    private let urlChampion = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/data/en_US/championFull.json"
     private let disposeBag = DisposeBag()
     private let championsFileURL = Helper.cachedFileURL("champions.json")
     var champions = BehaviorRelay<[Champion]>(value: [])
@@ -76,6 +76,28 @@ class ChampionsViewModel: ChampionsProtocol {
             })
             .disposed(by: disposeBag)
     }
+    
+//    func searchChampion() {
+//        let searchResults = searchBar.rx.text.orEmpty
+//            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+//            .distinctUntilChanged()
+//            .flatMapLatest { query -> Observable<[Repository]> in
+//                if query.isEmpty {
+//                    return .just([])
+//                }
+//                return searchGitHub(query)
+//                    .catchAndReturn([])
+//            }
+//            .observe(on: MainScheduler.instance)
+//
+//        searchResults
+//            .bind(to: tableView.rx.items(cellIdentifier: "Cell")) {
+//                (index, repository: Repository, cell) in
+//                cell.textLabel?.text = repository.name
+//                cell.detailTextLabel?.text = repository.url
+//            }
+//            .disposed(by: disposeBag)
+//    }
     
     func readChampionsCache() {
         let decoder = JSONDecoder()

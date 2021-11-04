@@ -1,13 +1,13 @@
 //
-//  GeneralView.swift
+//  SkillsView.swift
 //  LoLGuilde
 //
-//  Created by Bang on 04/11/2021.
+//  Created by Bang on 05/11/2021.
 //
 
 import UIKit
 
-class GeneralView: BaseView {
+class SkillsView: BaseView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
