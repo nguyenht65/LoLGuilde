@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemsViewController" customModule="LoLGuilde" customModuleProvider="target">
+            <connections>
+                <outlet property="itemCollectionView" destination="Kpa-FP-Qvw" id="DVE-X6-SPs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Kpa-FP-Qvw">
+                    <rect key="frame" x="0.0" y="95" width="414" height="702"/>
+                    <color key="backgroundColor" name="backgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="AJf-ky-XqA">
+                        <size key="itemSize" width="70" height="70"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="mf0-wm-081">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <color key="barTintColor" name="backgroundColor"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="backgroundColor"/>
+            <constraints>
+                <constraint firstItem="Kpa-FP-Qvw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4TE-6U-t4T"/>
+                <constraint firstItem="mf0-wm-081" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5y4-83-DDx"/>
+                <constraint firstItem="mf0-wm-081" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KmS-FP-L2M"/>
+                <constraint firstItem="mf0-wm-081" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eoL-ht-Bdh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kpa-FP-Qvw" secondAttribute="bottom" constant="65" id="k4r-qM-jif"/>
+                <constraint firstItem="Kpa-FP-Qvw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pcj-c4-N8t"/>
+                <constraint firstItem="Kpa-FP-Qvw" firstAttribute="top" secondItem="mf0-wm-081" secondAttribute="bottom" id="qoO-yQ-Q5Y"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
