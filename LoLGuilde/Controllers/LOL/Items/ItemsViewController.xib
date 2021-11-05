@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemsViewController" customModule="LoLGuilde" customModuleProvider="target">
             <connections>
+                <outlet property="bottomViewConstraint" destination="k4r-qM-jif" id="LVW-4X-JdF"/>
                 <outlet property="itemCollectionView" destination="Kpa-FP-Qvw" id="DVE-X6-SPs"/>
                 <outlet property="itemSearchBar" destination="mf0-wm-081" id="HAY-IJ-v8t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

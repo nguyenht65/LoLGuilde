@@ -16,6 +16,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
 
     @IBOutlet weak var itemSearchBar: UISearchBar!
     @IBOutlet weak var itemCollectionView: UICollectionView!
+    @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
     let disposeBag = DisposeBag()
     let itemsViewModel: ItemsViewModel = ItemsViewModel()
     private var listSearchedItems: [Item] = []
@@ -33,6 +34,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
         let nib = UINib(nibName: ItemsCell.className, bundle: .main)
         itemCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
         itemCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        registerKeyboardNotifications()
     }
 
     override func setupData() {
@@ -90,5 +92,31 @@ extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelega
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension ItemsViewController {
+
+    func registerKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: Notification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        // get bottom padding of the screen
+        let window = SceneDelegate.shared().window
+        let bottomPadding = window?.safeAreaInsets.bottom ?? 0
+        let newBottomViewPadding = keyboardSize.height - bottomPadding - itemSearchBar.bounds.height
+        itemCollectionView.contentInset.bottom = newBottomViewPadding
+    }
+
+    @objc func keyboardWillHide(notification: Notification) {
+        bottomViewConstraint.constant = 65
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
 }

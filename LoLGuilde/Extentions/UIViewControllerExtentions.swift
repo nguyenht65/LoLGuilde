@@ -21,15 +21,16 @@ extension UIViewController {
         let storyboard = UIStoryboard(name: name, bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: self.className)
     }
-}
 
-extension NSObject {
-    var className: String {
-        return String(describing: type(of: self)).components(separatedBy: ".").last!
-    }
-    
-    class var className: String {
-        return String(describing: self).components(separatedBy: ".").last!
-    }
+//    func hideKeyboardWhenTappedAround() {
+//        let tapGesture = UITapGestureRecognizer(target: self,
+//                         action: #selector(hideKeyboard))
+//        view.addGestureRecognizer(tapGesture)
+//    }
+//
+//    @objc func hideKeyboard() {
+//        view.endEditing(true)
+//    }
+
 }
 

@@ -16,6 +16,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var championsTableView: UITableView!
+    @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
     private let championsViewModel: ChampionsViewModel = ChampionsViewModel()
     let disposeBag = DisposeBag()
     private var listSearchedChampions: [Champion] = []
@@ -33,6 +34,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         let nib = UINib(nibName: ChampionsCell.className, bundle: .main)
         championsTableView.register(nib, forCellReuseIdentifier: "cell")
         championsTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        registerKeyboardNotifications()
     }
 
     override func setupData() {
@@ -79,6 +81,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         listSearchedChampions = listAllChampions
         return Observable.of(listAllChampions)
     }
+
 }
 
 extension ChampionsViewController: UITableViewDelegate {
@@ -96,5 +99,31 @@ extension ChampionsViewController: UITableViewDelegate {
         championInfoVC._urlStringImage = urlStringImage
         championInfoVC.champion = item
         self.navigationController?.pushViewController(championInfoVC, animated: true)
+    }
+}
+
+extension ChampionsViewController {
+
+    func registerKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: Notification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        // get bottom padding of the screen
+        let window = SceneDelegate.shared().window
+        let bottomPadding = window?.safeAreaInsets.bottom ?? 0
+        let newBottomViewPadding = keyboardSize.height - bottomPadding - searchBar.bounds.height
+        championsTableView.contentInset.bottom = newBottomViewPadding
+    }
+
+    @objc func keyboardWillHide(notification: Notification) {
+        bottomViewConstraint.constant = 65
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
 }

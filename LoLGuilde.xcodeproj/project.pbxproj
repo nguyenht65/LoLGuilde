@@ -10,6 +10,7 @@
 		3622CF7C272949D5005912CD /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3622CF7B272949D5005912CD /* Champion.swift */; };
 		363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FEDCE273037F600A1B6BE /* SpellsViewController.swift */; };
 		363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363FEDCF273037F600A1B6BE /* SpellsViewController.xib */; };
+		3644BCB72735BFA300E8E435 /* NSObjectExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3644BCB62735BFA300E8E435 /* NSObjectExtentions.swift */; };
 		36453AB827331AD400F7413A /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36453AB727331AD400F7413A /* GeneralView.swift */; };
 		36453ABA27331CE000F7413A /* GeneralView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36453AB927331CE000F7413A /* GeneralView.xib */; };
 		36453ABC27331DC000F7413A /* UIViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36453ABB27331DC000F7413A /* UIViewExtentions.swift */; };
@@ -70,6 +71,7 @@
 		3622CF7B272949D5005912CD /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		363FEDCE273037F600A1B6BE /* SpellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewController.swift; sourceTree = "<group>"; };
 		363FEDCF273037F600A1B6BE /* SpellsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsViewController.xib; sourceTree = "<group>"; };
+		3644BCB62735BFA300E8E435 /* NSObjectExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtentions.swift; sourceTree = "<group>"; };
 		36453AB727331AD400F7413A /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		36453AB927331CE000F7413A /* GeneralView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralView.xib; sourceTree = "<group>"; };
 		36453ABB27331DC000F7413A /* UIViewExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtentions.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			children = (
 				368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */,
 				36453ABB27331DC000F7413A /* UIViewExtentions.swift */,
+				3644BCB62735BFA300E8E435 /* NSObjectExtentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				36BEA65D272FDDCD00B75B39 /* CustomTabBar.swift in Sources */,
 				3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */,
 				36BEA661272FF4A200B75B39 /* ChampionInfoViewController.swift in Sources */,
+				3644BCB72735BFA300E8E435 /* NSObjectExtentions.swift in Sources */,
 				36BEA65B272FDCF600B75B39 /* TabBarItem.swift in Sources */,
 				36DB67D32734508E0063F6DB /* SkillsView.swift in Sources */,
 				368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */,
