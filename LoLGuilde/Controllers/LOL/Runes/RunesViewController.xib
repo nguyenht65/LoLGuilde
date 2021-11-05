@@ -22,16 +22,34 @@
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zr2-LM-U7C">
                     <rect key="frame" x="0.0" y="54" width="414" height="32"/>
                     <segments>
-                        <segment title="1"/>
-                        <segment title="2"/>
-                        <segment title="3"/>
-                        <segment title="4"/>
-                        <segment title="5"/>
+                        <segment title="" image="Domination"/>
+                        <segment title="" image="Precision"/>
+                        <segment title="" image="Sorcery"/>
+                        <segment title="" image="Whimsy"/>
+                        <segment title="" image="Resolve"/>
                     </segments>
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-nE-cqE">
                     <rect key="frame" x="0.0" y="95" width="414" height="702"/>
+                    <subviews>
+                        <tabBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Zox-j7-Bqc">
+                            <rect key="frame" x="0.0" y="10" width="414" height="49"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <items>
+                                <tabBarItem image="Domination" id="uss-Ma-sWo"/>
+                                <tabBarItem image="Precision" id="n8j-D7-wFe"/>
+                                <tabBarItem title="" image="Sorcery" id="z1p-Fa-eAl"/>
+                                <tabBarItem title="" image="Whimsy" id="hcK-fY-9yr"/>
+                                <tabBarItem title="" image="Resolve" id="U7c-NL-Ae8"/>
+                            </items>
+                        </tabBar>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Zox-j7-Bqc" secondAttribute="trailing" id="DLF-Bp-zL4"/>
+                        <constraint firstItem="Zox-j7-Bqc" firstAttribute="leading" secondItem="eCa-nE-cqE" secondAttribute="leading" id="Ul0-Wa-VCa"/>
+                        <constraint firstItem="Zox-j7-Bqc" firstAttribute="top" secondItem="eCa-nE-cqE" secondAttribute="top" constant="10" id="puW-Qo-uYQ"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -49,6 +67,11 @@
         </view>
     </objects>
     <resources>
+        <image name="Domination" width="32" height="32"/>
+        <image name="Precision" width="32" height="32"/>
+        <image name="Resolve" width="32" height="32"/>
+        <image name="Sorcery" width="32" height="32"/>
+        <image name="Whimsy" width="32" height="32"/>
         <namedColor name="backgroundColor">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
