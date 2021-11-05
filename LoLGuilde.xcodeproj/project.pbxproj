@@ -154,6 +154,27 @@
 			path = LOL;
 			sourceTree = "<group>";
 		};
+		3644BCB22735445D00E8E435 /* ItemsDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ItemsDetail;
+			sourceTree = "<group>";
+		};
+		3644BCB32735446800E8E435 /* RunesDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RunesDetail;
+			sourceTree = "<group>";
+		};
+		3644BCB42735446F00E8E435 /* SpellsDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpellsDetail;
+			sourceTree = "<group>";
+		};
 		36453AB327326E9200F7413A /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +340,7 @@
 		36574F052729030300C27774 /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				3644BCB22735445D00E8E435 /* ItemsDetail */,
 				36BEA663272FF5DA00B75B39 /* Cells */,
 				36574F062729031A00C27774 /* ItemsViewController.swift */,
 				36574F072729031A00C27774 /* ItemsViewController.xib */,
@@ -330,6 +352,7 @@
 		36574F0C27291A9800C27774 /* Runes */ = {
 			isa = PBXGroup;
 			children = (
+				3644BCB32735446800E8E435 /* RunesDetail */,
 				36574F0D27291AAF00C27774 /* RunesViewController.swift */,
 				36574F0E27291AAF00C27774 /* RunesViewController.xib */,
 			);
@@ -366,6 +389,7 @@
 		368CD679272F092F00A1FC9F /* Spells */ = {
 			isa = PBXGroup;
 			children = (
+				3644BCB42735446F00E8E435 /* SpellsDetail */,
 				36DB67C92733C39A0063F6DB /* Cell */,
 				363FEDCE273037F600A1B6BE /* SpellsViewController.swift */,
 				363FEDCF273037F600A1B6BE /* SpellsViewController.xib */,

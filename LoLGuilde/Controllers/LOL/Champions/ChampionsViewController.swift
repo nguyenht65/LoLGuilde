@@ -92,6 +92,7 @@ extension ChampionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = listTempChampions[indexPath.row]
+
         let championInfoVC = ChampionInfoViewController()
         let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
         championInfoVC._urlStringImage = urlStringImage
