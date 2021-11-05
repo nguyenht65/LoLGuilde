@@ -313,14 +313,14 @@
 			isa = PBXGroup;
 			children = (
 				36DB67E627345A940063F6DB /* Passive.swift */,
+				36DB67D02733D2450063F6DB /* Spells.swift */,
 				36DB67E427345A820063F6DB /* Skins.swift */,
 				368CE0D727307A4500C3DA27 /* Gold.swift */,
-				3622CF7B272949D5005912CD /* Champion.swift */,
 				36BB5D742729F13400001491 /* Image.swift */,
-				3657135B272FF76900F44595 /* Item.swift */,
 				3657135D272FF79100F44595 /* Info.swift */,
 				3657135F272FF79F00F44595 /* Stats.swift */,
-				36DB67D02733D2450063F6DB /* Spells.swift */,
+				3657135B272FF76900F44595 /* Item.swift */,
+				3622CF7B272949D5005912CD /* Champion.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";

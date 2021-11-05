@@ -7,8 +7,6 @@
 
 import UIKit
 import RxSwift
-import RxRelay
-import RxCocoa
 
 protocol ChampionsViewProtocol {
     func getChampionsSuccess()
@@ -20,7 +18,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     @IBOutlet weak var championsTableView: UITableView!
     private let championsViewModel: ChampionsViewModel = ChampionsViewModel()
     let disposeBag = DisposeBag()
-    private var listTempChampions: [Champion] = []
+    private var listSearchedChampions: [Champion] = []
 
     func getChampionsSuccess() {
         self.championsTableView.reloadData()
@@ -72,13 +70,13 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     func searchChampions(_ query: String) -> Observable<[Champion]> {
         let listChampions: [Champion] = championsViewModel.champions.value
             .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
-        listTempChampions = listChampions
+        listSearchedChampions = listChampions
         return Observable.of(listChampions)
     }
 
     func getAllChampions() -> Observable<[Champion]> {
         let listAllChampions: [Champion] = championsViewModel.champions.value
-        listTempChampions = listAllChampions
+        listSearchedChampions = listAllChampions
         return Observable.of(listAllChampions)
     }
 }
@@ -91,7 +89,7 @@ extension ChampionsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = listTempChampions[indexPath.row]
+        let item = listSearchedChampions[indexPath.row]
 
         let championInfoVC = ChampionInfoViewController()
         let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
