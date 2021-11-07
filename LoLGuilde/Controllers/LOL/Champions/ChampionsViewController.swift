@@ -35,6 +35,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         championsTableView.register(nib, forCellReuseIdentifier: "cell")
         championsTableView.rx.setDelegate(self).disposed(by: disposeBag)
         registerKeyboardNotifications()
+        hideKeyboardWhenTappedAround()
     }
 
     override func setupData() {
@@ -81,7 +82,6 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         listSearchedChampions = listAllChampions
         return Observable.of(listAllChampions)
     }
-
 }
 
 extension ChampionsViewController: UITableViewDelegate {
@@ -126,4 +126,5 @@ extension ChampionsViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
+
 }

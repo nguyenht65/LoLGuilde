@@ -35,6 +35,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
         itemCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
         itemCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
         registerKeyboardNotifications()
+        hideKeyboardWhenTappedAround()
     }
 
     override func setupData() {
