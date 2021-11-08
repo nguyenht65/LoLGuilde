@@ -22,9 +22,11 @@ class ChampionInfoViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let generalView = GeneralView()
+//        generalView.translatesAutoresizingMaskIntoConstraints = false
         let generalView = GeneralView(frame: infoStackView.bounds)
         generalView.setupData(item: champion)
-        infoStackView.addSubview(generalView)
+        infoStackView.addArrangedSubview(generalView)
     }
 
     override func setupUI() {
@@ -54,20 +56,18 @@ class ChampionInfoViewController: BaseViewController {
         for i in infoStackView.arrangedSubviews {
             i.removeFromSuperview()
         }
+        var view = UIView()
         if sender.selectedSegmentIndex == 0 {
-            let generalView = GeneralView(frame: infoStackView.bounds)
-            generalView.setupData(item: champion)
-            infoStackView.addSubview(generalView)
+            view = GeneralView(frame: infoStackView.bounds)
+            (view as? GeneralView)?.setupData(item: champion)
         } else if sender.selectedSegmentIndex == 1 {
-            let skillsView = SkillsView(frame: infoStackView.bounds)
-            infoStackView.addSubview(skillsView)
+            view = SkillsView(frame: infoStackView.bounds)
         } else if sender.selectedSegmentIndex == 2 {
-            let loreView = LoreView(frame: infoStackView.bounds)
-            loreView.setupData(item: champion)
-            infoStackView.addSubview(loreView)
+            view = LoreView(frame: infoStackView.bounds)
+            (view as? LoreView)?.setupData(item: champion)
         } else {
-            let skinsView = SkinsView(frame: infoStackView.bounds)
-            infoStackView.addSubview(skinsView)
+            view = SkinsView(frame: infoStackView.bounds)
         }
+        infoStackView.addArrangedSubview(view)
     }
 }

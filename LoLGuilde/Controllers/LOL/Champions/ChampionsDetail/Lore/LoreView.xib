@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sy9-L8-2kL">
-                    <rect key="frame" x="20" y="64" width="374" height="798"/>
+                    <rect key="frame" x="20" y="59" width="374" height="803"/>
                     <color key="backgroundColor" name="backgroundColor"/>
                     <color key="textColor" name="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -32,7 +32,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Sy9-L8-2kL" secondAttribute="bottom" id="7Kd-jm-rpV"/>
                 <constraint firstItem="Sy9-L8-2kL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ws9-fJ-NVu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Sy9-L8-2kL" secondAttribute="trailing" constant="20" id="kY9-dE-T5V"/>
-                <constraint firstItem="Sy9-L8-2kL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="lan-3A-03e"/>
+                <constraint firstItem="Sy9-L8-2kL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="lan-3A-03e"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
         </view>

@@ -29,13 +29,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="xNe-bv-daI">
-                    <rect key="frame" x="0.0" y="49" width="471" height="221"/>
+                    <rect key="frame" x="0.0" y="49" width="486" height="221"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UtN-na-TOv">
-                            <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="155"/>
+                            <rect key="frame" x="0.0" y="0.0" width="161.33333333333334" height="155"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-H6-SbD" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666714" y="0.0" width="156.33333333333331" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="Qzv-7f-rCB"/>
                                     </constraints>
@@ -47,7 +47,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-hS-Q4M" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="55" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666714" y="55" width="156.33333333333331" height="45"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                             <color key="value" systemColor="systemTealColor"/>
@@ -56,7 +56,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np3-o2-WfO" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="110" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666714" y="110" width="156.33333333333331" height="45"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                             <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,10 +67,10 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tmV-oU-9Yj">
-                            <rect key="frame" x="157.33333333333331" y="0.0" width="156.33333333333331" height="210"/>
+                            <rect key="frame" x="162.33333333333331" y="0.0" width="161.33333333333331" height="210"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4E6-0e-Cvm" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666572" y="0.0" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="zwV-wP-yYj"/>
@@ -83,7 +83,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrS-dd-ksV" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="55" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666572" y="55" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -93,7 +93,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-pM-V7V" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="110" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666572" y="110" width="156.33333333333334" height="45"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                             <color key="value" systemColor="systemPurpleColor"/>
@@ -102,7 +102,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-xW-VAJ" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="165" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666572" y="165" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -114,10 +114,10 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O9U-uZ-W9y">
-                            <rect key="frame" x="314.66666666666669" y="0.0" width="156.33333333333331" height="155"/>
+                            <rect key="frame" x="324.66666666666669" y="0.0" width="161.33333333333331" height="155"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-PJ-txk" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666288" y="0.0" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="laW-wx-a5s"/>
@@ -130,7 +130,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-e4-DF4" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="55" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666288" y="55" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -140,7 +140,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd0-Ku-TIQ" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="110" width="156.33333333333334" height="45"/>
+                                    <rect key="frame" x="2.6666666666666288" y="110" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -158,7 +158,7 @@
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
                 <constraint firstItem="xNe-bv-daI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4FN-mD-Gfg"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xNe-bv-daI" secondAttribute="trailing" constant="15" id="Wu0-iw-6PU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xNe-bv-daI" secondAttribute="trailing" id="Wu0-iw-6PU"/>
                 <constraint firstItem="xNe-bv-daI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="nCC-1i-Pfj"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xNe-bv-daI" secondAttribute="bottom" id="yNP-lo-0xK"/>
             </constraints>
