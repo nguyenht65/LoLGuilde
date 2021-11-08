@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+            <connections>
+                <outlet property="statusLabel" destination="3LY-9I-mwz" id="dls-ke-KQ0"/>
+                <outlet property="statusValueLabel" destination="YVQ-wu-fTc" id="f0P-RJ-Kym"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="151" height="43"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LY-9I-mwz">
+                    <rect key="frame" x="0.0" y="0.0" width="151" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" systemColor="systemBrownColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVQ-wu-fTc">
+                    <rect key="frame" x="0.0" y="23" width="151" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" name="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="backgroundColor"/>
+            <constraints>
+                <constraint firstItem="YVQ-wu-fTc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BvS-37-0Mo"/>
+                <constraint firstItem="3LY-9I-mwz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CTu-Um-HcM"/>
+                <constraint firstItem="3LY-9I-mwz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="E4d-fv-qqC"/>
+                <constraint firstItem="YVQ-wu-fTc" firstAttribute="top" secondItem="3LY-9I-mwz" secondAttribute="bottom" constant="5" id="OE5-Ho-Fn8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YVQ-wu-fTc" secondAttribute="bottom" id="ipN-d4-MGu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3LY-9I-mwz" secondAttribute="trailing" id="ugO-Jd-lyt"/>
+                <constraint firstItem="YVQ-wu-fTc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vFS-Ul-kbg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-54.347826086956523" y="318.41517857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

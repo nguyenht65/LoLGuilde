@@ -12,7 +12,7 @@ class ProgressView: BaseView {
 
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var infoProgessView: UIProgressView!
-    
+
     private var _label: String = ""
     private var _tintColor: UIColor = UIColor.white
 
@@ -25,7 +25,7 @@ class ProgressView: BaseView {
             return _label
         }
     }
-    
+
     @IBInspectable
     var progressTint: UIColor {
         set (newValue) {
@@ -35,7 +35,7 @@ class ProgressView: BaseView {
             return _tintColor
         }
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

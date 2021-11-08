@@ -13,7 +13,8 @@ class GeneralView: BaseView {
     @IBOutlet weak var defenseView: ProgressView!
     @IBOutlet weak var magicView: ProgressView!
     @IBOutlet weak var difficultyView: ProgressView!
-
+    @IBOutlet weak var statusView: StatusView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -31,5 +32,6 @@ class GeneralView: BaseView {
         defenseView.setupData(item: item)
         magicView.setupData(item: item)
         difficultyView.setupData(item: item)
+        statusView.setupData(item: item)
     }
 }

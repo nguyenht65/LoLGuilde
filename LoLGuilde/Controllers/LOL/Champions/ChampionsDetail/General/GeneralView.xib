@@ -15,32 +15,23 @@
                 <outlet property="defenseView" destination="qO2-GA-IXD" id="UJ8-tf-bVj"/>
                 <outlet property="difficultyView" destination="BDm-6w-Pk5" id="5Zj-Sg-0eh"/>
                 <outlet property="magicView" destination="7dJ-12-gUt" id="Cgm-sF-kAT"/>
+                <outlet property="statusView" destination="mNb-4v-yLD" id="JsM-MN-mwm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="582"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="467"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNb-4v-yLD">
-                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3C-VF-olR">
-                            <rect key="frame" x="182.5" y="90" width="49" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" name="textColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNb-4v-yLD" customClass="StatusView" customModule="LoLGuilde" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="220"/>
+                    <color key="backgroundColor" name="backgroundColor"/>
                     <constraints>
-                        <constraint firstItem="b3C-VF-olR" firstAttribute="centerX" secondItem="mNb-4v-yLD" secondAttribute="centerX" id="If2-wA-i7h"/>
-                        <constraint firstItem="b3C-VF-olR" firstAttribute="centerY" secondItem="mNb-4v-yLD" secondAttribute="centerY" id="Z3x-oq-C29"/>
-                        <constraint firstAttribute="height" constant="200" id="wUn-NO-v7V"/>
+                        <constraint firstAttribute="height" constant="220" id="wUn-NO-v7V"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deh-hh-Q1l">
-                    <rect key="frame" x="0.0" y="249" width="414" height="333"/>
+                    <rect key="frame" x="0.0" y="269" width="414" height="198"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdx-Ge-Kgm" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
                             <rect key="frame" x="15" y="0.0" width="384" height="40"/>
@@ -124,15 +115,12 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="deh-hh-Q1l" secondAttribute="bottom" id="xRe-mg-zrG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="127.53623188405798" y="437.27678571428572"/>
+            <point key="canvasLocation" x="115.94202898550725" y="403.45982142857139"/>
         </view>
     </objects>
     <resources>
         <namedColor name="backgroundColor">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="textColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

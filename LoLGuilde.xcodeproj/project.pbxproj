@@ -66,6 +66,10 @@
 		36DB67E3273452C10063F6DB /* SkinsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67E2273452C10063F6DB /* SkinsView.xib */; };
 		36DB67E527345A820063F6DB /* Skins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E427345A820063F6DB /* Skins.swift */; };
 		36DB67E727345A940063F6DB /* Passive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E627345A940063F6DB /* Passive.swift */; };
+		36E6344327391D960055E566 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6344227391D960055E566 /* StatusView.swift */; };
+		36E6344627391DA90055E566 /* StatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344527391DA90055E566 /* StatusView.xib */; };
+		36E6344C27391E530055E566 /* EachStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344B27391E530055E566 /* EachStatusView.xib */; };
+		36E6344E27391E600055E566 /* EachStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6344D27391E600055E566 /* EachStatusView.swift */; };
 		87E109F25E1944CD199057A5 /* Pods_LoLGuilde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +135,10 @@
 		36DB67E2273452C10063F6DB /* SkinsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinsView.xib; sourceTree = "<group>"; };
 		36DB67E427345A820063F6DB /* Skins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skins.swift; sourceTree = "<group>"; };
 		36DB67E627345A940063F6DB /* Passive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passive.swift; sourceTree = "<group>"; };
+		36E6344227391D960055E566 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		36E6344527391DA90055E566 /* StatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusView.xib; sourceTree = "<group>"; };
+		36E6344B27391E530055E566 /* EachStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachStatusView.xib; sourceTree = "<group>"; };
+		36E6344D27391E600055E566 /* EachStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachStatusView.swift; sourceTree = "<group>"; };
 		7F30D1743EE12A3B4C62F217 /* Pods-LoLGuilde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.release.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.release.xcconfig"; sourceTree = "<group>"; };
 		B503EAE8A47C33115A40BD5B /* Pods-LoLGuilde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.debug.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLGuilde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +171,9 @@
 		362EFFF52738649F005945C5 /* PartView */ = {
 			isa = PBXGroup;
 			children = (
+				36E6344927391DFB0055E566 /* EachStatus */,
+				36E6344227391D960055E566 /* StatusView.swift */,
+				36E6344527391DA90055E566 /* StatusView.xib */,
 				362EFFF6273864E2005945C5 /* ProgressView.swift */,
 				362EFFF8273864F2005945C5 /* ProgressView.xib */,
 			);
@@ -465,6 +476,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		36E6344927391DFB0055E566 /* EachStatus */ = {
+			isa = PBXGroup;
+			children = (
+				36E6344D27391E600055E566 /* EachStatusView.swift */,
+				36E6344B27391E530055E566 /* EachStatusView.xib */,
+			);
+			path = EachStatus;
+			sourceTree = "<group>";
+		};
 		D3B7C0F3B306BE49279DAF97 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +578,8 @@
 				3654D787271FEB7500BBB9EB /* SplashViewController.xib in Resources */,
 				36453ABA27331CE000F7413A /* GeneralView.xib in Resources */,
 				36574F1027291AAF00C27774 /* RunesViewController.xib in Resources */,
+				36E6344627391DA90055E566 /* StatusView.xib in Resources */,
+				36E6344C27391E530055E566 /* EachStatusView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +634,7 @@
 			files = (
 				36DB67D12733D2450063F6DB /* Spells.swift in Sources */,
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
+				36E6344327391D960055E566 /* StatusView.swift in Sources */,
 				3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */,
 				36BB5D78272AA03300001491 /* Networking.swift in Sources */,
 				3657135E272FF79100F44595 /* Info.swift in Sources */,
@@ -634,6 +657,7 @@
 				36BB5D7A272AA04400001491 /* NetworkingResult.swift in Sources */,
 				36BB5D752729F13400001491 /* Image.swift in Sources */,
 				36453AB827331AD400F7413A /* GeneralView.swift in Sources */,
+				36E6344E27391E600055E566 /* EachStatusView.swift in Sources */,
 				36571360272FF79F00F44595 /* Stats.swift in Sources */,
 				365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */,
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
