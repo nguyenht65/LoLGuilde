@@ -14,17 +14,10 @@ class EachStatusView: BaseView {
     @IBOutlet weak var statusValueLabel: UILabel!
 
     private var _status: String = ""
-<<<<<<< HEAD
     private var _textColor: UIColor = UIColor.white
 
     @IBInspectable
-    var label: String {
-=======
-    private var _textColor: UIColor = UIColor(named: "textColor")!
-
-    @IBInspectable
     var status: String {
->>>>>>> 598ccc9d5f3b822b097d6d06a417fbdeb29b405e
         set (newValue) {
             _status = newValue
             statusLabel.text = _status
@@ -37,20 +30,12 @@ class EachStatusView: BaseView {
     var textColor: UIColor {
         set (newValue) {
             _textColor = newValue
-<<<<<<< HEAD
             statusValueLabel.textColor = _textColor
-=======
-            statusLabel.textColor = _textColor
->>>>>>> 598ccc9d5f3b822b097d6d06a417fbdeb29b405e
         } get {
             return _textColor
         }
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 598ccc9d5f3b822b097d6d06a417fbdeb29b405e
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -68,7 +53,6 @@ class EachStatusView: BaseView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-<<<<<<< HEAD
 
     func setupData(item: Champion) {
         let cases = statusLabel.text
@@ -97,6 +81,4 @@ class EachStatusView: BaseView {
             return
         }
     }
-=======
->>>>>>> 598ccc9d5f3b822b097d6d06a417fbdeb29b405e
 }
