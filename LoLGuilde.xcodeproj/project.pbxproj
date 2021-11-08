@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3622CF7C272949D5005912CD /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3622CF7B272949D5005912CD /* Champion.swift */; };
+		362EFFF7273864E2005945C5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362EFFF6273864E2005945C5 /* ProgressView.swift */; };
+		362EFFF9273864F2005945C5 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362EFFF8273864F2005945C5 /* ProgressView.xib */; };
 		363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FEDCE273037F600A1B6BE /* SpellsViewController.swift */; };
 		363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363FEDCF273037F600A1B6BE /* SpellsViewController.xib */; };
 		3644BCB72735BFA300E8E435 /* NSObjectExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3644BCB62735BFA300E8E435 /* NSObjectExtentions.swift */; };
@@ -69,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		3622CF7B272949D5005912CD /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		362EFFF6273864E2005945C5 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		362EFFF8273864F2005945C5 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		363FEDCE273037F600A1B6BE /* SpellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewController.swift; sourceTree = "<group>"; };
 		363FEDCF273037F600A1B6BE /* SpellsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsViewController.xib; sourceTree = "<group>"; };
 		3644BCB62735BFA300E8E435 /* NSObjectExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtentions.swift; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 			path = LOL;
 			sourceTree = "<group>";
 		};
+		362EFFF52738649F005945C5 /* PartView */ = {
+			isa = PBXGroup;
+			children = (
+				362EFFF6273864E2005945C5 /* ProgressView.swift */,
+				362EFFF8273864F2005945C5 /* ProgressView.xib */,
+			);
+			path = PartView;
+			sourceTree = "<group>";
+		};
 		3644BCB22735445D00E8E435 /* ItemsDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +193,7 @@
 		36453AB327326E9200F7413A /* General */ = {
 			isa = PBXGroup;
 			children = (
+				362EFFF52738649F005945C5 /* PartView */,
 				36453AB727331AD400F7413A /* GeneralView.swift */,
 				36453AB927331CE000F7413A /* GeneralView.xib */,
 			);
@@ -529,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36574F042729022100C27774 /* ChampionsViewController.xib in Resources */,
+				362EFFF9273864F2005945C5 /* ProgressView.xib in Resources */,
 				36DB67E3273452C10063F6DB /* SkinsView.xib in Resources */,
 				3654D76F271FE42400BBB9EB /* LaunchScreen.storyboard in Resources */,
 				36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */,
@@ -600,6 +615,7 @@
 				3654D782271FEACA00BBB9EB /* BaseTabBarController.swift in Sources */,
 				36BB5D78272AA03300001491 /* Networking.swift in Sources */,
 				3657135E272FF79100F44595 /* Info.swift in Sources */,
+				362EFFF7273864E2005945C5 /* ProgressView.swift in Sources */,
 				36DB67CC2733C8D00063F6DB /* SpellsCell.swift in Sources */,
 				36DB67D52734509B0063F6DB /* LoreView.swift in Sources */,
 				36574F21272935D000C27774 /* ChampionsCell.swift in Sources */,

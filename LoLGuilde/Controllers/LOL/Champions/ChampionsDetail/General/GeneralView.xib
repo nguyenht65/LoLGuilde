@@ -5,29 +5,126 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralView" customModule="LoLGuilde" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralView" customModule="LoLGuilde" customModuleProvider="target">
+            <connections>
+                <outlet property="attackView" destination="rdx-Ge-Kgm" id="NwW-ox-wpT"/>
+                <outlet property="defenseView" destination="qO2-GA-IXD" id="UJ8-tf-bVj"/>
+                <outlet property="difficultyView" destination="BDm-6w-Pk5" id="5Zj-Sg-0eh"/>
+                <outlet property="magicView" destination="7dJ-12-gUt" id="Cgm-sF-kAT"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="582"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nb-er-SIN">
-                    <rect key="frame" x="177.5" y="437.5" width="59.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" name="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNb-4v-yLD">
+                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3C-VF-olR">
+                            <rect key="frame" x="182.5" y="90" width="49" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="textColor"/>
+                    <constraints>
+                        <constraint firstItem="b3C-VF-olR" firstAttribute="centerX" secondItem="mNb-4v-yLD" secondAttribute="centerX" id="If2-wA-i7h"/>
+                        <constraint firstItem="b3C-VF-olR" firstAttribute="centerY" secondItem="mNb-4v-yLD" secondAttribute="centerY" id="Z3x-oq-C29"/>
+                        <constraint firstAttribute="height" constant="200" id="wUn-NO-v7V"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deh-hh-Q1l">
+                    <rect key="frame" x="0.0" y="249" width="414" height="333"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdx-Ge-Kgm" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
+                            <rect key="frame" x="15" y="0.0" width="384" height="40"/>
+                            <color key="backgroundColor" name="backgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="mbg-4z-D1G"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="label" value="Attack"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
+                                    <color key="value" systemColor="systemRedColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-GA-IXD" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
+                            <rect key="frame" x="15" y="40" width="384" height="40"/>
+                            <color key="backgroundColor" name="backgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="XlL-4q-eM5"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="label" value="Defense"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
+                                    <color key="value" systemColor="systemGreenColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dJ-12-gUt" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
+                            <rect key="frame" x="15" y="80" width="384" height="40"/>
+                            <color key="backgroundColor" name="backgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="1hx-NL-Pqh"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="label" value="Magic"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
+                                    <color key="value" systemColor="systemBlueColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-6w-Pk5" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
+                            <rect key="frame" x="15" y="120" width="384" height="40"/>
+                            <color key="backgroundColor" name="backgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="9JG-Cu-xGh"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="label" value="Difficulty"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
+                                    <color key="value" systemColor="systemPurpleColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="backgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="rdx-Ge-Kgm" firstAttribute="leading" secondItem="deh-hh-Q1l" secondAttribute="leading" constant="15" id="0I6-tt-rSr"/>
+                        <constraint firstItem="BDm-6w-Pk5" firstAttribute="top" secondItem="7dJ-12-gUt" secondAttribute="bottom" id="0eK-Ys-IIa"/>
+                        <constraint firstItem="rdx-Ge-Kgm" firstAttribute="top" secondItem="deh-hh-Q1l" secondAttribute="top" id="24t-0l-1gg"/>
+                        <constraint firstItem="qO2-GA-IXD" firstAttribute="top" secondItem="rdx-Ge-Kgm" secondAttribute="bottom" id="2aa-mo-nfy"/>
+                        <constraint firstItem="7dJ-12-gUt" firstAttribute="top" secondItem="qO2-GA-IXD" secondAttribute="bottom" id="55F-va-YSM"/>
+                        <constraint firstAttribute="trailing" secondItem="BDm-6w-Pk5" secondAttribute="trailing" constant="15" id="9uJ-Hf-0SZ"/>
+                        <constraint firstAttribute="trailing" secondItem="qO2-GA-IXD" secondAttribute="trailing" constant="15" id="EJW-M6-Sx6"/>
+                        <constraint firstAttribute="trailing" secondItem="7dJ-12-gUt" secondAttribute="trailing" constant="15" id="Rad-en-syJ"/>
+                        <constraint firstItem="qO2-GA-IXD" firstAttribute="leading" secondItem="deh-hh-Q1l" secondAttribute="leading" constant="15" id="Sk0-KX-4no"/>
+                        <constraint firstItem="7dJ-12-gUt" firstAttribute="leading" secondItem="deh-hh-Q1l" secondAttribute="leading" constant="15" id="d3j-mI-WAK"/>
+                        <constraint firstItem="BDm-6w-Pk5" firstAttribute="leading" secondItem="deh-hh-Q1l" secondAttribute="leading" constant="15" id="fo6-LN-tjO"/>
+                        <constraint firstAttribute="trailing" secondItem="rdx-Ge-Kgm" secondAttribute="trailing" constant="15" id="uFp-yz-nw9"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="9Nb-er-SIN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1R2-AS-Edq"/>
-                <constraint firstItem="9Nb-er-SIN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YRR-yR-6B4"/>
+                <constraint firstItem="deh-hh-Q1l" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QIW-XV-EY6"/>
+                <constraint firstItem="mNb-4v-yLD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ren-GE-6jB"/>
+                <constraint firstItem="deh-hh-Q1l" firstAttribute="top" secondItem="mNb-4v-yLD" secondAttribute="bottom" constant="5" id="dDG-jC-mCR"/>
+                <constraint firstItem="deh-hh-Q1l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fyv-qR-xGK"/>
+                <constraint firstItem="mNb-4v-yLD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hBl-IE-PBq"/>
+                <constraint firstItem="mNb-4v-yLD" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mWp-Wk-QLq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="deh-hh-Q1l" secondAttribute="bottom" id="xRe-mg-zrG"/>
             </constraints>
-            <point key="canvasLocation" x="128.2608695652174" y="196.20535714285714"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="127.53623188405798" y="437.27678571428572"/>
         </view>
     </objects>
     <resources>
@@ -37,5 +134,17 @@
         <namedColor name="textColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

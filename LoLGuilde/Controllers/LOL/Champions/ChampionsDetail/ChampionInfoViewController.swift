@@ -19,9 +19,11 @@ class ChampionInfoViewController: BaseViewController {
 
     var champion: Champion!
     var _urlStringImage: String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let generalView = GeneralView(frame: infoStackView.bounds)
+        generalView.setupData(item: champion)
         infoStackView.addSubview(generalView)
     }
 
@@ -54,6 +56,7 @@ class ChampionInfoViewController: BaseViewController {
         }
         if sender.selectedSegmentIndex == 0 {
             let generalView = GeneralView(frame: infoStackView.bounds)
+            generalView.setupData(item: champion)
             infoStackView.addSubview(generalView)
         } else if sender.selectedSegmentIndex == 1 {
             let skillsView = SkillsView(frame: infoStackView.bounds)
@@ -66,6 +69,5 @@ class ChampionInfoViewController: BaseViewController {
             let skinsView = SkinsView(frame: infoStackView.bounds)
             infoStackView.addSubview(skinsView)
         }
-        print(sender.selectedSegmentIndex)
     }
 }
