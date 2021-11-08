@@ -9,6 +9,7 @@ import UIKit
 
 class StatusView: BaseView {
 
+<<<<<<< HEAD
     @IBOutlet weak var healthView: EachStatusView!
     @IBOutlet weak var healthRegenView: EachStatusView!
     @IBOutlet weak var manaView: EachStatusView!
@@ -20,6 +21,8 @@ class StatusView: BaseView {
     @IBOutlet weak var attackRangeView: EachStatusView!
     @IBOutlet weak var movementView: EachStatusView!
 
+=======
+>>>>>>> 598ccc9d5f3b822b097d6d06a417fbdeb29b405e
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -28,6 +31,7 @@ class StatusView: BaseView {
         super.init(coder: coder)
     }
 
+<<<<<<< HEAD
     override func commonInit() {
         super.commonInit()
     }
@@ -45,3 +49,7 @@ class StatusView: BaseView {
         movementView.setupData(item: item)
     }
 }
+=======
+}
+
+>>>>>>> 598ccc9d5f3b822b097d6d06a417fbdeb29b405e
