@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,13 +28,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd2-uW-Ts5">
                         <rect key="frame" x="15" y="10" width="316" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <color key="textColor" name="textColor"/>
+                        <color key="textColor" systemColor="systemOrangeColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPs-O0-7BM">
-                        <rect key="frame" x="13" y="111.5" width="318" height="97.5"/>
+                        <rect key="frame" x="12" y="106.5" width="319" height="102.5"/>
                         <color key="textColor" name="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-LS-DB2">
@@ -62,12 +63,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="jPs-O0-7BM" secondAttribute="bottom" id="2rg-06-fq8"/>
-                    <constraint firstItem="jPs-O0-7BM" firstAttribute="top" secondItem="B15-Gm-Qyt" secondAttribute="bottom" constant="10" id="6dN-nM-W7y"/>
+                    <constraint firstItem="jPs-O0-7BM" firstAttribute="top" secondItem="B15-Gm-Qyt" secondAttribute="bottom" constant="5" id="6dN-nM-W7y"/>
                     <constraint firstItem="B15-Gm-Qyt" firstAttribute="top" secondItem="fd2-uW-Ts5" secondAttribute="bottom" constant="10" id="7yH-jt-zti"/>
                     <constraint firstItem="lJS-LS-DB2" firstAttribute="leading" secondItem="B15-Gm-Qyt" secondAttribute="trailing" constant="10" id="Qel-bI-W3C"/>
                     <constraint firstItem="fd2-uW-Ts5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VX4-vj-cZb"/>
                     <constraint firstAttribute="trailing" secondItem="lJS-LS-DB2" secondAttribute="trailing" constant="15" id="ebE-42-RkW"/>
-                    <constraint firstItem="jPs-O0-7BM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="kZt-eI-YyQ"/>
+                    <constraint firstItem="jPs-O0-7BM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="kZt-eI-YyQ"/>
                     <constraint firstAttribute="trailing" secondItem="jPs-O0-7BM" secondAttribute="trailing" constant="15" id="l6E-TA-hqA"/>
                     <constraint firstAttribute="trailing" secondItem="fd2-uW-Ts5" secondAttribute="trailing" constant="15" id="oDq-km-nrY"/>
                     <constraint firstItem="jPs-O0-7BM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lJS-LS-DB2" secondAttribute="bottom" id="qUM-Pk-IY7"/>
@@ -97,5 +98,8 @@
         <namedColor name="textColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

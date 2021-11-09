@@ -19,19 +19,26 @@ class SkillsCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+
     func setupData(item: Champion, index: Int) {
         nameLabel.text = item.spells?[index].name
-        costLabel.text?.append(contentsOf: "\(item.spells?[index].costBurn ?? "") mana")
-        cooldownLabel.text?.append(contentsOf: "\(item.spells?[index].cooldownBurn ?? "")s")
-        rangeLabel.text?.append(contentsOf: "\(item.spells?[index].rangeBurn ?? "")")
+        costLabel.text = "Cost: \(item.spells?[index].costBurn ?? "") mana"
+        cooldownLabel.text = "Cooldown: \(item.spells?[index].cooldownBurn ?? "")s"
+        rangeLabel.text = "Range: \(item.spells?[index].rangeBurn ?? "")"
         descriptionLabel.text = item.spells?[index].description?.htmlToString
         let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.spells?[index].image?.full ?? "")"
         skillImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
+    }
+
+    func setupUI() {
+        skillImageView.layer.borderWidth = 1
+        skillImageView.layer.borderColor = UIColor.systemYellow.cgColor
+        skillImageView.layer.masksToBounds = true
     }
 }
