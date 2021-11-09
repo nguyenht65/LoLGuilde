@@ -24,16 +24,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aatrox" translatesAutoresizingMaskIntoConstraints="NO" id="iSi-7L-nNu">
-                        <rect key="frame" x="15" y="36.5" width="60" height="60"/>
+                        <rect key="frame" x="15" y="41.5" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="76X-I4-de0"/>
                             <constraint firstAttribute="height" constant="60" id="pT7-wN-ms6"/>
                         </constraints>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-gK-c8v">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-gK-c8v">
                         <rect key="frame" x="85" y="31.5" width="252" height="153.5"/>
                         <color key="textColor" name="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
@@ -44,8 +44,9 @@
                     <constraint firstItem="iSi-7L-nNu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="M71-mc-ox4"/>
                     <constraint firstItem="BPF-8c-QvW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="SGQ-Le-Ueg"/>
                     <constraint firstItem="2Nc-gK-c8v" firstAttribute="top" secondItem="BPF-8c-QvW" secondAttribute="bottom" id="Y3j-Lt-hAe"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iSi-7L-nNu" secondAttribute="bottom" id="dLq-9r-VZl"/>
                     <constraint firstAttribute="trailing" secondItem="BPF-8c-QvW" secondAttribute="trailing" constant="15" id="edo-MC-LEG"/>
-                    <constraint firstItem="iSi-7L-nNu" firstAttribute="top" secondItem="BPF-8c-QvW" secondAttribute="bottom" constant="5" id="t6s-6d-bHY"/>
+                    <constraint firstItem="iSi-7L-nNu" firstAttribute="top" secondItem="BPF-8c-QvW" secondAttribute="bottom" constant="10" id="t6s-6d-bHY"/>
                     <constraint firstAttribute="trailing" secondItem="2Nc-gK-c8v" secondAttribute="trailing" constant="15" id="tT7-Rw-euC"/>
                 </constraints>
             </tableViewCellContentView>

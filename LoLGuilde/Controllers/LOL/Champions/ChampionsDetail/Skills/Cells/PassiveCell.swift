@@ -15,18 +15,16 @@ class PassiveCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setupData(item: Champion) {
         nameLabel.text = item.passive?.name
-        descriptionTextView.text = item.passive?.description
+//        descriptionTextView.attributedText = item.passive?.description?.htmlToAttributedString
+        descriptionTextView.text = item.passive?.description?.htmlToString
         let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/passive/\(item.passive?.image?.full ?? "")"
         passiveImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
     }

@@ -28,6 +28,7 @@ class SkillsView: BaseView {
         skillsTableView.register(nib2, forCellReuseIdentifier: "skillsCell")
         skillsTableView.delegate = self
         skillsTableView.dataSource = self
+//        skillsTableView.sizeToFit()
     }
     
     func getChampion(champion: Champion) {
@@ -38,7 +39,7 @@ class SkillsView: BaseView {
 extension SkillsView: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,17 +48,18 @@ extension SkillsView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.deselectRow(at: indexPath, animated: true)
-        if  indexPath.row == 0 {
+        if indexPath.row == 0 {
             let cell = skillsTableView.dequeueReusableCell(withIdentifier: "passiveCell", for: indexPath) as! PassiveCell
             cell.setupData(item: champion)
             return cell
         } else {
             let cell = skillsTableView.dequeueReusableCell(withIdentifier: "skillsCell", for: indexPath) as! SkillsCell
+            cell.setupData(item: champion, index: indexPath.row - 1)
             return cell
         }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return UITableView.automaticDimension
     }
 }

@@ -29,6 +29,9 @@
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rgd-DZ-j5a">
                     <rect key="frame" x="0.0" y="144" width="390" height="32"/>
                     <color key="backgroundColor" name="nonSelectedSegmented"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="4vS-fB-8dB"/>
+                    </constraints>
                     <segments>
                         <segment title="General"/>
                         <segment title="Skills"/>
