@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="185" id="KGk-i7-Jjw" customClass="PassiveCell" customModule="LoLGuilde" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="185"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPF-8c-QvW">
+                        <rect key="frame" x="15" y="10" width="322" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" name="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aatrox" translatesAutoresizingMaskIntoConstraints="NO" id="iSi-7L-nNu">
+                        <rect key="frame" x="15" y="36.5" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="76X-I4-de0"/>
+                            <constraint firstAttribute="height" constant="60" id="pT7-wN-ms6"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-gK-c8v">
+                        <rect key="frame" x="85" y="31.5" width="252" height="153.5"/>
+                        <color key="textColor" name="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BPF-8c-QvW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="44Q-sE-iRW"/>
+                    <constraint firstAttribute="bottom" secondItem="2Nc-gK-c8v" secondAttribute="bottom" id="9GW-WO-CzK"/>
+                    <constraint firstItem="2Nc-gK-c8v" firstAttribute="leading" secondItem="iSi-7L-nNu" secondAttribute="trailing" constant="10" id="JGS-Nv-gxg"/>
+                    <constraint firstItem="iSi-7L-nNu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="M71-mc-ox4"/>
+                    <constraint firstItem="BPF-8c-QvW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="SGQ-Le-Ueg"/>
+                    <constraint firstItem="2Nc-gK-c8v" firstAttribute="top" secondItem="BPF-8c-QvW" secondAttribute="bottom" id="Y3j-Lt-hAe"/>
+                    <constraint firstAttribute="trailing" secondItem="BPF-8c-QvW" secondAttribute="trailing" constant="15" id="edo-MC-LEG"/>
+                    <constraint firstItem="iSi-7L-nNu" firstAttribute="top" secondItem="BPF-8c-QvW" secondAttribute="bottom" constant="5" id="t6s-6d-bHY"/>
+                    <constraint firstAttribute="trailing" secondItem="2Nc-gK-c8v" secondAttribute="trailing" constant="15" id="tT7-Rw-euC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="backgroundColor"/>
+            <connections>
+                <outlet property="descriptionTextView" destination="2Nc-gK-c8v" id="fjG-2l-EDp"/>
+                <outlet property="nameLabel" destination="BPF-8c-QvW" id="wnB-WL-sqr"/>
+                <outlet property="passiveImageView" destination="iSi-7L-nNu" id="MHs-wB-zqF"/>
+            </connections>
+            <point key="canvasLocation" x="155.07246376811597" y="112.83482142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Aatrox" width="120" height="120"/>
+        <namedColor name="backgroundColor">
+            <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

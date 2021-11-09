@@ -17,8 +17,8 @@ class ChampionInfoViewController: BaseViewController {
     @IBOutlet weak var infoStackView: UIStackView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
-    var champion: Champion!
-    var _urlStringImage: String = ""
+    private var champion: Champion!
+    private var urlStringImage: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,11 @@ class ChampionInfoViewController: BaseViewController {
         infoStackView.addArrangedSubview(generalView)
     }
 
+    func getDataFromController(champion: Champion, urlStringImage: String) {
+        self.champion = champion
+        self.urlStringImage = urlStringImage
+    }
+    
     override func setupUI() {
         title = "Champion Info"
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "textColor")]
@@ -45,7 +50,7 @@ class ChampionInfoViewController: BaseViewController {
         } else {
             tag2Label.text = ""
         }
-        championImageView.sd_setImage(with: URL(string: _urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
+        championImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +67,7 @@ class ChampionInfoViewController: BaseViewController {
             (view as? GeneralView)?.setupData(item: champion)
         } else if sender.selectedSegmentIndex == 1 {
             view = SkillsView(frame: infoStackView.bounds)
-            (view as? SkillsView)?.setupData(item: champion)
+            (view as? SkillsView)?.getChampion(champion: champion)
         } else if sender.selectedSegmentIndex == 2 {
             view = LoreView(frame: infoStackView.bounds)
             (view as? LoreView)?.setupData(item: champion)

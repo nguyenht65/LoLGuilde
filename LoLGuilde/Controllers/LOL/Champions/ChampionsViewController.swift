@@ -92,12 +92,12 @@ extension ChampionsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        // setup data
         let item = listSearchedChampions[indexPath.row]
-
         let championInfoVC = ChampionInfoViewController()
         let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
-        championInfoVC._urlStringImage = urlStringImage
-        championInfoVC.champion = item
+        championInfoVC.getDataFromController(champion: item, urlStringImage: urlStringImage)
+        // push navi
         self.navigationController?.pushViewController(championInfoVC, animated: true)
     }
 }
