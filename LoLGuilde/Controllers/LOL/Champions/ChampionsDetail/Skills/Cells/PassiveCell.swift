@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PassiveCell: UITableViewCell {
 
@@ -26,8 +27,8 @@ class PassiveCell: UITableViewCell {
         nameLabel.text = item.passive?.name
 //        descriptionTextView.attributedText = item.passive?.description?.htmlToAttributedString
         descriptionTextView.text = item.passive?.description?.htmlToString
-        let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/passive/\(item.passive?.image?.full ?? "")"
-        passiveImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
+        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/passive/\(item.passive?.image?.full ?? "")"
+        passiveImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "ic_tb1"))
     }
 
     func setupUI() {

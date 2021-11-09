@@ -73,6 +73,7 @@ class ChampionInfoViewController: BaseViewController {
             (view as? LoreView)?.setupData(item: champion)
         } else {
             view = SkinsView(frame: infoStackView.bounds)
+            (view as? SkinsView)?.getChampion(champion: champion)
         }
         infoStackView.addArrangedSubview(view)
     }

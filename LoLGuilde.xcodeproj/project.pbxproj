@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3622CF7C272949D5005912CD /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3622CF7B272949D5005912CD /* Champion.swift */; };
+		36272AA4273AFDBE00AE5205 /* SkinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36272AA3273AFDBE00AE5205 /* SkinsView.swift */; };
+		36272AA6273AFDC500AE5205 /* SkinsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36272AA5273AFDC500AE5205 /* SkinsView.xib */; };
+		36272AAA273AFE3F00AE5205 /* SkinsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36272AA8273AFE3F00AE5205 /* SkinsCell.swift */; };
+		36272AAB273AFE3F00AE5205 /* SkinsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36272AA9273AFE3F00AE5205 /* SkinsCell.xib */; };
 		362EFFF7273864E2005945C5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362EFFF6273864E2005945C5 /* ProgressView.swift */; };
 		362EFFF9273864F2005945C5 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362EFFF8273864F2005945C5 /* ProgressView.xib */; };
 		363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FEDCE273037F600A1B6BE /* SpellsViewController.swift */; };
@@ -67,8 +71,6 @@
 		36DB67D9273450C60063F6DB /* SkillsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67D8273450C60063F6DB /* SkillsView.xib */; };
 		36DB67DB273450D00063F6DB /* LoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67DA273450D00063F6DB /* LoreView.xib */; };
 		36DB67DF2734512F0063F6DB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67DE2734512F0063F6DB /* BaseView.swift */; };
-		36DB67E1273452B90063F6DB /* SkinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E0273452B90063F6DB /* SkinsView.swift */; };
-		36DB67E3273452C10063F6DB /* SkinsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67E2273452C10063F6DB /* SkinsView.xib */; };
 		36DB67E527345A820063F6DB /* Skins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E427345A820063F6DB /* Skins.swift */; };
 		36DB67E727345A940063F6DB /* Passive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E627345A940063F6DB /* Passive.swift */; };
 		36E6344327391D960055E566 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6344227391D960055E566 /* StatusView.swift */; };
@@ -80,6 +82,10 @@
 
 /* Begin PBXFileReference section */
 		3622CF7B272949D5005912CD /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		36272AA3273AFDBE00AE5205 /* SkinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinsView.swift; sourceTree = "<group>"; };
+		36272AA5273AFDC500AE5205 /* SkinsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinsView.xib; sourceTree = "<group>"; };
+		36272AA8273AFE3F00AE5205 /* SkinsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinsCell.swift; sourceTree = "<group>"; };
+		36272AA9273AFE3F00AE5205 /* SkinsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinsCell.xib; sourceTree = "<group>"; };
 		362EFFF6273864E2005945C5 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		362EFFF8273864F2005945C5 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		363FEDCE273037F600A1B6BE /* SpellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewController.swift; sourceTree = "<group>"; };
@@ -141,8 +147,6 @@
 		36DB67D8273450C60063F6DB /* SkillsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsView.xib; sourceTree = "<group>"; };
 		36DB67DA273450D00063F6DB /* LoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoreView.xib; sourceTree = "<group>"; };
 		36DB67DE2734512F0063F6DB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		36DB67E0273452B90063F6DB /* SkinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinsView.swift; sourceTree = "<group>"; };
-		36DB67E2273452C10063F6DB /* SkinsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinsView.xib; sourceTree = "<group>"; };
 		36DB67E427345A820063F6DB /* Skins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skins.swift; sourceTree = "<group>"; };
 		36DB67E627345A940063F6DB /* Passive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passive.swift; sourceTree = "<group>"; };
 		36E6344227391D960055E566 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
@@ -166,6 +170,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36272AA7273AFDE700AE5205 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				36272AA8273AFE3F00AE5205 /* SkinsCell.swift */,
+				36272AA9273AFE3F00AE5205 /* SkinsCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		362DE5042726B75700D3FC71 /* LOL */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +256,9 @@
 		36453AB62732E2FC00F7413A /* Skins */ = {
 			isa = PBXGroup;
 			children = (
-				36DB67E0273452B90063F6DB /* SkinsView.swift */,
-				36DB67E2273452C10063F6DB /* SkinsView.xib */,
+				36272AA7273AFDE700AE5205 /* cells */,
+				36272AA3273AFDBE00AE5205 /* SkinsView.swift */,
+				36272AA5273AFDC500AE5205 /* SkinsView.xib */,
 			);
 			path = Skins;
 			sourceTree = "<group>";
@@ -586,8 +600,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				36574F042729022100C27774 /* ChampionsViewController.xib in Resources */,
+				36272AAB273AFE3F00AE5205 /* SkinsCell.xib in Resources */,
+				36272AA6273AFDC500AE5205 /* SkinsView.xib in Resources */,
 				362EFFF9273864F2005945C5 /* ProgressView.xib in Resources */,
-				36DB67E3273452C10063F6DB /* SkinsView.xib in Resources */,
 				3654D76F271FE42400BBB9EB /* LaunchScreen.storyboard in Resources */,
 				36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */,
 				36BEA662272FF4A200B75B39 /* ChampionInfoViewController.xib in Resources */,
@@ -680,17 +695,18 @@
 				36574F0F27291AAF00C27774 /* RunesViewController.swift in Sources */,
 				3622CF7C272949D5005912CD /* Champion.swift in Sources */,
 				36BB5D7C272AA05000001491 /* NetworkingError.swift in Sources */,
+				36272AAA273AFE3F00AE5205 /* SkinsCell.swift in Sources */,
 				3654D780271FEA6E00BBB9EB /* BaseNavigationController.swift in Sources */,
 				36BB5D7A272AA04400001491 /* NetworkingResult.swift in Sources */,
 				369ECD75273A6A3900192332 /* StringExtentions.swift in Sources */,
 				36BB5D752729F13400001491 /* Image.swift in Sources */,
 				36453AB827331AD400F7413A /* GeneralView.swift in Sources */,
 				36E6344E27391E600055E566 /* EachStatusView.swift in Sources */,
+				36272AA4273AFDBE00AE5205 /* SkinsView.swift in Sources */,
 				36571360272FF79F00F44595 /* Stats.swift in Sources */,
 				365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */,
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* SplashViewController.swift in Sources */,
-				36DB67E1273452B90063F6DB /* SkinsView.swift in Sources */,
 				36DB67DF2734512F0063F6DB /* BaseView.swift in Sources */,
 				368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */,
 				3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */,

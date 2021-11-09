@@ -32,8 +32,8 @@ class SkillsCell: UITableViewCell {
         cooldownLabel.text = "Cooldown: \(item.spells?[index].cooldownBurn ?? "")s"
         rangeLabel.text = "Range: \(item.spells?[index].rangeBurn ?? "")"
         descriptionLabel.text = item.spells?[index].description?.htmlToString
-        let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.spells?[index].image?.full ?? "")"
-        skillImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
+        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.spells?[index].image?.full ?? "")"
+        skillImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "ic_tb1"))
     }
 
     func setupUI() {
