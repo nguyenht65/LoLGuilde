@@ -44,6 +44,8 @@
 		368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66A272DD52C00A1FC9F /* Helper.swift */; };
 		368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */; };
 		368CE0D827307A4500C3DA27 /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CE0D727307A4500C3DA27 /* Gold.swift */; };
+		369ECD68273A4BB600192332 /* PassiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369ECD67273A4BB600192332 /* PassiveView.swift */; };
+		369ECD6A273A4BC200192332 /* PassiveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369ECD69273A4BC200192332 /* PassiveView.xib */; };
 		36BB5D752729F13400001491 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D742729F13400001491 /* Image.swift */; };
 		36BB5D78272AA03300001491 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D77272AA03300001491 /* Networking.swift */; };
 		36BB5D7A272AA04400001491 /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D79272AA04400001491 /* NetworkingResult.swift */; };
@@ -113,6 +115,8 @@
 		368CD66A272DD52C00A1FC9F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
 		368CE0D727307A4500C3DA27 /* Gold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
+		369ECD67273A4BB600192332 /* PassiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassiveView.swift; sourceTree = "<group>"; };
+		369ECD69273A4BC200192332 /* PassiveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassiveView.xib; sourceTree = "<group>"; };
 		36BB5D742729F13400001491 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		36BB5D77272AA03300001491 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		36BB5D79272AA04400001491 /* NetworkingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 		36453AB42732E2E900F7413A /* Skills */ = {
 			isa = PBXGroup;
 			children = (
+				369ECD66273A4B7800192332 /* Passive */,
 				36DB67D22734508E0063F6DB /* SkillsView.swift */,
 				36DB67D8273450C60063F6DB /* SkillsView.xib */,
 			);
@@ -426,6 +431,15 @@
 			path = Spells;
 			sourceTree = "<group>";
 		};
+		369ECD66273A4B7800192332 /* Passive */ = {
+			isa = PBXGroup;
+			children = (
+				369ECD67273A4BB600192332 /* PassiveView.swift */,
+				369ECD69273A4BC200192332 /* PassiveView.xib */,
+			);
+			path = Passive;
+			sourceTree = "<group>";
+		};
 		36BB5D76272AA01A00001491 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +588,7 @@
 				36DB67D9273450C60063F6DB /* SkillsView.xib in Resources */,
 				36DB67DB273450D00063F6DB /* LoreView.xib in Resources */,
 				3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */,
+				369ECD6A273A4BC200192332 /* PassiveView.xib in Resources */,
 				363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */,
 				3654D787271FEB7500BBB9EB /* SplashViewController.xib in Resources */,
 				36453ABA27331CE000F7413A /* GeneralView.xib in Resources */,
@@ -672,6 +687,7 @@
 				36574F082729031A00C27774 /* ItemsViewController.swift in Sources */,
 				36453ABC27331DC000F7413A /* UIViewExtentions.swift in Sources */,
 				36DB67CF2733CB870063F6DB /* SpellsViewModel.swift in Sources */,
+				369ECD68273A4BB600192332 /* PassiveView.swift in Sources */,
 				36BEA658272FCF7A00B75B39 /* ScreenHelper.swift in Sources */,
 				368CE0D827307A4500C3DA27 /* Gold.swift in Sources */,
 				36574F032729022100C27774 /* ChampionsViewController.swift in Sources */,

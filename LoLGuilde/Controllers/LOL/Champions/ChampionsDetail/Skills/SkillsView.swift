@@ -9,6 +9,7 @@ import UIKit
 
 class SkillsView: BaseView {
 
+    @IBOutlet weak var passiveView: PassiveView!
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -17,4 +18,7 @@ class SkillsView: BaseView {
         super.init(coder: coder)
     }
 
+    func setupData(item: Champion) {
+        passiveView.setupData(item: item)
+    }
 }

@@ -62,6 +62,7 @@ class ChampionInfoViewController: BaseViewController {
             (view as? GeneralView)?.setupData(item: champion)
         } else if sender.selectedSegmentIndex == 1 {
             view = SkillsView(frame: infoStackView.bounds)
+            (view as? SkillsView)?.setupData(item: champion)
         } else if sender.selectedSegmentIndex == 2 {
             view = LoreView(frame: infoStackView.bounds)
             (view as? LoreView)?.setupData(item: champion)
