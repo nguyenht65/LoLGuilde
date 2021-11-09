@@ -10,6 +10,7 @@ import UIKit
 class SkillsView: BaseView {
 
     @IBOutlet weak var skillsTableView: UITableView!
+
     private var champion: Champion!
 
     override init(frame: CGRect) {
@@ -28,9 +29,8 @@ class SkillsView: BaseView {
         skillsTableView.register(nib2, forCellReuseIdentifier: "skillsCell")
         skillsTableView.delegate = self
         skillsTableView.dataSource = self
-//        skillsTableView.sizeToFit()
     }
-    
+
     func getChampion(champion: Champion) {
         self.champion = champion
     }
@@ -43,7 +43,7 @@ extension SkillsView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return champion.spells?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

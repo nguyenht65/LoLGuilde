@@ -18,7 +18,7 @@ class ChampionInfoViewController: BaseViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
     private var champion: Champion!
-    private var urlStringImage: String = ""
+    private var urlImage: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,9 @@ class ChampionInfoViewController: BaseViewController {
 
     func getDataFromController(champion: Champion, urlStringImage: String) {
         self.champion = champion
-        self.urlStringImage = urlStringImage
+        self.urlImage = urlStringImage
     }
-    
+
     override func setupUI() {
         title = "Champion Info"
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "textColor")]
@@ -50,7 +50,7 @@ class ChampionInfoViewController: BaseViewController {
         } else {
             tag2Label.text = ""
         }
-        championImageView.sd_setImage(with: URL(string: urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
+        championImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 
     override func viewWillAppear(_ animated: Bool) {

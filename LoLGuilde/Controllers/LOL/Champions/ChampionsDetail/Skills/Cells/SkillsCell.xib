@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="346" height="209"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tb1" translatesAutoresizingMaskIntoConstraints="NO" id="B15-Gm-Qyt">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_2" translatesAutoresizingMaskIntoConstraints="NO" id="B15-Gm-Qyt">
                         <rect key="frame" x="15" y="41.5" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="DXf-3R-fq4"/>
@@ -91,7 +91,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_tb1" width="894" height="894"/>
+        <image name="loading_2" width="980" height="980"/>
         <namedColor name="backgroundColor">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

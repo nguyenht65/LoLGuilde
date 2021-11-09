@@ -54,7 +54,7 @@ public class Passive: Codable {
 		if (dictionary["image"] != nil) { image = Image(dictionary: dictionary["image"] as! NSDictionary) }
 	}
 
-		
+
 /**
     Returns the dictionary representation for the current instance.
     

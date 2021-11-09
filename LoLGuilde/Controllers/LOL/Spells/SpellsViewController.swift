@@ -15,11 +15,11 @@ class SpellsViewController: BaseViewController, SpellsViewProtocol {
 
     @IBOutlet weak var spellsCollectionView: UICollectionView!
     let spellsViewModel: SpellsViewModel = SpellsViewModel()
-    
+
     func getSpellsSuccess() {
         self.spellsCollectionView.reloadData()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         spellsViewModel.spellsView = self
@@ -31,7 +31,7 @@ class SpellsViewController: BaseViewController, SpellsViewProtocol {
         spellsCollectionView.delegate = self
         spellsCollectionView.dataSource = self
     }
-    
+
     override func setupData() {
         spellsViewModel.loadAPI()
         spellsViewModel.readItemsCache()
@@ -63,6 +63,5 @@ extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
-    
+
 }
