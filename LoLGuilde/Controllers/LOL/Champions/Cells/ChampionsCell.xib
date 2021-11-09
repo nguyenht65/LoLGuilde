@@ -25,24 +25,27 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI1-i7-sjH">
-                        <rect key="frame" x="80" y="33.5" width="26.5" height="16"/>
+                        <rect key="frame" x="75" y="33.5" width="26.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" name="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crS-Hu-LuF">
-                        <rect key="frame" x="80" y="7" width="50.5" height="21.5"/>
+                        <rect key="frame" x="75" y="7" width="50.5" height="21.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <color key="textColor" name="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="mI1-i7-sjH" firstAttribute="leading" secondItem="Q4f-97-Y8H" secondAttribute="trailing" constant="20" id="CXY-QX-DoG"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mI1-i7-sjH" secondAttribute="bottom" id="2Lq-bW-Kn5"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="crS-Hu-LuF" secondAttribute="trailing" id="Bds-7N-dwW"/>
+                    <constraint firstItem="mI1-i7-sjH" firstAttribute="leading" secondItem="Q4f-97-Y8H" secondAttribute="trailing" constant="15" id="CXY-QX-DoG"/>
                     <constraint firstItem="crS-Hu-LuF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="GPM-gA-12k"/>
                     <constraint firstItem="mI1-i7-sjH" firstAttribute="top" secondItem="crS-Hu-LuF" secondAttribute="bottom" constant="5" id="SuA-4e-fYN"/>
-                    <constraint firstItem="crS-Hu-LuF" firstAttribute="leading" secondItem="Q4f-97-Y8H" secondAttribute="trailing" constant="20" id="laL-EL-qg6"/>
+                    <constraint firstItem="crS-Hu-LuF" firstAttribute="leading" secondItem="Q4f-97-Y8H" secondAttribute="trailing" constant="15" id="laL-EL-qg6"/>
                     <constraint firstAttribute="bottom" secondItem="Q4f-97-Y8H" secondAttribute="bottom" constant="5" id="nN7-vO-GJS"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mI1-i7-sjH" secondAttribute="trailing" id="t4O-4J-qIz"/>
                     <constraint firstItem="Q4f-97-Y8H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="vky-Xa-652"/>
                     <constraint firstItem="Q4f-97-Y8H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zwb-SH-qVj"/>
                 </constraints>

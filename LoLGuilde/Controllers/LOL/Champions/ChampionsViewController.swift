@@ -7,8 +7,7 @@
 
 import UIKit
 import RxSwift
-import RxRelay
-import RxCocoa
+import SDWebImage
 
 protocol ChampionsViewProtocol {
     func getChampionsSuccess()
@@ -18,9 +17,10 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var championsTableView: UITableView!
+    @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
     private let championsViewModel: ChampionsViewModel = ChampionsViewModel()
     let disposeBag = DisposeBag()
-    private var listTempChampions: [Champion] = []
+    private var listSearchedChampions: [Champion] = []
 
     func getChampionsSuccess() {
         self.championsTableView.reloadData()
@@ -35,6 +35,8 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         let nib = UINib(nibName: ChampionsCell.className, bundle: .main)
         championsTableView.register(nib, forCellReuseIdentifier: "cell")
         championsTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        registerKeyboardNotifications()
+        hideKeyboardWhenTappedAround()
     }
 
     override func setupData() {
@@ -72,13 +74,13 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     func searchChampions(_ query: String) -> Observable<[Champion]> {
         let listChampions: [Champion] = championsViewModel.champions.value
             .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
-        listTempChampions = listChampions
+        listSearchedChampions = listChampions
         return Observable.of(listChampions)
     }
 
     func getAllChampions() -> Observable<[Champion]> {
         let listAllChampions: [Champion] = championsViewModel.champions.value
-        listTempChampions = listAllChampions
+        listSearchedChampions = listAllChampions
         return Observable.of(listAllChampions)
     }
 }
@@ -91,11 +93,39 @@ extension ChampionsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = listTempChampions[indexPath.row]
+        // setup data
+        let item = listSearchedChampions[indexPath.row]
         let championInfoVC = ChampionInfoViewController()
-        let urlStringImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
-        championInfoVC._urlStringImage = urlStringImage
-        championInfoVC.champion = item
+        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
+        championInfoVC.getDataFromController(champion: item, urlStringImage: urlImage)
+        // push navi
         self.navigationController?.pushViewController(championInfoVC, animated: true)
     }
+}
+
+extension ChampionsViewController {
+
+    func registerKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: Notification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        // get bottom padding of the screen
+        let window = SceneDelegate.shared().window
+        let bottomPadding = window?.safeAreaInsets.bottom ?? 0
+        let newBottomViewPadding = keyboardSize.height - bottomPadding - searchBar.bounds.height
+        championsTableView.contentInset.bottom = newBottomViewPadding
+    }
+
+    @objc func keyboardWillHide(notification: Notification) {
+        bottomViewConstraint.constant = 65
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+
 }

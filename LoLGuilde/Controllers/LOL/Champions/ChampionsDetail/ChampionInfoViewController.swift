@@ -17,12 +17,21 @@ class ChampionInfoViewController: BaseViewController {
     @IBOutlet weak var infoStackView: UIStackView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
-    var champion: Champion!
-    var _urlStringImage: String = ""
+    private var champion: Champion!
+    private var urlImage: String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let generalView = GeneralView()
+//        generalView.translatesAutoresizingMaskIntoConstraints = false
         let generalView = GeneralView(frame: infoStackView.bounds)
-        infoStackView.addSubview(generalView)
+        generalView.setupData(item: champion)
+        infoStackView.addArrangedSubview(generalView)
+    }
+
+    func getDataFromController(champion: Champion, urlStringImage: String) {
+        self.champion = champion
+        self.urlImage = urlStringImage
     }
 
     override func setupUI() {
@@ -41,7 +50,7 @@ class ChampionInfoViewController: BaseViewController {
         } else {
             tag2Label.text = ""
         }
-        championImageView.sd_setImage(with: URL(string: _urlStringImage), placeholderImage: UIImage(named: "ic_tb1"))
+        championImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -52,20 +61,20 @@ class ChampionInfoViewController: BaseViewController {
         for i in infoStackView.arrangedSubviews {
             i.removeFromSuperview()
         }
+        var view = UIView()
         if sender.selectedSegmentIndex == 0 {
-            let generalView = GeneralView(frame: infoStackView.bounds)
-            infoStackView.addSubview(generalView)
+            view = GeneralView(frame: infoStackView.bounds)
+            (view as? GeneralView)?.setupData(item: champion)
         } else if sender.selectedSegmentIndex == 1 {
-            let skillsView = SkillsView(frame: infoStackView.bounds)
-            infoStackView.addSubview(skillsView)
+            view = SkillsView(frame: infoStackView.bounds)
+            (view as? SkillsView)?.getChampion(champion: champion)
         } else if sender.selectedSegmentIndex == 2 {
-            let loreView = LoreView(frame: infoStackView.bounds)
-            loreView.setupData(item: champion)
-            infoStackView.addSubview(loreView)
+            view = LoreView(frame: infoStackView.bounds)
+            (view as? LoreView)?.setupData(item: champion)
         } else {
-            let skinsView = SkinsView(frame: infoStackView.bounds)
-            infoStackView.addSubview(skinsView)
+            view = SkinsView(frame: infoStackView.bounds)
+            (view as? SkinsView)?.getChampion(champion: champion)
         }
-        print(sender.selectedSegmentIndex)
+        infoStackView.addArrangedSubview(view)
     }
 }

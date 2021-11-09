@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChampionsViewController" customModule="LoLGuilde" customModuleProvider="target">
             <connections>
+                <outlet property="bottomViewConstraint" destination="g1L-8f-LAS" id="3bP-uE-c2Z"/>
                 <outlet property="championsTableView" destination="AQH-IB-nmF" id="746-l6-ucc"/>
                 <outlet property="searchBar" destination="nSc-KC-r6v" id="Tlo-Rx-5Pb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,10 +27,15 @@
                     <color key="sectionIndexColor" name="textColor"/>
                     <color key="sectionIndexBackgroundColor" name="backgroundColor"/>
                 </tableView>
-                <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-KC-r6v">
+                <searchBar contentMode="redraw" barStyle="black" placeholder="Find Champions" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-KC-r6v">
                     <rect key="frame" x="0.0" y="44" width="428" height="51"/>
+                    <color key="tintColor" name="textColor"/>
                     <color key="barTintColor" name="backgroundColor"/>
                     <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
                 </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

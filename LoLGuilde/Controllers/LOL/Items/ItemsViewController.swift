@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol ItemsViewProtocol {
     func getItemsSuccess()
@@ -13,8 +14,12 @@ protocol ItemsViewProtocol {
 
 class ItemsViewController: BaseViewController, ItemsViewProtocol {
 
+    @IBOutlet weak var itemSearchBar: UISearchBar!
     @IBOutlet weak var itemCollectionView: UICollectionView!
+    @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
+    let disposeBag = DisposeBag()
     let itemsViewModel: ItemsViewModel = ItemsViewModel()
+    private var listSearchedItems: [Item] = []
 
     func getItemsSuccess() {
         self.itemCollectionView.reloadData()
@@ -28,28 +33,54 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     override func setupUI() {
         let nib = UINib(nibName: ItemsCell.className, bundle: .main)
         itemCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
-        itemCollectionView.delegate = self
-        itemCollectionView.dataSource = self
+        itemCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        registerKeyboardNotifications()
+        hideKeyboardWhenTappedAround()
     }
 
     override func setupData() {
         itemsViewModel.loadAPI()
         itemsViewModel.readItemsCache()
+        onSearching()
+    }
+
+    func onSearching() {
+        let searchResults = itemSearchBar.rx.text.orEmpty
+            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .flatMapLatest { query -> Observable<[Item]> in
+                if query.isEmpty { // case when use not search anythings
+//                    return .just([])
+                    return self.getAllItems()
+                }
+                return self.searchItems(query) // case when use search the query
+            }
+            .observe(on: MainScheduler.instance)
+
+        searchResults
+            .bind(to: itemCollectionView.rx.items(cellIdentifier: "cell", cellType: ItemsCell.self)) {
+                (index, items: Item, cell) in
+                cell.setupData(item: items)
+            }
+            .disposed(by: disposeBag)
+    }
+
+    func searchItems(_ query: String) -> Observable<[Item]> {
+        let listItems: [Item] = itemsViewModel.items.value
+            .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
+        listSearchedItems = listItems
+        return Observable.of(listItems)
+    }
+
+    func getAllItems() -> Observable<[Item]> {
+        let listAllItems: [Item] = itemsViewModel.items.value
+        listSearchedItems = listAllItems
+        return Observable.of(listAllItems)
     }
 
 }
 
-extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return itemsViewModel.items.value.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ItemsCell
-        let item = itemsViewModel.items.value[indexPath.row]
-        cell.setupData(item: item)
-        return cell
-    }
+extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
            let collectionViewWidth = collectionView.bounds.width
@@ -62,5 +93,31 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension ItemsViewController {
+
+    func registerKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: Notification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        // get bottom padding of the screen
+        let window = SceneDelegate.shared().window
+        let bottomPadding = window?.safeAreaInsets.bottom ?? 0
+        let newBottomViewPadding = keyboardSize.height - bottomPadding - itemSearchBar.bounds.height
+        itemCollectionView.contentInset.bottom = newBottomViewPadding
+    }
+
+    @objc func keyboardWillHide(notification: Notification) {
+        bottomViewConstraint.constant = 65
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
 }

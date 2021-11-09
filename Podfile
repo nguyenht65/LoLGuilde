@@ -10,5 +10,4 @@ target 'LoLGuilde' do
   pod 'RxCocoa', '6.2.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'RxAlamofire'
-  pod 'ObjectMapper'
 end

@@ -10,6 +10,7 @@ import UIKit
 class LoreView: BaseView {
 
     @IBOutlet weak var loreTextView: UITextView!
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
