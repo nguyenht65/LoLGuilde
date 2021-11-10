@@ -17,8 +17,9 @@ class RunesViewController: BaseViewController {
     }
 
     override func setupUI() {
-        var view = PrecisionView(frame: runesStackView.bounds)
-        runesStackView.addArrangedSubview(view)
+        segmentedControl.selectedSegmentTintColor = UIColor.systemYellow
+        let precisionView = PrecisionView(frame: runesStackView.bounds)
+        runesStackView.addArrangedSubview(precisionView)
     }
     
     @IBAction func selectedSegmentedControl(_ sender: Any) {
@@ -28,24 +29,24 @@ class RunesViewController: BaseViewController {
         var view = UIView()
         switch segmentedControl.selectedSegmentIndex {
         case 0:
+            segmentedControl.selectedSegmentTintColor = UIColor.systemYellow
             view = PrecisionView(frame: runesStackView.bounds)
-            
             print(segmentedControl.selectedSegmentIndex)
         case 1:
             view = DominationView(frame: runesStackView.bounds)
-            
+            segmentedControl.selectedSegmentTintColor = UIColor.systemRed
             print(segmentedControl.selectedSegmentIndex)
         case 2:
             view = SorceryView(frame: runesStackView.bounds)
-            
+            segmentedControl.selectedSegmentTintColor = UIColor.systemCyan
             print(segmentedControl.selectedSegmentIndex)
         case 3:
             view = ResolveView(frame: runesStackView.bounds)
-            
+            segmentedControl.selectedSegmentTintColor = UIColor.systemGreen
             print(segmentedControl.selectedSegmentIndex)
         case 4:
-            view = WhimsyView(frame: runesStackView.bounds)
-            
+            view = InspirationView(frame: runesStackView.bounds)
+            segmentedControl.selectedSegmentTintColor = UIColor.systemMint
             print(segmentedControl.selectedSegmentIndex)
         default:
             return

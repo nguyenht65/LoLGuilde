@@ -3,37 +3,147 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DominationView" customModule="LoLGuilde" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="489"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-AF-ERq">
-                    <rect key="frame" x="163.5" y="234" width="87" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="domination" translatesAutoresizingMaskIntoConstraints="NO" id="HWN-DK-4gP">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh5-Jo-shz">
+                    <rect key="frame" x="15" y="50" width="384" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <color key="textColor" name="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-iu-icb" userLabel="Rune View">
+                    <rect key="frame" x="0.0" y="140" width="414" height="456"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qw0-Q1-LLj">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Rjo-vn-pv4">
+                                    <rect key="frame" x="49.5" y="0.0" width="315" height="60"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNk-0N-JyH" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="0XE-3e-w9E"/>
+                                                <constraint firstAttribute="width" constant="60" id="NKC-b4-YpI"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxQ-qN-NNy" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="85" y="0.0" width="60" height="60"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-2q-1Mu" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1d-AT-C5d" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="255" y="0.0" width="60" height="60"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyd-yp-z35">
+                                    <rect key="frame" x="107" y="100" width="200" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-fU-vUa" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="mKm-bi-zzb"/>
+                                                <constraint firstAttribute="height" constant="50" id="qUG-XS-pHk"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTK-Ox-VgP" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-nI-EX8" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="8Uz-Qc-JdY">
+                                    <rect key="frame" x="107" y="190" width="200" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjV-dN-k1u" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="gEB-No-I58"/>
+                                                <constraint firstAttribute="height" constant="50" id="oew-1F-NV2"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9S5-xq-bju" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckf-eh-Xdn" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mvf-PZ-lMO">
+                                    <rect key="frame" x="69.5" y="280" width="275" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R6-hR-KXb" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Dq1-5N-nVI"/>
+                                                <constraint firstAttribute="width" constant="50" id="n7G-Er-dee"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnA-Ks-lA0" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKB-hf-mQ1" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-MV-G5h" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                            <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qw0-Q1-LLj" secondAttribute="trailing" id="GXJ-Al-wkl"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qw0-Q1-LLj" secondAttribute="bottom" id="kbz-2T-UE9"/>
+                        <constraint firstItem="qw0-Q1-LLj" firstAttribute="leading" secondItem="Lee-iu-icb" secondAttribute="leading" id="mmb-gP-shh"/>
+                        <constraint firstItem="qw0-Q1-LLj" firstAttribute="top" secondItem="Lee-iu-icb" secondAttribute="top" id="zuc-M0-AI5"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="sbj-AF-ERq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="39p-g8-6Ok"/>
-                <constraint firstItem="sbj-AF-ERq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SZF-ML-wtz"/>
+                <constraint firstItem="kh5-Jo-shz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="8cO-tl-VCM"/>
+                <constraint firstItem="HWN-DK-4gP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FHC-XW-5nR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HWN-DK-4gP" secondAttribute="trailing" id="GaV-3a-4R5"/>
+                <constraint firstItem="Lee-iu-icb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HJC-xn-kJn"/>
+                <constraint firstItem="kh5-Jo-shz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="HRv-qE-hnH"/>
+                <constraint firstItem="HWN-DK-4gP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IBe-hY-RnJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kh5-Jo-shz" secondAttribute="trailing" constant="15" id="PPd-Rc-2rC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Lee-iu-icb" secondAttribute="trailing" id="iYi-bg-g5D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Lee-iu-icb" secondAttribute="bottom" id="pKa-C5-08Z"/>
+                <constraint firstItem="Lee-iu-icb" firstAttribute="top" secondItem="kh5-Jo-shz" secondAttribute="bottom" constant="60" id="qhR-te-F39"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HWN-DK-4gP" secondAttribute="bottom" id="tS9-ta-gsZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="131.8840579710145" y="197.87946428571428"/>
+            <point key="canvasLocation" x="131.8840579710145" y="162.05357142857142"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="domination" width="237" height="500"/>
+        <namedColor name="backgroundColor">
+            <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

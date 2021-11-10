@@ -1,5 +1,5 @@
 //
-//  WhimsyView.swift
+//  Inspiration.swift
 //  LoLGuilde
 //
 //  Created by Bang on 10/11/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WhimsyView: BaseView {
+class InspirationView: BaseView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

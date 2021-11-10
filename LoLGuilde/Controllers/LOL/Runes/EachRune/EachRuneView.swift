@@ -21,9 +21,9 @@ class EachRuneView: BaseView {
 
     override func commonInit() {
         super.commonInit()
-        runeImage.layer.borderColor = UIColor.systemYellow.cgColor
-        runeImage.layer.borderWidth = 1
-        runeImage.layer.cornerRadius = runeImage.bounds.height/2
-        runeImage.layer.masksToBounds = true
+        layer.borderColor = UIColor.systemYellow.cgColor
+        layer.borderWidth = 1
+        layer.cornerRadius = self.bounds.height/2
+        layer.masksToBounds = true
     }
 }
