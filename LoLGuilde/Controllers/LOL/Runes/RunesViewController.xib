@@ -5,12 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LOLRuneViewController" customModule="LoLGuilde" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RunesViewController" customModule="LoLGuilde" customModuleProvider="target">
             <connections>
+                <outlet property="runesStackView" destination="IHq-9J-UBJ" id="NLH-Hb-n6H"/>
+                <outlet property="segmentedControl" destination="9M5-RF-jq6" id="K8n-lp-niX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,64 +20,48 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zr2-LM-U7C">
-                    <rect key="frame" x="0.0" y="54" width="414" height="32"/>
-                    <segments>
-                        <segment title="" image="Domination"/>
-                        <segment title="" image="Precision"/>
-                        <segment title="" image="Sorcery"/>
-                        <segment title="" image="Whimsy"/>
-                        <segment title="" image="Resolve"/>
-                    </segments>
-                </segmentedControl>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-nE-cqE">
-                    <rect key="frame" x="0.0" y="95" width="414" height="702"/>
-                    <subviews>
-                        <tabBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Zox-j7-Bqc">
-                            <rect key="frame" x="0.0" y="10" width="414" height="49"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <items>
-                                <tabBarItem image="Domination" id="uss-Ma-sWo"/>
-                                <tabBarItem image="Precision" id="n8j-D7-wFe"/>
-                                <tabBarItem title="" image="Sorcery" id="z1p-Fa-eAl"/>
-                                <tabBarItem title="" image="Whimsy" id="hcK-fY-9yr"/>
-                                <tabBarItem title="" image="Resolve" id="U7c-NL-Ae8"/>
-                            </items>
-                        </tabBar>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9M5-RF-jq6">
+                    <rect key="frame" x="0.0" y="44" width="414" height="41"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Zox-j7-Bqc" secondAttribute="trailing" id="DLF-Bp-zL4"/>
-                        <constraint firstItem="Zox-j7-Bqc" firstAttribute="leading" secondItem="eCa-nE-cqE" secondAttribute="leading" id="Ul0-Wa-VCa"/>
-                        <constraint firstItem="Zox-j7-Bqc" firstAttribute="top" secondItem="eCa-nE-cqE" secondAttribute="top" constant="10" id="puW-Qo-uYQ"/>
+                        <constraint firstAttribute="height" constant="40" id="eSq-aW-wsv"/>
                     </constraints>
-                </view>
+                    <segments>
+                        <segment title="" image="precision_icon"/>
+                        <segment title="" image="domination_icon"/>
+                        <segment title="" image="sorcery_icon"/>
+                        <segment title="" image="resolve_icon"/>
+                        <segment title="" image="whimsy_icon"/>
+                    </segments>
+                    <connections>
+                        <action selector="selectedSegmentedControl:" destination="-1" eventType="valueChanged" id="LZv-ZT-m4Q"/>
+                    </connections>
+                </segmentedControl>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IHq-9J-UBJ">
+                    <rect key="frame" x="0.0" y="84" width="414" height="713"/>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zr2-LM-U7C" secondAttribute="trailing" id="C1K-TZ-hs2"/>
-                <constraint firstItem="eCa-nE-cqE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="I1C-0J-coA"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eCa-nE-cqE" secondAttribute="bottom" constant="65" id="J3k-mQ-69B"/>
-                <constraint firstItem="zr2-LM-U7C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O1t-gz-mV1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eCa-nE-cqE" secondAttribute="trailing" id="RdD-Bg-4ba"/>
-                <constraint firstItem="zr2-LM-U7C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="bvV-sQ-20L"/>
-                <constraint firstItem="eCa-nE-cqE" firstAttribute="top" secondItem="zr2-LM-U7C" secondAttribute="bottom" constant="10" id="y2N-EL-WzY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9M5-RF-jq6" secondAttribute="trailing" id="8Ec-Wp-aGi"/>
+                <constraint firstItem="9M5-RF-jq6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Av2-VA-12W"/>
+                <constraint firstItem="IHq-9J-UBJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DPY-Ar-Ngk"/>
+                <constraint firstItem="IHq-9J-UBJ" firstAttribute="top" secondItem="9M5-RF-jq6" secondAttribute="bottom" id="Qoz-mb-EgI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IHq-9J-UBJ" secondAttribute="trailing" id="kTv-El-rsP"/>
+                <constraint firstItem="9M5-RF-jq6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lV7-qf-d0p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IHq-9J-UBJ" secondAttribute="bottom" constant="65" id="m4Z-7M-g66"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
         </view>
     </objects>
     <resources>
-        <image name="Domination" width="32" height="32"/>
-        <image name="Precision" width="32" height="32"/>
-        <image name="Resolve" width="32" height="32"/>
-        <image name="Sorcery" width="32" height="32"/>
-        <image name="Whimsy" width="32" height="32"/>
+        <image name="domination_icon" width="32" height="32"/>
+        <image name="precision_icon" width="32" height="32"/>
+        <image name="resolve_icon" width="32" height="32"/>
+        <image name="sorcery_icon" width="32" height="32"/>
+        <image name="whimsy_icon" width="32" height="32"/>
         <namedColor name="backgroundColor">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

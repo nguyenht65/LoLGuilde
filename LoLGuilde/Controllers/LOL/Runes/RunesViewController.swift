@@ -9,21 +9,47 @@ import UIKit
 
 class RunesViewController: BaseViewController {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var runesStackView: UIStackView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func setupUI() {
+        var view = PrecisionView(frame: runesStackView.bounds)
+        runesStackView.addArrangedSubview(view)
     }
-    */
-
+    
+    @IBAction func selectedSegmentedControl(_ sender: Any) {
+        for i in runesStackView.arrangedSubviews {
+            i.removeFromSuperview()
+        }
+        var view = UIView()
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            view = PrecisionView(frame: runesStackView.bounds)
+            
+            print(segmentedControl.selectedSegmentIndex)
+        case 1:
+            view = DominationView(frame: runesStackView.bounds)
+            
+            print(segmentedControl.selectedSegmentIndex)
+        case 2:
+            view = SorceryView(frame: runesStackView.bounds)
+            
+            print(segmentedControl.selectedSegmentIndex)
+        case 3:
+            view = ResolveView(frame: runesStackView.bounds)
+            
+            print(segmentedControl.selectedSegmentIndex)
+        case 4:
+            view = WhimsyView(frame: runesStackView.bounds)
+            
+            print(segmentedControl.selectedSegmentIndex)
+        default:
+            return
+        }
+        runesStackView.addArrangedSubview(view)
+    }
 }
