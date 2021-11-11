@@ -11,6 +11,7 @@ class RunesViewController: BaseViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var runesStackView: UIStackView!
+    let runesViewModel: RunesViewModel = RunesViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,11 @@ class RunesViewController: BaseViewController {
         runesStackView.addArrangedSubview(precisionView)
     }
     
+    override func setupData() {
+        runesViewModel.loadAPI()
+        runesViewModel.readRunesCache()
+    }
+
     @IBAction func selectedSegmentedControl(_ sender: Any) {
         for i in runesStackView.arrangedSubviews {
             i.removeFromSuperview()

@@ -12,7 +12,7 @@ import Foundation
  
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
-public class Runes {
+public class Runes: Codable {
 	public var id : Int?
 	public var key : String?
 	public var icon : String?

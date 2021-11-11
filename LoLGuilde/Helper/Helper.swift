@@ -19,6 +19,16 @@ class Helper {
         return nil
     }
 
+    // convert data to array
+    static func convertToArray(data: Data) -> [Any]? {
+        do {
+            return try JSONSerialization.jsonObject(with: data, options: []) as? [Any]
+        } catch {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+
     // create path
     static func cachedFileURL(_ fileName: String) -> URL {
         return FileManager.default
