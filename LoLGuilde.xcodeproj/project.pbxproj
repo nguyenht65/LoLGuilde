@@ -408,7 +408,7 @@
 		36574F00272901F800C27774 /* Champions */ = {
 			isa = PBXGroup;
 			children = (
-				36BEA65E272FF43C00B75B39 /* ChampionsDetail */,
+				36BEA65E272FF43C00B75B39 /* ChampionsInfo */,
 				36574F1E272934F600C27774 /* Cells */,
 				36574F012729022100C27774 /* ChampionsViewController.swift */,
 				36574F022729022100C27774 /* ChampionsViewController.xib */,
@@ -571,7 +571,7 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		36BEA65E272FF43C00B75B39 /* ChampionsDetail */ = {
+		36BEA65E272FF43C00B75B39 /* ChampionsInfo */ = {
 			isa = PBXGroup;
 			children = (
 				36453AB62732E2FC00F7413A /* Skins */,
@@ -581,7 +581,7 @@
 				36BEA65F272FF4A200B75B39 /* ChampionInfoViewController.swift */,
 				36BEA660272FF4A200B75B39 /* ChampionInfoViewController.xib */,
 			);
-			path = ChampionsDetail;
+			path = ChampionsInfo;
 			sourceTree = "<group>";
 		};
 		36BEA663272FF5DA00B75B39 /* Cells */ = {

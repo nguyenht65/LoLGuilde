@@ -20,7 +20,7 @@ class RunesViewModel: RunesProtocol {
     private let disposeBag = DisposeBag()
     private let runesFileURL = Helper.cachedFileURL("runes.json")
     var runes = BehaviorRelay<[Rune]>(value: [])
-    
+
     func processRunes(_ newRunes: [Rune]) {
         // update API
         DispatchQueue.main.async {
@@ -69,6 +69,7 @@ class RunesViewModel: RunesProtocol {
                 self.processRunes(newRunes)
             })
             .disposed(by: disposeBag)
+        
     }
 
     func readRunesCache() {

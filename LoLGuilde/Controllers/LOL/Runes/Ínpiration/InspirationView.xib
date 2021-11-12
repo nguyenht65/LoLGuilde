@@ -8,7 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InspirationView" customModule="LoLGuilde" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InspirationView" customModule="LoLGuilde" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLabel" destination="Ryx-Wu-eoT" id="CUF-53-ePF"/>
+                <outlet property="slot1_r1View" destination="o9I-vk-Qxj" id="KII-EK-cto"/>
+                <outlet property="slot1_r2View" destination="C3l-bm-HNx" id="cu7-qE-0AH"/>
+                <outlet property="slot1_r3View" destination="JQb-5E-CRi" id="1Wg-qz-Zyf"/>
+                <outlet property="slot2_r1View" destination="P6e-XS-ySu" id="0ME-rH-Mxr"/>
+                <outlet property="slot2_r2View" destination="hxo-4i-bTA" id="ZmQ-dE-81h"/>
+                <outlet property="slot2_r3View" destination="1QS-aA-AB2" id="d1I-k1-XYZ"/>
+                <outlet property="slot3_r1View" destination="1Ln-VO-WTr" id="Wa9-pK-QAs"/>
+                <outlet property="slot3_r2View" destination="UEa-qd-KKC" id="rLZ-Cr-xHw"/>
+                <outlet property="slot3_r3View" destination="itU-RA-YBG" id="rjf-Oc-D6n"/>
+                <outlet property="slot4_r1View" destination="oKt-cI-dfu" id="sm3-Su-ohv"/>
+                <outlet property="slot4_r2View" destination="0vo-QA-Tmj" id="8QZ-bM-Tvu"/>
+                <outlet property="slot4_r3View" destination="uQj-km-Xnl" id="UcE-6s-9bZ"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1dI-Da-PZe">
             <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
@@ -17,7 +33,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whimsy" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Jf-tcM">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryx-Wu-eoT">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryx-Wu-eoT">
                     <rect key="frame" x="0.0" y="50" width="414" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <color key="textColor" name="textColor"/>
@@ -29,7 +45,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-1a-PQR">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5OM-zZ-ObQ">
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5OM-zZ-ObQ" userLabel="Slot1">
                                     <rect key="frame" x="72" y="0.0" width="270" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9I-vk-Qxj" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
@@ -47,7 +63,7 @@
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tsV-4D-Q8z">
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tsV-4D-Q8z" userLabel="Slot2">
                                     <rect key="frame" x="102" y="100" width="210" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-XS-ySu" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
@@ -65,7 +81,7 @@
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7vL-t1-kuU">
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7vL-t1-kuU" userLabel="Slot3">
                                     <rect key="frame" x="102" y="190" width="210" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ln-VO-WTr" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
@@ -83,7 +99,7 @@
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Lik-lg-5WY">
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Lik-lg-5WY" userLabel="Slot4">
                                     <rect key="frame" x="102" y="280" width="210" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKt-cI-dfu" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">

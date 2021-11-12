@@ -8,7 +8,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DominationView" customModule="LoLGuilde" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DominationView" customModule="LoLGuilde" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLabel" destination="kh5-Jo-shz" id="eGp-fo-2Ll"/>
+                <outlet property="slot1_r1View" destination="FNk-0N-JyH" id="s9c-aG-iZf"/>
+                <outlet property="slot1_r2View" destination="JxQ-qN-NNy" id="8i3-AD-42a"/>
+                <outlet property="slot1_r3View" destination="0Xc-2q-1Mu" id="HUE-Rc-CNz"/>
+                <outlet property="slot1_r4View" destination="p1d-AT-C5d" id="kGe-X1-a5A"/>
+                <outlet property="slot2_r1View" destination="1zE-fU-vUa" id="ecj-hk-l18"/>
+                <outlet property="slot2_r2View" destination="lTK-Ox-VgP" id="Vlj-VC-dVk"/>
+                <outlet property="slot2_r3View" destination="Ww5-nI-EX8" id="ftz-MR-7Vh"/>
+                <outlet property="slot3_r1View" destination="CjV-dN-k1u" id="NLJ-cC-QZb"/>
+                <outlet property="slot3_r2View" destination="9S5-xq-bju" id="GQC-GL-C2p"/>
+                <outlet property="slot3_r3View" destination="Ckf-eh-Xdn" id="cut-NU-AMU"/>
+                <outlet property="slot4_r1View" destination="6R6-hR-KXb" id="Tgm-h7-F4R"/>
+                <outlet property="slot4_r2View" destination="UnA-Ks-lA0" id="AbG-eb-63D"/>
+                <outlet property="slot4_r3View" destination="WKB-hf-mQ1" id="MZC-LG-7tC"/>
+                <outlet property="slot4_r4View" destination="aL7-MV-G5h" id="lXb-hq-JAP"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
@@ -17,7 +35,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="domination" translatesAutoresizingMaskIntoConstraints="NO" id="HWN-DK-4gP">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh5-Jo-shz">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh5-Jo-shz">
                     <rect key="frame" x="15" y="50" width="384" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <color key="textColor" name="textColor"/>
@@ -29,8 +47,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qw0-Q1-LLj">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Rjo-vn-pv4">
-                                    <rect key="frame" x="49.5" y="0.0" width="315" height="60"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Rjo-vn-pv4" userLabel="Slot1">
+                                    <rect key="frame" x="42" y="0.0" width="330" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNk-0N-JyH" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -40,18 +58,18 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxQ-qN-NNy" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="85" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="90" y="0.0" width="60" height="60"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-2q-1Mu" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="170" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1d-AT-C5d" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="255" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="270" y="0.0" width="60" height="60"/>
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dyd-yp-z35">
-                                    <rect key="frame" x="107" y="100" width="200" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dyd-yp-z35" userLabel="Slot2">
+                                    <rect key="frame" x="102" y="100" width="210" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-fU-vUa" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -61,15 +79,15 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTK-Ox-VgP" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="80" y="0.0" width="50" height="50"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-nI-EX8" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="160" y="0.0" width="50" height="50"/>
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="8Uz-Qc-JdY">
-                                    <rect key="frame" x="107" y="190" width="200" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8Uz-Qc-JdY" userLabel="Slot3">
+                                    <rect key="frame" x="102" y="190" width="210" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjV-dN-k1u" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -79,15 +97,15 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9S5-xq-bju" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="80" y="0.0" width="50" height="50"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckf-eh-Xdn" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="160" y="0.0" width="50" height="50"/>
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mvf-PZ-lMO">
-                                    <rect key="frame" x="69.5" y="280" width="275" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mvf-PZ-lMO" userLabel="Slot4">
+                                    <rect key="frame" x="62" y="280" width="290" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R6-hR-KXb" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -97,13 +115,13 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnA-Ks-lA0" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="80" y="0.0" width="50" height="50"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKB-hf-mQ1" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="160" y="0.0" width="50" height="50"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-MV-G5h" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="240" y="0.0" width="50" height="50"/>
                                         </view>
                                     </subviews>
                                 </stackView>

@@ -26,4 +26,9 @@ class EachRuneView: BaseView {
         layer.cornerRadius = self.bounds.height/2
         layer.masksToBounds = true
     }
+    
+    func setupUI(item: Rune, slotsIndex: Int, runeIndex: Int) {
+        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/img/\(item.slots?[slotsIndex].runes?[runeIndex].icon ?? "")"
+        runeImage.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
+    }
 }

@@ -11,6 +11,7 @@ class RunesViewController: BaseViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var runesStackView: UIStackView!
+    private var listRunes: [Rune] = []
     let runesViewModel: RunesViewModel = RunesViewModel()
 
     override func viewDidLoad() {
@@ -20,6 +21,8 @@ class RunesViewController: BaseViewController {
     override func setupUI() {
         segmentedControl.selectedSegmentTintColor = UIColor.systemYellow
         let precisionView = PrecisionView(frame: runesStackView.bounds)
+        let precisionRune = runesViewModel.runes.value[2]
+        precisionView.setupUI(item: precisionRune)
         runesStackView.addArrangedSubview(precisionView)
     }
     
@@ -37,23 +40,23 @@ class RunesViewController: BaseViewController {
         case 0:
             segmentedControl.selectedSegmentTintColor = UIColor.systemYellow
             view = PrecisionView(frame: runesStackView.bounds)
-            print(segmentedControl.selectedSegmentIndex)
+            (view as? PrecisionView)?.setupUI(item: listRunes[2])
         case 1:
             view = DominationView(frame: runesStackView.bounds)
             segmentedControl.selectedSegmentTintColor = UIColor.systemRed
-            print(segmentedControl.selectedSegmentIndex)
+            (view as? DominationView)?.setupUI(item: listRunes[0])
         case 2:
             view = SorceryView(frame: runesStackView.bounds)
             segmentedControl.selectedSegmentTintColor = UIColor.systemCyan
-            print(segmentedControl.selectedSegmentIndex)
+            (view as? SorceryView)?.setupUI(item: listRunes[4])
         case 3:
             view = ResolveView(frame: runesStackView.bounds)
             segmentedControl.selectedSegmentTintColor = UIColor.systemGreen
-            print(segmentedControl.selectedSegmentIndex)
+            (view as? ResolveView)?.setupUI(item: listRunes[3])
         case 4:
             view = InspirationView(frame: runesStackView.bounds)
             segmentedControl.selectedSegmentTintColor = UIColor.systemMint
-            print(segmentedControl.selectedSegmentIndex)
+            (view as? InspirationView)?.setupUI(item: listRunes[1])
         default:
             return
         }
