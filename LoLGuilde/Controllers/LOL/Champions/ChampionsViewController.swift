@@ -23,7 +23,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     private var listSearchedChampions: [Champion] = []
 
     func getChampionsSuccess() {
-        self.championsTableView.reloadData()
+        onSearching()
     }
 
     override func viewDidLoad() {
@@ -42,7 +42,6 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     override func setupData() {
         championsViewModel.loadAPI()
         championsViewModel.readChampionsCache()
-        onSearching()
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -7,12 +7,20 @@
 
 import UIKit
 
-class RunesViewController: BaseViewController {
+protocol RunesViewProtocol {
+    func getRunesSuccess()
+}
+
+class RunesViewController: BaseViewController, RunesViewProtocol {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var runesStackView: UIStackView!
-    private var listRunes: [Rune] = []
     let runesViewModel: RunesViewModel = RunesViewModel()
+    var runes: [Rune] = []
+
+    func getRunesSuccess() {
+        runes = runesViewModel.runes.value
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,21 +28,19 @@ class RunesViewController: BaseViewController {
 
     override func setupUI() {
         segmentedControl.selectedSegmentTintColor = UIColor.systemYellow
-        let precisionView = PrecisionView(frame: runesStackView.bounds)
-        let precisionRune = runesViewModel.runes.value[2]
-        precisionView.setupUI(item: precisionRune)
-        runesStackView.addArrangedSubview(precisionView)
-    }
-    
-    override func setupData() {
-        runesViewModel.loadAPI()
-        runesViewModel.readRunesCache()
     }
 
-    @IBAction func selectedSegmentedControl(_ sender: Any) {
+    override func setupData() {
+        runesViewModel.loadAPI()
+//        runesViewModel.readRunesCache()
+ 
+    }
+
+    @IBAction func selectedSegmentedControl(_ sender: UISegmentedControl) {
         for i in runesStackView.arrangedSubviews {
             i.removeFromSuperview()
         }
+        let listRunes = runesViewModel.runes.value
         var view = UIView()
         switch segmentedControl.selectedSegmentIndex {
         case 0:

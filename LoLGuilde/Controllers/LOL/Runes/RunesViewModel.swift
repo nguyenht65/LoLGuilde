@@ -20,11 +20,13 @@ class RunesViewModel: RunesProtocol {
     private let disposeBag = DisposeBag()
     private let runesFileURL = Helper.cachedFileURL("runes.json")
     var runes = BehaviorRelay<[Rune]>(value: [])
+    var runesView: RunesViewProtocol?
 
     func processRunes(_ newRunes: [Rune]) {
         // update API
         DispatchQueue.main.async {
             self.runes.accept(newRunes)
+            self.runesView?.getRunesSuccess()
         }
         // save data to file
         let encoder = JSONEncoder()

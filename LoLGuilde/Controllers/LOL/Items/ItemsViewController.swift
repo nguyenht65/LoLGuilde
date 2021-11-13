@@ -22,7 +22,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     private var listSearchedItems: [Item] = []
 
     func getItemsSuccess() {
-        self.itemCollectionView.reloadData()
+        onSearching()
     }
 
     override func viewDidLoad() {
@@ -41,7 +41,6 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     override func setupData() {
         itemsViewModel.loadAPI()
         itemsViewModel.readItemsCache()
-        onSearching()
     }
 
     func onSearching() {
