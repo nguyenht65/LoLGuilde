@@ -54,7 +54,7 @@ class RunesViewModel: RunesProtocol {
             }
             .map { _, data -> [Rune] in
                 var listRunes: [Rune] = []
-                let array = try JSONSerialization.jsonObject(with: data, options: []) as? [Any]
+                let array = Helper.convertToArray(data: data)
                 if let _list = array as? [NSDictionary] {
                     for rune in _list {
                         if let newRune = Rune(dictionary: rune) {
