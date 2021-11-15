@@ -360,7 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				362DE5042726B75700D3FC71 /* LOL */,
-				3654D783271FEAF300BBB9EB /* Home */,
+				3654D783271FEAF300BBB9EB /* SplashView */,
 				3654D77C271FE9D200BBB9EB /* Base */,
 			);
 			path = Controllers;
@@ -377,13 +377,13 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		3654D783271FEAF300BBB9EB /* Home */ = {
+		3654D783271FEAF300BBB9EB /* SplashView */ = {
 			isa = PBXGroup;
 			children = (
 				3654D784271FEB7500BBB9EB /* SplashViewController.swift */,
 				3654D785271FEB7500BBB9EB /* SplashViewController.xib */,
 			);
-			path = Home;
+			path = SplashView;
 			sourceTree = "<group>";
 		};
 		3654D78F271FF17F00BBB9EB /* Objects */ = {

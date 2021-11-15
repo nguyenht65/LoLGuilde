@@ -62,18 +62,21 @@ class ChampionInfoViewController: BaseViewController {
             i.removeFromSuperview()
         }
         var view = UIView()
-        if sender.selectedSegmentIndex == 0 {
+        switch sender.selectedSegmentIndex {
+        case 0:
             view = GeneralView(frame: infoStackView.bounds)
             (view as? GeneralView)?.setupData(item: champion)
-        } else if sender.selectedSegmentIndex == 1 {
+        case 1:
             view = SkillsView(frame: infoStackView.bounds)
             (view as? SkillsView)?.getChampion(champion: champion)
-        } else if sender.selectedSegmentIndex == 2 {
+        case 2:
             view = LoreView(frame: infoStackView.bounds)
             (view as? LoreView)?.setupData(item: champion)
-        } else {
+        case 3:
             view = SkinsView(frame: infoStackView.bounds)
             (view as? SkinsView)?.getChampion(champion: champion)
+        default:
+            return
         }
         infoStackView.addArrangedSubview(view)
     }

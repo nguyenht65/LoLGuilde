@@ -49,7 +49,6 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
             .distinctUntilChanged()
             .flatMapLatest { query -> Observable<[Item]> in
                 if query.isEmpty { // case when use not search anythings
-//                    return .just([])
                     return self.getAllItems()
                 }
                 return self.searchItems(query) // case when use search the query
