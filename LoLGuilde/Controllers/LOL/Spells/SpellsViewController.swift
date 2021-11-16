@@ -15,6 +15,7 @@ class SpellsViewController: BaseViewController, SpellsViewProtocol {
 
     @IBOutlet weak var spellsCollectionView: UICollectionView!
     let spellsViewModel: SpellsViewModel = SpellsViewModel()
+    lazy var spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
 
     func getSpellsSuccess() {
         self.spellsCollectionView.reloadData()
@@ -64,4 +65,20 @@ extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return 0
     }
 
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        spellsCollectionView.deselectItem(at: indexPath, animated: true)
+        // setupUI
+        let screenSize = collectionView.layer.bounds.size
+        spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 250))
+        spellsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
+        // setupData
+        let item = spellsViewModel.spells.value[indexPath.row]
+        spellsDetailView.setupData(item: item)
+        self.view.addSubview(spellsDetailView)
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        spellsDetailView.removeFromSuperview()
+//    }
 }

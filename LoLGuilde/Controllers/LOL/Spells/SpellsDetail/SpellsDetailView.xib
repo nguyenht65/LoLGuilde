@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpellsDetailView" customModule="LoLGuilde" customModuleProvider="target">
+            <connections>
+                <outlet property="cooldownLabel" destination="IvU-Iw-Dbn" id="Cz2-3L-HOA"/>
+                <outlet property="descriptionTextView" destination="Dol-2K-oFV" id="tzI-Ig-izR"/>
+                <outlet property="nameLabel" destination="NoB-Tl-1js" id="r5e-pP-kWa"/>
+                <outlet property="spellsImageView" destination="iac-UU-BVb" id="Id3-XF-Nmk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="244"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aatrox" translatesAutoresizingMaskIntoConstraints="NO" id="iac-UU-BVb">
+                    <rect key="frame" x="10" y="10" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="D5n-Pm-AmP"/>
+                        <constraint firstAttribute="width" constant="50" id="quv-91-4HT"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoB-Tl-1js">
+                    <rect key="frame" x="70" y="10" width="47.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" name="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooldown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvU-Iw-Dbn">
+                    <rect key="frame" x="70" y="35.5" width="292" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dol-2K-oFV">
+                    <rect key="frame" x="10" y="70" width="352" height="164"/>
+                    <color key="textColor" name="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tga-v3-aFv">
+                    <rect key="frame" x="350" y="10" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="i72-ae-dkj"/>
+                        <constraint firstAttribute="width" constant="12" id="tO3-Ig-3hE"/>
+                    </constraints>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark.square.fill" catalog="system"/>
+                    <connections>
+                        <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="Zkg-ad-JPm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iac-UU-BVb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="AJR-U9-WpJ"/>
+                <constraint firstItem="Tga-v3-aFv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Div-ut-uHH"/>
+                <constraint firstItem="Dol-2K-oFV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="F8r-hc-12Z"/>
+                <constraint firstItem="NoB-Tl-1js" firstAttribute="leading" secondItem="iac-UU-BVb" secondAttribute="trailing" constant="10" id="FSG-Q2-yKY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dol-2K-oFV" secondAttribute="trailing" constant="10" id="MVs-Xa-Scp"/>
+                <constraint firstItem="IvU-Iw-Dbn" firstAttribute="leading" secondItem="iac-UU-BVb" secondAttribute="trailing" constant="10" id="N0x-GT-zV9"/>
+                <constraint firstAttribute="trailing" secondItem="Tga-v3-aFv" secondAttribute="trailing" constant="10" id="NSY-RG-aFb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IvU-Iw-Dbn" secondAttribute="trailing" constant="10" id="PCj-hZ-rUy"/>
+                <constraint firstItem="NoB-Tl-1js" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ZKP-JF-2vg"/>
+                <constraint firstItem="IvU-Iw-Dbn" firstAttribute="top" secondItem="NoB-Tl-1js" secondAttribute="bottom" constant="5" id="avQ-3S-wTA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Dol-2K-oFV" secondAttribute="bottom" constant="10" id="gB2-d8-sfF"/>
+                <constraint firstItem="Tga-v3-aFv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NoB-Tl-1js" secondAttribute="trailing" constant="10" id="gNU-eG-tmG"/>
+                <constraint firstItem="iac-UU-BVb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="hJz-UN-sAA"/>
+                <constraint firstItem="Dol-2K-oFV" firstAttribute="top" secondItem="iac-UU-BVb" secondAttribute="bottom" constant="10" id="o4k-s2-Znt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="101.44927536231884" y="293.97321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Aatrox" width="120" height="120"/>
+        <image name="xmark.square.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="textColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
