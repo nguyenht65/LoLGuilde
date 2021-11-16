@@ -15,11 +15,11 @@ class RunesViewController: BaseViewController, RunesViewProtocol {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var runesStackView: UIStackView!
-    let runesViewModel: RunesViewModel = RunesViewModel()
+    let viewModel: RunesViewModel = RunesViewModel()
     var listRunes: [Rune] = []
 
     func getRunesSuccess() {
-        listRunes = runesViewModel.runes.value
+        listRunes = viewModel.runes.value
         let precisionView = PrecisionView(frame: runesStackView.bounds)
         precisionView.setupUI(item: listRunes[2])
         runesStackView.addArrangedSubview(precisionView)
@@ -27,7 +27,7 @@ class RunesViewController: BaseViewController, RunesViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        runesViewModel.runesView = self
+        viewModel.runesView = self
     }
 
     override func setupUI() {
@@ -35,8 +35,8 @@ class RunesViewController: BaseViewController, RunesViewProtocol {
     }
 
     override func setupData() {
-        runesViewModel.loadAPI()
-        runesViewModel.readRunesCache()
+        viewModel.loadAPI()
+        viewModel.readRunesCache()
     }
 
     @IBAction func selectedSegmentedControl(_ sender: UISegmentedControl) {

@@ -18,7 +18,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var championsTableView: UITableView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
-    private let championsViewModel: ChampionsViewModel = ChampionsViewModel()
+    private let viewModel: ChampionsViewModel = ChampionsViewModel()
     let disposeBag = DisposeBag()
     private var listSearchedChampions: [Champion] = []
 
@@ -28,7 +28,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        championsViewModel.championView = self
+        viewModel.championView = self
     }
 
     override func setupUI() {
@@ -40,8 +40,8 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     }
 
     override func setupData() {
-        championsViewModel.loadAPI()
-        championsViewModel.readChampionsCache()
+        viewModel.loadAPI()
+        viewModel.readChampionsCache()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -71,14 +71,14 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     }
 
     func searchChampions(_ query: String) -> Observable<[Champion]> {
-        let listChampions: [Champion] = championsViewModel.champions.value
+        let listChampions: [Champion] = viewModel.champions.value
             .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
         listSearchedChampions = listChampions
         return Observable.of(listChampions)
     }
 
     func getAllChampions() -> Observable<[Champion]> {
-        let listAllChampions: [Champion] = championsViewModel.champions.value
+        let listAllChampions: [Champion] = viewModel.champions.value
         listSearchedChampions = listAllChampions
         return Observable.of(listAllChampions)
     }

@@ -18,7 +18,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     @IBOutlet weak var itemCollectionView: UICollectionView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
     let disposeBag = DisposeBag()
-    let itemsViewModel: ItemsViewModel = ItemsViewModel()
+    let viewModel: ItemsViewModel = ItemsViewModel()
     private var listSearchedItems: [Item] = []
 
     func getItemsSuccess() {
@@ -27,7 +27,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemsViewModel.itemView = self
+        viewModel.itemView = self
     }
 
     override func setupUI() {
@@ -39,8 +39,8 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     }
 
     override func setupData() {
-        itemsViewModel.loadAPI()
-        itemsViewModel.readItemsCache()
+        viewModel.loadAPI()
+        viewModel.readItemsCache()
     }
 
     func onSearching() {
@@ -64,14 +64,14 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     }
 
     func searchItems(_ query: String) -> Observable<[Item]> {
-        let listItems: [Item] = itemsViewModel.items.value
+        let listItems: [Item] = viewModel.items.value
             .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
         listSearchedItems = listItems
         return Observable.of(listItems)
     }
 
     func getAllItems() -> Observable<[Item]> {
-        let listAllItems: [Item] = itemsViewModel.items.value
+        let listAllItems: [Item] = viewModel.items.value
         listSearchedItems = listAllItems
         return Observable.of(listAllItems)
     }
