@@ -61,7 +61,7 @@
 		36664F47273C60D300355C0D /* Slots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F45273C60D300355C0D /* Slots.swift */; };
 		36664F49273C617A00355C0D /* Rune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F48273C617A00355C0D /* Rune.swift */; };
 		3668387D274238CE00B4332B /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668387C274238CE00B4332B /* ItemsDetailView.swift */; };
-		3668387F274238DE00B4332B /* ItemDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3668387E274238DE00B4332B /* ItemDetailView.xib */; };
+		3668387F274238DE00B4332B /* ItemsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3668387E274238DE00B4332B /* ItemsDetailView.xib */; };
 		3668388227423A9C00B4332B /* RunesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668388127423A9C00B4332B /* RunesDetailView.swift */; };
 		3668388427423AC300B4332B /* RunesDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3668388327423AC300B4332B /* RunesDetailView.xib */; };
 		3668388627423B1800B4332B /* SpellsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668388527423B1800B4332B /* SpellsDetailView.swift */; };
@@ -159,7 +159,7 @@
 		36664F45273C60D300355C0D /* Slots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slots.swift; sourceTree = "<group>"; };
 		36664F48273C617A00355C0D /* Rune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rune.swift; sourceTree = "<group>"; };
 		3668387C274238CE00B4332B /* ItemsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDetailView.swift; sourceTree = "<group>"; };
-		3668387E274238DE00B4332B /* ItemDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailView.xib; sourceTree = "<group>"; };
+		3668387E274238DE00B4332B /* ItemsDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsDetailView.xib; sourceTree = "<group>"; };
 		3668388127423A9C00B4332B /* RunesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunesDetailView.swift; sourceTree = "<group>"; };
 		3668388327423AC300B4332B /* RunesDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunesDetailView.xib; sourceTree = "<group>"; };
 		3668388527423B1800B4332B /* SpellsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsDetailView.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				3668387C274238CE00B4332B /* ItemsDetailView.swift */,
-				3668387E274238DE00B4332B /* ItemDetailView.xib */,
+				3668387E274238DE00B4332B /* ItemsDetailView.xib */,
 			);
 			path = ItemsDetail;
 			sourceTree = "<group>";
@@ -731,7 +731,7 @@
 				36571364272FFA1500F44595 /* ItemsCell.xib in Resources */,
 				36574F092729031A00C27774 /* ItemsViewController.xib in Resources */,
 				36DB67D9273450C60063F6DB /* SkillsView.xib in Resources */,
-				3668387F274238DE00B4332B /* ItemDetailView.xib in Resources */,
+				3668387F274238DE00B4332B /* ItemsDetailView.xib in Resources */,
 				36DB67DB273450D00063F6DB /* LoreView.xib in Resources */,
 				3654D76C271FE42400BBB9EB /* Assets.xcassets in Resources */,
 				363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */,
