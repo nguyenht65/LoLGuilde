@@ -41,7 +41,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
 
     override func setupData() {
         viewModel.loadAPI()
-        viewModel.readItemsCache()
+//        viewModel.readItemsCache()
     }
 
     func onSearching() {
@@ -66,7 +66,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
 
     func searchItems(_ query: String) -> Observable<[Item]> {
         let listItems: [Item] = viewModel.items.value
-            .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
+            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
         listSearchedItems = listItems
         return Observable.of(listItems)
     }

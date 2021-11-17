@@ -34,7 +34,7 @@ class DominationView: BaseView {
     }
 
     func setupUI(item: Rune) {
-        nameLabel.text = item.name
+//        nameLabel.text = item.name
         slot1_r1View.setupUI(item: item, slotsIndex: 0, runeIndex: 0)
         slot1_r2View.setupUI(item: item, slotsIndex: 0, runeIndex: 1)
         slot1_r3View.setupUI(item: item, slotsIndex: 0, runeIndex: 2)

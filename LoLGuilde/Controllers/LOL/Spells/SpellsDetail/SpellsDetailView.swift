@@ -27,10 +27,10 @@ class SpellsDetailView: BaseView {
     }
 
     func setupData(item: Spells) {
-        nameLabel.text = item.name
-        cooldownLabel.text = "Cooldown: \(item.cooldownBurn ?? "")s"
-        descriptionTextView.text = item.description?.htmlToString
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.image?.full ?? "")"
-        spellsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
+//        nameLabel.text = item.name
+//        cooldownLabel.text = "Cooldown: \(item.cooldownBurn ?? "")s"
+//        descriptionTextView.text = item.description?.htmlToString
+//        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.image?.full ?? "")"
+//        spellsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 }

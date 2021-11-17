@@ -28,9 +28,9 @@ class ItemsDetailView: BaseView {
     
     func setupData(item: Item) {
         nameLabel.text = item.name
-        goldLabel.text = "\(item.gold?.total ?? 0)"
-        descriptionTextView.text = item.description?.htmlToString
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/item/\(item.image?.full ?? "")"
+        goldLabel.text = "\(item.gold.total)"
+        descriptionTextView.text = item.description.htmlToString
+        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/item/\(item.image.full)"
         itemsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 }

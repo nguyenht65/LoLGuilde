@@ -58,25 +58,25 @@ class EachStatusView: BaseView {
         let cases = statusLabel.text
         switch cases {
         case "HEALTH":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.hp ?? 0)(\(item.stats?.hpperlevel ?? 0))")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.hp)(\(item.stats.hpperlevel)")
         case "HEALTH REGEN":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.hpregen ?? 0)(\(item.stats?.hpregenperlevel ?? 0))")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.hpregen)(\(item.stats.hpregenperlevel))")
         case "MANA":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.mp ?? 0)(\(item.stats?.mpperlevel ?? 0))")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.mp)(\(item.stats.mpperlevel))")
         case "MANA REGEN":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.mpregen ?? 0)(\(item.stats?.mpregenperlevel ?? 0))")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.mpregen)(\(item.stats.mpregenperlevel))")
         case "ATTACK DAMAGE":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.attackdamage ?? 0)(\(item.stats?.attackdamageperlevel ?? 0))")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.attackdamage)(\(item.stats.attackdamageperlevel))")
         case "ATTACK SPEED":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.attackspeed ?? 0)(\(item.stats?.attackspeedperlevel ?? 0))")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.attackspeed)(\(item.stats.attackspeedperlevel))")
         case "ARMOR":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.armor ?? 0)(\(item.stats?.armorperlevel ?? 0))")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.armor)(\(item.stats.armorperlevel))")
         case "MAGIC RESIST":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.spellblock ?? 0)(\(item.stats?.spellblockperlevel ?? 0))")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.spellblock)(\(item.stats.spellblockperlevel))")
         case "ATTACK RANGE":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.attackrange ?? 0)")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.attackrange)")
         case "MOVEMENT":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats?.movespeed ?? 0)")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.movespeed )")
         default:
             return
         }

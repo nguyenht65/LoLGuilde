@@ -1,64 +1,51 @@
-/* 
-Copyright (c) 2021 Swift Models Generated from JSON powered by http://www.json4swift.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
 
 import Foundation
 
-public class Image: Codable {
-    public var full : String?
-    public var sprite : String?
-    public var group : String?
-    public var x : Int?
-    public var y : Int?
-    public var w : Int?
-    public var h : Int?
-
-/**
-    Constructs the object based on the given dictionary.
-    
-    Sample usage:
-    let image = Image(someDictionaryFromJSON)
-
-    - parameter dictionary:  NSDictionary from JSON.
-
-    - returns: Image Instance.
-*/
-    required public init?(dictionary: NSDictionary) {
-
-        full = dictionary["full"] as? String
-        sprite = dictionary["sprite"] as? String
-        group = dictionary["group"] as? String
-        x = dictionary["x"] as? Int
-        y = dictionary["y"] as? Int
-        w = dictionary["w"] as? Int
-        h = dictionary["h"] as? Int
-    }
-
-        
-/**
-    Returns the dictionary representation for the current instance.
-    
-    - returns: NSDictionary.
-*/
-    public func dictionaryRepresentation() -> NSDictionary {
-
-        let dictionary = NSMutableDictionary()
-
-        dictionary.setValue(self.full, forKey: "full")
-        dictionary.setValue(self.sprite, forKey: "sprite")
-        dictionary.setValue(self.group, forKey: "group")
-        dictionary.setValue(self.x, forKey: "x")
-        dictionary.setValue(self.y, forKey: "y")
-        dictionary.setValue(self.w, forKey: "w")
-        dictionary.setValue(self.h, forKey: "h")
-
-        return dictionary
-    }
-
+struct Image : Codable {
+    let full : String
+    let sprite : String
+    let group : String
+    let x : Int
+    let y : Int
+    let w : Int
+    let h : Int
 }
+
+//enum Sprite: String, Codable {
+//    // champion
+//    case champion0PNG = "champion0.png"
+//    case champion1PNG = "champion1.png"
+//    case champion2PNG = "champion2.png"
+//    case champion3PNG = "champion3.png"
+//    case champion4PNG = "champion4.png"
+//    case champion5PNG = "champion5.png"
+//    // passive
+//    case passive0PNG = "passive0.png"
+//    case passive1PNG = "passive1.png"
+//    case passive2PNG = "passive2.png"
+//    case passive3PNG = "passive3.png"
+//    case passive4PNG = "passive4.png"
+//    case passive5PNG = "passive5.png"
+//    // spell
+//    case spell0PNG = "spell0.png"
+//    case spell10PNG = "spell10.png"
+//    case spell11PNG = "spell11.png"
+//    case spell12PNG = "spell12.png"
+//    case spell13PNG = "spell13.png"
+//    case spell14PNG = "spell14.png"
+//    case spell15PNG = "spell15.png"
+//    case spell16PNG = "spell16.png"
+//    case spell1PNG = "spell1.png"
+//    case spell2PNG = "spell2.png"
+//    case spell3PNG = "spell3.png"
+//    case spell4PNG = "spell4.png"
+//    case spell5PNG = "spell5.png"
+//    case spell6PNG = "spell6.png"
+//    case spell7PNG = "spell7.png"
+//    case spell8PNG = "spell8.png"
+//    case spell9PNG = "spell9.png"
+//    // item
+//    case item0PNG = "item0.png"
+//    case item1PNG = "item1.png"
+//}
+

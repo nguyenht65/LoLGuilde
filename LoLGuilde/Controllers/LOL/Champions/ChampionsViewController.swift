@@ -72,7 +72,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
 
     func searchChampions(_ query: String) -> Observable<[Champion]> {
         let listChampions: [Champion] = viewModel.champions.value
-            .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
+            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
         listSearchedChampions = listChampions
         return Observable.of(listChampions)
     }
@@ -95,9 +95,9 @@ extension ChampionsViewController: UITableViewDelegate {
         // setup data
         let item = listSearchedChampions[indexPath.row]
         let championInfoVC = ChampionInfoViewController()
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
+        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image.full)"
         championInfoVC.getDataFromController(champion: item, urlStringImage: urlImage)
-        // push navi
+        // push navigation
         self.navigationController?.pushViewController(championInfoVC, animated: true)
     }
 }

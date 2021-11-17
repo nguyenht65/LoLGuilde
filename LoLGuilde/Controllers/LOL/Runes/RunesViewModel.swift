@@ -36,42 +36,42 @@ class RunesViewModel: RunesProtocol {
     }
     
     func loadAPI() {
-        let observable = Observable<String>.of(urlRunes)
-            .map { urlString -> URL in
-                return URL(string: urlString)!
-            }
-            .map { url -> URLRequest in
-                return URLRequest(url: url)
-            }
-            .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
-                return URLSession.shared.rx.response(request: request)
-            }
-            .share(replay: 1)
-    
-        observable
-            .filter { response, _ -> Bool in
-                return 200..<300 ~= response.statusCode
-            }
-            .map { _, data -> [Rune] in
-                var listRunes: [Rune] = []
-                let array = Helper.convertToArray(data: data)
-                if let _list = array as? [NSDictionary] {
-                    for rune in _list {
-                        if let newRune = Rune(dictionary: rune) {
-                            listRunes.append(newRune)
-                        }
-                    }
-                }
-                return listRunes
-            }
-            .filter { objects in
-                return !objects.isEmpty
-            }
-            .subscribe(onNext: { newRunes in
-                self.processRunes(newRunes)
-            })
-            .disposed(by: disposeBag)
-        
+//        let observable = Observable<String>.of(urlRunes)
+//            .map { urlString -> URL in
+//                return URL(string: urlString)!
+//            }
+//            .map { url -> URLRequest in
+//                return URLRequest(url: url)
+//            }
+//            .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
+//                return URLSession.shared.rx.response(request: request)
+//            }
+//            .share(replay: 1)
+//    
+//        observable
+//            .filter { response, _ -> Bool in
+//                return 200..<300 ~= response.statusCode
+//            }
+//            .map { _, data -> [Rune] in
+//                var listRunes: [Rune] = []
+//                let array = Helper.convertToArray(data: data)
+//                if let _list = array as? [NSDictionary] {
+//                    for rune in _list {
+//                        if let newRune = Rune(dictionary: rune) {
+//                            listRunes.append(newRune)
+//                        }
+//                    }
+//                }
+//                return listRunes
+//            }
+//            .filter { objects in
+//                return !objects.isEmpty
+//            }
+//            .subscribe(onNext: { newRunes in
+//                self.processRunes(newRunes)
+//            })
+//            .disposed(by: disposeBag)
+//        
     }
 
     func readRunesCache() {

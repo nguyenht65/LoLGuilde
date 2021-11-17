@@ -56,13 +56,13 @@ class ProgressView: BaseView {
     
     func setupData(item: Champion) {
         if infoLabel.text == "Attack" {
-            infoProgessView.setProgress(Float((item.info?.attack) ?? 0)/10, animated: true)
+            infoProgessView.setProgress(Float(item.info.attack)/10, animated: true)
         } else if infoLabel.text == "Defense" {
-            infoProgessView.setProgress(Float((item.info?.defense) ?? 0)/10, animated: true)
+            infoProgessView.setProgress(Float(item.info.defense)/10, animated: true)
         } else if infoLabel.text == "Magic" {
-            infoProgessView.setProgress(Float((item.info?.magic) ?? 0)/10, animated: true)
+            infoProgessView.setProgress(Float(item.info.magic)/10, animated: true)
         } else {
-            infoProgessView.setProgress(Float((item.info?.difficulty) ?? 0)/10, animated: true)
+            infoProgessView.setProgress(Float(item.info.difficulty)/10, animated: true)
         }
     }
 }

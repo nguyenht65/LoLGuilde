@@ -44,9 +44,9 @@ class ChampionInfoViewController: BaseViewController {
     override func setupData() {
         nameLabel.text = champion.name
         titleLabel.text = champion.title
-        tag1Label.text = champion.tags?[0]
-        if champion.tags?.count ?? 1 > 1 {
-            tag2Label.text = champion.tags?[1]
+        tag1Label.text = champion.tags[0].rawValue
+        if champion.tags.count > 1 {
+            tag2Label.text = champion.tags[1].rawValue
         } else {
             tag2Label.text = ""
         }

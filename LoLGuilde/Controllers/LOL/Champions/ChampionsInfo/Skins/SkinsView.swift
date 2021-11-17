@@ -37,7 +37,7 @@ class SkinsView: BaseView {
 extension SkinsView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return champion.skins?.count ?? 0
+        return champion.skins.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

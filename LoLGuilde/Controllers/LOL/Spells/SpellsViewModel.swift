@@ -12,7 +12,7 @@ import RxCocoa
 
 protocol SpellsProtocol {
     func processSpells(_ newSpell: [Spells])
-    func loadAPI()
+//    func loadAPI()
 }
 
 class SpellsViewModel: SpellsProtocol {
@@ -36,44 +36,44 @@ class SpellsViewModel: SpellsProtocol {
         }
     }
 
-    func loadAPI() {
-        let observable = Observable<String>.of(urlSpell)
-            .map { urlString -> URL in
-                return URL(string: urlString)!
-            }
-            .map { url -> URLRequest in
-                return URLRequest(url: url)
-            }
-            .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
-                return URLSession.shared.rx.response(request: request)
-            }
-            .share(replay: 1)
-
-        observable
-            .filter { response, _ -> Bool in
-                return 200..<300 ~= response.statusCode
-            }
-            .map { _, data -> [Spells] in
-                var listSpells: [Spells] = []
-                let dictionary = Helper.convertToDictionary(data: data)
-                if let _listSpells = dictionary?["data"] as? [String: NSDictionary] {
-                    for spell in _listSpells {
-                        let spellInfor = spell.value
-                        if let newSpells = Spells(dictionary: spellInfor) {
-                            listSpells.append(newSpells)
-                        }
-                    }
-                }
-                return listSpells.sorted(by: { $0.image?.full ?? "" < $1.image?.full ?? "" })
-            }
-            .filter { objects in
-                return !objects.isEmpty
-            }
-            .subscribe(onNext: { newSpells in
-                self.processSpells(newSpells)
-            })
-            .disposed(by: disposeBag)
-    }
+//    func loadAPI() {
+//        let observable = Observable<String>.of(urlSpell)
+//            .map { urlString -> URL in
+//                return URL(string: urlString)!
+//            }
+//            .map { url -> URLRequest in
+//                return URLRequest(url: url)
+//            }
+//            .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
+//                return URLSession.shared.rx.response(request: request)
+//            }
+//            .share(replay: 1)
+//
+//        observable
+//            .filter { response, _ -> Bool in
+//                return 200..<300 ~= response.statusCode
+//            }
+//            .map { _, data -> [Spells] in
+//                var listSpells: [Spells] = []
+//                let dictionary = Helper.convertToDictionary(data: data)
+//                if let _listSpells = dictionary?["data"] as? [String: NSDictionary] {
+//                    for spell in _listSpells {
+//                        let spellInfor = spell.value
+//                        if let newSpells = Spells(dictionary: spellInfor) {
+//                            listSpells.append(newSpells)
+//                        }
+//                    }
+//                }
+//                return listSpells.sorted(by: { $0.image?.full ?? "" < $1.image?.full ?? "" })
+//            }
+//            .filter { objects in
+//                return !objects.isEmpty
+//            }
+//            .subscribe(onNext: { newSpells in
+//                self.processSpells(newSpells)
+//            })
+//            .disposed(by: disposeBag)
+//    }
 
     func readItemsCache() {
         let decoder = JSONDecoder()

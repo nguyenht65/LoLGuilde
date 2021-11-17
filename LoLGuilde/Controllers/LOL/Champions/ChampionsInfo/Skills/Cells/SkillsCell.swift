@@ -27,12 +27,12 @@ class SkillsCell: UITableViewCell {
     }
 
     func setupData(item: Champion, index: Int) {
-        nameLabel.text = item.spells?[index].name
-        costLabel.text = "Cost: \(item.spells?[index].costBurn ?? "") mana"
-        cooldownLabel.text = "Cooldown: \(item.spells?[index].cooldownBurn ?? "")s"
-        rangeLabel.text = "Range: \(item.spells?[index].rangeBurn ?? "")"
-        descriptionLabel.text = item.spells?[index].description?.htmlToString
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.spells?[index].image?.full ?? "")"
+        nameLabel.text = item.spells[index].name
+        costLabel.text = "Cost: \(item.spells[index].costBurn) \(item.partype)"
+        cooldownLabel.text = "Cooldown: \(item.spells[index].cooldownBurn)s"
+        rangeLabel.text = "Range: \(item.spells[index].rangeBurn)"
+        descriptionLabel.text = item.spells[index].description.htmlToString
+        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.spells[index].image.full)"
         skillImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 

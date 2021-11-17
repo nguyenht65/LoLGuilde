@@ -55,16 +55,15 @@ class ItemsViewModel: ItemsProtocol {
             }
             .map { _, data -> [Item] in
                 var listItems: [Item] = []
-                let dictionary = Helper.convertToDictionary(data: data)
-                if let _listItems = dictionary?["data"] as? [String: NSDictionary] {
-                    for item in _listItems {
-                        let ItemInfor = item.value
-                        if let newItems = Item(dictionary: ItemInfor) {
-                            listItems.append(newItems)
-                        }
+                let decoder = JSONDecoder()
+                let item = try? decoder.decode(ItemBase.self, from: data)
+                if let list = item?.data.values {
+                    for i in list {
+                        let newItem = Item(name: i.name, description: i.description, plaintext: i.plaintext, into: i.into, from: i.from, image: i.image, gold: i.gold, tags: i.tags, stats: i.stats)
+                        listItems.append(newItem)
                     }
                 }
-                return listItems.sorted(by: { $0.image?.full ?? "" < $1.image?.full ?? "" })
+                return listItems.sorted(by: { $0.image.full < $1.image.full})
             }
             .filter { objects in
                 return !objects.isEmpty

@@ -34,7 +34,7 @@ class SpellsViewController: BaseViewController, SpellsViewProtocol {
     }
 
     override func setupData() {
-        viewModel.loadAPI()
+//        viewModel.loadAPI()
         viewModel.readItemsCache()
     }
 }
