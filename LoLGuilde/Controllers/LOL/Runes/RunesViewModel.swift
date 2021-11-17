@@ -54,7 +54,13 @@ class RunesViewModel: RunesProtocol {
             }
             .map { _, data -> [Rune] in
                 var listRunes: [Rune] = []
-                
+                let decoder = JSONDecoder()
+                let rune = try? decoder.decode(RuneBase.self, from: data)
+                if let list = rune {
+                    for i in list {
+                        listRunes.append(Rune(rune: i))
+                    }
+                }
                 return listRunes
             }
             .filter { objects in

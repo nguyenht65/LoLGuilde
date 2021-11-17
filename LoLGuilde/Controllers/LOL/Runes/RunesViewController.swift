@@ -43,7 +43,6 @@ class RunesViewController: BaseViewController, RunesViewProtocol {
         for i in runesStackView.arrangedSubviews {
             i.removeFromSuperview()
         }
-//        let listRunes = runesViewModel.runes.value
         var view = UIView()
         switch segmentedControl.selectedSegmentIndex {
         case 0:

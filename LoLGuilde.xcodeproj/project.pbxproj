@@ -57,8 +57,6 @@
 		36664F3F273C162800355C0D /* InspirationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F3E273C162800355C0D /* InspirationView.swift */; };
 		36664F41273C163400355C0D /* InspirationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F40273C163400355C0D /* InspirationView.xib */; };
 		36664F43273C5B8900355C0D /* RunesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F42273C5B8900355C0D /* RunesViewModel.swift */; };
-		36664F46273C60D300355C0D /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F44273C60D300355C0D /* Runes.swift */; };
-		36664F47273C60D300355C0D /* Slots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F45273C60D300355C0D /* Slots.swift */; };
 		36664F49273C617A00355C0D /* Rune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F48273C617A00355C0D /* Rune.swift */; };
 		3668387D274238CE00B4332B /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668387C274238CE00B4332B /* ItemsDetailView.swift */; };
 		3668387F274238DE00B4332B /* ItemsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3668387E274238DE00B4332B /* ItemsDetailView.xib */; };
@@ -155,8 +153,6 @@
 		36664F3E273C162800355C0D /* InspirationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationView.swift; sourceTree = "<group>"; };
 		36664F40273C163400355C0D /* InspirationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InspirationView.xib; sourceTree = "<group>"; };
 		36664F42273C5B8900355C0D /* RunesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunesViewModel.swift; sourceTree = "<group>"; };
-		36664F44273C60D300355C0D /* Runes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runes.swift; sourceTree = "<group>"; };
-		36664F45273C60D300355C0D /* Slots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slots.swift; sourceTree = "<group>"; };
 		36664F48273C617A00355C0D /* Rune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rune.swift; sourceTree = "<group>"; };
 		3668387C274238CE00B4332B /* ItemsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDetailView.swift; sourceTree = "<group>"; };
 		3668387E274238DE00B4332B /* ItemsDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsDetailView.xib; sourceTree = "<group>"; };
@@ -405,8 +401,6 @@
 		3654D78F271FF17F00BBB9EB /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				36664F44273C60D300355C0D /* Runes.swift */,
-				36664F45273C60D300355C0D /* Slots.swift */,
 				36DB67E627345A940063F6DB /* Passive.swift */,
 				36DB67D02733D2450063F6DB /* Spell.swift */,
 				36DB67E427345A820063F6DB /* Skin.swift */,
@@ -845,14 +839,12 @@
 				3657135C272FF76900F44595 /* Item.swift in Sources */,
 				36574F0B27290F3E00C27774 /* TabBarController.swift in Sources */,
 				36DB67E727345A940063F6DB /* Passive.swift in Sources */,
-				36664F47273C60D300355C0D /* Slots.swift in Sources */,
 				3668388227423A9C00B4332B /* RunesDetailView.swift in Sources */,
 				36664F49273C617A00355C0D /* Rune.swift in Sources */,
 				36664F31273C15B900355C0D /* DominationView.swift in Sources */,
 				36574F082729031A00C27774 /* ItemsViewController.swift in Sources */,
 				36453ABC27331DC000F7413A /* UIViewExtentions.swift in Sources */,
 				36DB67CF2733CB870063F6DB /* SpellsViewModel.swift in Sources */,
-				36664F46273C60D300355C0D /* Runes.swift in Sources */,
 				36BEA658272FCF7A00B75B39 /* ScreenHelper.swift in Sources */,
 				368CE0D827307A4500C3DA27 /* Gold.swift in Sources */,
 				36574F032729022100C27774 /* ChampionsViewController.swift in Sources */,
