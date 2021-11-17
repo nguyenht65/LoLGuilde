@@ -56,11 +56,10 @@ class ItemsViewModel: ItemsProtocol {
             .map { _, data -> [Item] in
                 var listItems: [Item] = []
                 let decoder = JSONDecoder()
-                let item = try? decoder.decode(ItemBase.self, from: data)
+                let item = try? decoder.decode(BaseItem.self, from: data)
                 if let list = item?.data.values {
                     for i in list {
-                        let newItem = Item(name: i.name, description: i.description, plaintext: i.plaintext, into: i.into, from: i.from, image: i.image, gold: i.gold, tags: i.tags, stats: i.stats)
-                        listItems.append(newItem)
+                        listItems.append(Item(item: i))
                     }
                 }
                 return listItems.sorted(by: { $0.image.full < $1.image.full})

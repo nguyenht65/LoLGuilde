@@ -7,7 +7,7 @@
 import Foundation
 
 // MARK: - ChampionBase
-struct ChampionBase: Codable {
+struct BaseChampion: Codable {
     let data: [String: Champion]
 }
 
@@ -15,14 +15,14 @@ struct ChampionBase: Codable {
 struct Champion: Codable {
     let id, name, title: String
     let image: Image
-    let skins: [Skins]
+    let skins: [Skin]
     let lore, blurb: String
     let allytips, enemytips: [String]
     let tags: [Tag]
     let partype: String
     let info: Info
     let stats: Stats
-    let spells: [Spells]
+    let spells: [Spell]
     let passive: Passive
     
     enum CodingKeys: String, CodingKey {
@@ -41,6 +41,10 @@ struct Champion: Codable {
         case stats = "stats"
         case spells = "spells"
         case passive = "passive"
+    }
+
+    init(champion: Champion) {
+        self = champion
     }
 }
 

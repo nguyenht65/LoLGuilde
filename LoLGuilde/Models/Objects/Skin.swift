@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct Skins : Codable {
+struct Skin : Codable {
     let id : String
     let num : Int
     let name : String

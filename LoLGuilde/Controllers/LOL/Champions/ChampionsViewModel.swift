@@ -56,14 +56,12 @@ class ChampionsViewModel: ChampionsProtocol {
             .map { _, data -> [Champion] in
                 var listChampions: [Champion] = []
                 let decoder = JSONDecoder()
-                let champion = try? decoder.decode(ChampionBase.self, from: data)
+                let champion = try? decoder.decode(BaseChampion.self, from: data)
                 if let list = champion?.data.values {
                     for i in list {
-                        let newChampion = Champion(id: i.id, name: i.name, title: i.title, image: i.image, skins: i.skins, lore: i.lore, blurb: i.blurb, allytips: i.allytips, enemytips: i.enemytips, tags: i.tags, partype: i.partype, info: i.info, stats: i.stats, spells: i.spells, passive: i.passive)
-                        listChampions.append(newChampion)
+                        listChampions.append(Champion(champion: i))
                     }
                 }
-                print(listChampions.count)
                 return listChampions.sorted(by: { $0.name < $1.name })
             }
             .filter { objects in

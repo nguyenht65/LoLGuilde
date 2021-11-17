@@ -26,7 +26,7 @@ class RunesDetailView: BaseView {
         self.removeFromSuperview()
     }
 
-    func setupData(item: Spells) {
+    func setupData(item: Spell) {
 //        nameLabel.text = item.name
 //        cooldownLabel.text = "Cooldown: \(item.cooldownBurn ?? "")s"
 //        descriptionTextView.text = item.description?.htmlToString

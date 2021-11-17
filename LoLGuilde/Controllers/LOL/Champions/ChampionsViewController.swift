@@ -41,7 +41,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
 
     override func setupData() {
         viewModel.loadAPI()
-        viewModel.readChampionsCache()
+//        viewModel.readChampionsCache()
     }
 
     override func viewWillAppear(_ animated: Bool) {

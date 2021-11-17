@@ -87,13 +87,13 @@
 		36DB67CC2733C8D00063F6DB /* SpellsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67CA2733C8D00063F6DB /* SpellsCell.swift */; };
 		36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67CB2733C8D00063F6DB /* SpellsCell.xib */; };
 		36DB67CF2733CB870063F6DB /* SpellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67CE2733CB870063F6DB /* SpellsViewModel.swift */; };
-		36DB67D12733D2450063F6DB /* Spells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D02733D2450063F6DB /* Spells.swift */; };
+		36DB67D12733D2450063F6DB /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D02733D2450063F6DB /* Spell.swift */; };
 		36DB67D32734508E0063F6DB /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D22734508E0063F6DB /* SkillsView.swift */; };
 		36DB67D52734509B0063F6DB /* LoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67D42734509B0063F6DB /* LoreView.swift */; };
 		36DB67D9273450C60063F6DB /* SkillsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67D8273450C60063F6DB /* SkillsView.xib */; };
 		36DB67DB273450D00063F6DB /* LoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DB67DA273450D00063F6DB /* LoreView.xib */; };
 		36DB67DF2734512F0063F6DB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67DE2734512F0063F6DB /* BaseView.swift */; };
-		36DB67E527345A820063F6DB /* Skins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E427345A820063F6DB /* Skins.swift */; };
+		36DB67E527345A820063F6DB /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E427345A820063F6DB /* Skin.swift */; };
 		36DB67E727345A940063F6DB /* Passive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E627345A940063F6DB /* Passive.swift */; };
 		36E6344327391D960055E566 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6344227391D960055E566 /* StatusView.swift */; };
 		36E6344627391DA90055E566 /* StatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344527391DA90055E566 /* StatusView.xib */; };
@@ -185,13 +185,13 @@
 		36DB67CA2733C8D00063F6DB /* SpellsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsCell.swift; sourceTree = "<group>"; };
 		36DB67CB2733C8D00063F6DB /* SpellsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsCell.xib; sourceTree = "<group>"; };
 		36DB67CE2733CB870063F6DB /* SpellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewModel.swift; sourceTree = "<group>"; };
-		36DB67D02733D2450063F6DB /* Spells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spells.swift; sourceTree = "<group>"; };
+		36DB67D02733D2450063F6DB /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		36DB67D22734508E0063F6DB /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		36DB67D42734509B0063F6DB /* LoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoreView.swift; sourceTree = "<group>"; };
 		36DB67D8273450C60063F6DB /* SkillsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsView.xib; sourceTree = "<group>"; };
 		36DB67DA273450D00063F6DB /* LoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoreView.xib; sourceTree = "<group>"; };
 		36DB67DE2734512F0063F6DB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		36DB67E427345A820063F6DB /* Skins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skins.swift; sourceTree = "<group>"; };
+		36DB67E427345A820063F6DB /* Skin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
 		36DB67E627345A940063F6DB /* Passive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passive.swift; sourceTree = "<group>"; };
 		36E6344227391D960055E566 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		36E6344527391DA90055E566 /* StatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusView.xib; sourceTree = "<group>"; };
@@ -408,8 +408,8 @@
 				36664F44273C60D300355C0D /* Runes.swift */,
 				36664F45273C60D300355C0D /* Slots.swift */,
 				36DB67E627345A940063F6DB /* Passive.swift */,
-				36DB67D02733D2450063F6DB /* Spells.swift */,
-				36DB67E427345A820063F6DB /* Skins.swift */,
+				36DB67D02733D2450063F6DB /* Spell.swift */,
+				36DB67E427345A820063F6DB /* Skin.swift */,
 				368CE0D727307A4500C3DA27 /* Gold.swift */,
 				36BB5D742729F13400001491 /* Image.swift */,
 				3657135D272FF79100F44595 /* Info.swift */,
@@ -796,7 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36DB67D12733D2450063F6DB /* Spells.swift in Sources */,
+				36DB67D12733D2450063F6DB /* Spell.swift in Sources */,
 				3668387D274238CE00B4332B /* ItemsDetailView.swift in Sources */,
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
 				36664F43273C5B8900355C0D /* RunesViewModel.swift in Sources */,
@@ -856,7 +856,7 @@
 				36BEA658272FCF7A00B75B39 /* ScreenHelper.swift in Sources */,
 				368CE0D827307A4500C3DA27 /* Gold.swift in Sources */,
 				36574F032729022100C27774 /* ChampionsViewController.swift in Sources */,
-				36DB67E527345A820063F6DB /* Skins.swift in Sources */,
+				36DB67E527345A820063F6DB /* Skin.swift in Sources */,
 				363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

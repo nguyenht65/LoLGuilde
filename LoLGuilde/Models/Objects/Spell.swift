@@ -1,22 +1,24 @@
 
 import Foundation
 
-struct Spells: Codable {
+struct BaseSpell: Codable {
+    let data: [String: Spell]
+}
 
+struct Spell: Codable {
     let id, name, description, tooltip: String
     let maxrank: Int
     let cooldown: [Double]
     let cooldownBurn: String
     let cost: [Int]
     let costBurn: String
-    let effect: [[Double]?]
-    let effectBurn: [String?]
+//    let effect: [[Double]?]
+//    let effectBurn: [String?]
     let costType: CostType
     let maxammo: String
     let range: [Int]
     let rangeBurn: String
     let image: Image
-    let resource: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -28,16 +30,18 @@ struct Spells: Codable {
         case cooldownBurn = "cooldownBurn"
         case cost = "cost"
         case costBurn = "costBurn"
-        case effect = "effect"
-        case effectBurn = "effectBurn"
+//        case effect = "effect"
+//        case effectBurn = "effectBurn"
         case costType = "costType"
         case maxammo = "maxammo"
         case range = "range"
         case rangeBurn = "rangeBurn"
         case image = "image"
-        case resource = "resource"
     }
 
+    init(spell: Spell) {
+        self = spell
+    }
 }
 
 enum CostType: String, Codable {
@@ -66,4 +70,5 @@ enum CostType: String, Codable {
     case passive = "Passive"
     case the1Seed = "1 Seed"
     case turretKitCostMana = " Turret Kit & {{ cost }} Mana"
+    case nbsp = "&nbsp;"
 }

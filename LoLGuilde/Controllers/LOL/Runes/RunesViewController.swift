@@ -36,7 +36,7 @@ class RunesViewController: BaseViewController, RunesViewProtocol {
 
     override func setupData() {
         viewModel.loadAPI()
-        viewModel.readRunesCache()
+//        viewModel.readRunesCache()
     }
 
     @IBAction func selectedSegmentedControl(_ sender: UISegmentedControl) {
