@@ -58,7 +58,7 @@ class EachStatusView: BaseView {
         let cases = statusLabel.text
         switch cases {
         case "HEALTH":
-            statusValueLabel.text?.append(contentsOf: "\(item.stats.hp)(\(item.stats.hpperlevel)")
+            statusValueLabel.text?.append(contentsOf: "\(item.stats.hp)(\(item.stats.hpperlevel))")
         case "HEALTH REGEN":
             statusValueLabel.text?.append(contentsOf: "\(item.stats.hpregen)(\(item.stats.hpregenperlevel))")
         case "MANA":
