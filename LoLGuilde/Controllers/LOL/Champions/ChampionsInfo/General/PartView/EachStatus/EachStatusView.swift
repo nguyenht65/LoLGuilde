@@ -7,6 +7,19 @@
 
 import UIKit
 
+enum ChampionStatusValue: Int {
+    case health = 0
+    case healthRegen = 1
+    case mana = 2
+    case manaRegen = 3
+    case attackDamage = 4
+    case attackSpeed = 5
+    case armor = 6
+    case spellBlock = 7
+    case attackRange = 8
+    case moveSpeed = 9
+}
+
 @IBDesignable
 class EachStatusView: BaseView {
 
@@ -15,7 +28,17 @@ class EachStatusView: BaseView {
 
     private var _status: String = ""
     private var _textColor: UIColor = UIColor.white
+    private var _championStatusValue: Int = 0
 
+    @IBInspectable
+    var championStatusValue: Int {
+        set (newValue) {
+            _championStatusValue = newValue
+        } get {
+            return _championStatusValue
+        }
+    }
+    
     @IBInspectable
     var status: String {
         set (newValue) {
@@ -55,30 +78,28 @@ class EachStatusView: BaseView {
     }
 
     func setupData(item: Champion) {
-        let cases = statusLabel.text
-        switch cases {
-        case "HEALTH":
+        guard let championStatusValue = ChampionStatusValue(rawValue: _championStatusValue) else { return }
+        switch championStatusValue {
+        case .health:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.hp)(\(item.stats.hpperlevel))")
-        case "HEALTH REGEN":
+        case .healthRegen:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.hpregen)(\(item.stats.hpregenperlevel))")
-        case "MANA":
+        case .mana:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.mp)(\(item.stats.mpperlevel))")
-        case "MANA REGEN":
+        case .manaRegen:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.mpregen)(\(item.stats.mpregenperlevel))")
-        case "ATTACK DAMAGE":
+        case .attackDamage:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.attackdamage)(\(item.stats.attackdamageperlevel))")
-        case "ATTACK SPEED":
+        case .attackSpeed:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.attackspeed)(\(item.stats.attackspeedperlevel))")
-        case "ARMOR":
+        case .armor:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.armor)(\(item.stats.armorperlevel))")
-        case "MAGIC RESIST":
+        case .spellBlock:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.spellblock)(\(item.stats.spellblockperlevel))")
-        case "ATTACK RANGE":
+        case .attackRange:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.attackrange)")
-        case "MOVEMENT":
+        case .moveSpeed:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.movespeed )")
-        default:
-            return
         }
     }
 }

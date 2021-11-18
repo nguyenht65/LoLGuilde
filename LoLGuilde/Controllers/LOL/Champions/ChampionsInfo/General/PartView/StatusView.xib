@@ -44,6 +44,9 @@
                                             <color key="value" systemColor="systemGreenColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="HEALTH"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="0"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-hS-Q4M" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
@@ -53,6 +56,9 @@
                                             <color key="value" systemColor="systemTealColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="MANA REGEN"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np3-o2-WfO" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
@@ -62,6 +68,9 @@
                                             <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="ARMOR"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
@@ -80,6 +89,9 @@
                                             <color key="value" name="healthRegenColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="HEALTH REGEN"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrS-dd-ksV" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
@@ -90,6 +102,9 @@
                                             <color key="value" systemColor="systemRedColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="ATTACK DAMAGE"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-pM-V7V" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
@@ -99,6 +114,9 @@
                                             <color key="value" systemColor="systemPurpleColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="MAGIC RESIST"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-xW-VAJ" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
@@ -109,6 +127,9 @@
                                             <color key="value" name="textColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="MOVEMENT"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="9"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
@@ -127,6 +148,9 @@
                                             <color key="value" systemColor="systemBlueColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="MANA"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-e4-DF4" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
@@ -137,6 +161,9 @@
                                             <color key="value" systemColor="systemOrangeColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="ATTACK SPEED"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd0-Ku-TIQ" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
@@ -147,6 +174,9 @@
                                             <color key="value" systemColor="systemYellowColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="status" value="ATTACK RANGE"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="championStatusValue">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
