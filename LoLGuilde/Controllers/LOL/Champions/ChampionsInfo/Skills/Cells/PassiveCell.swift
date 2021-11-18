@@ -27,7 +27,7 @@ class PassiveCell: UITableViewCell {
         nameLabel.text = item.passive.name
         descriptionTextView.text = item.passive.description.htmlToString
 //        descriptionTextView.attributedText = item.passive.description.htmlToAttributedString
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/passive/\(item.passive.image.full)"
+        let urlImage = Image.EndPoint.passive.urlString + item.passive.image.full
         passiveImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 

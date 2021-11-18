@@ -30,7 +30,7 @@ class ItemsDetailView: BaseView {
         nameLabel.text = item.name
         goldLabel.text = "\(item.gold.total)"
         descriptionTextView.text = item.description.htmlToString
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/item/\(item.image.full)"
+        let urlImage = Image.EndPoint.item.urlString + item.image.full
         itemsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 }

@@ -19,7 +19,7 @@ class ItemsCell: UICollectionViewCell {
     }
 
     func setupData(item: Item) {
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/item/\(item.image.full)"
+        let urlImage = Image.EndPoint.item.urlString + item.image.full
         itemImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
         itemNameLabel.text = item.name
         if item.into?.isEmpty != nil && item.from?.isEmpty != nil {

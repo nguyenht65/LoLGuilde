@@ -21,7 +21,7 @@ class ChampionsCell: UITableViewCell {
     func setupData(item: Champion) {
         nameLabel.text = item.name
         titleLabel.text = item.title
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image.full)"
+        let urlImage = Image.EndPoint.champion.urlString + item.image.full
         championImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 }

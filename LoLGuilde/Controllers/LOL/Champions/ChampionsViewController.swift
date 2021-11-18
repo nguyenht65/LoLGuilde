@@ -96,7 +96,7 @@ extension ChampionsViewController: UITableViewDelegate {
         // setup data
         let item = listSearchedChampions[indexPath.row]
         let championInfoVC = ChampionInfoViewController()
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image.full)"
+        let urlImage = Image.EndPoint.champion.urlString + item.image.full
         championInfoVC.getDataFromController(champion: item, urlStringImage: urlImage)
         // push navigation
         self.navigationController?.pushViewController(championInfoVC, animated: true)

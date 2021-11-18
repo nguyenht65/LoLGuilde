@@ -32,7 +32,7 @@ class SkillsCell: UITableViewCell {
         cooldownLabel.text = "Cooldown: \(item.spells[index].cooldownBurn)s"
         rangeLabel.text = "Range: \(item.spells[index].rangeBurn)"
         descriptionLabel.text = item.spells[index].description.htmlToString
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.spells[index].image.full)"
+        let urlImage = Image.EndPoint.spell.urlString + item.spells[index].image.full
         skillImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
     }
 
