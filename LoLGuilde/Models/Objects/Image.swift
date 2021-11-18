@@ -1,5 +1,6 @@
 
 import Foundation
+import UIKit
 
 struct Image : Codable {
     let full : String
@@ -37,5 +38,10 @@ struct Image : Codable {
                 return EndPoint.baseURL_2 + "champion/splash/"
             }
         }
+    }
+    
+    enum LoadingImage: String {
+        case square = "loading_2"
+        case rectangle = "loading"
     }
 }

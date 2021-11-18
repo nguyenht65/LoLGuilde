@@ -31,6 +31,6 @@ class SpellsDetailView: BaseView {
         cooldownLabel.text = "Cooldown: \(item.cooldownBurn)s"
         descriptionTextView.text = item.description.htmlToString
         let urlImage = Image.EndPoint.spell.urlString + item.image.full
-        spellsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
+        spellsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
     }
 }

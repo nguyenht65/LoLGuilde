@@ -27,11 +27,7 @@ class RunesDetailView: BaseView {
     }
 
     func setupData(item: Spell) {
-//        nameLabel.text = item.name
-//        cooldownLabel.text = "Cooldown: \(item.cooldownBurn)s"
-//        descriptionTextView.text = item.description.htmlToString
-//        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.image.full)"
-//        spellsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
+
     }
 
 }

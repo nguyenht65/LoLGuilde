@@ -31,6 +31,6 @@ class ItemsDetailView: BaseView {
         goldLabel.text = "\(item.gold.total)"
         descriptionTextView.text = item.description.htmlToString
         let urlImage = Image.EndPoint.item.urlString + item.image.full
-        itemsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
+        itemsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
     }
 }

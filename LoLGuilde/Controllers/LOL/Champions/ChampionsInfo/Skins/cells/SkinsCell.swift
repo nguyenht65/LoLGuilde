@@ -23,6 +23,6 @@ class SkinsCell: UITableViewCell {
     func setupData(item: Champion, index: Int) {
         nameLabel.text = item.skins[index].name
         let urlImage = "\(Image.EndPoint.skin.urlString)\(item.id )_\(item.skins[index].num ).jpg"
-        skinsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading"))
+        skinsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.rectangle.rawValue))
     }
 }

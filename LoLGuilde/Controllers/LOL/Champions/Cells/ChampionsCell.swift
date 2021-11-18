@@ -22,6 +22,6 @@ class ChampionsCell: UITableViewCell {
         nameLabel.text = item.name
         titleLabel.text = item.title
         let urlImage = Image.EndPoint.champion.urlString + item.image.full
-        championImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
+        championImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
     }
 }
