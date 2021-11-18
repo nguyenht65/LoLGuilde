@@ -158,6 +158,9 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
                                                     <color key="value" systemColor="systemRedColor"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="championPropertyValue">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-GA-IXD" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
@@ -167,6 +170,9 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="label" value="Defense"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
                                                     <color key="value" systemColor="systemGreenColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="championPropertyValue">
+                                                    <integer key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
@@ -181,6 +187,9 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
                                                     <color key="value" systemColor="systemBlueColor"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="championPropertyValue">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-6w-Pk5" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
@@ -193,6 +202,9 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="label" value="Difficulty"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
                                                     <color key="value" systemColor="systemPurpleColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="championPropertyValue">
+                                                    <integer key="value" value="3"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>

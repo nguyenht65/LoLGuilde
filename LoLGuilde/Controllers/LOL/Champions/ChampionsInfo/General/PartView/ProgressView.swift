@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum ChampionPropertyValues: Int {
+    case attack = 0
+    case defense = 1
+    case magic = 2
+    case difficulty = 3
+}
+
 @IBDesignable
 class ProgressView: BaseView {
 
@@ -15,6 +22,16 @@ class ProgressView: BaseView {
 
     private var _label: String = ""
     private var _tintColor: UIColor = UIColor.white
+    private var _championPropertyValue: Int = 0
+
+    @IBInspectable
+    var championPropertyValue: Int {
+        set (newValue) {
+            _championPropertyValue = newValue
+        } get {
+            return _championPropertyValue
+        }
+    }
 
     @IBInspectable
     var label: String {
@@ -55,13 +72,15 @@ class ProgressView: BaseView {
     }
     
     func setupData(item: Champion) {
-        if infoLabel.text == "Attack" {
+        guard let championProperties = ChampionPropertyValues(rawValue: _championPropertyValue) else { return }
+        switch championProperties {
+        case .attack:
             infoProgessView.setProgress(Float(item.info.attack)/10, animated: true)
-        } else if infoLabel.text == "Defense" {
+        case .defense:
             infoProgessView.setProgress(Float(item.info.defense)/10, animated: true)
-        } else if infoLabel.text == "Magic" {
+        case .magic:
             infoProgessView.setProgress(Float(item.info.magic)/10, animated: true)
-        } else {
+        case .difficulty:
             infoProgessView.setProgress(Float(item.info.difficulty)/10, animated: true)
         }
     }
