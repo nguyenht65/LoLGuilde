@@ -14,7 +14,7 @@ protocol ItemsViewProtocol {
 
 class ItemsViewController: BaseViewController, ItemsViewProtocol {
 
-    @IBOutlet weak var itemSearchBar: UISearchBar!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var itemCollectionView: UICollectionView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
     let disposeBag = DisposeBag()
@@ -45,7 +45,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     }
 
     func onSearching() {
-        let searchResults = itemSearchBar.rx.text.orEmpty
+        let searchResults = searchBar.rx.text.orEmpty
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .flatMapLatest { query -> Observable<[Item]> in
@@ -98,7 +98,7 @@ extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelega
         collectionView.deselectItem(at: indexPath, animated: true)
         // setupUI
         let screenSize = collectionView.layer.bounds.size
-        itemsDetailView = ItemsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 250))
+        itemsDetailView = ItemsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 350))
         itemsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
         // setupData
         let item = viewModel.items.value[indexPath.row]
@@ -119,12 +119,14 @@ extension ItemsViewController {
         // get bottom padding of the screen
         let window = SceneDelegate.shared().window
         let bottomPadding = window?.safeAreaInsets.bottom ?? 0
-        let newBottomViewPadding = keyboardSize.height - bottomPadding - itemSearchBar.bounds.height
+        let newBottomViewPadding = keyboardSize.height - bottomPadding - searchBar.bounds.height
         itemCollectionView.contentInset.bottom = newBottomViewPadding
+        searchBar.showsCancelButton = true
     }
 
     @objc func keyboardWillHide(notification: Notification) {
         bottomViewConstraint.constant = 65
+        searchBar.showsCancelButton = false
     }
 
     override func viewWillDisappear(_ animated: Bool) {

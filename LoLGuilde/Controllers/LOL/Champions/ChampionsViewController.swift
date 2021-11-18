@@ -53,7 +53,8 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         let searchResults = searchBar.rx.text.orEmpty
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .flatMapLatest { query -> Observable<[Champion]> in
+            .flatMapLatest { [weak self] query -> Observable<[Champion]> in
+                guard let self = self else { return .just([])}
                 if query.isEmpty { // case when use not search anythings
 //                    return .just([])
                     return self.getAllChampions()
@@ -116,10 +117,12 @@ extension ChampionsViewController {
         let bottomPadding = window?.safeAreaInsets.bottom ?? 0
         let newBottomViewPadding = keyboardSize.height - bottomPadding - searchBar.bounds.height
         championsTableView.contentInset.bottom = newBottomViewPadding
+        searchBar.showsCancelButton = true
     }
 
     @objc func keyboardWillHide(notification: Notification) {
         bottomViewConstraint.constant = 65
+        searchBar.showsCancelButton = false
     }
 
     override func viewWillDisappear(_ animated: Bool) {
