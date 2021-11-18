@@ -20,7 +20,7 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     let disposeBag = DisposeBag()
     let viewModel: ItemsViewModel = ItemsViewModel()
     private var listSearchedItems: [Item] = []
-    var itemsDetailView = ItemsDetailView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    var itemsDetailView = ItemsDetailView()
 
     func getItemsSuccess() {
         onSearching()
@@ -97,14 +97,16 @@ extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         // setupUI
+        itemsDetailView.removeFromSuperview()
         let screenSize = collectionView.layer.bounds.size
-        itemsDetailView = ItemsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 350))
+        itemsDetailView.frame = CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 350)
         itemsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
         // setupData
-        let item = viewModel.items.value[indexPath.row]
+        let item = listSearchedItems[indexPath.row]
         itemsDetailView.setupData(item: item)
         self.view.addSubview(itemsDetailView)
     }
+    
 }
 
 extension ItemsViewController {

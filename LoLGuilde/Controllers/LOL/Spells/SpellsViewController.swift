@@ -69,6 +69,7 @@ extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         spellsCollectionView.deselectItem(at: indexPath, animated: true)
         // setupUI
+        spellsDetailView.removeFromSuperview()
         let screenSize = collectionView.layer.bounds.size
         spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 250))
         spellsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
@@ -77,8 +78,5 @@ extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         spellsDetailView.setupData(item: item)
         self.view.addSubview(spellsDetailView)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        spellsDetailView.removeFromSuperview()
-//    }
+
 }
