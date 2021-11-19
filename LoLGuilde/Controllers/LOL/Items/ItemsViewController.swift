@@ -99,8 +99,8 @@ extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelega
         // setupUI
         itemsDetailView.removeFromSuperview()
         let screenSize = collectionView.layer.bounds.size
-        itemsDetailView.frame = CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 350)
-        itemsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
+        itemsDetailView.frame = CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: screenSize.height * 3 / 5)
+        itemsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height * 2 / 3)
         // setupData
         let item = listSearchedItems[indexPath.row]
         itemsDetailView.setupData(item: item)

@@ -28,7 +28,7 @@ class ItemsDetailView: BaseView {
     
     func setupData(item: Item) {
         nameLabel.text = item.name
-        goldLabel.text = "\(item.gold.total)"
+        goldLabel.text = "$\(item.gold.total) - $\(item.gold.sell)"
         descriptionTextView.text = item.description.htmlToString
         let urlImage = Image.EndPoint.item.urlString + item.image.full
         itemsImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
