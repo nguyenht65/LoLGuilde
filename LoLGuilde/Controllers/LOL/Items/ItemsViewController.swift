@@ -14,20 +14,21 @@ protocol ItemsViewProtocol {
 
 class ItemsViewController: BaseViewController, ItemsViewProtocol {
 
-    @IBOutlet weak var itemSearchBar: UISearchBar!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var itemCollectionView: UICollectionView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
     let disposeBag = DisposeBag()
-    let itemsViewModel: ItemsViewModel = ItemsViewModel()
+    let viewModel: ItemsViewModel = ItemsViewModel()
     private var listSearchedItems: [Item] = []
+    var itemsDetailView = ItemsDetailView()
 
     func getItemsSuccess() {
-        self.itemCollectionView.reloadData()
+        onSearching()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemsViewModel.itemView = self
+        viewModel.itemView = self
     }
 
     override func setupUI() {
@@ -39,18 +40,16 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     }
 
     override func setupData() {
-        itemsViewModel.loadAPI()
-        itemsViewModel.readItemsCache()
-        onSearching()
+        viewModel.loadAPI()
+//        viewModel.readItemsCache()
     }
 
     func onSearching() {
-        let searchResults = itemSearchBar.rx.text.orEmpty
+        let searchResults = searchBar.rx.text.orEmpty
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .flatMapLatest { query -> Observable<[Item]> in
                 if query.isEmpty { // case when use not search anythings
-//                    return .just([])
                     return self.getAllItems()
                 }
                 return self.searchItems(query) // case when use search the query
@@ -66,14 +65,14 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     }
 
     func searchItems(_ query: String) -> Observable<[Item]> {
-        let listItems: [Item] = itemsViewModel.items.value
-            .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
+        let listItems: [Item] = viewModel.items.value
+            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
         listSearchedItems = listItems
         return Observable.of(listItems)
     }
 
     func getAllItems() -> Observable<[Item]> {
-        let listAllItems: [Item] = itemsViewModel.items.value
+        let listAllItems: [Item] = viewModel.items.value
         listSearchedItems = listAllItems
         return Observable.of(listAllItems)
     }
@@ -94,6 +93,20 @@ extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        // setupUI
+        itemsDetailView.removeFromSuperview()
+        let screenSize = collectionView.layer.bounds.size
+        itemsDetailView.frame = CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 350)
+        itemsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
+        // setupData
+        let item = listSearchedItems[indexPath.row]
+        itemsDetailView.setupData(item: item)
+        self.view.addSubview(itemsDetailView)
+    }
+    
 }
 
 extension ItemsViewController {
@@ -108,12 +121,14 @@ extension ItemsViewController {
         // get bottom padding of the screen
         let window = SceneDelegate.shared().window
         let bottomPadding = window?.safeAreaInsets.bottom ?? 0
-        let newBottomViewPadding = keyboardSize.height - bottomPadding - itemSearchBar.bounds.height
+        let newBottomViewPadding = keyboardSize.height - bottomPadding - searchBar.bounds.height
         itemCollectionView.contentInset.bottom = newBottomViewPadding
+        searchBar.showsCancelButton = true
     }
 
     @objc func keyboardWillHide(notification: Notification) {
         bottomViewConstraint.constant = 65
+        searchBar.showsCancelButton = false
     }
 
     override func viewWillDisappear(_ animated: Bool) {

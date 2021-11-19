@@ -55,17 +55,14 @@ class ChampionsViewModel: ChampionsProtocol {
             }
             .map { _, data -> [Champion] in
                 var listChampions: [Champion] = []
-                let dictionary = Helper.convertToDictionary(data: data)
-                if let _listChampions = dictionary?["data"] as? [String: NSDictionary] {
-                    for champion in _listChampions {
-                        //let championName = champion.key
-                        let championInfor = champion.value
-                        if let newChampion = Champion(dictionary: championInfor) {
-                            listChampions.append(newChampion)
-                        }
+                let decoder = JSONDecoder()
+                let champion = try? decoder.decode(BaseChampion.self, from: data)
+                if let list = champion?.data.values {
+                    for i in list {
+                        listChampions.append(Champion(champion: i))
                     }
                 }
-                return listChampions.sorted(by: { $0.name ?? "" < $1.name ?? ""})
+                return listChampions.sorted(by: { $0.name < $1.name })
             }
             .filter { objects in
                 return !objects.isEmpty

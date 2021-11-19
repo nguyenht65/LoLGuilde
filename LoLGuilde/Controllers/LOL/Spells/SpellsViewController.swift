@@ -14,7 +14,8 @@ protocol SpellsViewProtocol {
 class SpellsViewController: BaseViewController, SpellsViewProtocol {
 
     @IBOutlet weak var spellsCollectionView: UICollectionView!
-    let spellsViewModel: SpellsViewModel = SpellsViewModel()
+    let viewModel: SpellsViewModel = SpellsViewModel()
+    lazy var spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
 
     func getSpellsSuccess() {
         self.spellsCollectionView.reloadData()
@@ -22,7 +23,7 @@ class SpellsViewController: BaseViewController, SpellsViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        spellsViewModel.spellsView = self
+        viewModel.spellsView = self
     }
 
     override func setupUI() {
@@ -33,20 +34,20 @@ class SpellsViewController: BaseViewController, SpellsViewProtocol {
     }
 
     override func setupData() {
-        spellsViewModel.loadAPI()
-        spellsViewModel.readItemsCache()
+        viewModel.loadAPI()
+//        viewModel.readItemsCache()
     }
 }
 
 extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return spellsViewModel.spells.value.count
+        return viewModel.spells.value.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SpellsCell
-        let item = spellsViewModel.spells.value[indexPath.row]
+        let item = viewModel.spells.value[indexPath.row]
         cell.setupData(item: item)
         return cell
     }
@@ -62,6 +63,20 @@ extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        spellsCollectionView.deselectItem(at: indexPath, animated: true)
+        // setupUI
+        spellsDetailView.removeFromSuperview()
+        let screenSize = collectionView.layer.bounds.size
+        spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 250))
+        spellsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
+        // setupData
+        let item = viewModel.spells.value[indexPath.row]
+        spellsDetailView.setupData(item: item)
+        self.view.addSubview(spellsDetailView)
     }
 
 }

@@ -18,17 +18,17 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var championsTableView: UITableView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
-    private let championsViewModel: ChampionsViewModel = ChampionsViewModel()
+    private let viewModel: ChampionsViewModel = ChampionsViewModel()
     let disposeBag = DisposeBag()
     private var listSearchedChampions: [Champion] = []
 
     func getChampionsSuccess() {
-        self.championsTableView.reloadData()
+        onSearching()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        championsViewModel.championView = self
+        viewModel.championView = self
     }
 
     override func setupUI() {
@@ -40,9 +40,8 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     }
 
     override func setupData() {
-        championsViewModel.loadAPI()
-        championsViewModel.readChampionsCache()
-        onSearching()
+        viewModel.loadAPI()
+//        viewModel.readChampionsCache()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +53,8 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
         let searchResults = searchBar.rx.text.orEmpty
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .flatMapLatest { query -> Observable<[Champion]> in
+            .flatMapLatest { [weak self] query -> Observable<[Champion]> in
+                guard let self = self else { return .just([])}
                 if query.isEmpty { // case when use not search anythings
 //                    return .just([])
                     return self.getAllChampions()
@@ -72,14 +72,14 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     }
 
     func searchChampions(_ query: String) -> Observable<[Champion]> {
-        let listChampions: [Champion] = championsViewModel.champions.value
-            .filter{ ($0.name ?? "").uppercased().contains(query.uppercased()) }
+        let listChampions: [Champion] = viewModel.champions.value
+            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
         listSearchedChampions = listChampions
         return Observable.of(listChampions)
     }
 
     func getAllChampions() -> Observable<[Champion]> {
-        let listAllChampions: [Champion] = championsViewModel.champions.value
+        let listAllChampions: [Champion] = viewModel.champions.value
         listSearchedChampions = listAllChampions
         return Observable.of(listAllChampions)
     }
@@ -96,9 +96,9 @@ extension ChampionsViewController: UITableViewDelegate {
         // setup data
         let item = listSearchedChampions[indexPath.row]
         let championInfoVC = ChampionInfoViewController()
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/champion/\(item.image?.full ?? "")"
+        let urlImage = Image.EndPoint.champion.urlString + item.image.full
         championInfoVC.getDataFromController(champion: item, urlStringImage: urlImage)
-        // push navi
+        // push navigation
         self.navigationController?.pushViewController(championInfoVC, animated: true)
     }
 }
@@ -117,10 +117,12 @@ extension ChampionsViewController {
         let bottomPadding = window?.safeAreaInsets.bottom ?? 0
         let newBottomViewPadding = keyboardSize.height - bottomPadding - searchBar.bounds.height
         championsTableView.contentInset.bottom = newBottomViewPadding
+        searchBar.showsCancelButton = true
     }
 
     @objc func keyboardWillHide(notification: Notification) {
         bottomViewConstraint.constant = 65
+        searchBar.showsCancelButton = false
     }
 
     override func viewWillDisappear(_ animated: Bool) {

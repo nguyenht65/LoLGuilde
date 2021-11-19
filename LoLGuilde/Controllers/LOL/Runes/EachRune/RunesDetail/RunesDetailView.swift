@@ -1,0 +1,33 @@
+//
+//  RunesDetailView.swift
+//  LoLGuilde
+//
+//  Created by Bang on 15/11/2021.
+//
+
+import UIKit
+
+class RunesDetailView: BaseView {
+
+    @IBOutlet weak var spellsImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cooldownLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+
+    @IBAction func closeButtonAction(_ sender: UIButton) {
+        self.removeFromSuperview()
+    }
+
+    func setupData(item: Spell) {
+
+    }
+
+}

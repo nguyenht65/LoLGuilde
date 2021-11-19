@@ -18,10 +18,10 @@ class SpellsCell: UICollectionViewCell {
         setupUI()
     }
 
-    func setupData(item: Spells){
+    func setupData(item: Spell){
         spellNameLabel.text = item.name
-        let urlImage = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/img/spell/\(item.image?.full ?? "")"
-        spellImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: "loading_2"))
+        let urlImage = Image.EndPoint.spell.urlString + item.image.full
+        spellImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
         spellImageView.layer.borderColor = UIColor.white.cgColor
     }
 
