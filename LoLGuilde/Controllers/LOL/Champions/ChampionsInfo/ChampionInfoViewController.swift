@@ -19,6 +19,27 @@ class ChampionInfoViewController: BaseViewController {
 
     private var champion: Champion!
     private var urlImage: String = ""
+    
+    private lazy var generalView: GeneralView = {
+        let view = GeneralView(frame: infoStackView.bounds)
+        view.setupData(item: champion)
+        return view
+    }()
+    private lazy var skillsView: SkillsView = {
+        let view = SkillsView(frame: infoStackView.bounds)
+        view.getChampion(champion: champion)
+        return view
+    }()
+    private lazy var loreView: LoreView = {
+        let view = LoreView(frame: infoStackView.bounds)
+        view.setupData(item: champion)
+        return view
+    }()
+    private lazy var skinsView: SkinsView = {
+        let view = SkinsView(frame: infoStackView.bounds)
+        view.getChampion(champion: champion)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,17 +85,13 @@ class ChampionInfoViewController: BaseViewController {
         var view = UIView()
         switch sender.selectedSegmentIndex {
         case 0:
-            view = GeneralView(frame: infoStackView.bounds)
-            (view as? GeneralView)?.setupData(item: champion)
+            view = generalView
         case 1:
-            view = SkillsView(frame: infoStackView.bounds)
-            (view as? SkillsView)?.getChampion(champion: champion)
+            view = skillsView
         case 2:
-            view = LoreView(frame: infoStackView.bounds)
-            (view as? LoreView)?.setupData(item: champion)
+            view = loreView
         case 3:
-            view = SkinsView(frame: infoStackView.bounds)
-            (view as? SkinsView)?.getChampion(champion: champion)
+            view = skinsView
         default:
             return
         }
