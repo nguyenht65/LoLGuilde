@@ -17,7 +17,7 @@ protocol SpellsProtocol {
 
 class SpellsViewModel: SpellsProtocol {
 
-    private let urlSpell = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/data/en_US/summoner.json"
+    private let urlSpell = "https://nguyenht65.github.io/LOLResources/lol/data/en_US/summoner.json"
     private let disposeBag = DisposeBag()
     private let spellsFileURL = Helper.cachedFileURL("spells.json")
     var spells = BehaviorRelay<[Spell]>(value: [])

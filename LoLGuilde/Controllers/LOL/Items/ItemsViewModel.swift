@@ -17,7 +17,7 @@ protocol ItemsProtocol {
 
 class ItemsViewModel: ItemsProtocol {
 
-    private let urlItem = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/data/en_US/item.json"
+    private let urlItem = "https://nguyenht65.github.io/LOLResources/lol/data/en_US/item.json"
     private let disposeBag = DisposeBag()
     private let itemsFileURL = Helper.cachedFileURL("items.json")
     var items = BehaviorRelay<[Item]>(value: [])

@@ -16,7 +16,7 @@ protocol RunesProtocol {
 
 class RunesViewModel: RunesProtocol {
     
-    private let urlRunes = "https://nguyenht65.github.io/LOLResources/LoLResouces/lol/data/en_US/runesReforged.json"
+    private let urlRunes = "https://nguyenht65.github.io/LOLResources/lol/data/en_US/runesReforged.json"
     private let disposeBag = DisposeBag()
     private let runesFileURL = Helper.cachedFileURL("runes.json")
     var runes = BehaviorRelay<[Rune]>(value: [])
