@@ -44,4 +44,8 @@ struct Image : Codable {
         case square = "loading_2"
         case rectangle = "loading"
     }
+    
+    enum TopicImage: String {
+        case ic = "ic_tb1"
+    }
 }

@@ -30,13 +30,13 @@ enum TabItem: String, CaseIterable {
     var icon: UIImage {
         switch self {
         case .champions:
-            return UIImage(named: "ic_tb1")!
+            return UIImage(named: Image.TopicImage.ic.rawValue)!
         case .items:
-            return UIImage(named: "ic_tb1")!
+            return UIImage(named: Image.TopicImage.ic.rawValue)!
         case .runes:
-            return UIImage(named: "ic_tb1")!
+            return UIImage(named: Image.TopicImage.ic.rawValue)!
         case .spells:
-            return UIImage(named: "ic_tb1")!
+            return UIImage(named: Image.TopicImage.ic.rawValue)!
         }
     }
 
