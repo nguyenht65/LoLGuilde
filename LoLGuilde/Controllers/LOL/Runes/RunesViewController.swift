@@ -19,40 +19,41 @@ class RunesViewController: BaseViewController, RunesViewProtocol {
     private var listRunes: [Rune] = []
 
     private lazy var precisionView: PrecisionView = {
-        segmentedControl.selectedSegmentTintColor = UIColor.systemYellow
         let view = PrecisionView(frame: runesStackView.bounds)
         view.setupUI(item: listRunes[2])
+        view.setupData(rune: listRunes[2])
         return view
     }()
     private lazy var dominationView: DominationView = {
-        segmentedControl.selectedSegmentTintColor = UIColor.systemRed
         let view = DominationView(frame: runesStackView.bounds)
         view.setupUI(item: listRunes[0])
+        view.setupData(rune: listRunes[0])
         return view
     }()
     private lazy var sorceryView: SorceryView = {
-        segmentedControl.selectedSegmentTintColor = UIColor.systemCyan
         let view = SorceryView(frame: runesStackView.bounds)
         view.setupUI(item: listRunes[4])
+        view.setupData(rune: listRunes[4])
         return view
     }()
     private lazy var resolveView: ResolveView = {
-        segmentedControl.selectedSegmentTintColor = UIColor.systemGreen
         let view = ResolveView(frame: runesStackView.bounds)
         view.setupUI(item: listRunes[3])
+        view.setupData(rune: listRunes[3])
         return view
     }()
     private lazy var inspirationView: InspirationView = {
-        segmentedControl.selectedSegmentTintColor = UIColor.systemMint
         let view = InspirationView(frame: runesStackView.bounds)
         view.setupUI(item: listRunes[1])
+        view.setupData(rune: listRunes[1])
         return view
     }()
-    
+
     func getRunesSuccess() {
         listRunes = viewModel.runes.value
         let precisionView = PrecisionView(frame: runesStackView.bounds)
         precisionView.setupUI(item: listRunes[2])
+        precisionView.setupData(rune: listRunes[2])
         runesStackView.addArrangedSubview(precisionView)
     }
 
@@ -77,14 +78,19 @@ class RunesViewController: BaseViewController, RunesViewProtocol {
         var view = UIView()
         switch segmentedControl.selectedSegmentIndex {
         case 0:
+            segmentedControl.selectedSegmentTintColor = UIColor.systemYellow
             view = precisionView
         case 1:
+            segmentedControl.selectedSegmentTintColor = UIColor.systemRed
             view = dominationView
         case 2:
+            segmentedControl.selectedSegmentTintColor = UIColor.systemCyan
             view = sorceryView
         case 3:
+            segmentedControl.selectedSegmentTintColor = UIColor.systemGreen
             view = resolveView
         case 4:
+            segmentedControl.selectedSegmentTintColor = UIColor.systemMint
             view = inspirationView
         default:
             return

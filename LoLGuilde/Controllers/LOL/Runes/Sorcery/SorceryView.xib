@@ -54,12 +54,27 @@
                                                 <constraint firstAttribute="height" constant="60" id="Aho-pg-fzw"/>
                                                 <constraint firstAttribute="width" constant="60" id="lzu-Qr-c1b"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="403-JU-9QW" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="105" y="0.0" width="60" height="60"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-vF-7Tv" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="210" y="0.0" width="60" height="60"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                 </stackView>
@@ -72,12 +87,27 @@
                                                 <constraint firstAttribute="height" constant="50" id="3U9-uW-AsF"/>
                                                 <constraint firstAttribute="width" constant="50" id="p3f-rL-eMc"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrJ-6P-Gvx" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTX-CW-Fwm" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                 </stackView>
@@ -90,12 +120,27 @@
                                                 <constraint firstAttribute="width" constant="50" id="Jd6-Zi-zje"/>
                                                 <constraint firstAttribute="height" constant="50" id="ea5-uZ-hRx"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr0-H6-Zpz" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AfN-JQ-RWb" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                 </stackView>
@@ -108,12 +153,27 @@
                                                 <constraint firstAttribute="height" constant="50" id="R8W-uZ-znb"/>
                                                 <constraint firstAttribute="width" constant="50" id="cAa-K9-v6w"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="9"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xa-yO-DSO" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2A-92-l5P" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="11"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                 </stackView>

@@ -17,10 +17,15 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var itemCollectionView: UICollectionView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
-    let disposeBag = DisposeBag()
-    let viewModel: ItemsViewModel = ItemsViewModel()
+
+    private let disposeBag = DisposeBag()
+    var viewModel: ItemsViewModel = ItemsViewModel()
     private var listSearchedItems: [Item] = []
-    var itemsDetailView = ItemsDetailView()
+    private var itemsDetailView = ItemsDetailView()
+
+//    required init?(coder: NSCoder) {
+//        fatalError("Have an error in ItemsViewController")
+//    }
 
     func getItemsSuccess() {
         onSearching()

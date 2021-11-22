@@ -19,7 +19,7 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     @IBOutlet weak var championsTableView: UITableView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
     private let viewModel: ChampionsViewModel = ChampionsViewModel()
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     private var listSearchedChampions: [Champion] = []
 
     func getChampionsSuccess() {

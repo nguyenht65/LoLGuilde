@@ -10,12 +10,12 @@ import RxSwift
 import RxRelay
 import RxCocoa
 
-protocol ItemsProtocol {
+protocol ItemsViewModelProtocol {
     func processItems(_ newItems: [Item])
     func loadAPI()
 }
 
-class ItemsViewModel: ItemsProtocol {
+class ItemsViewModel: ItemsViewModelProtocol {
 
     private let urlItem = "https://nguyenht65.github.io/LOLResources/lol/data/en_US/item.json"
     private let disposeBag = DisposeBag()
