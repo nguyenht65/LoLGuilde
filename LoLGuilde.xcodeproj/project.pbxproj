@@ -447,6 +447,7 @@
 				36664F2D273C156E00355C0D /* Sorcery */,
 				36664F2C273C156400355C0D /* Domination */,
 				36664F25273C150000355C0D /* Precision */,
+				366838802742399800B4332B /* RunesDetail */,
 				36664F24273C126500355C0D /* EachRune */,
 				36574F0D27291AAF00C27774 /* RunesViewController.swift */,
 				36574F0E27291AAF00C27774 /* RunesViewController.xib */,
@@ -467,7 +468,6 @@
 		36664F24273C126500355C0D /* EachRune */ = {
 			isa = PBXGroup;
 			children = (
-				366838802742399800B4332B /* RunesDetail */,
 				36664F20273C115600355C0D /* EachRuneView.swift */,
 				36664F22273C116600355C0D /* EachRuneView.xib */,
 			);

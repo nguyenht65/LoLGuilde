@@ -28,7 +28,7 @@ class PrecisionView: BaseView {
 
     private lazy var runesDetailView: RunesDetailView = {
         let screenSize = self.layer.bounds.size
-        let view = RunesDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 300))
+        let view = RunesDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: screenSize.height * 4 / 9))
         view.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
         return view
     }()
@@ -40,7 +40,7 @@ class PrecisionView: BaseView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
+
     override func commonInit() {
         super.commonInit()
         setupAction()
