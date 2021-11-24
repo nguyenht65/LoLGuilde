@@ -49,7 +49,7 @@
                 <constraint firstItem="AQH-IB-nmF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zwf-a7-anO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AQH-IB-nmF" secondAttribute="trailing" id="zwy-uA-GTc"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="107"/>
+            <point key="canvasLocation" x="131.77570093457942" y="106.91144708423327"/>
         </view>
     </objects>
     <resources>

@@ -13,14 +13,20 @@ final class Networking {
 
     // MARK: - Endpoint
     enum EndPoint {
-        static let baseURL: URL? = URL(string: "https://nguyenht65.github.io/LOLResources/lol/data/en_US/")
+        static let baseUrlString = "https://nguyenht65.github.io/LOLResources/lol/data"
+        static let language = "/en_US"
+     
+        static var baseURL: URL {
+            return URL(string: Networking.EndPoint.baseUrlString + Networking.EndPoint.language)!
+        }
+//        static let baseURL: URL? = URL(string: "https://nguyenht65.github.io/LOLResources/lol/data/en_US/")
 
         case champion
 
         var url: URL? {
             switch self {
             case .champion:
-                return EndPoint.baseURL?.appendingPathComponent("championFull.json")
+                return EndPoint.baseURL.appendingPathComponent("/championFull.json")
             }
         }
     }

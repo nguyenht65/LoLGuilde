@@ -30,9 +30,8 @@ extension UIViewController {
 
     @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
-
-        if let nav = self.navigationController {
-            nav.view.endEditing(true)
+        if let navigationController = self.navigationController {
+            navigationController.view.endEditing(true)
         }
     }
 }

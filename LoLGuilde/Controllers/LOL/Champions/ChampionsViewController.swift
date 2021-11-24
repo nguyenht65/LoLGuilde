@@ -37,7 +37,7 @@ class ChampionsViewController: BaseViewController {
         let nib = UINib(nibName: ChampionsCell.className, bundle: .main)
         championsTableView.register(nib, forCellReuseIdentifier: "cell")
         championsTableView.rx.setDelegate(self).disposed(by: disposeBag)
-        registerKeyboardNotifications()
+ 
         hideKeyboardWhenTappedAround()
     }
 
@@ -45,7 +45,6 @@ class ChampionsViewController: BaseViewController {
 //        viewModel.readChampionsCache()
         viewModel.loadAPI()
         bindViewModel()
-        onSearching()
     }
 
     func bindViewModel() {
@@ -56,11 +55,13 @@ class ChampionsViewController: BaseViewController {
                 cell.setupData(item: champions)
             }
             .disposed(by: disposeBag)
+        onSearching()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
+        registerKeyboardNotifications()
     }
 
     func onSearching() {
@@ -99,8 +100,9 @@ extension ChampionsViewController {
         // get bottom padding of the screen
         let window = SceneDelegate.shared().window
         let bottomPadding = window?.safeAreaInsets.bottom ?? 0
-        let newBottomViewPadding = keyboardSize.height - bottomPadding - searchBar.bounds.height
-        championsTableView.contentInset.bottom = newBottomViewPadding
+        let newBottomViewPadding = keyboardSize.height - bottomPadding
+//        championsTableView.contentInset.bottom = newBottomViewPadding
+        bottomViewConstraint.constant = newBottomViewPadding
         searchBar.showsCancelButton = true
     }
 
