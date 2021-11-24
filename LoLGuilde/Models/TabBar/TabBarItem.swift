@@ -16,7 +16,7 @@ enum TabItem: String, CaseIterable {
     var viewController: UIViewController {
         switch self {
         case .champions:
-            let navigationController = UINavigationController(rootViewController: ChampionsViewController())
+            let navigationController = UINavigationController(rootViewController: ChampionsViewController( championsViewModel: ChampionsViewModel()))
             return navigationController
         case .items:
             return ItemsViewController()

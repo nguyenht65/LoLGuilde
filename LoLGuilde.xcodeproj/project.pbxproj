@@ -97,6 +97,7 @@
 		36E6344627391DA90055E566 /* StatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344527391DA90055E566 /* StatusView.xib */; };
 		36E6344C27391E530055E566 /* EachStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344B27391E530055E566 /* EachStatusView.xib */; };
 		36E6344E27391E600055E566 /* EachStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6344D27391E600055E566 /* EachStatusView.swift */; };
+		36F329C7274DB9DE00DB5CBB /* ChampionsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F329C6274DB9DE00DB5CBB /* ChampionsServices.swift */; };
 		87E109F25E1944CD199057A5 /* Pods_LoLGuilde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +194,7 @@
 		36E6344527391DA90055E566 /* StatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusView.xib; sourceTree = "<group>"; };
 		36E6344B27391E530055E566 /* EachStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachStatusView.xib; sourceTree = "<group>"; };
 		36E6344D27391E600055E566 /* EachStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachStatusView.swift; sourceTree = "<group>"; };
+		36F329C6274DB9DE00DB5CBB /* ChampionsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsServices.swift; sourceTree = "<group>"; };
 		7F30D1743EE12A3B4C62F217 /* Pods-LoLGuilde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.release.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.release.xcconfig"; sourceTree = "<group>"; };
 		B503EAE8A47C33115A40BD5B /* Pods-LoLGuilde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLGuilde.debug.xcconfig"; path = "Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BBF08DAB4D95AE0FE9F8A4 /* Pods_LoLGuilde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLGuilde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -423,6 +425,7 @@
 				36574F012729022100C27774 /* ChampionsViewController.swift */,
 				36574F022729022100C27774 /* ChampionsViewController.xib */,
 				368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */,
+				36F329C6274DB9DE00DB5CBB /* ChampionsServices.swift */,
 			);
 			path = Champions;
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 			files = (
 				36DB67D12733D2450063F6DB /* Spell.swift in Sources */,
 				3668387D274238CE00B4332B /* ItemsDetailView.swift in Sources */,
+				36F329C7274DB9DE00DB5CBB /* ChampionsServices.swift in Sources */,
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
 				36664F43273C5B8900355C0D /* RunesViewModel.swift in Sources */,
 				369ECD72273A599C00192332 /* PassiveCell.swift in Sources */,

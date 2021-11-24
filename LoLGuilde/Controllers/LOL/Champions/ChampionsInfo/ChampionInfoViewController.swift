@@ -19,7 +19,7 @@ class ChampionInfoViewController: BaseViewController {
 
     private var champion: Champion!
     private var urlImage: String = ""
-    
+
     private lazy var generalView: GeneralView = {
         let view = GeneralView(frame: infoStackView.bounds)
         view.setupData(item: champion)

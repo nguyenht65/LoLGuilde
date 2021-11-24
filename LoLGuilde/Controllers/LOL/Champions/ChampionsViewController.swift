@@ -8,27 +8,29 @@
 import UIKit
 import RxSwift
 import SDWebImage
+import RxRelay
 
-protocol ChampionsViewProtocol {
-    func getChampionsSuccess()
-}
 
-class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
+class ChampionsViewController: BaseViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var championsTableView: UITableView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
-    private let viewModel: ChampionsViewModel = ChampionsViewModel()
-    private let disposeBag = DisposeBag()
-    private var listSearchedChampions: [Champion] = []
 
-    func getChampionsSuccess() {
-        onSearching()
+    private var viewModel: ChampionsViewModel
+    private let disposeBag = DisposeBag()
+
+    init(championsViewModel: ChampionsViewModelProtocol) {
+        self.viewModel = championsViewModel as! ChampionsViewModel
+        super.init(nibName: ChampionsViewController.className, bundle: .main)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("Error at ChampionsViewController")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.championView = self
     }
 
     override func setupUI() {
@@ -40,8 +42,20 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     }
 
     override func setupData() {
-        viewModel.loadAPI()
 //        viewModel.readChampionsCache()
+        viewModel.loadAPI()
+        bindViewModel()
+        onSearching()
+    }
+
+    func bindViewModel() {
+        viewModel.searchResults
+            .asObservable()
+            .bind(to: championsTableView.rx.items(cellIdentifier: "cell", cellType: ChampionsCell.self)) {
+                (index, champions: Champion, cell) in
+                cell.setupData(item: champions)
+            }
+            .disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -50,39 +64,9 @@ class ChampionsViewController: BaseViewController, ChampionsViewProtocol {
     }
 
     func onSearching() {
-        let searchResults = searchBar.rx.text.orEmpty
-            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
-            .flatMapLatest { [weak self] query -> Observable<[Champion]> in
-                guard let self = self else { return .just([])}
-                if query.isEmpty { // case when use not search anythings
-//                    return .just([])
-                    return self.getAllChampions()
-                }
-                return self.searchChampions(query) // case when use search the query
-            }
-            .observe(on: MainScheduler.instance)
-
-        searchResults
-            .bind(to: championsTableView.rx.items(cellIdentifier: "cell", cellType: ChampionsCell.self)) {
-                (index, champions: Champion, cell) in
-                cell.setupData(item: champions)
-            }
-            .disposed(by: disposeBag)
+        viewModel.search(searchBar: searchBar)
     }
 
-    func searchChampions(_ query: String) -> Observable<[Champion]> {
-        let listChampions: [Champion] = viewModel.champions.value
-            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
-        listSearchedChampions = listChampions
-        return Observable.of(listChampions)
-    }
-
-    func getAllChampions() -> Observable<[Champion]> {
-        let listAllChampions: [Champion] = viewModel.champions.value
-        listSearchedChampions = listAllChampions
-        return Observable.of(listAllChampions)
-    }
 }
 
 extension ChampionsViewController: UITableViewDelegate {
@@ -94,7 +78,7 @@ extension ChampionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         // setup data
-        let item = listSearchedChampions[indexPath.row]
+        let item = viewModel.searchResults.value[indexPath.row]
         let championInfoVC = ChampionInfoViewController()
         let urlImage = Image.EndPoint.champion.urlString + item.image.full
         championInfoVC.getDataFromController(champion: item, urlStringImage: urlImage)

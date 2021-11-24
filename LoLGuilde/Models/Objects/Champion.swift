@@ -13,7 +13,8 @@ struct BaseChampion: Codable {
 
 // MARK: - Champion
 struct Champion: Codable {
-    let id, name, title: String
+    let id: String
+    let name, title: String
     let image: Image
     let skins: [Skin]
     let lore, blurb: String
@@ -43,9 +44,11 @@ struct Champion: Codable {
         case passive = "passive"
     }
 
-    init(champion: Champion) {
-        self = champion
-    }
+//    init(champion: Champion) {
+//        self = champion
+//    }
+//    
+
 }
 
 enum Tag: String, Codable {

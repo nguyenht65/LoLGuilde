@@ -10,24 +10,23 @@ import RxSwift
 import RxRelay
 import RxCocoa
 
-protocol ChampionsProtocol {
+protocol ChampionsViewModelProtocol {
     func processChampions(_ newChampions: [Champion])
     func loadAPI()
 }
 
-class ChampionsViewModel: ChampionsProtocol {
-    
-    private let urlChampion = "https://nguyenht65.github.io/LOLResources/lol/data/en_US/championFull.json"
+class ChampionsViewModel: ChampionsViewModelProtocol {
+
     private let disposeBag = DisposeBag()
     private let championsFileURL = Helper.cachedFileURL("champions.json")
     var champions = BehaviorRelay<[Champion]>(value: [])
-    var championView: ChampionsViewProtocol?
-    
+    var searchResults = BehaviorRelay<[Champion]>(value: [])
+
     func processChampions(_ newChampions: [Champion]) {
         // update API
         DispatchQueue.main.async {
             self.champions.accept(newChampions)
-            self.championView?.getChampionsSuccess()
+            self.searchResults.accept(newChampions)
         }
         // save data to file
         let encoder = JSONEncoder()
@@ -35,40 +34,36 @@ class ChampionsViewModel: ChampionsProtocol {
             try? championsData.write(to: championsFileURL, options: .atomicWrite)
         }
     }
-    
-    func loadAPI() {
-        let observable = Observable<String>.of(urlChampion)
-            .map { urlString -> URL in
-                return URL(string: urlString)!
-            }
-            .map { url -> URLRequest in
-                return URLRequest(url: url)
-            }
-            .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
-                return URLSession.shared.rx.response(request: request)
-            }
-            .share(replay: 1)
-        
-        observable
-            .filter { response, _ -> Bool in
-                return 200..<300 ~= response.statusCode
-            }
-            .map { _, data -> [Champion] in
-                var listChampions: [Champion] = []
-                let decoder = JSONDecoder()
-                let champion = try? decoder.decode(BaseChampion.self, from: data)
-                if let list = champion?.data.values {
-                    for i in list {
-                        listChampions.append(Champion(champion: i))
-                    }
+
+    func search(searchBar: UISearchBar) {
+        searchBar.rx.text.orEmpty
+            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .flatMapLatest { [weak self] query -> Observable<[Champion]> in
+                guard let self = self else { return .just([])}
+                if query.isEmpty { // case when use not search anythings
+                    return self.champions.asObservable()
                 }
-                return listChampions.sorted(by: { $0.name < $1.name })
+                return self.searchChampions(query) // case when use search the query
             }
-            .filter { objects in
-                return !objects.isEmpty
-            }
-            .subscribe(onNext: { newChampions in
-                self.processChampions(newChampions)
+            .bind(to: searchResults)
+            .disposed(by: disposeBag)
+    }
+
+    func searchChampions(_ query: String) -> Observable<[Champion]> {
+        let listChampions: [Champion] = champions.value
+            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
+        return Observable.of(listChampions)
+    }
+
+    func loadAPI() {
+        let newChampions = ChampionsServices.shared().getChampions()
+        newChampions
+//            .filter { objects in
+//                return !objects.isEmpty
+//            }
+            .subscribe(onNext: { [weak self] newChampions in
+                self?.processChampions(newChampions)
             })
             .disposed(by: disposeBag)
     }
