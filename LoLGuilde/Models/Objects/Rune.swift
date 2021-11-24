@@ -28,4 +28,4 @@ struct RuneElements: Codable {
     let longDesc: String
 }
 
-typealias RuneBase = [Rune]
+typealias BaseRune = [Rune]

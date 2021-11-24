@@ -8,32 +8,27 @@
 import UIKit
 import RxSwift
 
-protocol ItemsViewProtocol {
-    func getItemsSuccess()
-}
-
-class ItemsViewController: BaseViewController, ItemsViewProtocol {
+class ItemsViewController: BaseViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var itemCollectionView: UICollectionView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
 
     private let disposeBag = DisposeBag()
-    var viewModel: ItemsViewModel = ItemsViewModel()
-    private var listSearchedItems: [Item] = []
-    private var itemsDetailView = ItemsDetailView()
+    private var viewModel: ItemsViewModel
+    lazy var itemsDetailView = ItemsDetailView()
 
-//    required init?(coder: NSCoder) {
-//        fatalError("Have an error in ItemsViewController")
-//    }
+    init(itemsViewModel: ItemsViewModelProtocol) {
+        self.viewModel = itemsViewModel as! ItemsViewModel
+        super.init(nibName: ItemsViewController.className, bundle: .main)
+    }
 
-    func getItemsSuccess() {
-        onSearching()
+    required init?(coder: NSCoder) {
+        fatalError("Error at ItemsViewController")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.itemView = self
     }
 
     override func setupUI() {
@@ -45,43 +40,26 @@ class ItemsViewController: BaseViewController, ItemsViewProtocol {
     }
 
     override func setupData() {
-        viewModel.loadAPI()
 //        viewModel.readItemsCache()
+        viewModel.loadAPI()
+        bindViewModel()
+
     }
 
-    func onSearching() {
-        let searchResults = searchBar.rx.text.orEmpty
-            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
-            .flatMapLatest { query -> Observable<[Item]> in
-                if query.isEmpty { // case when use not search anythings
-                    return self.getAllItems()
-                }
-                return self.searchItems(query) // case when use search the query
-            }
-            .observe(on: MainScheduler.instance)
-
-        searchResults
+    func bindViewModel() {
+        viewModel.searchResults
+            .asObservable()
             .bind(to: itemCollectionView.rx.items(cellIdentifier: "cell", cellType: ItemsCell.self)) {
                 (index, items: Item, cell) in
                 cell.setupData(item: items)
             }
             .disposed(by: disposeBag)
+        onSearching()
     }
 
-    func searchItems(_ query: String) -> Observable<[Item]> {
-        let listItems: [Item] = viewModel.items.value
-            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
-        listSearchedItems = listItems
-        return Observable.of(listItems)
+    func onSearching() {
+        viewModel.search(searchBar: searchBar)
     }
-
-    func getAllItems() -> Observable<[Item]> {
-        let listAllItems: [Item] = viewModel.items.value
-        listSearchedItems = listAllItems
-        return Observable.of(listAllItems)
-    }
-
 }
 
 extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout {
@@ -107,7 +85,7 @@ extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelega
         itemsDetailView.frame = CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: screenSize.height * 3 / 5)
         itemsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height * 2 / 3)
         // setupData
-        let item = listSearchedItems[indexPath.row]
+        let item = viewModel.searchResults.value[indexPath.row]
         itemsDetailView.setupData(item: item)
         self.view.addSubview(itemsDetailView)
     }
@@ -126,8 +104,8 @@ extension ItemsViewController {
         // get bottom padding of the screen
         let window = SceneDelegate.shared().window
         let bottomPadding = window?.safeAreaInsets.bottom ?? 0
-        let newBottomViewPadding = keyboardSize.height - bottomPadding - searchBar.bounds.height
-        itemCollectionView.contentInset.bottom = newBottomViewPadding
+        let newBottomViewPadding = keyboardSize.height - bottomPadding
+        bottomViewConstraint.constant = newBottomViewPadding
         searchBar.showsCancelButton = true
     }
 

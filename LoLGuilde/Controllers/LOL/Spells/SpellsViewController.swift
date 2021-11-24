@@ -6,51 +6,53 @@
 //
 
 import UIKit
+import RxSwift
 
-protocol SpellsViewProtocol {
-    func getSpellsSuccess()
-}
-
-class SpellsViewController: BaseViewController, SpellsViewProtocol {
+class SpellsViewController: BaseViewController {
 
     @IBOutlet weak var spellsCollectionView: UICollectionView!
-    let viewModel: SpellsViewModel = SpellsViewModel()
-    lazy var spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
 
-    func getSpellsSuccess() {
-        self.spellsCollectionView.reloadData()
+    private let disposeBag = DisposeBag()
+    private var viewModel: SpellsViewModel
+    lazy var spellsDetailView = SpellsDetailView()
+
+    init(spellsViewModel: SpellsViewModelProtocol) {
+        self.viewModel = spellsViewModel as! SpellsViewModel
+        super.init(nibName: SpellsViewController.className, bundle: .main)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("Error at SpellsViewController")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.spellsView = self
     }
 
     override func setupUI() {
         let nib = UINib(nibName: SpellsCell.className, bundle: .main)
         spellsCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
-        spellsCollectionView.delegate = self
-        spellsCollectionView.dataSource = self
+        spellsCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
     }
 
     override func setupData() {
-        viewModel.loadAPI()
 //        viewModel.readItemsCache()
+        viewModel.loadAPI()
+        bindViewModel()
+    }
+    
+    func bindViewModel() {
+        viewModel.spells
+            .asObservable()
+            .bind(to: spellsCollectionView.rx.items(cellIdentifier: "cell", cellType: SpellsCell.self)) {
+                (index, items: Spell, cell) in
+                cell.setupData(item: items)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
-extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.spells.value.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SpellsCell
-        let item = viewModel.spells.value[indexPath.row]
-        cell.setupData(item: item)
-        return cell
-    }
+extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
            let collectionViewWidth = collectionView.bounds.width

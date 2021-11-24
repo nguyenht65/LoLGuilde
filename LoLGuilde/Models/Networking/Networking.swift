@@ -22,11 +22,20 @@ final class Networking {
 //        static let baseURL: URL? = URL(string: "https://nguyenht65.github.io/LOLResources/lol/data/en_US/")
 
         case champion
-
+        case item
+        case rune
+        case spell
+        
         var url: URL? {
             switch self {
             case .champion:
                 return EndPoint.baseURL.appendingPathComponent("/championFull.json")
+            case .item:
+                return EndPoint.baseURL.appendingPathComponent("/item.json")
+            case .rune:
+                return EndPoint.baseURL.appendingPathComponent("/runesReforged.json")
+            case .spell:
+                return EndPoint.baseURL.appendingPathComponent("/summoner.json")
             }
         }
     }

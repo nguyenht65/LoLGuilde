@@ -37,7 +37,6 @@ class ChampionsViewController: BaseViewController {
         let nib = UINib(nibName: ChampionsCell.className, bundle: .main)
         championsTableView.register(nib, forCellReuseIdentifier: "cell")
         championsTableView.rx.setDelegate(self).disposed(by: disposeBag)
- 
         hideKeyboardWhenTappedAround()
     }
 

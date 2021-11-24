@@ -35,6 +35,18 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
         }
     }
 
+    func loadAPI() {
+        let newChampions = ChampionsServices.shared().getChampions()
+        newChampions
+//            .filter { objects in
+//                return !objects.isEmpty
+//            }
+            .subscribe(onNext: { [weak self] newChampion in
+                self?.processChampions(newChampion)
+            })
+            .disposed(by: disposeBag)
+    }
+
     func search(searchBar: UISearchBar) {
         searchBar.rx.text.orEmpty
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
@@ -56,18 +68,6 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
         return Observable.of(listChampions)
     }
 
-    func loadAPI() {
-        let newChampions = ChampionsServices.shared().getChampions()
-        newChampions
-//            .filter { objects in
-//                return !objects.isEmpty
-//            }
-            .subscribe(onNext: { [weak self] newChampions in
-                self?.processChampions(newChampions)
-            })
-            .disposed(by: disposeBag)
-    }
-
     func readChampionsCache() {
         let decoder = JSONDecoder()
         if let championsData = try? Data(contentsOf: championsFileURL),
@@ -75,5 +75,4 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
             self.champions.accept(preChampions)
         }
     }
-    
 }

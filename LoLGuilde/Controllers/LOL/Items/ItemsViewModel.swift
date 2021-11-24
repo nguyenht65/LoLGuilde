@@ -17,17 +17,16 @@ protocol ItemsViewModelProtocol {
 
 class ItemsViewModel: ItemsViewModelProtocol {
 
-    private let urlItem = "https://nguyenht65.github.io/LOLResources/lol/data/en_US/item.json"
     private let disposeBag = DisposeBag()
     private let itemsFileURL = Helper.cachedFileURL("items.json")
     var items = BehaviorRelay<[Item]>(value: [])
-    var itemView: ItemsViewProtocol?
+    var searchResults = BehaviorRelay<[Item]>(value: [])
 
     func processItems(_ newItems: [Item]) {
         // update API
         DispatchQueue.main.async {
             self.items.accept(newItems)
-            self.itemView?.getItemsSuccess()
+            self.searchResults.accept(newItems)
         }
         // save data to file
         let encoder = JSONEncoder()
@@ -37,42 +36,38 @@ class ItemsViewModel: ItemsViewModelProtocol {
     }
 
     func loadAPI() {
-        let observable = Observable<String>.of(urlItem)
-            .map { urlString -> URL in
-                return URL(string: urlString)!
-            }
-            .map { url -> URLRequest in
-                return URLRequest(url: url)
-            }
-            .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
-                return URLSession.shared.rx.response(request: request)
-            }
-            .share(replay: 1)
-
-        observable
-            .filter { response, _ -> Bool in
-                return 200..<300 ~= response.statusCode
-            }
-            .map { _, data -> [Item] in
-                var listItems: [Item] = []
-                let decoder = JSONDecoder()
-                let item = try? decoder.decode(BaseItem.self, from: data)
-                if let list = item?.data.values {
-                    for i in list {
-                        listItems.append(Item(item: i))
-                    }
-                }
-                return listItems.sorted(by: { $0.image.full < $1.image.full})
-            }
-            .filter { objects in
-                return !objects.isEmpty
-            }
-            .subscribe(onNext: { newItems in
-                self.processItems(newItems)
+        let newItems = ItemsServices.shared().getItems()
+        newItems
+//            .filter { objects in
+//                return !objects.isEmpty
+//            }
+            .subscribe(onNext: { [weak self] newItem in
+                self?.processItems(newItem)
             })
             .disposed(by: disposeBag)
     }
-    
+
+    func search(searchBar: UISearchBar) {
+        searchBar.rx.text.orEmpty
+            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .flatMapLatest { [weak self] query -> Observable<[Item]> in
+                guard let self = self else { return .just([])}
+                if query.isEmpty { // case when use not search anythings
+                    return self.items.asObservable()
+                }
+                return self.searchItems(query) // case when use search the query
+            }
+            .bind(to: searchResults)
+            .disposed(by: disposeBag)
+    }
+
+    func searchItems(_ query: String) -> Observable<[Item]> {
+        let listItems: [Item] = items.value
+            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
+        return Observable.of(listItems)
+    }
+
     func readItemsCache() {
         let decoder = JSONDecoder()
         if let itemData = try? Data(contentsOf: itemsFileURL),

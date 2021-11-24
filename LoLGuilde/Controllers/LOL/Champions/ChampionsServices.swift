@@ -23,7 +23,7 @@ struct ChampionsServices {
         let request: Observable<BaseChampion> = Networking.shared().request(url: url)
         return request
             .map { element in
-                var listChampions = [Champion]()
+                var listChampions: [Champion] = []
                 for (_, value) in element.data {
                     listChampions.append(value)
                 }
