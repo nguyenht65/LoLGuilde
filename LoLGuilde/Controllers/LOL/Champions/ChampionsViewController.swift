@@ -10,7 +10,6 @@ import RxSwift
 import SDWebImage
 import RxRelay
 
-
 class ChampionsViewController: BaseViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -20,8 +19,8 @@ class ChampionsViewController: BaseViewController {
     private var viewModel: ChampionsViewModel
     private let disposeBag = DisposeBag()
 
-    init(championsViewModel: ChampionsViewModelProtocol) {
-        self.viewModel = championsViewModel as! ChampionsViewModel
+    init(championsViewModel: ChampionsViewModel) {
+        self.viewModel = championsViewModel
         super.init(nibName: ChampionsViewController.className, bundle: .main)
     }
 
@@ -50,7 +49,7 @@ class ChampionsViewController: BaseViewController {
         viewModel.searchResults
             .asObservable()
             .bind(to: championsTableView.rx.items(cellIdentifier: "cell", cellType: ChampionsCell.self)) {
-                (index, champions: Champion, cell) in
+                (_, champions: Champion, cell) in
                 cell.setupData(item: champions)
             }
             .disposed(by: disposeBag)

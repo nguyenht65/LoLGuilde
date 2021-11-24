@@ -37,7 +37,7 @@ class CustomTabBar: UIView {
             NSLayoutConstraint.activate([
                 itemView.heightAnchor.constraint(equalTo: heightAnchor),
                 itemView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: offsetX),
-                itemView.topAnchor.constraint(equalTo: topAnchor),
+                itemView.topAnchor.constraint(equalTo: topAnchor)
             ])
         }
 
@@ -79,7 +79,7 @@ class CustomTabBar: UIView {
             itemImageView.leadingAnchor.constraint(equalTo: tabBarItem.leadingAnchor, constant: 35),
             itemTitleLabel.heightAnchor.constraint(equalToConstant: 25),
             itemTitleLabel.widthAnchor.constraint(equalTo: tabBarItem.widthAnchor),
-            itemTitleLabel.topAnchor.constraint(equalTo: itemImageView.bottomAnchor, constant: 4),
+            itemTitleLabel.topAnchor.constraint(equalTo: itemImageView.bottomAnchor, constant: 4)
         ])
         // Add gesture recognizer to handle tap event
         tabBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))

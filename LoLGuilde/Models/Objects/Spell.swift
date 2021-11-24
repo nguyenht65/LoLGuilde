@@ -19,7 +19,7 @@ struct Spell: Codable {
     let range: [Int]
     let rangeBurn: String
     let image: Image
-    
+
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
@@ -39,9 +39,6 @@ struct Spell: Codable {
         case image = "image"
     }
 
-    init(spell: Spell) {
-        self = spell
-    }
 }
 
 enum CostType: String, Codable {

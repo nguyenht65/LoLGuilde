@@ -31,7 +31,7 @@ class RunesViewModel: RunesViewModelProtocol {
             try? runesData.write(to: runesFileURL, options: .atomicWrite)
         }
     }
-    
+
     func loadAPI() {
         let newRunes = RunesServices.shared().getRunes()
         newRunes

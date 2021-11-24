@@ -24,8 +24,7 @@ class ItemsCell: UICollectionViewCell {
         itemNameLabel.text = item.name
         if item.into?.isEmpty != nil && item.from?.isEmpty != nil {
             itemImageView.layer.borderColor = UIColor.systemYellow.cgColor
-        }
-        else if item.into?.isEmpty != nil {
+        } else if item.into?.isEmpty != nil {
             itemImageView.layer.borderColor = UIColor.systemGray.cgColor
         } else if item.from?.isEmpty != nil {
             itemImageView.layer.borderColor = UIColor.systemPink.cgColor
@@ -33,8 +32,8 @@ class ItemsCell: UICollectionViewCell {
             itemImageView.layer.borderColor = UIColor.systemMint.cgColor
         }
     }
-    
-    func setupUI(){
+
+    func setupUI() {
         itemImageView.layoutIfNeeded()
         itemImageView.layer.borderWidth = 1
         itemImageView.layer.masksToBounds = true

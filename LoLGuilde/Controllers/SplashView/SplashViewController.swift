@@ -14,8 +14,7 @@ class SplashViewController: BaseViewController {
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.splashTimeOut(sender:)), userInfo: nil, repeats: false)
     }
 
-    @objc func splashTimeOut(sender : Timer){
+    @objc func splashTimeOut(sender: Timer) {
         SceneDelegate.shared().window?.rootViewController = TabBarController()
     }
 }
-

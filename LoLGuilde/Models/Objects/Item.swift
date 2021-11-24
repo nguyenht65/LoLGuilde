@@ -1,19 +1,18 @@
-
 import Foundation
 
-struct BaseItem : Codable {
-    let data : [String: Item]
+struct BaseItem: Codable {
+    let data: [String: Item]
 }
 
-struct Item : Codable {
-    let name : String
-    let description : String
-    let plaintext : String
-    let into : [String]?
-    let from : [String]?
-    let image : Image
-    let gold : Gold
-    let tags : [String]
+struct Item: Codable {
+    let name: String
+    let description: String
+    let plaintext: String
+    let into: [String]?
+    let from: [String]?
+    let image: Image
+    let gold: Gold
+    let tags: [String]
 
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -24,9 +23,5 @@ struct Item : Codable {
         case image = "image"
         case gold = "gold"
         case tags = "tags"
-    }
-    
-    init(item: Item) {
-        self = item
     }
 }

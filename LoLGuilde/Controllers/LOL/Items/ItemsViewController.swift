@@ -18,8 +18,8 @@ class ItemsViewController: BaseViewController {
     private var viewModel: ItemsViewModel
     lazy var itemsDetailView = ItemsDetailView()
 
-    init(itemsViewModel: ItemsViewModelProtocol) {
-        self.viewModel = itemsViewModel as! ItemsViewModel
+    init(itemsViewModel: ItemsViewModel) {
+        self.viewModel = itemsViewModel
         super.init(nibName: ItemsViewController.className, bundle: .main)
     }
 
@@ -50,7 +50,7 @@ class ItemsViewController: BaseViewController {
         viewModel.searchResults
             .asObservable()
             .bind(to: itemCollectionView.rx.items(cellIdentifier: "cell", cellType: ItemsCell.self)) {
-                (index, items: Item, cell) in
+                (_, items: Item, cell) in
                 cell.setupData(item: items)
             }
             .disposed(by: disposeBag)
@@ -62,7 +62,7 @@ class ItemsViewController: BaseViewController {
     }
 }
 
-extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout {
+extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
            let collectionViewWidth = collectionView.bounds.width
@@ -89,7 +89,6 @@ extension ItemsViewController: UICollectionViewDelegate,  UICollectionViewDelega
         itemsDetailView.setupData(item: item)
         self.view.addSubview(itemsDetailView)
     }
-    
 }
 
 extension ItemsViewController {

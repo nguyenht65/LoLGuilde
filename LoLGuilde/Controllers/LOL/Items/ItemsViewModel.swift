@@ -64,7 +64,7 @@ class ItemsViewModel: ItemsViewModelProtocol {
 
     func searchItems(_ query: String) -> Observable<[Item]> {
         let listItems: [Item] = items.value
-            .filter{ ($0.name).uppercased().contains(query.uppercased()) }
+            .filter { ($0.name).uppercased().contains(query.uppercased()) }
         return Observable.of(listItems)
     }
 

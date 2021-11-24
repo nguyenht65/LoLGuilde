@@ -18,14 +18,14 @@ class SpellsCell: UICollectionViewCell {
         setupUI()
     }
 
-    func setupData(item: Spell){
+    func setupData(item: Spell) {
         spellNameLabel.text = item.name
         let urlImage = Image.EndPoint.spell.urlString + item.image.full
         spellImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
         spellImageView.layer.borderColor = UIColor.white.cgColor
     }
 
-    func setupUI(){
+    func setupUI() {
         spellImageView.layoutIfNeeded()
         spellImageView.layer.borderWidth = 1
         spellImageView.layer.masksToBounds = true

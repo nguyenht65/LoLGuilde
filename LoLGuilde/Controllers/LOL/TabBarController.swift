@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class TabBarController: BaseTabBarController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
 }

@@ -17,11 +17,11 @@ class EachRuneView: BaseView {
 
     @IBInspectable
     var buttonTag: Int {
-        set (newValue) {
+        get {
+            return _tag
+        } set(newValue) {
             _tag = newValue
             imageButton.tag = _tag
-        } get {
-            return _tag
         }
     }
 

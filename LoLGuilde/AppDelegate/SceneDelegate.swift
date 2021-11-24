@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let splashVC = SplashViewController()
         window.rootViewController = splashVC
-        
+
         self.window = window
         window.makeKeyAndVisible()
     }
@@ -42,6 +42,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
 
-
 }
-

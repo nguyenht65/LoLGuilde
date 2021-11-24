@@ -1,27 +1,26 @@
-
 import Foundation
 
-struct Stats : Codable {
-    let hp : Double
-    let hpperlevel : Double
-    let mp : Double
-    let mpperlevel : Double
-    let movespeed : Double
-    let armor : Double
-    let armorperlevel : Double
-    let spellblock : Double
-    let spellblockperlevel : Double
-    let attackrange : Double
-    let hpregen : Double
-    let hpregenperlevel : Double
-    let mpregen : Double
-    let mpregenperlevel : Double
-    let crit : Double
-    let critperlevel : Double
-    let attackdamage : Double
-    let attackdamageperlevel : Double
-    let attackspeedperlevel : Double
-    let attackspeed : Double
+struct Stats: Codable {
+    let hp: Double
+    let hpperlevel: Double
+    let mp: Double
+    let mpperlevel: Double
+    let movespeed: Double
+    let armor: Double
+    let armorperlevel: Double
+    let spellblock: Double
+    let spellblockperlevel: Double
+    let attackrange: Double
+    let hpregen: Double
+    let hpregenperlevel: Double
+    let mpregen: Double
+    let mpregenperlevel: Double
+    let crit: Double
+    let critperlevel: Double
+    let attackdamage: Double
+    let attackdamageperlevel: Double
+    let attackspeedperlevel: Double
+    let attackspeed: Double
 
     enum CodingKeys: String, CodingKey {
 

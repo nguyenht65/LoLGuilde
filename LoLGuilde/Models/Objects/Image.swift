@@ -1,20 +1,18 @@
-
 import Foundation
-import UIKit
 
-struct Image : Codable {
-    let full : String
-    let sprite : String
-    let group : String
-    let x : Int
-    let y : Int
-    let w : Int
-    let h : Int
-    
+struct Image: Codable {
+    let full: String
+    let sprite: String
+    let group: String
+    let x: Int
+    let y: Int
+    let w: Int
+    let h: Int
+
     enum EndPoint {
         static let baseURL: String = "https://nguyenht65.github.io/LOLResources/lol/img/"
-        static let baseURL_2: String = "https://nguyenht65.github.io/LOLResources/img/"
-        
+        static let baseURL2: String = "https://nguyenht65.github.io/LOLResources/img/"
+
         case passive
         case spell
         case rune
@@ -29,23 +27,23 @@ struct Image : Codable {
             case .spell:
                 return EndPoint.baseURL + "spell/"
             case .rune:
-                return EndPoint.baseURL_2
+                return EndPoint.baseURL2
             case .item:
                 return EndPoint.baseURL + "item/"
             case .champion:
                 return EndPoint.baseURL + "champion/"
             case .skin:
-                return EndPoint.baseURL_2 + "champion/splash/"
+                return EndPoint.baseURL2 + "champion/splash/"
             }
         }
     }
-    
+
     enum LoadingImage: String {
         case square = "loading_2"
         case rectangle = "loading"
     }
-    
+
     enum TopicImage: String {
-        case ic = "ic_tb1"
+        case icon = "ic_tb1"
     }
 }

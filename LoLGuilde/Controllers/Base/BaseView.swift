@@ -13,12 +13,12 @@ class BaseView: UIView {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
-    
+
     func commonInit() {
         self.initViewWithNib()
     }

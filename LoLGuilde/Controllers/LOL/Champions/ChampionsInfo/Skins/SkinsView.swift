@@ -42,7 +42,9 @@ extension SkinsView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.deselectRow(at: indexPath, animated: true)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SkinsCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SkinsCell else {
+            fatalError("dequeue cell error")
+        }
         cell.setupData(item: champion, index: indexPath.row)
         return cell
     }
@@ -50,5 +52,5 @@ extension SkinsView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 230
     }
-    
+
 }

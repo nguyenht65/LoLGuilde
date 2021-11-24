@@ -13,10 +13,9 @@ class RunesViewController: BaseViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var runesStackView: UIStackView!
-    
+
     private let disposeBag = DisposeBag()
     private var viewModel: RunesViewModel
-    private var listRunes: BehaviorRelay<[Rune]> = BehaviorRelay<[Rune]>(value: [])
 
     private lazy var precisionView: PrecisionView = {
         let view = PrecisionView(frame: runesStackView.bounds)
@@ -49,35 +48,15 @@ class RunesViewController: BaseViewController {
         return view
     }()
 
-    init(runesViewModel: RunesViewModelProtocol) {
-        self.viewModel = runesViewModel as! RunesViewModel
+    init(runesViewModel: RunesViewModel) {
+        self.viewModel = runesViewModel
         super.init(nibName: RunesViewController.className, bundle: .main)
     }
 
     required init?(coder: NSCoder) {
-        fatalError("Error at RunessViewController")
+        fatalError("Error at RunesViewController")
     }
 
-    func getRunesSuccess() {
-//        listRunes = viewModel.runes.value
-//        let precisionView = PrecisionView(frame: runesStackView.bounds)
-//        precisionView.setupUI(item: listRunes[2])
-//        precisionView.setupData(rune: listRunes[2])
-//        runesStackView.addArrangedSubview(precisionView)
-    }
-
-    func bindViewModel() {
-        viewModel.runes
-            .asObservable()
-//            .subscribe(onNext: { [weak self] element in
-//                print(element[0])
-//            })
-            .bind(to: listRunes)
-            .disposed(by: disposeBag)
-//        let view = precisionView
-//        runesStackView.addArrangedSubview(view)
-
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -87,14 +66,28 @@ class RunesViewController: BaseViewController {
     }
 
     override func setupData() {
-        viewModel.loadAPI()
 //        viewModel.readRunesCache()
+        viewModel.loadAPI()
         bindViewModel()
     }
 
+    func bindViewModel() {
+        viewModel.runes
+            .asObservable()
+            .subscribe(onNext: { [weak self] element in
+                guard let self = self else { return }
+                if !element.isEmpty {
+                let view = self.precisionView
+                self.runesStackView.addArrangedSubview(view)
+                }
+            })
+            .disposed(by: disposeBag)
+
+    }
+
     @IBAction func selectedSegmentedControl(_ sender: UISegmentedControl) {
-        for i in runesStackView.arrangedSubviews {
-            i.removeFromSuperview()
+        for view in runesStackView.arrangedSubviews {
+            view.removeFromSuperview()
         }
         var view = UIView()
         switch segmentedControl.selectedSegmentIndex {

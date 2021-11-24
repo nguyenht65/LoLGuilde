@@ -18,7 +18,7 @@ class BaseViewController: UIViewController {
     func setupData() { } // xử lý Data (load, fetch,..)
 
     func setupUI() { } // xử lý UI lúc khởi tạo VC
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

@@ -11,18 +11,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SorceryView" customModule="LoLGuilde" customModuleProvider="target">
             <connections>
                 <outlet property="nameLabel" destination="L8r-3e-auf" id="K8L-UK-18j"/>
-                <outlet property="slot1_r1View" destination="70Z-lH-gNd" id="ljh-FA-Vq3"/>
-                <outlet property="slot1_r2View" destination="403-JU-9QW" id="9B4-II-FOh"/>
-                <outlet property="slot1_r3View" destination="KFP-vF-7Tv" id="cBh-XN-Xlh"/>
-                <outlet property="slot2_r1View" destination="bJe-e7-UeH" id="jbU-au-JCL"/>
-                <outlet property="slot2_r2View" destination="NrJ-6P-Gvx" id="ZWq-zC-u38"/>
-                <outlet property="slot2_r3View" destination="vTX-CW-Fwm" id="U2r-g3-g83"/>
-                <outlet property="slot3_r1View" destination="M4f-cW-T15" id="u4A-TY-WtR"/>
-                <outlet property="slot3_r2View" destination="Jr0-H6-Zpz" id="Yzq-9p-R4l"/>
-                <outlet property="slot3_r3View" destination="AfN-JQ-RWb" id="Nnv-vZ-exh"/>
-                <outlet property="slot4_r1View" destination="hYZ-4K-nHg" id="6aQ-wI-wYV"/>
-                <outlet property="slot4_r2View" destination="3xa-yO-DSO" id="0Uc-dG-Y2i"/>
-                <outlet property="slot4_r3View" destination="F2A-92-l5P" id="e4E-IH-I5J"/>
+                <outlet property="slot11View" destination="70Z-lH-gNd" id="ENO-yg-GBC"/>
+                <outlet property="slot12View" destination="403-JU-9QW" id="QZc-Ed-qzo"/>
+                <outlet property="slot13View" destination="KFP-vF-7Tv" id="QT0-mE-FM4"/>
+                <outlet property="slot21View" destination="bJe-e7-UeH" id="Fvf-PU-eKP"/>
+                <outlet property="slot22View" destination="NrJ-6P-Gvx" id="xYR-kF-BIw"/>
+                <outlet property="slot23View" destination="vTX-CW-Fwm" id="8bg-vy-jMd"/>
+                <outlet property="slot31View" destination="M4f-cW-T15" id="Dta-sn-7DS"/>
+                <outlet property="slot32View" destination="Jr0-H6-Zpz" id="Ick-ga-RFH"/>
+                <outlet property="slot33View" destination="AfN-JQ-RWb" id="Qlu-pg-Tqf"/>
+                <outlet property="slot41View" destination="hYZ-4K-nHg" id="dc4-qe-uR1"/>
+                <outlet property="slot42View" destination="3xa-yO-DSO" id="kLa-6c-Lej"/>
+                <outlet property="slot43View" destination="F2A-92-l5P" id="bwI-Z3-H40"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

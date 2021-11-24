@@ -1,11 +1,11 @@
 import Foundation
 
-struct Gold : Codable {
+struct Gold: Codable {
 
-    let base : Int
-    let purchasable : Bool
-    let total : Int
-    let sell : Int
+    let base: Int
+    let purchasable: Bool
+    let total: Int
+    let sell: Int
 
     enum CodingKeys: String, CodingKey {
         case base = "base"

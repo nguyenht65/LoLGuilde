@@ -45,8 +45,7 @@ class ChampionInfoViewController: BaseViewController {
         super.viewDidLoad()
 //        let generalView = GeneralView()
 //        generalView.translatesAutoresizingMaskIntoConstraints = false
-        let generalView = GeneralView(frame: infoStackView.bounds)
-        generalView.setupData(item: champion)
+        let generalView = generalView
         infoStackView.addArrangedSubview(generalView)
     }
 
@@ -58,8 +57,8 @@ class ChampionInfoViewController: BaseViewController {
     override func setupUI() {
         title = "Champion Info"
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "textColor")]
-        segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key : Any], for: .normal)
-        segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key : Any], for: .selected)
+        segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key: Any], for: .normal)
+        segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key: Any], for: .selected)
     }
 
     override func setupData() {
@@ -79,8 +78,8 @@ class ChampionInfoViewController: BaseViewController {
     }
 
     @IBAction func changeSegmentedControl(_ sender: UISegmentedControl) {
-        for i in infoStackView.arrangedSubviews {
-            i.removeFromSuperview()
+        for view in infoStackView.arrangedSubviews {
+            view.removeFromSuperview()
         }
         var view = UIView()
         switch sender.selectedSegmentIndex {

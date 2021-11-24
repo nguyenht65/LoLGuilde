@@ -10,20 +10,20 @@ import UIKit
 class DominationView: BaseView {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var slot1_r1View: EachRuneView!
-    @IBOutlet weak var slot1_r2View: EachRuneView!
-    @IBOutlet weak var slot1_r3View: EachRuneView!
-    @IBOutlet weak var slot1_r4View: EachRuneView!
-    @IBOutlet weak var slot2_r1View: EachRuneView!
-    @IBOutlet weak var slot2_r2View: EachRuneView!
-    @IBOutlet weak var slot2_r3View: EachRuneView!
-    @IBOutlet weak var slot3_r1View: EachRuneView!
-    @IBOutlet weak var slot3_r2View: EachRuneView!
-    @IBOutlet weak var slot3_r3View: EachRuneView!
-    @IBOutlet weak var slot4_r1View: EachRuneView!
-    @IBOutlet weak var slot4_r2View: EachRuneView!
-    @IBOutlet weak var slot4_r3View: EachRuneView!
-    @IBOutlet weak var slot4_r4View: EachRuneView!
+    @IBOutlet weak var slot11View: EachRuneView!
+    @IBOutlet weak var slot12View: EachRuneView!
+    @IBOutlet weak var slot13View: EachRuneView!
+    @IBOutlet weak var slot14View: EachRuneView!
+    @IBOutlet weak var slot21View: EachRuneView!
+    @IBOutlet weak var slot22View: EachRuneView!
+    @IBOutlet weak var slot23View: EachRuneView!
+    @IBOutlet weak var slot31View: EachRuneView!
+    @IBOutlet weak var slot32View: EachRuneView!
+    @IBOutlet weak var slot33View: EachRuneView!
+    @IBOutlet weak var slot41View: EachRuneView!
+    @IBOutlet weak var slot42View: EachRuneView!
+    @IBOutlet weak var slot43View: EachRuneView!
+    @IBOutlet weak var slot44View: EachRuneView!
 
     private var rune: Rune!
 
@@ -53,39 +53,39 @@ class DominationView: BaseView {
 
     func setupUI(item: Rune) {
         nameLabel.text = item.name
-        slot1_r1View.setupUI(item: item, slotsIndex: 0, runeIndex: 0)
-        slot1_r2View.setupUI(item: item, slotsIndex: 0, runeIndex: 1)
-        slot1_r3View.setupUI(item: item, slotsIndex: 0, runeIndex: 2)
-        slot1_r4View.setupUI(item: item, slotsIndex: 0, runeIndex: 3)
-        slot2_r1View.setupUI(item: item, slotsIndex: 1, runeIndex: 0)
-        slot2_r2View.setupUI(item: item, slotsIndex: 1, runeIndex: 1)
-        slot2_r3View.setupUI(item: item, slotsIndex: 1, runeIndex: 2)
-        slot3_r1View.setupUI(item: item, slotsIndex: 2, runeIndex: 0)
-        slot3_r2View.setupUI(item: item, slotsIndex: 2, runeIndex: 1)
-        slot3_r3View.setupUI(item: item, slotsIndex: 2, runeIndex: 2)
-        slot4_r1View.setupUI(item: item, slotsIndex: 3, runeIndex: 0)
-        slot4_r2View.setupUI(item: item, slotsIndex: 3, runeIndex: 1)
-        slot4_r3View.setupUI(item: item, slotsIndex: 3, runeIndex: 2)
-        slot4_r4View.setupUI(item: item, slotsIndex: 3, runeIndex: 3)
+        slot11View.setupUI(item: item, slotsIndex: 0, runeIndex: 0)
+        slot12View.setupUI(item: item, slotsIndex: 0, runeIndex: 1)
+        slot13View.setupUI(item: item, slotsIndex: 0, runeIndex: 2)
+        slot14View.setupUI(item: item, slotsIndex: 0, runeIndex: 3)
+        slot21View.setupUI(item: item, slotsIndex: 1, runeIndex: 0)
+        slot22View.setupUI(item: item, slotsIndex: 1, runeIndex: 1)
+        slot23View.setupUI(item: item, slotsIndex: 1, runeIndex: 2)
+        slot31View.setupUI(item: item, slotsIndex: 2, runeIndex: 0)
+        slot32View.setupUI(item: item, slotsIndex: 2, runeIndex: 1)
+        slot33View.setupUI(item: item, slotsIndex: 2, runeIndex: 2)
+        slot41View.setupUI(item: item, slotsIndex: 3, runeIndex: 0)
+        slot42View.setupUI(item: item, slotsIndex: 3, runeIndex: 1)
+        slot43View.setupUI(item: item, slotsIndex: 3, runeIndex: 2)
+        slot44View.setupUI(item: item, slotsIndex: 3, runeIndex: 3)
     }
     
     func setupAction() {
-        slot1_r1View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot1_r2View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot1_r3View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot1_r4View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot2_r1View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot2_r2View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot2_r3View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot3_r1View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot3_r2View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot3_r3View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot4_r1View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot4_r2View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot4_r3View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot4_r4View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot11View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot12View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot13View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot14View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot21View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot22View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot23View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot31View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot32View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot33View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot41View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot42View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot43View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        slot44View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
-    
+
     @objc func buttonAction(sender: UIButton!) {
         runesDetailView.removeFromSuperview()
         let buttonTag: UIButton = sender
@@ -123,5 +123,4 @@ class DominationView: BaseView {
         }
         self.addSubview(runesDetailView)
     }
-    
 }

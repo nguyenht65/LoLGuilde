@@ -25,7 +25,7 @@ struct Champion: Codable {
     let stats: Stats
     let spells: [Spell]
     let passive: Passive
-    
+
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
@@ -43,11 +43,6 @@ struct Champion: Codable {
         case spells = "spells"
         case passive = "passive"
     }
-
-//    init(champion: Champion) {
-//        self = champion
-//    }
-//    
 
 }
 

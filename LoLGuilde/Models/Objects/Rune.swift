@@ -10,7 +10,7 @@ struct Rune: Codable {
     let id: Int
     let key, icon, name: String
     let slots: [Slot]
-    
+
     init(rune: Rune) {
         self = rune
     }
