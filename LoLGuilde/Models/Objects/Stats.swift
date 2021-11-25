@@ -23,7 +23,6 @@ struct Stats: Codable {
     let attackspeed: Double
 
     enum CodingKeys: String, CodingKey {
-
         case hp = "hp"
         case hpperlevel = "hpperlevel"
         case mp = "mp"

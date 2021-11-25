@@ -30,7 +30,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whimsy" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Jf-tcM">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inspiration" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Jf-tcM">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryx-Wu-eoT">
@@ -208,7 +208,7 @@
         </view>
     </objects>
     <resources>
-        <image name="whimsy" width="237" height="500"/>
+        <image name="inspiration" width="1080" height="1920"/>
         <namedColor name="backgroundColor">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -208,7 +208,7 @@
         </view>
     </objects>
     <resources>
-        <image name="sorcery" width="237" height="500"/>
+        <image name="sorcery" width="1080" height="1920"/>
         <namedColor name="backgroundColor">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

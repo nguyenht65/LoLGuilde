@@ -22,10 +22,10 @@ struct RunesServices {
         let url = Networking.EndPoint.rune.url
         let request: Observable<BaseRune> = Networking.shared().request(url: url)
         return request
-            .map { element in
+            .map { elements in
                 var listRunes: [Rune] = []
-                for i in element {
-                    listRunes.append(i)
+                for rune in elements {
+                    listRunes.append(rune)
                 }
                 return listRunes
             }
