@@ -26,36 +26,36 @@ class EachStatusView: BaseView {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var statusValueLabel: UILabel!
 
-    private var _status: String = ""
-    private var _textColor: UIColor = UIColor.white
-    private var _championStatusValue: Int = 0
+    private var tempStatus: String = ""
+    private var tempTextColor: UIColor = UIColor.white
+    private var tempStatusValue: Int = 0
 
     @IBInspectable
     var championStatusValue: Int {
         set (newValue) {
-            _championStatusValue = newValue
+            tempStatusValue = newValue
         } get {
-            return _championStatusValue
+            return tempStatusValue
         }
     }
     
     @IBInspectable
     var status: String {
         set (newValue) {
-            _status = newValue
-            statusLabel.text = _status
+            tempStatus = newValue
+            statusLabel.text = tempStatus
         } get {
-            return _status
+            return tempStatus
         }
     }
 
     @IBInspectable
     var textColor: UIColor {
         set (newValue) {
-            _textColor = newValue
-            statusValueLabel.textColor = _textColor
+            tempTextColor = newValue
+            statusValueLabel.textColor = tempTextColor
         } get {
-            return _textColor
+            return tempTextColor
         }
     }
 
@@ -78,7 +78,7 @@ class EachStatusView: BaseView {
     }
 
     func setupData(item: Champion) {
-        guard let championStatusValue = ChampionStatusValue(rawValue: _championStatusValue) else { return }
+        guard let championStatusValue = ChampionStatusValue(rawValue: tempStatusValue) else { return }
         switch championStatusValue {
         case .health:
             statusValueLabel.text?.append(contentsOf: "\(item.stats.hp)(\(item.stats.hpperlevel))")

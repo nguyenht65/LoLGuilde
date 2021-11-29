@@ -20,36 +20,36 @@ class ProgressView: BaseView {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var infoProgessView: UIProgressView!
 
-    private var _label: String = ""
-    private var _tintColor: UIColor = UIColor.white
-    private var _championPropertyValue: Int = 0
+    private var tempLabel: String = ""
+    private var tempTintColor: UIColor = UIColor.white
+    private var tempPropertyValue: Int = 0
 
     @IBInspectable
     var championPropertyValue: Int {
         set (newValue) {
-            _championPropertyValue = newValue
+            tempPropertyValue = newValue
         } get {
-            return _championPropertyValue
+            return tempPropertyValue
         }
     }
 
     @IBInspectable
     var label: String {
         set (newValue) {
-            _label = newValue
-            infoLabel.text = _label
+            tempLabel = newValue
+            infoLabel.text = tempLabel
         } get {
-            return _label
+            return tempLabel
         }
     }
 
     @IBInspectable
     var progressTint: UIColor {
         set (newValue) {
-            _tintColor = newValue
-            infoProgessView.tintColor = _tintColor
+            tempTintColor = newValue
+            infoProgessView.tintColor = tempTintColor
         } get {
-            return _tintColor
+            return tempTintColor
         }
     }
 
@@ -72,7 +72,7 @@ class ProgressView: BaseView {
     }
     
     func setupData(item: Champion) {
-        guard let championProperties = ChampionPropertyValues(rawValue: _championPropertyValue) else { return }
+        guard let championProperties = ChampionPropertyValues(rawValue: tempPropertyValue) else { return }
         switch championProperties {
         case .attack:
             infoProgessView.setProgress(Float(item.info.attack)/10, animated: true)

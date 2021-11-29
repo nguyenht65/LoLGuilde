@@ -10,5 +10,14 @@ struct Passive: Codable {
         case description = "description"
         case image = "image"
     }
+}
 
+extension Passive {
+    var urlImage: String {
+        return Image.EndPoint.passive.urlString + image.full
+    }
+
+    var placeholderImage: String {
+        return Image.LoadingImage.square.rawValue
+    }
 }

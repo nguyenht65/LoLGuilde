@@ -18,7 +18,6 @@ class ChampionInfoViewController: BaseViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
     private var champion: Champion!
-    private var urlImage: String = ""
 
     private lazy var generalView: GeneralView = {
         let view = GeneralView(frame: infoStackView.bounds)
@@ -49,9 +48,8 @@ class ChampionInfoViewController: BaseViewController {
         infoStackView.addArrangedSubview(generalView)
     }
 
-    func getDataFromController(champion: Champion, urlStringImage: String) {
+    func getChampion(champion: Champion) {
         self.champion = champion
-        self.urlImage = urlStringImage
     }
 
     override func setupUI() {
@@ -70,7 +68,7 @@ class ChampionInfoViewController: BaseViewController {
         } else {
             tag2Label.text = ""
         }
-        championImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
+        championImageView.sd_setImage(with: URL(string: champion.urlImage), placeholderImage: UIImage(named: champion.placeholderImage))
     }
 
     override func viewWillAppear(_ animated: Bool) {

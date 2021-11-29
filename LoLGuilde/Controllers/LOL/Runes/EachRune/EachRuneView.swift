@@ -42,8 +42,8 @@ class EachRuneView: BaseView {
     }
 
     func setupUI(item: Rune, slotsIndex: Int, runeIndex: Int) {
-        let urlImage = Image.EndPoint.rune.urlString + item.slots[slotsIndex].runes[runeIndex].icon
-        runeImage.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
+        let urlImage = item.urlImage + item.slots[slotsIndex].runes[runeIndex].icon
+        runeImage.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: item.placeholderImage))
     }
 
 }

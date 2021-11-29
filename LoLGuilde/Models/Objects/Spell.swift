@@ -38,7 +38,16 @@ struct Spell: Codable {
         case rangeBurn = "rangeBurn"
         case image = "image"
     }
+}
 
+extension Spell {
+    var urlImage: String {
+        return Image.EndPoint.spell.urlString + image.full
+    }
+
+    var placeholderImage: String {
+        return Image.LoadingImage.square.rawValue
+    }
 }
 
 enum CostType: String, Codable {

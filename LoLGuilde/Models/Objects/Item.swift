@@ -25,3 +25,13 @@ struct Item: Codable {
         case tags = "tags"
     }
 }
+
+extension Item {
+    var urlImage: String {
+        return Image.EndPoint.item.urlString + image.full
+    }
+
+    var placeholderImage: String {
+        return Image.LoadingImage.square.rawValue
+    }
+}

@@ -29,3 +29,13 @@ struct RuneElements: Codable {
 }
 
 typealias BaseRune = [Rune]
+
+extension Rune {
+    var urlImage: String {
+        return Image.EndPoint.rune.urlString 
+    }
+
+    var placeholderImage: String {
+        return Image.LoadingImage.square.rawValue
+    }
+}

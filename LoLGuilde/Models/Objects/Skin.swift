@@ -13,3 +13,17 @@ struct Skin: Codable {
         case chromas = "chromas"
     }
 }
+
+extension Skin {
+    var urlImage: String {
+        return Image.EndPoint.skin.urlString
+    }
+
+    var imageFormat: String {
+        return ".jpg"
+    }
+
+    var placeholderImage: String {
+        return Image.LoadingImage.rectangle.rawValue
+    }
+}

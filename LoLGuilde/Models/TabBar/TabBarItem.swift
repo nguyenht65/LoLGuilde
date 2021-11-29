@@ -7,6 +7,26 @@
 
 import UIKit
 
+struct TabBarItem {
+
+    lazy var championsViewController: UIViewController = {
+        let navigationController = UINavigationController(rootViewController: ChampionsViewController(championsViewModel: ChampionsViewModel()))
+        return navigationController
+    }()
+
+    lazy var itemsViewController: UIViewController = {
+        return ItemsViewController(itemsViewModel: ItemsViewModel())
+    }()
+
+    lazy var runesViewController: UIViewController = {
+        return RunesViewController(runesViewModel: RunesViewModel())
+    }()
+
+    lazy var spellsViewController: UIViewController = {
+        return SpellsViewController(spellsViewModel: SpellsViewModel())
+    }()
+}
+
 enum TabItem: String, CaseIterable {
 
     case champions = "champions"
@@ -15,16 +35,16 @@ enum TabItem: String, CaseIterable {
     case spells = "spells"
 
     var viewController: UIViewController {
+        var tabBarItem = TabBarItem()
         switch self {
         case .champions:
-            let navigationController = UINavigationController(rootViewController: ChampionsViewController(championsViewModel: ChampionsViewModel()))
-            return navigationController
+            return tabBarItem.championsViewController
         case .items:
-            return ItemsViewController(itemsViewModel: ItemsViewModel())
+            return tabBarItem.itemsViewController
         case .runes:
-            return RunesViewController(runesViewModel: RunesViewModel())
+            return tabBarItem.runesViewController
         case .spells:
-            return SpellsViewController(spellsViewModel: SpellsViewModel())
+            return tabBarItem.spellsViewController
         }
     }
 

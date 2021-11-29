@@ -54,3 +54,14 @@ enum Tag: String, Codable {
     case support = "Support"
     case tank = "Tank"
 }
+
+extension Champion {
+    var urlImage: String {
+        return Image.EndPoint.champion.urlString + image.full
+    }
+
+    var placeholderImage: String {
+        return Image.LoadingImage.square.rawValue
+    }
+
+}

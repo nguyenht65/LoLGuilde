@@ -39,8 +39,8 @@ class RunesDetailView: BaseView {
 
     func setupData(item: Rune, slotsIndex: Int, runeIndex: Int) {
         nameLabel.text = item.slots[slotsIndex].runes[runeIndex].name
-        let urlImage = Image.EndPoint.rune.urlString + item.slots[slotsIndex].runes[runeIndex].icon
-        runesImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
+        let urlImage = item.urlImage + item.slots[slotsIndex].runes[runeIndex].icon
+        runesImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: item.placeholderImage))
         descriptionTextView.text = item.slots[slotsIndex].runes[runeIndex].longDesc.htmlToString
     }
 

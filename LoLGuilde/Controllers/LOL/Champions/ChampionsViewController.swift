@@ -40,7 +40,7 @@ class ChampionsViewController: BaseViewController {
     }
 
     override func setupData() {
-//        viewModel.readChampionsCache()
+        viewModel.readChampionsCache()
         viewModel.loadAPI()
         bindViewModel()
     }
@@ -79,8 +79,7 @@ extension ChampionsViewController: UITableViewDelegate {
         // setup data
         let item = viewModel.searchResults.value[indexPath.row]
         let championInfoVC = ChampionInfoViewController()
-        let urlImage = Image.EndPoint.champion.urlString + item.image.full
-        championInfoVC.getDataFromController(champion: item, urlStringImage: urlImage)
+        championInfoVC.getChampion(champion: item)
         // push navigation
         self.navigationController?.pushViewController(championInfoVC, animated: true)
     }

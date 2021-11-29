@@ -52,7 +52,7 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .flatMapLatest { [weak self] query -> Observable<[Champion]> in
-                guard let self = self else { return .just([])}
+                guard let self = self else { return .just([]) }
                 if query.isEmpty { // case when use not search anythings
                     return self.champions.asObservable()
                 }

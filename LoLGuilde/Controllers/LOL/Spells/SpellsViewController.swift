@@ -13,13 +13,12 @@ class SpellsViewController: BaseViewController {
     @IBOutlet weak var spellsCollectionView: UICollectionView!
 
     private let disposeBag = DisposeBag()
-    private var viewModel: SpellsViewModel?
+    private var viewModel: SpellsViewModel
     lazy var spellsDetailView = SpellsDetailView()
 
-    init(spellsViewModel: SpellsViewModelProtocol) {
-        super.init(nibName: SpellsViewController.className, bundle: .main)
-        guard let spellsViewModel = spellsViewModel as? SpellsViewModel else { return }
+    init(spellsViewModel: SpellsViewModel) {
         self.viewModel = spellsViewModel
+        super.init(nibName: SpellsViewController.className, bundle: .main)
     }
 
     required init?(coder: NSCoder) {
@@ -37,13 +36,13 @@ class SpellsViewController: BaseViewController {
     }
 
     override func setupData() {
-//        viewModel.readItemsCache()
-        viewModel?.loadAPI()
+        viewModel.readSpellsCache()
+        viewModel.loadAPI()
         bindViewModel()
     }
 
     func bindViewModel() {
-        viewModel?.spells
+        viewModel.spells
             .asObservable()
             .bind(to: spellsCollectionView.rx.items(cellIdentifier: "cell", cellType: SpellsCell.self)) {
                 (_, items: Spell, cell) in
@@ -76,10 +75,8 @@ extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDelega
         spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 250))
         spellsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
         // setupData
-        if let item = viewModel?.spells.value[indexPath.row] {
-            spellsDetailView.setupData(item: item)
-        }
+        let item = viewModel.spells.value[indexPath.row]
+        spellsDetailView.setupData(item: item)
         self.view.addSubview(spellsDetailView)
     }
-
 }

@@ -66,7 +66,7 @@ class RunesViewController: BaseViewController {
     }
 
     override func setupData() {
-//        viewModel.readRunesCache()
+        viewModel.readRunesCache()
         viewModel.loadAPI()
         bindViewModel()
     }

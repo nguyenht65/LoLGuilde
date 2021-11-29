@@ -45,7 +45,7 @@ class SpellsViewModel: SpellsViewModelProtocol {
             .disposed(by: disposeBag)
     }
 
-    func readItemsCache() {
+    func readSpellsCache() {
         let decoder = JSONDecoder()
         if let spellData = try? Data(contentsOf: spellsFileURL),
            let preSpells = try? decoder.decode([Spell].self, from: spellData) {

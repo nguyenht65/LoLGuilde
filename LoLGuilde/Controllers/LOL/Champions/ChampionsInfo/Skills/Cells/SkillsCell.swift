@@ -32,8 +32,8 @@ class SkillsCell: UITableViewCell {
         cooldownLabel.text = "Cooldown: \(item.spells[index].cooldownBurn)s"
         rangeLabel.text = "Range: \(item.spells[index].rangeBurn)"
         descriptionLabel.text = item.spells[index].description.htmlToString
-        let urlImage = Image.EndPoint.spell.urlString + item.spells[index].image.full
-        skillImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: Image.LoadingImage.square.rawValue))
+        let urlImage = item.spells[index].urlImage
+        skillImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: item.placeholderImage))
     }
 
     func setupUI() {
