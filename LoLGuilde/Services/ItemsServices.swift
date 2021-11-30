@@ -11,15 +11,6 @@ import RxSwift
 
 struct ItemsServices {
 
-    private static var sharedItemsServices: ItemsServices = {
-        let itemsServices = ItemsServices()
-        return itemsServices
-    }()
-
-    static func shared() -> ItemsServices {
-        return sharedItemsServices
-    }
-
     func getItems() -> Observable<[Item]> {
         let url = Networking.EndPoint.item.url
         let request: Observable<BaseItem> = Networking.shared().request(url: url)

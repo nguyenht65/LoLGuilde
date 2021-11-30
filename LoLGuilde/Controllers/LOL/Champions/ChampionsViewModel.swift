@@ -11,7 +11,6 @@ import RxRelay
 import RxCocoa
 
 protocol ChampionsViewModelProtocol {
-    func processChampions(_ newChampions: [Champion])
     func loadAPI()
 }
 
@@ -19,10 +18,11 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
 
     private let disposeBag = DisposeBag()
     private let championsFileURL = Helper.cachedFileURL("champions.json")
+    private let championsServices = ChampionsServices()
     var champions = BehaviorRelay<[Champion]>(value: [])
     var searchResults = BehaviorRelay<[Champion]>(value: [])
-
-    func processChampions(_ newChampions: [Champion]) {
+    
+    private func processChampions(_ newChampions: [Champion]) {
         // update API
         DispatchQueue.main.async {
             self.champions.accept(newChampions)
@@ -36,11 +36,11 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
     }
 
     func loadAPI() {
-        let newChampions = ChampionsServices.shared().getChampions()
-        newChampions
-//            .filter { objects in
-//                return !objects.isEmpty
-//            }
+        let listChampions = championsServices.getChampions()
+        listChampions
+            .filter { objects in
+                return !objects.isEmpty
+            }
             .subscribe(onNext: { [weak self] newChampion in
                 self?.processChampions(newChampion)
             })

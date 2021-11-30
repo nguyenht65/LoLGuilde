@@ -11,7 +11,6 @@ import RxRelay
 import RxCocoa
 
 protocol ItemsViewModelProtocol {
-    func processItems(_ newItems: [Item])
     func loadAPI()
 }
 
@@ -19,10 +18,11 @@ class ItemsViewModel: ItemsViewModelProtocol {
 
     private let disposeBag = DisposeBag()
     private let itemsFileURL = Helper.cachedFileURL("items.json")
+    private let itemsServices = ItemsServices()
     var items = BehaviorRelay<[Item]>(value: [])
     var searchResults = BehaviorRelay<[Item]>(value: [])
 
-    func processItems(_ newItems: [Item]) {
+    private func processItems(_ newItems: [Item]) {
         // update API
         DispatchQueue.main.async {
             self.items.accept(newItems)
@@ -36,11 +36,11 @@ class ItemsViewModel: ItemsViewModelProtocol {
     }
 
     func loadAPI() {
-        let newItems = ItemsServices.shared().getItems()
-        newItems
-//            .filter { objects in
-//                return !objects.isEmpty
-//            }
+        let listItems = itemsServices.getItems()
+        listItems
+            .filter { objects in
+                return !objects.isEmpty
+            }
             .subscribe(onNext: { [weak self] newItem in
                 self?.processItems(newItem)
             })

@@ -25,8 +25,8 @@ class SkillsView: BaseView {
         super.commonInit()
         let nib1 = UINib(nibName: PassiveCell.className, bundle: .main)
         let nib2 = UINib(nibName: SkillsCell.className, bundle: .main)
-        skillsTableView.register(nib1, forCellReuseIdentifier: "passiveCell")
-        skillsTableView.register(nib2, forCellReuseIdentifier: "skillsCell")
+        skillsTableView.register(nib1, forCellReuseIdentifier: PassiveCell.className)
+        skillsTableView.register(nib2, forCellReuseIdentifier: SkillsCell.className)
         skillsTableView.delegate = self
         skillsTableView.dataSource = self
     }
@@ -49,17 +49,19 @@ extension SkillsView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
-            guard let cell = skillsTableView.dequeueReusableCell(withIdentifier: "passiveCell", for: indexPath) as? PassiveCell else {
+            guard let cell = skillsTableView.dequeueReusableCell(withIdentifier: PassiveCell.className, for: indexPath) as? PassiveCell else {
                 fatalError("dequeue cell error")
             }
             cell.setupData(item: champion)
             return cell
         } else {
-            guard let cell = skillsTableView.dequeueReusableCell(withIdentifier: "skillsCell", for: indexPath) as? SkillsCell else {
+            guard let cell = skillsTableView.dequeueReusableCell(withIdentifier: SkillsCell.className, for: indexPath) as? SkillsCell else {
                 fatalError("dequeue cell error")
             }
             cell.setupData(item: champion, index: indexPath.row - 1)
             return cell
         }
     }
+    
+    
 }

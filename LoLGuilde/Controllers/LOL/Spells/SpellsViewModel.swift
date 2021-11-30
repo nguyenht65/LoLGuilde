@@ -19,6 +19,7 @@ class SpellsViewModel: SpellsViewModelProtocol {
 
     private let disposeBag = DisposeBag()
     private let spellsFileURL = Helper.cachedFileURL("spells.json")
+    private let spellsServices = SpellsServices()
     var spells = BehaviorRelay<[Spell]>(value: [])
 
     func processSpells(_ newSpells: [Spell]) {
@@ -34,11 +35,11 @@ class SpellsViewModel: SpellsViewModelProtocol {
     }
 
     func loadAPI() {
-        let newSpells = SpellsServices.shared().getSpells()
-        newSpells
-//            .filter { objects in
-//                return !objects.isEmpty
-//            }
+        let listSpells = spellsServices.getSpells()
+        listSpells
+            .filter { objects in
+                return !objects.isEmpty
+            }
             .subscribe(onNext: { [weak self] newSpell in
                 self?.processSpells(newSpell)
             })

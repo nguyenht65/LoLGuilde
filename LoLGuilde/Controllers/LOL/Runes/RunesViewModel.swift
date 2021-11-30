@@ -10,7 +10,6 @@ import RxSwift
 import RxRelay
 
 protocol RunesViewModelProtocol {
-    func processRunes(_ newRunes: [Rune])
     func loadAPI()
 }
 
@@ -18,9 +17,10 @@ class RunesViewModel: RunesViewModelProtocol {
 
     private let disposeBag = DisposeBag()
     private let runesFileURL = Helper.cachedFileURL("runes.json")
+    let runesServices = RunesServices()
     var runes = BehaviorRelay<[Rune]>(value: [])
 
-    func processRunes(_ newRunes: [Rune]) {
+    private func processRunes(_ newRunes: [Rune]) {
         // update API
         DispatchQueue.main.async {
             self.runes.accept(newRunes)
@@ -33,8 +33,8 @@ class RunesViewModel: RunesViewModelProtocol {
     }
 
     func loadAPI() {
-        let newRunes = RunesServices.shared().getRunes()
-        newRunes
+        let listRunes = runesServices.getRunes()
+        listRunes
             .filter { objects in
                 return !objects.isEmpty
             }

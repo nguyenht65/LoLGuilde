@@ -9,15 +9,6 @@ import RxSwift
 
 struct SpellsServices {
 
-    private static var sharedSpellsServices: SpellsServices = {
-        let spellsServices = SpellsServices()
-        return spellsServices
-    }()
-
-    static func shared() -> SpellsServices {
-        return sharedSpellsServices
-    }
-
     func getSpells() -> Observable<[Spell]> {
         let url = Networking.EndPoint.spell.url
         let request: Observable<BaseSpell> = Networking.shared().request(url: url)

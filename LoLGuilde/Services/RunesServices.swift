@@ -9,15 +9,6 @@ import RxSwift
 
 struct RunesServices {
 
-    private static var sharedRunesServices: RunesServices = {
-        let runesServices = RunesServices()
-        return runesServices
-    }()
-
-    static func shared() -> RunesServices {
-        return sharedRunesServices
-    }
-
     func getRunes() -> Observable<[Rune]> {
         let url = Networking.EndPoint.rune.url
         let request: Observable<BaseRune> = Networking.shared().request(url: url)

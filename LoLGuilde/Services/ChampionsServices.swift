@@ -9,15 +9,6 @@ import RxSwift
 
 struct ChampionsServices {
 
-    private static var sharedChampionsServices: ChampionsServices = {
-        let championsServices = ChampionsServices()
-        return championsServices
-    }()
-
-    static func shared() -> ChampionsServices {
-        return sharedChampionsServices
-    }
-
     func getChampions() -> Observable<[Champion]> {
         let url = Networking.EndPoint.champion.url
         let request: Observable<BaseChampion> = Networking.shared().request(url: url)

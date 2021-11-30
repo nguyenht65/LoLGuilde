@@ -329,7 +329,7 @@
 			children = (
 				3654D776271FE64C00BBB9EB /* AppDelegate */,
 				3654D77B271FE9C400BBB9EB /* Controllers */,
-				3654D778271FE6FA00BBB9EB /* Views */,
+				3654D778271FE6FA00BBB9EB /* Services */,
 				3654D777271FE6EB00BBB9EB /* Models */,
 				368CD669272DD4D900A1FC9F /* Helper */,
 				3654D77A271FE71D00BBB9EB /* Resources */,
@@ -358,17 +358,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3654D778271FE6FA00BBB9EB /* Views */ = {
+		3654D778271FE6FA00BBB9EB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3654D76D271FE42400BBB9EB /* LaunchScreen.storyboard */,
+				36D0366A274E3A5F0053FC19 /* SpellsServices.swift */,
+				36D03668274E2BCE0053FC19 /* RunesServices.swift */,
+				36D03666274E20AF0053FC19 /* ItemsServices.swift */,
+				36F329C6274DB9DE00DB5CBB /* ChampionsServices.swift */,
 			);
-			path = Views;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3654D77A271FE71D00BBB9EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3654D76D271FE42400BBB9EB /* LaunchScreen.storyboard */,
 				3654D76B271FE42400BBB9EB /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -428,7 +432,6 @@
 				36574F012729022100C27774 /* ChampionsViewController.swift */,
 				36574F022729022100C27774 /* ChampionsViewController.xib */,
 				368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */,
-				36F329C6274DB9DE00DB5CBB /* ChampionsServices.swift */,
 			);
 			path = Champions;
 			sourceTree = "<group>";
@@ -441,7 +444,6 @@
 				36574F062729031A00C27774 /* ItemsViewController.swift */,
 				36574F072729031A00C27774 /* ItemsViewController.xib */,
 				365B2BB42731153B0012C667 /* ItemsViewModel.swift */,
-				36D03666274E20AF0053FC19 /* ItemsServices.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -459,7 +461,6 @@
 				36574F0D27291AAF00C27774 /* RunesViewController.swift */,
 				36574F0E27291AAF00C27774 /* RunesViewController.xib */,
 				36664F42273C5B8900355C0D /* RunesViewModel.swift */,
-				36D03668274E2BCE0053FC19 /* RunesServices.swift */,
 			);
 			path = Runes;
 			sourceTree = "<group>";
@@ -565,7 +566,6 @@
 				363FEDCE273037F600A1B6BE /* SpellsViewController.swift */,
 				363FEDCF273037F600A1B6BE /* SpellsViewController.xib */,
 				36DB67CE2733CB870063F6DB /* SpellsViewModel.swift */,
-				36D0366A274E3A5F0053FC19 /* SpellsServices.swift */,
 			);
 			path = Spells;
 			sourceTree = "<group>";
