@@ -32,7 +32,7 @@ struct SpellsServices {
             try? spellsData.write(to: spellsFileURL, options: .atomicWrite)
         }
     }
-    
+
     func getSpellsFromCache() -> [Spell] {
         let decoder = JSONDecoder()
         if let spellData = try? Data(contentsOf: spellsFileURL),

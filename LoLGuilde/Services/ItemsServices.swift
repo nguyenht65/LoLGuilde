@@ -27,7 +27,7 @@ struct ItemsServices {
             .catchAndReturn([])
             .share(replay: 1, scope: .forever)
     }
-    
+
     func saveItemsToCache(_ newItems: [Item]) {
         let encoder = JSONEncoder()
         if let itemData = try? encoder.encode(newItems) {

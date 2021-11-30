@@ -11,7 +11,6 @@ import RxRelay
 struct ChampionsServices {
 
     private let championsFileURL = Helper.cachedFileURL("champions.json")
-    private var champions = BehaviorRelay<[Champion]>(value: [])
 
     func getChampions() -> Observable<[Champion]> {
         let url = Networking.EndPoint.champion.url
