@@ -82,7 +82,6 @@ class RunesViewController: BaseViewController {
                 }
             })
             .disposed(by: disposeBag)
-
     }
 
     @IBAction func selectedSegmentedControl(_ sender: UISegmentedControl) {

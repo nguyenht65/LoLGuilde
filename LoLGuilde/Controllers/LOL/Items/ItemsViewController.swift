@@ -35,13 +35,12 @@ class ItemsViewController: BaseViewController {
         let nib = UINib(nibName: ItemsCell.className, bundle: .main)
         itemCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
         itemCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
-        registerKeyboardNotifications()
         hideKeyboardWhenTappedAround()
     }
 
     override func setupData() {
         viewModel.readItemsFromCache()
-//        viewModel.loadAPI()
+        viewModel.loadAPI()
         bindViewModel()
 
     }
@@ -55,6 +54,11 @@ class ItemsViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         onSearching()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerKeyboardNotifications()
     }
 
     func onSearching() {
@@ -106,6 +110,7 @@ extension ItemsViewController {
         let newBottomViewPadding = keyboardSize.height - bottomPadding
         bottomViewConstraint.constant = newBottomViewPadding
         searchBar.showsCancelButton = true
+        itemsDetailView.removeFromSuperview()
     }
 
     @objc func keyboardWillHide(notification: Notification) {

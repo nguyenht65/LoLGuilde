@@ -14,7 +14,7 @@ struct Spell: Codable {
     let costBurn: String
 //    let effect: [[Double]?]
 //    let effectBurn: [String?]
-    let costType: CostType
+    let costType: String
     let maxammo: String
     let range: [Int]
     let rangeBurn: String
@@ -48,33 +48,4 @@ extension Spell {
     var placeholderImage: String {
         return Image.LoadingImage.square.rawValue
     }
-}
-
-enum CostType: String, Codable {
-    case abilityresourcename = " {{ abilityresourcename }}"
-    case abilityresourcenamePerSecond = " {{ abilityresourcename }} per Second"
-    case costTypeHealth = "Health"
-    case currentHealth = "% Current Health"
-    case empty = ""
-    case energy = " Energy"
-    case furyASecond = " Fury a Second"
-    case generates1Ferocity = "Generates 1 Ferocity"
-    case health = " Health"
-    case heat = " Heat"
-    case mana = " Mana"
-    case manaAllCharges = " Mana, all Charges"
-    case manaPerRocket = " Mana Per Rocket"
-    case manaPerSecond = " Mana per Second"
-    case manaPercentmanacost100MaxMana = " Mana + {{ percentmanacost*100 }}% Max Mana"
-    case manacostpersecondManaPerSecond = " + {{ manacostpersecond }} Mana per second"
-    case maxHealthCostMana = "% Max Health, {{ cost }} Mana"
-    case noCost = "No Cost"
-    case ofCurrentHealth = "% of current Health"
-    case ofCurrentHealthHealthcosttooltip = "% of current Health ({{ healthcosttooltip }})"
-    case ofCurrentHealthTooltiphealthcost = "% of current Health ({{ tooltiphealthcost }})"
-    case ofMaxHealth = "% of max Health"
-    case passive = "Passive"
-    case the1Seed = "1 Seed"
-    case turretKitCostMana = " Turret Kit & {{ cost }} Mana"
-    case nbsp = "&nbsp;"
 }
