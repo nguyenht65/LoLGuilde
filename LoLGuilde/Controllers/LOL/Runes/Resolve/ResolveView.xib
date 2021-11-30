@@ -34,19 +34,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-mo-y0j">
-                    <rect key="frame" x="0.0" y="50" width="414" height="30"/>
+                    <rect key="frame" x="0.0" y="94" width="414" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <color key="textColor" name="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pf1-YN-AqY" userLabel="Rune View">
-                    <rect key="frame" x="0.0" y="140" width="414" height="428"/>
+                    <rect key="frame" x="0.0" y="184" width="414" height="384"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Z1H-sc-S74">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="MvW-mP-L3H" userLabel="Slot1">
-                                    <rect key="frame" x="72" y="0.0" width="270" height="60"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="MvW-mP-L3H" userLabel="Slot1">
+                                    <rect key="frame" x="87" y="0.0" width="240" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbU-qE-5Eu" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -61,7 +61,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKk-gd-tMw" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="105" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="90" y="0.0" width="60" height="60"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
                                                     <integer key="value" value="1"/>
@@ -69,7 +69,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UC2-w8-AAU" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="210" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
                                                     <integer key="value" value="2"/>
@@ -196,7 +196,7 @@
                 <constraint firstItem="yWs-tF-CGs" firstAttribute="bottom" secondItem="pf1-YN-AqY" secondAttribute="bottom" id="7E7-Wf-JH0"/>
                 <constraint firstItem="pf1-YN-AqY" firstAttribute="top" secondItem="nIN-mo-y0j" secondAttribute="bottom" constant="60" id="H2r-Uv-yOz"/>
                 <constraint firstItem="yWs-tF-CGs" firstAttribute="trailing" secondItem="5qr-nQ-YBG" secondAttribute="trailing" id="Hs6-WR-cnL"/>
-                <constraint firstItem="nIN-mo-y0j" firstAttribute="top" secondItem="Fgm-De-hbE" secondAttribute="top" constant="50" id="L59-Je-m7d"/>
+                <constraint firstItem="nIN-mo-y0j" firstAttribute="top" secondItem="yWs-tF-CGs" secondAttribute="top" constant="50" id="L59-Je-m7d"/>
                 <constraint firstItem="yWs-tF-CGs" firstAttribute="trailing" secondItem="pf1-YN-AqY" secondAttribute="trailing" id="VDT-7W-Jxp"/>
                 <constraint firstItem="5qr-nQ-YBG" firstAttribute="leading" secondItem="yWs-tF-CGs" secondAttribute="leading" id="e0P-y7-IqH"/>
                 <constraint firstItem="pf1-YN-AqY" firstAttribute="leading" secondItem="yWs-tF-CGs" secondAttribute="leading" id="qZL-6b-On1"/>

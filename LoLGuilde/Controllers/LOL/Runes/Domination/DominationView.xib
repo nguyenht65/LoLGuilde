@@ -36,13 +36,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh5-Jo-shz">
-                    <rect key="frame" x="15" y="50" width="384" height="30"/>
+                    <rect key="frame" x="15" y="94" width="384" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <color key="textColor" name="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-iu-icb" userLabel="Rune View">
-                    <rect key="frame" x="0.0" y="140" width="414" height="456"/>
+                    <rect key="frame" x="0.0" y="184" width="414" height="412"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qw0-Q1-LLj">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
@@ -209,7 +209,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="kh5-Jo-shz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="8cO-tl-VCM"/>
+                <constraint firstItem="kh5-Jo-shz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="8cO-tl-VCM"/>
                 <constraint firstItem="HWN-DK-4gP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FHC-XW-5nR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HWN-DK-4gP" secondAttribute="trailing" id="GaV-3a-4R5"/>
                 <constraint firstItem="Lee-iu-icb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HJC-xn-kJn"/>

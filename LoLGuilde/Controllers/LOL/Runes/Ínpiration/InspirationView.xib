@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -45,8 +45,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-1a-PQR">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5OM-zZ-ObQ" userLabel="Slot1">
-                                    <rect key="frame" x="72" y="0.0" width="270" height="60"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5OM-zZ-ObQ" userLabel="Slot1">
+                                    <rect key="frame" x="87" y="0.0" width="240" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9I-vk-Qxj" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -61,7 +61,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-bm-HNx" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="105" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="90" y="0.0" width="60" height="60"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
                                                     <integer key="value" value="1"/>
@@ -69,7 +69,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-5E-CRi" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
-                                            <rect key="frame" x="210" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
                                                     <integer key="value" value="2"/>
@@ -196,7 +196,7 @@
                 <constraint firstItem="oqB-da-lAH" firstAttribute="trailing" secondItem="1NW-nY-kQK" secondAttribute="trailing" id="KNl-Wa-Mei"/>
                 <constraint firstItem="1NW-nY-kQK" firstAttribute="leading" secondItem="oqB-da-lAH" secondAttribute="leading" id="Naa-7U-7cM"/>
                 <constraint firstItem="oqB-da-lAH" firstAttribute="trailing" secondItem="pkc-Jf-tcM" secondAttribute="trailing" id="Ufn-es-jhn"/>
-                <constraint firstItem="Ryx-Wu-eoT" firstAttribute="top" secondItem="1dI-Da-PZe" secondAttribute="top" constant="50" id="aC5-8t-8v1"/>
+                <constraint firstItem="Ryx-Wu-eoT" firstAttribute="top" secondItem="oqB-da-lAH" secondAttribute="top" constant="50" id="aC5-8t-8v1"/>
                 <constraint firstItem="1NW-nY-kQK" firstAttribute="top" secondItem="Ryx-Wu-eoT" secondAttribute="bottom" constant="60" id="dIF-FR-kqo"/>
                 <constraint firstItem="Ryx-Wu-eoT" firstAttribute="leading" secondItem="oqB-da-lAH" secondAttribute="leading" id="ipp-je-QGe"/>
                 <constraint firstItem="oqB-da-lAH" firstAttribute="bottom" secondItem="1NW-nY-kQK" secondAttribute="bottom" id="ppB-eI-UPg"/>
