@@ -16,20 +16,15 @@ protocol RunesViewModelProtocol {
 class RunesViewModel: RunesViewModelProtocol {
 
     private let disposeBag = DisposeBag()
-    private let runesFileURL = Helper.cachedFileURL("runes.json")
     let runesServices = RunesServices()
     var runes = BehaviorRelay<[Rune]>(value: [])
-
+    
     private func processRunes(_ newRunes: [Rune]) {
         // update API
         DispatchQueue.main.async {
             self.runes.accept(newRunes)
         }
-        // save data to file
-        let encoder = JSONEncoder()
-        if let runesData = try? encoder.encode(newRunes) {
-            try? runesData.write(to: runesFileURL, options: .atomicWrite)
-        }
+        runesServices.saveRunesToCache(newRunes)
     }
 
     func loadAPI() {
@@ -44,12 +39,8 @@ class RunesViewModel: RunesViewModelProtocol {
             .disposed(by: disposeBag)
     }
 
-    func readRunesCache() {
-        let decoder = JSONDecoder()
-        if let runesData = try? Data(contentsOf: runesFileURL),
-           let preRunes = try? decoder.decode([Rune].self, from: runesData) {
-            self.runes.accept(preRunes)
-        }
+    func readRunesFromCache() {
+        let listRunes = runesServices.getRunesFromCache()
+        self.runes.accept(listRunes)
     }
-    
 }

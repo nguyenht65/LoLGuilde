@@ -17,22 +17,17 @@ protocol ChampionsViewModelProtocol {
 class ChampionsViewModel: ChampionsViewModelProtocol {
 
     private let disposeBag = DisposeBag()
-    private let championsFileURL = Helper.cachedFileURL("champions.json")
     private let championsServices = ChampionsServices()
     var champions = BehaviorRelay<[Champion]>(value: [])
     var searchResults = BehaviorRelay<[Champion]>(value: [])
-    
+
     private func processChampions(_ newChampions: [Champion]) {
         // update API
         DispatchQueue.main.async {
             self.champions.accept(newChampions)
             self.searchResults.accept(newChampions)
         }
-        // save data to file
-        let encoder = JSONEncoder()
-        if let championsData = try? encoder.encode(newChampions) {
-            try? championsData.write(to: championsFileURL, options: .atomicWrite)
-        }
+        championsServices.saveChampionToCache(newChampions)
     }
 
     func loadAPI() {
@@ -68,11 +63,8 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
         return Observable.of(listChampions)
     }
 
-    func readChampionsCache() {
-        let decoder = JSONDecoder()
-        if let championsData = try? Data(contentsOf: championsFileURL),
-           let preChampions = try? decoder.decode([Champion].self, from: championsData) {
-            self.champions.accept(preChampions)
-        }
+    func readChampionsFromCache() {
+        let listChampions = championsServices.getChampionsFromCache()
+        self.champions.accept(listChampions)
     }
 }

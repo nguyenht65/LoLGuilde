@@ -18,7 +18,6 @@ protocol SpellsViewModelProtocol {
 class SpellsViewModel: SpellsViewModelProtocol {
 
     private let disposeBag = DisposeBag()
-    private let spellsFileURL = Helper.cachedFileURL("spells.json")
     private let spellsServices = SpellsServices()
     var spells = BehaviorRelay<[Spell]>(value: [])
 
@@ -27,11 +26,7 @@ class SpellsViewModel: SpellsViewModelProtocol {
         DispatchQueue.main.async {
             self.spells.accept(newSpells)
         }
-        // save data to file
-        let encoder = JSONEncoder()
-        if let spellsData = try? encoder.encode(newSpells) {
-            try? spellsData.write(to: spellsFileURL, options: .atomicWrite)
-        }
+        spellsServices.saveSpellsToCache(newSpells)
     }
 
     func loadAPI() {
@@ -46,11 +41,8 @@ class SpellsViewModel: SpellsViewModelProtocol {
             .disposed(by: disposeBag)
     }
 
-    func readSpellsCache() {
-        let decoder = JSONDecoder()
-        if let spellData = try? Data(contentsOf: spellsFileURL),
-           let preSpells = try? decoder.decode([Spell].self, from: spellData) {
-            self.spells.accept(preSpells)
-        }
+    func readSpellsFromCache() {
+        let listSpells = spellsServices.getSpellsFromCache()
+        self.spells.accept(listSpells)
     }
 }

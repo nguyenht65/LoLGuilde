@@ -9,6 +9,8 @@ import RxSwift
 
 struct SpellsServices {
 
+    private let spellsFileURL = Helper.cachedFileURL("spells.json")
+
     func getSpells() -> Observable<[Spell]> {
         let url = Networking.EndPoint.spell.url
         let request: Observable<BaseSpell> = Networking.shared().request(url: url)
@@ -22,5 +24,22 @@ struct SpellsServices {
             }
             .catchAndReturn([])
             .share(replay: 1, scope: .forever)
+    }
+
+    func saveSpellsToCache(_ newSpells: [Spell]) {
+        let encoder = JSONEncoder()
+        if let spellsData = try? encoder.encode(newSpells) {
+            try? spellsData.write(to: spellsFileURL, options: .atomicWrite)
+        }
+    }
+    
+    func getSpellsFromCache() -> [Spell] {
+        let decoder = JSONDecoder()
+        if let spellData = try? Data(contentsOf: spellsFileURL),
+           let preSpells = try? decoder.decode([Spell].self, from: spellData) {
+            return preSpells
+        } else {
+            return []
+        }
     }
 }

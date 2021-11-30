@@ -17,7 +17,6 @@ protocol ItemsViewModelProtocol {
 class ItemsViewModel: ItemsViewModelProtocol {
 
     private let disposeBag = DisposeBag()
-    private let itemsFileURL = Helper.cachedFileURL("items.json")
     private let itemsServices = ItemsServices()
     var items = BehaviorRelay<[Item]>(value: [])
     var searchResults = BehaviorRelay<[Item]>(value: [])
@@ -28,11 +27,7 @@ class ItemsViewModel: ItemsViewModelProtocol {
             self.items.accept(newItems)
             self.searchResults.accept(newItems)
         }
-        // save data to file
-        let encoder = JSONEncoder()
-        if let itemData = try? encoder.encode(newItems) {
-            try? itemData.write(to: itemsFileURL, options: .atomicWrite)
-        }
+        itemsServices.saveItemsToCache(newItems)
     }
 
     func loadAPI() {
@@ -68,11 +63,8 @@ class ItemsViewModel: ItemsViewModelProtocol {
         return Observable.of(listItems)
     }
 
-    func readItemsCache() {
-        let decoder = JSONDecoder()
-        if let itemData = try? Data(contentsOf: itemsFileURL),
-           let preItems = try? decoder.decode([Item].self, from: itemData) {
-            self.items.accept(preItems)
-        }
+    func readItemsFromCache() {
+        let listItems = itemsServices.getItemsFromCache()
+        self.items.accept(listItems)
     }
 }

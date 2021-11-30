@@ -11,6 +11,8 @@ import RxSwift
 
 struct ItemsServices {
 
+    private let itemsFileURL = Helper.cachedFileURL("items.json")
+
     func getItems() -> Observable<[Item]> {
         let url = Networking.EndPoint.item.url
         let request: Observable<BaseItem> = Networking.shared().request(url: url)
@@ -24,5 +26,22 @@ struct ItemsServices {
             }
             .catchAndReturn([])
             .share(replay: 1, scope: .forever)
+    }
+    
+    func saveItemsToCache(_ newItems: [Item]) {
+        let encoder = JSONEncoder()
+        if let itemData = try? encoder.encode(newItems) {
+            try? itemData.write(to: itemsFileURL, options: .atomicWrite)
+        }
+    }
+
+    func getItemsFromCache() -> [Item] {
+        let decoder = JSONDecoder()
+        if let itemsData = try? Data(contentsOf: itemsFileURL),
+           let preItems = try? decoder.decode([Item].self, from: itemsData) {
+            return preItems
+        } else {
+            return []
+        }
     }
 }

@@ -36,7 +36,7 @@ class SpellsViewController: BaseViewController {
     }
 
     override func setupData() {
-        viewModel.readSpellsCache()
+        viewModel.readSpellsFromCache()
         viewModel.loadAPI()
         bindViewModel()
     }

@@ -6,8 +6,12 @@
 //
 
 import RxSwift
+import RxRelay
 
 struct ChampionsServices {
+
+    private let championsFileURL = Helper.cachedFileURL("champions.json")
+    private var champions = BehaviorRelay<[Champion]>(value: [])
 
     func getChampions() -> Observable<[Champion]> {
         let url = Networking.EndPoint.champion.url
@@ -22,5 +26,23 @@ struct ChampionsServices {
             }
             .catchAndReturn([])
             .share(replay: 1, scope: .forever)
+    }
+
+    func saveChampionToCache(_ newChampions: [Champion]) {
+        // save data to file
+        let encoder = JSONEncoder()
+        if let championsData = try? encoder.encode(newChampions) {
+            try? championsData.write(to: championsFileURL, options: .atomicWrite)
+        }
+    }
+
+    func getChampionsFromCache() -> [Champion] {
+        let decoder = JSONDecoder()
+        if let championsData = try? Data(contentsOf: championsFileURL),
+           let preChampions = try? decoder.decode([Champion].self, from: championsData) {
+            return preChampions
+        } else {
+            return []
+        }
     }
 }
