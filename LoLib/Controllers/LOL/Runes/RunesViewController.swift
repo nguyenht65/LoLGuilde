@@ -19,30 +19,35 @@ class RunesViewController: BaseViewController {
 
     private lazy var precisionView: PrecisionView = {
         let view = PrecisionView(frame: runesStackView.bounds)
+        view.backgroundImageView.image = UIImage(named: Image.RuneBackground.precision.rawValue)
         view.setupUI(item: viewModel.runes.value[2])
         view.setupData(rune: viewModel.runes.value[2])
         return view
     }()
     private lazy var dominationView: DominationView = {
         let view = DominationView(frame: runesStackView.bounds)
+        view.backgroundImageView.image = UIImage(named: Image.RuneBackground.domination.rawValue)
         view.setupUI(item: viewModel.runes.value[0])
         view.setupData(rune: viewModel.runes.value[0])
         return view
     }()
-    private lazy var sorceryView: SorceryView = {
-        let view = SorceryView(frame: runesStackView.bounds)
+    private lazy var sorceryView: BaseRuneView = {
+        let view = BaseRuneView(frame: runesStackView.bounds)
+        view.backgroundImageView.image = UIImage(named: Image.RuneBackground.sorcery.rawValue)
         view.setupUI(item: viewModel.runes.value[4])
         view.setupData(rune: viewModel.runes.value[4])
         return view
     }()
-    private lazy var resolveView: ResolveView = {
-        let view = ResolveView(frame: runesStackView.bounds)
+    private lazy var resolveView: BaseRuneView = {
+        let view = BaseRuneView(frame: runesStackView.bounds)
+        view.backgroundImageView.image = UIImage(named: Image.RuneBackground.resolve.rawValue)
         view.setupUI(item: viewModel.runes.value[3])
         view.setupData(rune: viewModel.runes.value[3])
         return view
     }()
-    private lazy var inspirationView: InspirationView = {
-        let view = InspirationView(frame: runesStackView.bounds)
+    private lazy var inspirationView: BaseRuneView = {
+        let view = BaseRuneView(frame: runesStackView.bounds)
+        view.backgroundImageView.image = UIImage(named: Image.RuneBackground.inspiration.rawValue)
         view.setupUI(item: viewModel.runes.value[1])
         view.setupData(rune: viewModel.runes.value[1])
         return view

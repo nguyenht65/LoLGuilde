@@ -46,4 +46,12 @@ struct Image: Codable {
     enum TopicImage: String {
         case icon = "ic_tb1"
     }
+
+    enum RuneBackground: String {
+        case domination = "domination"
+        case precision = "precision"
+        case sorcery = "sorcery"
+        case resolve = "resolve"
+        case inspiration = "inspiration"
+    }
 }

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseRuneView" customModule="LoLib" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImageView" destination="wJ1-az-AEa" id="xtE-qH-znU"/>
+                <outlet property="nameLabel" destination="u6T-sZ-VFO" id="eBG-je-Eto"/>
+                <outlet property="slot11View" destination="mab-hn-zU3" id="t5V-br-HV8"/>
+                <outlet property="slot12View" destination="WgY-IP-cJr" id="6B8-QY-Quf"/>
+                <outlet property="slot13View" destination="ZSs-VP-BNa" id="fvh-dH-6wn"/>
+                <outlet property="slot21View" destination="iYj-gA-haS" id="lbe-4L-qGJ"/>
+                <outlet property="slot22View" destination="Kse-9p-Ahw" id="s5T-3h-BWf"/>
+                <outlet property="slot23View" destination="VUt-Bd-kMg" id="Dy5-1m-UNW"/>
+                <outlet property="slot31View" destination="7iJ-CJ-8Gu" id="wHa-dL-RtG"/>
+                <outlet property="slot32View" destination="kuu-Wg-jGB" id="Bva-m2-24J"/>
+                <outlet property="slot33View" destination="Zld-Al-ihp" id="76d-Ul-tAp"/>
+                <outlet property="slot41View" destination="1a4-qs-neF" id="eGY-B9-3Yy"/>
+                <outlet property="slot42View" destination="2D9-W0-HmZ" id="y9P-rm-mbv"/>
+                <outlet property="slot43View" destination="8nF-pa-eBP" id="1r6-tP-Nrq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2tC-rd-5eG">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wJ1-az-AEa">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6T-sZ-VFO">
+                    <rect key="frame" x="15" y="94" width="384" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <color key="textColor" name="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QQ-nM-qB0" userLabel="Rune View">
+                    <rect key="frame" x="0.0" y="184" width="414" height="412"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Rm1-u6-HHi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BL4-1g-M8v" userLabel="Slot1">
+                                    <rect key="frame" x="87" y="0.0" width="240" height="60"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mab-hn-zU3" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="oNF-Xg-dvS"/>
+                                                <constraint firstAttribute="height" constant="60" id="wVk-Ia-NX2"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-IP-cJr" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="90" y="0.0" width="60" height="60"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSs-VP-BNa" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="180" y="0.0" width="60" height="60"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="F3I-Ld-Zib" userLabel="Slot2">
+                                    <rect key="frame" x="102" y="100" width="210" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYj-gA-haS" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="B9r-Nx-kma"/>
+                                                <constraint firstAttribute="width" constant="50" id="ZoR-9I-JmX"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kse-9p-Ahw" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUt-Bd-kMg" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0hz-v5-w6z" userLabel="Slot3">
+                                    <rect key="frame" x="102" y="190" width="210" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iJ-CJ-8Gu" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="WTr-nD-nNq"/>
+                                                <constraint firstAttribute="width" constant="50" id="hEZ-FR-gKi"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuu-Wg-jGB" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zld-Al-ihp" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="9"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Glv-I2-yfA" userLabel="Slot4">
+                                    <rect key="frame" x="102" y="280" width="210" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1a4-qs-neF" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="3cW-lc-EMM"/>
+                                                <constraint firstAttribute="height" constant="50" id="f3j-lb-Oxp"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2D9-W0-HmZ" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="11"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nF-pa-eBP" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
+                                            <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
+                                                    <integer key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Rm1-u6-HHi" firstAttribute="leading" secondItem="8QQ-nM-qB0" secondAttribute="leading" id="PAZ-TL-O9d"/>
+                        <constraint firstAttribute="trailing" secondItem="Rm1-u6-HHi" secondAttribute="trailing" id="Qdj-KX-Fhf"/>
+                        <constraint firstItem="Rm1-u6-HHi" firstAttribute="top" secondItem="8QQ-nM-qB0" secondAttribute="top" id="c4L-mp-nXv"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Rm1-u6-HHi" secondAttribute="bottom" id="lX3-Vw-aYo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="4Bb-2e-Cpx"/>
+            <color key="backgroundColor" name="backgroundColor"/>
+            <constraints>
+                <constraint firstItem="4Bb-2e-Cpx" firstAttribute="trailing" secondItem="u6T-sZ-VFO" secondAttribute="trailing" constant="15" id="7NS-ev-0Ao"/>
+                <constraint firstItem="wJ1-az-AEa" firstAttribute="top" secondItem="2tC-rd-5eG" secondAttribute="top" id="Add-cT-dhg"/>
+                <constraint firstItem="u6T-sZ-VFO" firstAttribute="leading" secondItem="4Bb-2e-Cpx" secondAttribute="leading" constant="15" id="Dub-ub-uqD"/>
+                <constraint firstItem="8QQ-nM-qB0" firstAttribute="leading" secondItem="4Bb-2e-Cpx" secondAttribute="leading" id="FRM-bH-gJY"/>
+                <constraint firstItem="4Bb-2e-Cpx" firstAttribute="bottom" secondItem="8QQ-nM-qB0" secondAttribute="bottom" id="HX8-xY-I15"/>
+                <constraint firstItem="4Bb-2e-Cpx" firstAttribute="trailing" secondItem="8QQ-nM-qB0" secondAttribute="trailing" id="I0e-w3-1HL"/>
+                <constraint firstItem="4Bb-2e-Cpx" firstAttribute="bottom" secondItem="wJ1-az-AEa" secondAttribute="bottom" id="WlE-a8-pTJ"/>
+                <constraint firstItem="u6T-sZ-VFO" firstAttribute="top" secondItem="4Bb-2e-Cpx" secondAttribute="top" constant="50" id="aM4-x1-Lsg"/>
+                <constraint firstItem="wJ1-az-AEa" firstAttribute="leading" secondItem="4Bb-2e-Cpx" secondAttribute="leading" id="evY-VP-x2M"/>
+                <constraint firstItem="4Bb-2e-Cpx" firstAttribute="trailing" secondItem="wJ1-az-AEa" secondAttribute="trailing" id="fgh-Nq-ktb"/>
+                <constraint firstItem="8QQ-nM-qB0" firstAttribute="top" secondItem="u6T-sZ-VFO" secondAttribute="bottom" constant="60" id="mwt-qF-3tz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="162.05357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

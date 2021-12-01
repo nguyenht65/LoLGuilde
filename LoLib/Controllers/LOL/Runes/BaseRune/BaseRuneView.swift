@@ -1,20 +1,19 @@
 //
-//  PrecisionView.swift
-//  LoLGuilde
+//  TestRune.swift
+//  LoLib
 //
-//  Created by Bang on 10/11/2021.
+//  Created by Bang on 02/12/2021.
 //
 
 import UIKit
 
-class PrecisionView: BaseView {
+class BaseRuneView: BaseView {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var slot11View: EachRuneView!
     @IBOutlet weak var slot12View: EachRuneView!
     @IBOutlet weak var slot13View: EachRuneView!
-    @IBOutlet weak var slot14View: EachRuneView!
     @IBOutlet weak var slot21View: EachRuneView!
     @IBOutlet weak var slot22View: EachRuneView!
     @IBOutlet weak var slot23View: EachRuneView!
@@ -56,7 +55,6 @@ class PrecisionView: BaseView {
         slot11View.setupUI(item: item, slotsIndex: 0, runeIndex: 0)
         slot12View.setupUI(item: item, slotsIndex: 0, runeIndex: 1)
         slot13View.setupUI(item: item, slotsIndex: 0, runeIndex: 2)
-        slot14View.setupUI(item: item, slotsIndex: 0, runeIndex: 3)
         slot21View.setupUI(item: item, slotsIndex: 1, runeIndex: 0)
         slot22View.setupUI(item: item, slotsIndex: 1, runeIndex: 1)
         slot23View.setupUI(item: item, slotsIndex: 1, runeIndex: 2)
@@ -67,12 +65,11 @@ class PrecisionView: BaseView {
         slot42View.setupUI(item: item, slotsIndex: 3, runeIndex: 1)
         slot43View.setupUI(item: item, slotsIndex: 3, runeIndex: 2)
     }
-
+    
     func setupAction() {
         slot11View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         slot12View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         slot13View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot14View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         slot21View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         slot22View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         slot23View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -95,24 +92,22 @@ class PrecisionView: BaseView {
         case 2:
             runesDetailView.setupData(item: rune, slotsIndex: 0, runeIndex: 2)
         case 3:
-            runesDetailView.setupData(item: rune, slotsIndex: 0, runeIndex: 3)
-        case 4:
             runesDetailView.setupData(item: rune, slotsIndex: 1, runeIndex: 0)
-        case 5:
+        case 4:
             runesDetailView.setupData(item: rune, slotsIndex: 1, runeIndex: 1)
-        case 6:
+        case 5:
             runesDetailView.setupData(item: rune, slotsIndex: 1, runeIndex: 2)
-        case 7:
+        case 6:
             runesDetailView.setupData(item: rune, slotsIndex: 2, runeIndex: 0)
-        case 8:
+        case 7:
             runesDetailView.setupData(item: rune, slotsIndex: 2, runeIndex: 1)
-        case 9:
+        case 8:
             runesDetailView.setupData(item: rune, slotsIndex: 2, runeIndex: 2)
-        case 10:
+        case 9:
             runesDetailView.setupData(item: rune, slotsIndex: 3, runeIndex: 0)
-        case 11:
+        case 10:
             runesDetailView.setupData(item: rune, slotsIndex: 3, runeIndex: 1)
-        case 12:
+        case 11:
             runesDetailView.setupData(item: rune, slotsIndex: 3, runeIndex: 2)
         default:
             return

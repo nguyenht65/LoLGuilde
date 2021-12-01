@@ -15,6 +15,7 @@ final class Networking {
     enum EndPoint {
         static let baseUrlString = "https://nguyenht65.github.io/LOLResources/lol/data"
         static let language = "/en_US"
+//        static let language = "/vn_VN"
 
         static var baseURL: URL {
             return URL(string: Networking.EndPoint.baseUrlString + Networking.EndPoint.language)!

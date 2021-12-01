@@ -8,8 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DominationView" customModule="LoLGuilde" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DominationView" customModule="LoLib" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="HWN-DK-4gP" id="Qeo-rd-h9Q"/>
                 <outlet property="nameLabel" destination="kh5-Jo-shz" id="eGp-fo-2Ll"/>
                 <outlet property="slot11View" destination="FNk-0N-JyH" id="s9c-aG-iZf"/>
                 <outlet property="slot12View" destination="JxQ-qN-NNy" id="8i3-AD-42a"/>
@@ -50,7 +51,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Rjo-vn-pv4" userLabel="Slot1">
                                     <rect key="frame" x="42" y="0.0" width="330" height="60"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNk-0N-JyH" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNk-0N-JyH" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="0XE-3e-w9E"/>
@@ -62,7 +63,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxQ-qN-NNy" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxQ-qN-NNy" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="60" height="60"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -70,7 +71,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-2q-1Mu" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-2q-1Mu" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -78,7 +79,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1d-AT-C5d" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1d-AT-C5d" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="270" y="0.0" width="60" height="60"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -91,7 +92,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dyd-yp-z35" userLabel="Slot2">
                                     <rect key="frame" x="102" y="100" width="210" height="50"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-fU-vUa" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-fU-vUa" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="mKm-bi-zzb"/>
@@ -103,7 +104,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTK-Ox-VgP" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTK-Ox-VgP" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="80" y="0.0" width="50" height="50"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -111,7 +112,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-nI-EX8" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-nI-EX8" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="160" y="0.0" width="50" height="50"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -124,7 +125,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8Uz-Qc-JdY" userLabel="Slot3">
                                     <rect key="frame" x="102" y="190" width="210" height="50"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjV-dN-k1u" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjV-dN-k1u" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="gEB-No-I58"/>
@@ -136,7 +137,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9S5-xq-bju" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9S5-xq-bju" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="80" y="0.0" width="50" height="50"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -144,7 +145,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckf-eh-Xdn" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckf-eh-Xdn" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="160" y="0.0" width="50" height="50"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -157,7 +158,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mvf-PZ-lMO" userLabel="Slot4">
                                     <rect key="frame" x="62" y="280" width="290" height="50"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R6-hR-KXb" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R6-hR-KXb" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Dq1-5N-nVI"/>
@@ -169,7 +170,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnA-Ks-lA0" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnA-Ks-lA0" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="80" y="0.0" width="50" height="50"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -177,7 +178,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKB-hf-mQ1" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKB-hf-mQ1" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="160" y="0.0" width="50" height="50"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -185,7 +186,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-MV-G5h" customClass="EachRuneView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aL7-MV-G5h" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="240" y="0.0" width="50" height="50"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">

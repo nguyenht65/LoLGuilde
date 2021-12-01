@@ -40,7 +40,7 @@ class ChampionsViewController: BaseViewController {
     }
 
     override func setupData() {
-//        viewModel.readChampionsFromCache()
+        viewModel.readChampionsFromCache()
         viewModel.loadAPI()
         bindViewModel()
     }

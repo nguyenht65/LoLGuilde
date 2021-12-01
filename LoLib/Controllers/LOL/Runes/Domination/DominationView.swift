@@ -10,6 +10,7 @@ import UIKit
 class DominationView: BaseView {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var slot11View: EachRuneView!
     @IBOutlet weak var slot12View: EachRuneView!
     @IBOutlet weak var slot13View: EachRuneView!

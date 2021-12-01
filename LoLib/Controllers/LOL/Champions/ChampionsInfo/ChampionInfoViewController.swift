@@ -42,8 +42,6 @@ class ChampionInfoViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let generalView = GeneralView()
-//        generalView.translatesAutoresizingMaskIntoConstraints = false
         let generalView = generalView
         infoStackView.addArrangedSubview(generalView)
     }
