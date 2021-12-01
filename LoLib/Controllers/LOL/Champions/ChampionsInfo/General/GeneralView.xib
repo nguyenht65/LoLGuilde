@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralView" customModule="LoLGuilde" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralView" customModule="LoLib" customModuleProvider="target">
             <connections>
                 <outlet property="attackView" destination="rdx-Ge-Kgm" id="NwW-ox-wpT"/>
                 <outlet property="defenseView" destination="qO2-GA-IXD" id="UJ8-tf-bVj"/>
@@ -26,7 +26,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="355" placeholderIntrinsicHeight="436" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wkd-rG-0HK">
                     <rect key="frame" x="0.0" y="44" width="355" height="436"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNb-4v-yLD" customClass="StatusView" customModule="LoLGuilde" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNb-4v-yLD" customClass="StatusView" customModule="LoLib" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="355" height="271"/>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="97j-EX-2eJ" userLabel="Split Stack View">
@@ -147,7 +147,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cCF-g7-cpm">
                                     <rect key="frame" x="0.0" y="0.0" width="355" height="160"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdx-Ge-Kgm" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdx-Ge-Kgm" customClass="ProgressView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
                                             <color key="backgroundColor" name="backgroundColor"/>
                                             <constraints>
@@ -163,7 +163,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-GA-IXD" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-GA-IXD" customClass="ProgressView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="40" width="355" height="40"/>
                                             <color key="backgroundColor" name="backgroundColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -176,7 +176,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dJ-12-gUt" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dJ-12-gUt" customClass="ProgressView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="80" width="355" height="40"/>
                                             <color key="backgroundColor" name="backgroundColor"/>
                                             <constraints>
@@ -192,7 +192,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-6w-Pk5" customClass="ProgressView" customModule="LoLGuilde" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-6w-Pk5" customClass="ProgressView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="120" width="355" height="40"/>
                                             <color key="backgroundColor" name="backgroundColor"/>
                                             <constraints>

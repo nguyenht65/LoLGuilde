@@ -85,9 +85,10 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDelegat
         collectionView.deselectItem(at: indexPath, animated: true)
         // setupUI
         itemsDetailView.removeFromSuperview()
-        let screenSize = collectionView.layer.bounds.size
-        itemsDetailView.frame = CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: screenSize.height * 3 / 5)
-        itemsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height * 2 / 3)
+//        let screenSize = collectionView.layer.bounds.size
+        let screenSize: CGRect = UIScreen.main.bounds
+        itemsDetailView.frame = CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: screenSize.height * 2 / 5)
+        itemsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
         // setupData
         let item = viewModel.searchResults.value[indexPath.row]
         itemsDetailView.setupData(item: item)
@@ -109,13 +110,15 @@ extension ItemsViewController {
         let bottomPadding = window?.safeAreaInsets.bottom ?? 0
         let newBottomViewPadding = keyboardSize.height - bottomPadding
         bottomViewConstraint.constant = newBottomViewPadding
-        searchBar.showsCancelButton = true
+        searchBar.setShowsCancelButton(true, animated: true)
+//        searchBar.setShowsScope(true, animated: true)
         itemsDetailView.removeFromSuperview()
     }
 
     @objc func keyboardWillHide(notification: Notification) {
         bottomViewConstraint.constant = 65
-        searchBar.showsCancelButton = false
+        searchBar.setShowsCancelButton(false, animated: true)
+//        searchBar.setShowsScope(false, animated: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

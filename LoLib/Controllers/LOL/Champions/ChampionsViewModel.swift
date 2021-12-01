@@ -59,7 +59,7 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
 
     func searchChampions(_ query: String) -> Observable<[Champion]> {
         let listChampions: [Champion] = champions.value
-            .filter { ($0.name).uppercased().contains(query.uppercased()) }
+            .filter { $0.name.uppercased().contains(query.uppercased()) }
         return Observable.of(listChampions)
     }
 

@@ -100,12 +100,12 @@ extension ChampionsViewController {
         let newBottomViewPadding = keyboardSize.height - bottomPadding
 //        championsTableView.contentInset.bottom = newBottomViewPadding
         bottomViewConstraint.constant = newBottomViewPadding
-        searchBar.showsCancelButton = true
+        searchBar.setShowsCancelButton(true, animated: true)
     }
 
     @objc func keyboardWillHide(notification: Notification) {
         bottomViewConstraint.constant = 65
-        searchBar.showsCancelButton = false
+        searchBar.setShowsCancelButton(false, animated: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
