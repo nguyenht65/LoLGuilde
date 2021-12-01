@@ -19,7 +19,6 @@ final class Networking {
         static var baseURL: URL {
             return URL(string: Networking.EndPoint.baseUrlString + Networking.EndPoint.language)!
         }
-//        static let baseURL: URL? = URL(string: "https://nguyenht65.github.io/LOLResources/lol/data/en_US/")
 
         case champion
         case item
@@ -52,7 +51,7 @@ final class Networking {
 
     private init() { }
 
-    // MARK: Request: xu ly viec ket noi
+    // MARK: Request
     func request<T: Codable>(url: URL?) -> Observable<T> {
         do {
             // check URL == nil

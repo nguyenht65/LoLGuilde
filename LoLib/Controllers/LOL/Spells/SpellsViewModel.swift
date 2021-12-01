@@ -11,7 +11,6 @@ import RxRelay
 import RxCocoa
 
 protocol SpellsViewModelProtocol {
-    func processSpells(_ newSpell: [Spell])
     func loadAPI()
 }
 
@@ -21,7 +20,7 @@ class SpellsViewModel: SpellsViewModelProtocol {
     private let spellsServices = SpellsServices()
     var spells = BehaviorRelay<[Spell]>(value: [])
 
-    func processSpells(_ newSpells: [Spell]) {
+    private func processSpells(_ newSpells: [Spell]) {
         // update API
         DispatchQueue.main.async {
             self.spells.accept(newSpells)

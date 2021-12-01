@@ -22,7 +22,7 @@ class CustomTabBar: UIView {
 
     convenience init(menuItems: [TabItem], frame: CGRect) {
         self.init(frame: frame)
-        layer.backgroundColor = UIColor(named: "backgroundColor")?.cgColor
+        layer.backgroundColor = UIColor(named: Color.backgroundColor.rawValue)?.cgColor
 
         // create each tab bar item
         for index in 0 ..< menuItems.count {
@@ -48,14 +48,14 @@ class CustomTabBar: UIView {
 
     func createTabItem(item: TabItem) -> UIView {
         let tabBarItem = UIView()
-        tabBarItem.layer.backgroundColor = UIColor(named: "backgroundColor")?.cgColor
+        tabBarItem.layer.backgroundColor = UIColor(named: Color.backgroundColor.rawValue)?.cgColor
         tabBarItem.translatesAutoresizingMaskIntoConstraints = false
         tabBarItem.clipsToBounds = true
 
         // Setup item title
         let itemTitleLabel = UILabel()
         itemTitleLabel.text = item.displayTitle
-        itemTitleLabel.textColor = UIColor(named: "textColor")
+        itemTitleLabel.textColor = UIColor(named: Color.textColor.rawValue)
         itemTitleLabel.textAlignment = .center
         itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         itemTitleLabel.clipsToBounds = true

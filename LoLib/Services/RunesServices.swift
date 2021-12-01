@@ -9,7 +9,7 @@ import RxSwift
 
 struct RunesServices {
 
-    private let runesFileURL = Helper.cachedFileURL("runes.json")
+    private let runesFileURL = FileHelper.cachedFileURL("runes.json")
 
     func getRunes() -> Observable<[Rune]> {
         let url = Networking.EndPoint.rune.url

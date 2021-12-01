@@ -54,7 +54,7 @@ class ChampionInfoViewController: BaseViewController {
 
     override func setupUI() {
         title = "Champion Info"
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "textColor")]
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: Color.textColor.rawValue)]
         segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key: Any], for: .normal)
         segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key: Any], for: .selected)
     }
@@ -95,10 +95,9 @@ class ChampionInfoViewController: BaseViewController {
         infoStackView.addArrangedSubview(view)
     }
 
-    @IBAction func moveToTips(_ sender: Any) {
+    @IBAction func moveToTips(_ sender: UIButton) {
         let tipsVC = TipsViewController()
         tipsVC.getChampion(champion: champion)
-        // push navigation
         self.navigationController?.pushViewController(tipsVC, animated: true)
     }
 }

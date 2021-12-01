@@ -9,7 +9,7 @@ import RxSwift
 
 struct SpellsServices {
 
-    private let spellsFileURL = Helper.cachedFileURL("spells.json")
+    private let spellsFileURL = FileHelper.cachedFileURL("spells.json")
 
     func getSpells() -> Observable<[Spell]> {
         let url = Networking.EndPoint.spell.url

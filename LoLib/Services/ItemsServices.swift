@@ -11,7 +11,7 @@ import RxSwift
 
 struct ItemsServices {
 
-    private let itemsFileURL = Helper.cachedFileURL("items.json")
+    private let itemsFileURL = FileHelper.cachedFileURL("items.json")
 
     func getItems() -> Observable<[Item]> {
         let url = Networking.EndPoint.item.url

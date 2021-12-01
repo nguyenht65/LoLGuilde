@@ -65,8 +65,9 @@
 		3668388827424C8600B4332B /* SpellsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3668388727424C8600B4332B /* SpellsDetailView.xib */; };
 		367611012757564000BD0EBE /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367610FF2757564000BD0EBE /* TipsViewController.swift */; };
 		367611022757564000BD0EBE /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367611002757564000BD0EBE /* TipsViewController.xib */; };
+		3676110D2757668B00BD0EBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676110C2757668B00BD0EBE /* Color.swift */; };
 		368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */; };
-		368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66A272DD52C00A1FC9F /* Helper.swift */; };
+		368CD66B272DD52C00A1FC9F /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66A272DD52C00A1FC9F /* FileHelper.swift */; };
 		368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */; };
 		368CE0D827307A4500C3DA27 /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CE0D727307A4500C3DA27 /* Gold.swift */; };
 		369ECD6E273A54FE00192332 /* SkillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369ECD6C273A54FE00192332 /* SkillsCell.swift */; };
@@ -166,8 +167,9 @@
 		3668388727424C8600B4332B /* SpellsDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsDetailView.xib; sourceTree = "<group>"; };
 		367610FF2757564000BD0EBE /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		367611002757564000BD0EBE /* TipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
+		3676110C2757668B00BD0EBE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewModel.swift; sourceTree = "<group>"; };
-		368CD66A272DD52C00A1FC9F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		368CD66A272DD52C00A1FC9F /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
 		368CE0D727307A4500C3DA27 /* Gold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
 		369ECD6C273A54FE00192332 /* SkillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCell.swift; sourceTree = "<group>"; };
@@ -554,8 +556,9 @@
 		368CD669272DD4D900A1FC9F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				368CD66A272DD52C00A1FC9F /* Helper.swift */,
+				368CD66A272DD52C00A1FC9F /* FileHelper.swift */,
 				36BEA657272FCF7A00B75B39 /* ScreenHelper.swift */,
+				3676110C2757668B00BD0EBE /* Color.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -860,7 +863,7 @@
 				36BEA65B272FDCF600B75B39 /* TabBarItem.swift in Sources */,
 				36664F35273C15DC00355C0D /* SorceryView.swift in Sources */,
 				36DB67D32734508E0063F6DB /* SkillsView.swift in Sources */,
-				368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */,
+				368CD66B272DD52C00A1FC9F /* FileHelper.swift in Sources */,
 				36574F0F27291AAF00C27774 /* RunesViewController.swift in Sources */,
 				3622CF7C272949D5005912CD /* Champion.swift in Sources */,
 				36BB5D7C272AA05000001491 /* NetworkingError.swift in Sources */,
@@ -876,6 +879,7 @@
 				36272AA4273AFDBE00AE5205 /* SkinsView.swift in Sources */,
 				36571360272FF79F00F44595 /* Stats.swift in Sources */,
 				365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */,
+				3676110D2757668B00BD0EBE /* Color.swift in Sources */,
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* SplashViewController.swift in Sources */,
 				36664F21273C115600355C0D /* EachRuneView.swift in Sources */,

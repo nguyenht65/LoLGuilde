@@ -10,7 +10,7 @@ import RxRelay
 
 struct ChampionsServices {
 
-    private let championsFileURL = Helper.cachedFileURL("champions.json")
+    private let championsFileURL = FileHelper.cachedFileURL("champions.json")
 
     func getChampions() -> Observable<[Champion]> {
         let url = Networking.EndPoint.champion.url
