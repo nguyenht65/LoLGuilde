@@ -63,6 +63,8 @@
 		3668388427423AC300B4332B /* RunesDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3668388327423AC300B4332B /* RunesDetailView.xib */; };
 		3668388627423B1800B4332B /* SpellsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668388527423B1800B4332B /* SpellsDetailView.swift */; };
 		3668388827424C8600B4332B /* SpellsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3668388727424C8600B4332B /* SpellsDetailView.xib */; };
+		367611012757564000BD0EBE /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367610FF2757564000BD0EBE /* TipsViewController.swift */; };
+		367611022757564000BD0EBE /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367611002757564000BD0EBE /* TipsViewController.xib */; };
 		368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */; };
 		368CD66B272DD52C00A1FC9F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66A272DD52C00A1FC9F /* Helper.swift */; };
 		368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */; };
@@ -162,6 +164,8 @@
 		3668388327423AC300B4332B /* RunesDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunesDetailView.xib; sourceTree = "<group>"; };
 		3668388527423B1800B4332B /* SpellsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsDetailView.swift; sourceTree = "<group>"; };
 		3668388727424C8600B4332B /* SpellsDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsDetailView.xib; sourceTree = "<group>"; };
+		367610FF2757564000BD0EBE /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		367611002757564000BD0EBE /* TipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
 		368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewModel.swift; sourceTree = "<group>"; };
 		368CD66A272DD52C00A1FC9F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
@@ -538,6 +542,15 @@
 			path = RunesDetail;
 			sourceTree = "<group>";
 		};
+		367610FE2757561800BD0EBE /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				367610FF2757564000BD0EBE /* TipsViewController.swift */,
+				367611002757564000BD0EBE /* TipsViewController.xib */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
 		368CD669272DD4D900A1FC9F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,6 +616,7 @@
 		36BEA65E272FF43C00B75B39 /* ChampionsInfo */ = {
 			isa = PBXGroup;
 			children = (
+				367610FE2757561800BD0EBE /* Tips */,
 				36453AB62732E2FC00F7413A /* Skins */,
 				36453AB52732E2F100F7413A /* Lore */,
 				36453AB42732E2E900F7413A /* Skills */,
@@ -741,6 +755,7 @@
 				363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */,
 				3654D787271FEB7500BBB9EB /* SplashViewController.xib in Resources */,
 				3668388827424C8600B4332B /* SpellsDetailView.xib in Resources */,
+				367611022757564000BD0EBE /* TipsViewController.xib in Resources */,
 				36664F3D273C161300355C0D /* ResolveView.xib in Resources */,
 				36453ABA27331CE000F7413A /* GeneralView.xib in Resources */,
 				36574F1027291AAF00C27774 /* RunesViewController.xib in Resources */,
@@ -835,6 +850,7 @@
 				36571363272FFA1500F44595 /* ItemsCell.swift in Sources */,
 				36BEA65D272FDDCD00B75B39 /* CustomTabBar.swift in Sources */,
 				3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */,
+				367611012757564000BD0EBE /* TipsViewController.swift in Sources */,
 				369ECD6E273A54FE00192332 /* SkillsCell.swift in Sources */,
 				36D03667274E20AF0053FC19 /* ItemsServices.swift in Sources */,
 				36664F39273C15FA00355C0D /* ResolveView.swift in Sources */,

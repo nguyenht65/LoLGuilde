@@ -94,4 +94,11 @@ class ChampionInfoViewController: BaseViewController {
         }
         infoStackView.addArrangedSubview(view)
     }
+
+    @IBAction func moveToTips(_ sender: Any) {
+        let tipsVC = TipsViewController()
+        tipsVC.getChampion(champion: champion)
+        // push navigation
+        self.navigationController?.pushViewController(tipsVC, animated: true)
+    }
 }

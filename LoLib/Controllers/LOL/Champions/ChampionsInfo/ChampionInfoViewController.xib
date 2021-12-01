@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChampionInfoViewController" customModule="LoLGuilde" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChampionInfoViewController" customModule="LoLib" customModuleProvider="target">
             <connections>
                 <outlet property="championImageView" destination="f7S-4Z-HV4" id="rVJ-65-1yd"/>
                 <outlet property="infoStackView" destination="6BH-tl-hoV" id="kUq-Ot-fLK"/>
@@ -57,7 +57,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ve-pr-eBT">
-                            <rect key="frame" x="110" y="10" width="280" height="24"/>
+                            <rect key="frame" x="110" y="10" width="55" height="24"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <color key="textColor" name="textColor"/>
                             <nil key="highlightedColor"/>
@@ -80,19 +80,35 @@
                             <color key="textColor" systemColor="systemGrayColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTZ-bz-c1A">
+                            <rect key="frame" x="315" y="10" width="60" height="25"/>
+                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="8jA-3G-cRa"/>
+                                <constraint firstAttribute="height" constant="25" id="cCX-Ei-o3b"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Tips"/>
+                            <connections>
+                                <action selector="moveToTips:" destination="-1" eventType="touchUpInside" id="6sX-Nn-yBv"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" name="backgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="5ve-pr-eBT" secondAttribute="trailing" id="40w-QW-eh2"/>
+                        <constraint firstItem="iTZ-bz-c1A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5ve-pr-eBT" secondAttribute="trailing" id="40w-QW-eh2"/>
                         <constraint firstItem="MzW-XH-XxT" firstAttribute="leading" secondItem="f7S-4Z-HV4" secondAttribute="trailing" constant="15" id="6BB-BS-yiu"/>
                         <constraint firstAttribute="height" constant="100" id="7DZ-xE-ntI"/>
                         <constraint firstItem="yyU-Ay-Ns3" firstAttribute="top" secondItem="MzW-XH-XxT" secondAttribute="bottom" constant="5" id="7vX-hK-ne8"/>
                         <constraint firstAttribute="trailing" secondItem="MzW-XH-XxT" secondAttribute="trailing" id="AvM-yS-Oac"/>
+                        <constraint firstItem="iTZ-bz-c1A" firstAttribute="top" secondItem="5ve-pr-eBT" secondAttribute="top" id="B20-WF-lMN"/>
                         <constraint firstItem="yyU-Ay-Ns3" firstAttribute="leading" secondItem="f7S-4Z-HV4" secondAttribute="trailing" constant="15" id="BBL-Rx-Pxn"/>
                         <constraint firstItem="f7S-4Z-HV4" firstAttribute="leading" secondItem="HGg-Z4-53i" secondAttribute="leading" constant="20" id="FPM-gE-fYL"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ze0-c9-cDE" secondAttribute="trailing" id="GyV-bf-4dU"/>
                         <constraint firstItem="5ve-pr-eBT" firstAttribute="leading" secondItem="f7S-4Z-HV4" secondAttribute="trailing" constant="15" id="Lwa-Bx-U5P"/>
                         <constraint firstItem="ze0-c9-cDE" firstAttribute="top" secondItem="MzW-XH-XxT" secondAttribute="bottom" constant="5" id="M0G-FO-Toj"/>
+                        <constraint firstAttribute="trailing" secondItem="iTZ-bz-c1A" secondAttribute="trailing" constant="15" id="VAy-Yl-yju"/>
                         <constraint firstItem="f7S-4Z-HV4" firstAttribute="centerY" secondItem="HGg-Z4-53i" secondAttribute="centerY" id="eCg-m6-Gji"/>
                         <constraint firstItem="5ve-pr-eBT" firstAttribute="top" secondItem="HGg-Z4-53i" secondAttribute="top" constant="10" id="kXd-zy-FaN"/>
                         <constraint firstItem="MzW-XH-XxT" firstAttribute="top" secondItem="5ve-pr-eBT" secondAttribute="bottom" constant="5" id="mNg-aI-lWl"/>
@@ -115,7 +131,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6BH-tl-hoV" secondAttribute="bottom" constant="65" id="qs8-nd-Fb2"/>
                 <constraint firstItem="6BH-tl-hoV" firstAttribute="top" secondItem="rgd-DZ-j5a" secondAttribute="bottom" constant="10" id="rrF-KB-hIu"/>
             </constraints>
-            <point key="canvasLocation" x="131.8840579710145" y="81.696428571428569"/>
+            <point key="canvasLocation" x="130.76923076923077" y="81.042654028436019"/>
         </view>
     </objects>
     <resources>
@@ -132,6 +148,9 @@
         <namedColor name="textColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
