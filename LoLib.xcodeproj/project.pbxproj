@@ -117,7 +117,7 @@
 		36453AB727331AD400F7413A /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		36453AB927331CE000F7413A /* GeneralView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralView.xib; sourceTree = "<group>"; };
 		36453ABB27331DC000F7413A /* UIViewExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtentions.swift; sourceTree = "<group>"; };
-		3654D75F271FE42300BBB9EB /* LoLGuilde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLGuilde.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3654D75F271FE42300BBB9EB /* LoLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3654D762271FE42300BBB9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3654D764271FE42300BBB9EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3654D76B271FE42400BBB9EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 		3654D756271FE42300BBB9EB = {
 			isa = PBXGroup;
 			children = (
-				3654D761271FE42300BBB9EB /* LoLGuilde */,
+				3654D761271FE42300BBB9EB /* LoLib */,
 				3654D760271FE42300BBB9EB /* Products */,
 				D3B7C0F3B306BE49279DAF97 /* Pods */,
 				FC74C205166C2DAC81BC4FF6 /* Frameworks */,
@@ -319,12 +319,12 @@
 		3654D760271FE42300BBB9EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3654D75F271FE42300BBB9EB /* LoLGuilde.app */,
+				3654D75F271FE42300BBB9EB /* LoLib.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3654D761271FE42300BBB9EB /* LoLGuilde */ = {
+		3654D761271FE42300BBB9EB /* LoLib */ = {
 			isa = PBXGroup;
 			children = (
 				3654D776271FE64C00BBB9EB /* AppDelegate */,
@@ -336,7 +336,7 @@
 				368CD66C272DDAC500A1FC9F /* Extentions */,
 				3654D770271FE42400BBB9EB /* Info.plist */,
 			);
-			path = LoLGuilde;
+			path = LoLib;
 			sourceTree = "<group>";
 		};
 		3654D776271FE64C00BBB9EB /* AppDelegate */ = {
@@ -660,9 +660,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3654D75E271FE42300BBB9EB /* LoLGuilde */ = {
+		3654D75E271FE42300BBB9EB /* LoLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3654D773271FE42400BBB9EB /* Build configuration list for PBXNativeTarget "LoLGuilde" */;
+			buildConfigurationList = 3654D773271FE42400BBB9EB /* Build configuration list for PBXNativeTarget "LoLib" */;
 			buildPhases = (
 				B333D1BE3FC4570D7BA566D9 /* [CP] Check Pods Manifest.lock */,
 				3654D75B271FE42300BBB9EB /* Sources */,
@@ -675,9 +675,9 @@
 			);
 			dependencies = (
 			);
-			name = LoLGuilde;
+			name = LoLib;
 			productName = LoLGuilde;
-			productReference = 3654D75F271FE42300BBB9EB /* LoLGuilde.app */;
+			productReference = 3654D75F271FE42300BBB9EB /* LoLib.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -695,7 +695,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3654D75A271FE42300BBB9EB /* Build configuration list for PBXProject "LoLGuilde" */;
+			buildConfigurationList = 3654D75A271FE42300BBB9EB /* Build configuration list for PBXProject "LoLib" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -708,7 +708,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3654D75E271FE42300BBB9EB /* LoLGuilde */,
+				3654D75E271FE42300BBB9EB /* LoLib */,
 			);
 		};
 /* End PBXProject section */
@@ -1023,7 +1023,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ND56YYF4X4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoLGuilde/Info.plist;
+				INFOPLIST_FILE = LoLib/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
@@ -1053,7 +1053,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ND56YYF4X4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoLGuilde/Info.plist;
+				INFOPLIST_FILE = LoLib/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
@@ -1076,7 +1076,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3654D75A271FE42300BBB9EB /* Build configuration list for PBXProject "LoLGuilde" */ = {
+		3654D75A271FE42300BBB9EB /* Build configuration list for PBXProject "LoLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3654D771271FE42400BBB9EB /* Debug */,
@@ -1085,7 +1085,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3654D773271FE42400BBB9EB /* Build configuration list for PBXNativeTarget "LoLGuilde" */ = {
+		3654D773271FE42400BBB9EB /* Build configuration list for PBXNativeTarget "LoLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3654D774271FE42400BBB9EB /* Debug */,
