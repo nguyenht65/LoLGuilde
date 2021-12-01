@@ -13,15 +13,15 @@ class EachRuneView: BaseView {
     @IBOutlet weak var runeImage: UIImageView!
     @IBOutlet weak var imageButton: UIButton!
 
-    private var _tag: Int = 0
+    private var tagValue: Int = 0
 
     @IBInspectable
     var buttonTag: Int {
         get {
-            return _tag
+            return tagValue
         } set(newValue) {
-            _tag = newValue
-            imageButton.tag = _tag
+            tagValue = newValue
+            imageButton.tag = tagValue
         }
     }
 

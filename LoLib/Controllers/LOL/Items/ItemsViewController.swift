@@ -33,7 +33,7 @@ class ItemsViewController: BaseViewController {
 
     override func setupUI() {
         let nib = UINib(nibName: ItemsCell.className, bundle: .main)
-        itemCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
+        itemCollectionView.register(nib, forCellWithReuseIdentifier: ItemsCell.className)
         itemCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
         hideKeyboardWhenTappedAround()
     }
@@ -48,7 +48,7 @@ class ItemsViewController: BaseViewController {
     func bindViewModel() {
         viewModel.searchResults
             .asObservable()
-            .bind(to: itemCollectionView.rx.items(cellIdentifier: "cell", cellType: ItemsCell.self)) {
+            .bind(to: itemCollectionView.rx.items(cellIdentifier: ItemsCell.className, cellType: ItemsCell.self)) {
                 (_, items: Item, cell) in
                 cell.setupData(item: items)
             }

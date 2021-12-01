@@ -14,7 +14,7 @@ class SpellsViewController: BaseViewController {
 
     private let disposeBag = DisposeBag()
     private var viewModel: SpellsViewModel
-    lazy var spellsDetailView = SpellsDetailView()
+    private lazy var spellsDetailView = SpellsDetailView()
 
     init(spellsViewModel: SpellsViewModel) {
         self.viewModel = spellsViewModel
@@ -31,7 +31,7 @@ class SpellsViewController: BaseViewController {
 
     override func setupUI() {
         let nib = UINib(nibName: SpellsCell.className, bundle: .main)
-        spellsCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
+        spellsCollectionView.register(nib, forCellWithReuseIdentifier: SpellsCell.className)
         spellsCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
     }
 
@@ -44,7 +44,7 @@ class SpellsViewController: BaseViewController {
     func bindViewModel() {
         viewModel.spells
             .asObservable()
-            .bind(to: spellsCollectionView.rx.items(cellIdentifier: "cell", cellType: SpellsCell.self)) {
+            .bind(to: spellsCollectionView.rx.items(cellIdentifier: SpellsCell.className, cellType: SpellsCell.self)) {
                 (_, items: Spell, cell) in
                 cell.setupData(item: items)
             }
@@ -68,12 +68,12 @@ extension SpellsViewController: UICollectionViewDelegate, UICollectionViewDelega
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        spellsCollectionView.deselectItem(at: indexPath, animated: true)
+        collectionView.deselectItem(at: indexPath, animated: true)
         // setupUI
         spellsDetailView.removeFromSuperview()
         let screenSize = collectionView.layer.bounds.size
-        spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: 250))
-        spellsDetailView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
+        spellsDetailView = SpellsDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3.6 / 4, height: screenSize.height / 3.1))
+        spellsDetailView.center = CGPoint(x: screenSize.width/2, y: screenSize.height / 1.15)
         // setupData
         let item = viewModel.spells.value[indexPath.row]
         spellsDetailView.setupData(item: item)

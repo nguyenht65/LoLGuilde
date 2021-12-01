@@ -23,18 +23,22 @@ class TipsViewController: BaseViewController {
     override func setupData() {
         let allyTips = "Ally tips: \n"
         let enemyTips = "\nEnemy tips: \n"
-
-        if !champion.allytips.isEmpty {
-            tipsTextView.text.append(contentsOf: allyTips)
-            for tip in champion.allytips {
-                tipsTextView.text.append(contentsOf: "  - \(tip)\n")
+        if champion.allytips.isEmpty && champion.enemytips.isEmpty {
+            tipsTextView.text = "   - There are currently no tips for this hero!"
+        } else {
+            // ally tips
+            if !champion.allytips.isEmpty {
+                tipsTextView.text.append(contentsOf: allyTips)
+                for tip in champion.allytips {
+                    tipsTextView.text.append(contentsOf: "  - \(tip)\n")
+                }
             }
-        }
-
-        if !champion.enemytips.isEmpty {
-            tipsTextView.text.append(contentsOf: enemyTips)
-            for tip in champion.enemytips {
-                tipsTextView.text.append(contentsOf: "  - \(tip)\n")
+            // enemy tips
+            if !champion.enemytips.isEmpty {
+                tipsTextView.text.append(contentsOf: enemyTips)
+                for tip in champion.enemytips {
+                    tipsTextView.text.append(contentsOf: "  - \(tip)\n")
+                }
             }
         }
     }

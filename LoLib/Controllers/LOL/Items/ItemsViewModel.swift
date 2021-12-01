@@ -43,11 +43,12 @@ class ItemsViewModel: ItemsViewModelProtocol {
     }
 
     func search(searchBar: UISearchBar) {
-        searchBar.rx.text.orEmpty
+        searchBar.rx.text
+            .orEmpty // Make it non-optional
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
+            .distinctUntilChanged() // If they didn't occur, check if the new value is the same as
             .flatMapLatest { [weak self] query -> Observable<[Item]> in
-                guard let self = self else { return .just([])}
+                guard let self = self else { return .just([]) }
                 if query.isEmpty { // case when use not search anythings
                     return self.items.asObservable()
                 }

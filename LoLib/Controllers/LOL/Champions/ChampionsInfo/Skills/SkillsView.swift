@@ -47,21 +47,14 @@ extension SkillsView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
-            guard let cell = skillsTableView.dequeueReusableCell(withIdentifier: PassiveCell.className, for: indexPath) as? PassiveCell else {
-                fatalError("dequeue cell error")
-            }
+            let cell = tableView.dequeueCell(PassiveCell.self)
             cell.setupData(item: champion)
             return cell
         } else {
-            guard let cell = skillsTableView.dequeueReusableCell(withIdentifier: SkillsCell.className, for: indexPath) as? SkillsCell else {
-                fatalError("dequeue cell error")
-            }
+            let cell = tableView.dequeueCell(SkillsCell.self)
             cell.setupData(item: champion, index: indexPath.row - 1)
             return cell
         }
     }
-    
-    
 }

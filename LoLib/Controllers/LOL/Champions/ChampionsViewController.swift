@@ -34,13 +34,13 @@ class ChampionsViewController: BaseViewController {
 
     override func setupUI() {
         let nib = UINib(nibName: ChampionsCell.className, bundle: .main)
-        championsTableView.register(nib, forCellReuseIdentifier: "cell")
+        championsTableView.register(nib, forCellReuseIdentifier: ChampionsCell.className)
         championsTableView.rx.setDelegate(self).disposed(by: disposeBag)
         hideKeyboardWhenTappedAround()
     }
 
     override func setupData() {
-        viewModel.readChampionsFromCache()
+//        viewModel.readChampionsFromCache()
         viewModel.loadAPI()
         bindViewModel()
     }
@@ -48,7 +48,7 @@ class ChampionsViewController: BaseViewController {
     func bindViewModel() {
         viewModel.searchResults
             .asObservable()
-            .bind(to: championsTableView.rx.items(cellIdentifier: "cell", cellType: ChampionsCell.self)) {
+            .bind(to: championsTableView.rx.items(cellIdentifier: ChampionsCell.className, cellType: ChampionsCell.self)) {
                 (_, champions: Champion, cell) in
                 cell.setupData(item: champions)
             }

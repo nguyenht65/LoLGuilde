@@ -24,7 +24,7 @@ class SkinsView: BaseView {
     override func commonInit() {
         super.commonInit()
         let nib = UINib(nibName: SkinsCell.className, bundle: .main)
-        skinsTableView.register(nib, forCellReuseIdentifier: "cell")
+        skinsTableView.register(nib, forCellReuseIdentifier: SkinsCell.className)
         skinsTableView.delegate = self
         skinsTableView.dataSource = self
     }
@@ -41,10 +41,7 @@ extension SkinsView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.deselectRow(at: indexPath, animated: true)
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SkinsCell else {
-            fatalError("dequeue cell error")
-        }
+        let cell = tableView.dequeueCell(SkinsCell.self)
         cell.setupData(item: champion, index: indexPath.row)
         return cell
     }

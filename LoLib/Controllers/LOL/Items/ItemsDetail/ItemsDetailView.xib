@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemsDetailView" customModule="LoLGuilde" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemsDetailView" customModule="LoLib" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionTextView" destination="gdG-Q9-baa" id="Txl-ee-did"/>
                 <outlet property="goldLabel" destination="GdG-nY-Cju" id="of5-cn-N56"/>
@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="372" height="244"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aatrox" translatesAutoresizingMaskIntoConstraints="NO" id="dpn-1V-4hs">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_2" translatesAutoresizingMaskIntoConstraints="NO" id="dpn-1V-4hs">
                     <rect key="frame" x="10" y="10" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="2vH-2p-ph1"/>
@@ -83,7 +83,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Aatrox" width="120" height="120"/>
+        <image name="loading_2" width="980" height="980"/>
         <image name="xmark.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="textColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

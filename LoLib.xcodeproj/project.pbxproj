@@ -66,6 +66,7 @@
 		367611012757564000BD0EBE /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367610FF2757564000BD0EBE /* TipsViewController.swift */; };
 		367611022757564000BD0EBE /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367611002757564000BD0EBE /* TipsViewController.xib */; };
 		3676110D2757668B00BD0EBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676110C2757668B00BD0EBE /* Color.swift */; };
+		3676110F2757F56E00BD0EBE /* UITableViewCellExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676110E2757F56E00BD0EBE /* UITableViewCellExtentions.swift */; };
 		368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */; };
 		368CD66B272DD52C00A1FC9F /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66A272DD52C00A1FC9F /* FileHelper.swift */; };
 		368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */; };
@@ -168,6 +169,7 @@
 		367610FF2757564000BD0EBE /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		367611002757564000BD0EBE /* TipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
 		3676110C2757668B00BD0EBE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3676110E2757F56E00BD0EBE /* UITableViewCellExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtentions.swift; sourceTree = "<group>"; };
 		368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewModel.swift; sourceTree = "<group>"; };
 		368CD66A272DD52C00A1FC9F /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 				36453ABB27331DC000F7413A /* UIViewExtentions.swift */,
 				3644BCB62735BFA300E8E435 /* NSObjectExtentions.swift */,
 				369ECD74273A6A3900192332 /* StringExtentions.swift */,
+				3676110E2757F56E00BD0EBE /* UITableViewCellExtentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -883,6 +886,7 @@
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* SplashViewController.swift in Sources */,
 				36664F21273C115600355C0D /* EachRuneView.swift in Sources */,
+				3676110F2757F56E00BD0EBE /* UITableViewCellExtentions.swift in Sources */,
 				36DB67DF2734512F0063F6DB /* BaseView.swift in Sources */,
 				368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */,
 				3654D765271FE42300BBB9EB /* SceneDelegate.swift in Sources */,
