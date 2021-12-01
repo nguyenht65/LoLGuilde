@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_LoLGuildeVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LoLGuildeVersionString[];
+FOUNDATION_EXPORT double Pods_LoLibVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_LoLibVersionString[];
 

@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-LoLGuilde/Pods-LoLGuilde-frameworks.sh
+${PODS_ROOT}/Target Support Files/Pods-LoLib/Pods-LoLib-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
