@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DeviceKit
 
 class DominationView: BaseView {
 
@@ -25,6 +26,8 @@ class DominationView: BaseView {
     @IBOutlet weak var slot42View: EachRuneView!
     @IBOutlet weak var slot43View: EachRuneView!
     @IBOutlet weak var slot44View: EachRuneView!
+    @IBOutlet weak var nameTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var nameBottomConstraint: NSLayoutConstraint!
 
     private var rune: Rune!
 
@@ -46,6 +49,19 @@ class DominationView: BaseView {
     override func commonInit() {
         super.commonInit()
         setupAction()
+        setDeviceConstraint()
+    }
+
+    private func setDeviceConstraint() {
+        let device = Device.current
+        switch device {
+        case .simulator(.iPhoneSE):
+            nameTopConstraint.constant = 20
+            nameBottomConstraint.constant = 30
+            break
+        default:
+            break
+        }
     }
 
     func setupData(rune: Rune) {

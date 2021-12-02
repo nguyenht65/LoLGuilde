@@ -1,10 +1,5 @@
 PODS:
-  - Alamofire (5.4.4)
-  - RxAlamofire (6.1.1):
-    - RxAlamofire/Core (= 6.1.1)
-  - RxAlamofire/Core (6.1.1):
-    - Alamofire (~> 5.4)
-    - RxSwift (~> 6.0)
+  - DeviceKit (4.5.2)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -17,7 +12,7 @@ PODS:
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
-  - RxAlamofire
+  - DeviceKit (~> 4.0)
   - RxCocoa (= 6.2.0)
   - RxSwift (= 6.2.0)
   - SDWebImage (~> 5.0)
@@ -25,8 +20,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Alamofire
-    - RxAlamofire
+    - DeviceKit
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -34,14 +28,13 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
-  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
+  DeviceKit: c622fc19f795f3e0b4d75d6d11b26604338cdab3
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 2c5389c6cb5e776daf200634670c94f341c09bef
+PODFILE CHECKSUM: b3c85f789a4ec340b7ed555aefe25ffcf7b0591e
 
 COCOAPODS: 1.10.2

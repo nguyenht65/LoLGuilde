@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DeviceKit
 
 enum ChampionPropertyValues: Int {
     case attack = 0
@@ -69,8 +70,20 @@ class ProgressView: BaseView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        setDeviceConstraint()
     }
-    
+
+    private func setDeviceConstraint() {
+        let device = Device.current
+        switch device {
+        case .simulator(.iPhoneSE):
+            infoLabel.font = .systemFont(ofSize: 13)
+            break
+        default:
+            break
+        }
+    }
+
     func setupData(item: Champion) {
         guard let championProperties = ChampionPropertyValues(rawValue: tempPropertyValue) else { return }
         switch championProperties {

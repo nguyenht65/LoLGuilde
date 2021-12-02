@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ItemsCell" customModule="LoLGuilde" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ItemsCell" customModule="LoLib" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="98" height="83"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="29" y="10" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Gmc-cf-hyw"/>
-                                    <constraint firstAttribute="width" constant="40" id="Mju-8A-kk8"/>
+                                    <constraint firstAttribute="width" secondItem="REp-DE-khW" secondAttribute="height" multiplier="1:1" id="JlH-3v-AIW"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-Ya-YTP">
@@ -54,6 +54,7 @@
             </constraints>
             <size key="customSize" width="98" height="84"/>
             <connections>
+                <outlet property="imageViewHeightConstraint" destination="Gmc-cf-hyw" id="FdV-Cd-zwO"/>
                 <outlet property="itemImageView" destination="REp-DE-khW" id="baQ-Pw-M9t"/>
                 <outlet property="itemNameLabel" destination="5gV-Ya-YTP" id="e86-7V-AnB"/>
             </connections>

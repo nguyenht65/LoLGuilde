@@ -11,7 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseRuneView" customModule="LoLib" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImageView" destination="wJ1-az-AEa" id="xtE-qH-znU"/>
+                <outlet property="nameBottomConstraint" destination="mwt-qF-3tz" id="lbg-U4-zL7"/>
                 <outlet property="nameLabel" destination="u6T-sZ-VFO" id="eBG-je-Eto"/>
+                <outlet property="nameTopConstraint" destination="aM4-x1-Lsg" id="iGb-cg-dNE"/>
                 <outlet property="slot11View" destination="mab-hn-zU3" id="t5V-br-HV8"/>
                 <outlet property="slot12View" destination="WgY-IP-cJr" id="6B8-QY-Quf"/>
                 <outlet property="slot13View" destination="ZSs-VP-BNa" id="fvh-dH-6wn"/>
@@ -52,7 +54,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mab-hn-zU3" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="oNF-Xg-dvS"/>
+                                                <constraint firstAttribute="width" secondItem="mab-hn-zU3" secondAttribute="height" multiplier="1:1" id="NSW-Jh-bOc"/>
                                                 <constraint firstAttribute="height" constant="60" id="wVk-Ia-NX2"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
@@ -86,7 +88,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="B9r-Nx-kma"/>
-                                                <constraint firstAttribute="width" constant="50" id="ZoR-9I-JmX"/>
+                                                <constraint firstAttribute="width" secondItem="iYj-gA-haS" secondAttribute="height" multiplier="1:1" id="fSb-a6-QWL"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
@@ -117,10 +119,6 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iJ-CJ-8Gu" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="WTr-nD-nNq"/>
-                                                <constraint firstAttribute="width" constant="50" id="hEZ-FR-gKi"/>
-                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
                                                     <integer key="value" value="7"/>
@@ -150,10 +148,6 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1a4-qs-neF" customClass="EachRuneView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="3cW-lc-EMM"/>
-                                                <constraint firstAttribute="height" constant="50" id="f3j-lb-Oxp"/>
-                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="buttonTag">
                                                     <integer key="value" value="10"/>
@@ -179,6 +173,12 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="7iJ-CJ-8Gu" firstAttribute="width" secondItem="iYj-gA-haS" secondAttribute="width" id="2R1-ng-aki"/>
+                                <constraint firstItem="1a4-qs-neF" firstAttribute="width" secondItem="7iJ-CJ-8Gu" secondAttribute="width" id="6Fi-ru-jnr"/>
+                                <constraint firstItem="1a4-qs-neF" firstAttribute="height" secondItem="7iJ-CJ-8Gu" secondAttribute="height" id="ASE-wA-T0X"/>
+                                <constraint firstItem="7iJ-CJ-8Gu" firstAttribute="height" secondItem="iYj-gA-haS" secondAttribute="height" id="eKq-Ge-u0b"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <constraints>

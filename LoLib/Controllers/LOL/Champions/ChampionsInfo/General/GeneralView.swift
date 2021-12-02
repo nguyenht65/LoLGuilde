@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DeviceKit
 
 class GeneralView: BaseView {
 
@@ -14,13 +15,30 @@ class GeneralView: BaseView {
     @IBOutlet weak var magicView: ProgressView!
     @IBOutlet weak var difficultyView: ProgressView!
     @IBOutlet weak var statusView: StatusView!
-
+    @IBOutlet weak var progressHeightConstraint: NSLayoutConstraint!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+
+    private func setDeviceConstraint() {
+        let device = Device.current
+        switch device {
+        case .simulator(.iPhoneSE):
+            progressHeightConstraint.constant = 30
+            break // You're running on the iPad Air 2 simulator
+        default:
+            break
+        }
+    }
+
+    override func commonInit() {
+        super.commonInit()
+        setDeviceConstraint()
     }
 
     func setupData(item: Champion) {

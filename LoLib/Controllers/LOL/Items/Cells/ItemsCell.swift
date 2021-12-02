@@ -7,12 +7,14 @@
 
 import UIKit
 import SDWebImage
+import DeviceKit
 
 class ItemsCell: UICollectionViewCell {
 
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
-
+    @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -36,5 +38,18 @@ class ItemsCell: UICollectionViewCell {
         itemImageView.layoutIfNeeded()
         itemImageView.layer.borderWidth = 1
         itemImageView.layer.masksToBounds = true
+        setDeviceConstraint()
+    }
+
+    private func setDeviceConstraint() {
+        let device = Device.current
+        switch device {
+        case .simulator(.iPhoneSE):
+            imageViewHeightConstraint.constant = 30
+            itemNameLabel.font = .systemFont(ofSize: 11)
+            break
+        default:
+            break
+        }
     }
 }

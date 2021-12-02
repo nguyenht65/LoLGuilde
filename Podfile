@@ -9,6 +9,6 @@ target 'LoLib' do
 	pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
   pod 'SDWebImage', '~> 5.0'
-  pod 'RxAlamofire'
+  pod 'DeviceKit', '~> 4.0'
   pod 'SwiftLint'
 end

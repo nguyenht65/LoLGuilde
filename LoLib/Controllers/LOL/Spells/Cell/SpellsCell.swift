@@ -7,12 +7,14 @@
 
 import UIKit
 import SDWebImage
+import DeviceKit
 
 class SpellsCell: UICollectionViewCell {
 
     @IBOutlet weak var spellImageView: UIImageView!
     @IBOutlet weak var spellNameLabel: UILabel!
-
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -28,5 +30,21 @@ class SpellsCell: UICollectionViewCell {
         spellImageView.layoutIfNeeded()
         spellImageView.layer.borderWidth = 1
         spellImageView.layer.masksToBounds = true
+        setDeviceConstraint()
     }
+
+    private func setDeviceConstraint() {
+        let device = Device.current
+        switch device {
+        case .simulator(.iPhoneSE):
+            imageHeightConstraint.constant = 30
+            break
+        case .simulator(.iPhoneSE2), .simulator(.iPhone6s):
+            imageHeightConstraint.constant = 40
+            break
+        default:
+            break
+        }
+    }
+
 }

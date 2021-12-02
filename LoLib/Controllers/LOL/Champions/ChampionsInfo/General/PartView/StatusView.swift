@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DeviceKit
 
 class StatusView: BaseView {
 
@@ -19,7 +20,8 @@ class StatusView: BaseView {
     @IBOutlet weak var magicResistView: EachStatusView!
     @IBOutlet weak var attackRangeView: EachStatusView!
     @IBOutlet weak var movementView: EachStatusView!
-
+    @IBOutlet weak var statusViewHeightConstraint: NSLayoutConstraint!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -30,6 +32,18 @@ class StatusView: BaseView {
 
     override func commonInit() {
         super.commonInit()
+        setDeviceConstraint()
+    }
+
+    private func setDeviceConstraint() {
+        let device = Device.current
+        switch device {
+        case .simulator(.iPhoneSE):
+            statusViewHeightConstraint.constant = 30
+            break
+        default:
+            break
+        }
     }
 
     func setupData(item: Champion) {

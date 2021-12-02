@@ -15,6 +15,7 @@
                 <outlet property="defenseView" destination="qO2-GA-IXD" id="UJ8-tf-bVj"/>
                 <outlet property="difficultyView" destination="BDm-6w-Pk5" id="5Zj-Sg-0eh"/>
                 <outlet property="magicView" destination="7dJ-12-gUt" id="Cgm-sF-kAT"/>
+                <outlet property="progressHeightConstraint" destination="mbg-4z-D1G" id="6ju-Gl-ccK"/>
                 <outlet property="statusView" destination="mNb-4v-yLD" id="JsM-MN-mwm"/>
             </connections>
         </placeholder>
@@ -179,9 +180,6 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dJ-12-gUt" customClass="ProgressView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="80" width="355" height="40"/>
                                             <color key="backgroundColor" name="backgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="1hx-NL-Pqh"/>
-                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="label" value="Magic"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="progressTint">
@@ -195,9 +193,6 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-6w-Pk5" customClass="ProgressView" customModule="LoLib" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="120" width="355" height="40"/>
                                             <color key="backgroundColor" name="backgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="9JG-Cu-xGh"/>
-                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="label" value="Difficulty"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="progressTint">

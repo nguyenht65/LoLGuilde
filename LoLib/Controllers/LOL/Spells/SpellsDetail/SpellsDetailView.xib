@@ -8,10 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpellsDetailView" customModule="LoLGuilde" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpellsDetailView" customModule="LoLib" customModuleProvider="target">
             <connections>
                 <outlet property="cooldownLabel" destination="IvU-Iw-Dbn" id="Cz2-3L-HOA"/>
                 <outlet property="descriptionTextView" destination="Dol-2K-oFV" id="tzI-Ig-izR"/>
+                <outlet property="imageHeightConstraint" destination="D5n-Pm-AmP" id="5Pj-ep-ZgB"/>
                 <outlet property="nameLabel" destination="NoB-Tl-1js" id="r5e-pP-kWa"/>
                 <outlet property="spellsImageView" destination="iac-UU-BVb" id="Id3-XF-Nmk"/>
             </connections>
@@ -25,7 +26,7 @@
                     <rect key="frame" x="10" y="10" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="D5n-Pm-AmP"/>
-                        <constraint firstAttribute="width" constant="50" id="quv-91-4HT"/>
+                        <constraint firstAttribute="width" secondItem="iac-UU-BVb" secondAttribute="height" multiplier="1:1" id="eJa-VE-grN"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoB-Tl-1js">

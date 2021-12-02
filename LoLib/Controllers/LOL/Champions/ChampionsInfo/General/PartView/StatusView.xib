@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatusView" customModule="LoLGuilde" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatusView" customModule="LoLib" customModuleProvider="target">
             <connections>
                 <outlet property="armorView" destination="np3-o2-WfO" id="7Z8-PY-l5H"/>
                 <outlet property="attackDamageView" destination="YrS-dd-ksV" id="pTA-tR-cIj"/>
@@ -21,6 +21,7 @@
                 <outlet property="manaRegenView" destination="fOS-hS-Q4M" id="b6n-YW-hk7"/>
                 <outlet property="manaView" destination="j4m-PJ-txk" id="7aQ-1x-RpD"/>
                 <outlet property="movementView" destination="ILi-xW-VAJ" id="NfV-0a-0zr"/>
+                <outlet property="statusViewHeightConstraint" destination="Qzv-7f-rCB" id="v8x-Nh-KuX"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -34,7 +35,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UtN-na-TOv">
                             <rect key="frame" x="0.0" y="0.0" width="161.33333333333334" height="155"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-H6-SbD" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-H6-SbD" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666714" y="0.0" width="156.33333333333331" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="Qzv-7f-rCB"/>
@@ -49,7 +50,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-hS-Q4M" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-hS-Q4M" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666714" y="55" width="156.33333333333331" height="45"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -61,7 +62,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np3-o2-WfO" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="np3-o2-WfO" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666714" y="110" width="156.33333333333331" height="45"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -78,12 +79,9 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tmV-oU-9Yj">
                             <rect key="frame" x="162.33333333333331" y="0.0" width="161.33333333333331" height="210"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4E6-0e-Cvm" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4E6-0e-Cvm" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666572" y="0.0" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="45" id="zwV-wP-yYj"/>
-                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                             <color key="value" name="healthRegenColor"/>
@@ -94,7 +92,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrS-dd-ksV" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrS-dd-ksV" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666572" y="55" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
@@ -107,7 +105,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-pM-V7V" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-pM-V7V" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666572" y="110" width="156.33333333333334" height="45"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -119,7 +117,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-xW-VAJ" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-xW-VAJ" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666572" y="165" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
@@ -137,12 +135,9 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O9U-uZ-W9y">
                             <rect key="frame" x="324.66666666666669" y="0.0" width="161.33333333333331" height="155"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-PJ-txk" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-PJ-txk" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666288" y="0.0" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="45" id="laW-wx-a5s"/>
-                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                             <color key="value" systemColor="systemBlueColor"/>
@@ -153,7 +148,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-e4-DF4" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-e4-DF4" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666288" y="55" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
@@ -166,7 +161,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd0-Ku-TIQ" customClass="EachStatusView" customModule="LoLGuilde" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd0-Ku-TIQ" customClass="EachStatusView" customModule="LoLib" customModuleProvider="target">
                                     <rect key="frame" x="2.6666666666666288" y="110" width="156.33333333333334" height="45"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
@@ -182,6 +177,10 @@
                             </subviews>
                         </stackView>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="j4m-PJ-txk" firstAttribute="height" secondItem="4E6-0e-Cvm" secondAttribute="height" id="25V-rz-MhN"/>
+                        <constraint firstItem="4E6-0e-Cvm" firstAttribute="height" secondItem="3Yc-H6-SbD" secondAttribute="height" id="AhU-hI-hn6"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DeviceKit
 
 class BaseRuneView: BaseView {
 
@@ -23,7 +24,9 @@ class BaseRuneView: BaseView {
     @IBOutlet weak var slot41View: EachRuneView!
     @IBOutlet weak var slot42View: EachRuneView!
     @IBOutlet weak var slot43View: EachRuneView!
-
+    @IBOutlet weak var nameTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var nameBottomConstraint: NSLayoutConstraint!
+    
     private var rune: Rune!
 
     private lazy var runesDetailView: RunesDetailView = {
@@ -44,6 +47,19 @@ class BaseRuneView: BaseView {
     override func commonInit() {
         super.commonInit()
         setupAction()
+        setDeviceConstraint()
+    }
+
+    private func setDeviceConstraint() {
+        let device = Device.current
+        switch device {
+        case .simulator(.iPhoneSE):
+            nameTopConstraint.constant = 20
+            nameBottomConstraint.constant = 30
+            break
+        default:
+            break
+        }
     }
 
     func setupData(rune: Rune) {

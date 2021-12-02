@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DeviceKit
 
 enum ChampionStatusValue: Int {
     case health = 0
@@ -67,6 +68,18 @@ class EachStatusView: BaseView {
         super.init(coder: coder)
     }
 
+    private func setDeviceConstraint() {
+        let device = Device.current
+        switch device {
+        case .simulator(.iPhoneSE):
+            statusLabel.font = .systemFont(ofSize: 12)
+            statusValueLabel.font = .systemFont(ofSize: 10)
+            break // You're running on the iPad Air 2 simulator
+        default:
+            break
+        }
+    }
+
     override func commonInit() {
         let bundle = Bundle.init(for: EachStatusView.self)
         guard let viewToAdd = bundle.loadNibNamed(EachStatusView.className, owner: self, options: nil), let contentView = viewToAdd.first as? UIView else {
@@ -75,6 +88,7 @@ class EachStatusView: BaseView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        setDeviceConstraint()
     }
 
     func setupData(item: Champion) {
