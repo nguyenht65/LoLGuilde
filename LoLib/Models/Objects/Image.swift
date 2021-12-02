@@ -44,10 +44,10 @@ struct Image: Codable {
     }
 
     enum TopicImage: String {
-        case champion = "championIcon"
-        case item = "itemIcon"
-        case rune = "runeIcon"
-        case spell = "spellIcon"
+        case champion = "champion_icon"
+        case item = "item_icon"
+        case rune = "rune_icon"
+        case spell = "spell_icon"
     }
 
     enum RuneBackground: String {
