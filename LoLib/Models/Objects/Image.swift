@@ -4,10 +4,6 @@ struct Image: Codable {
     let full: String
     let sprite: String
     let group: String
-//    let x: Int
-//    let y: Int
-//    let w: Int
-//    let h: Int
 
     enum EndPoint {
         static let baseURL: String = "https://nguyenht65.github.io/LOLResources/lol/img/"

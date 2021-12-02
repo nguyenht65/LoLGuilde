@@ -64,7 +64,6 @@ final class Networking {
             guard let finalURL = components.url else {
                 throw NetworkingError.invalidURL(url?.absoluteString ?? "n/a")
             }
-//            print("⚠️ url: \(finalURL.absoluteString)")
             let request = URLRequest(url: finalURL)
             // connect with urlRequest
             return URLSession.shared.rx.response(request: request)

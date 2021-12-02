@@ -111,14 +111,12 @@ extension ItemsViewController {
         let newBottomViewPadding = keyboardSize.height - bottomPadding
         bottomViewConstraint.constant = newBottomViewPadding
         searchBar.setShowsCancelButton(true, animated: true)
-//        searchBar.setShowsScope(true, animated: true)
         itemsDetailView.removeFromSuperview()
     }
 
     @objc func keyboardWillHide(notification: Notification) {
         bottomViewConstraint.constant = 65
         searchBar.setShowsCancelButton(false, animated: true)
-//        searchBar.setShowsScope(false, animated: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

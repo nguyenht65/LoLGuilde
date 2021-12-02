@@ -10,7 +10,7 @@ import UIKit
 struct TabBarItem {
 
     lazy var championsViewController: UIViewController = {
-        let navigationController = UINavigationController(rootViewController: ChampionsViewController(championsViewModel: ChampionsViewModel()))
+        let navigationController = BaseNavigationController(rootViewController: ChampionsViewController(championsViewModel: ChampionsViewModel()))
         return navigationController
     }()
 

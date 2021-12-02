@@ -40,7 +40,6 @@ class CustomTabBar: UIView {
                 itemView.topAnchor.constraint(equalTo: topAnchor)
             ])
         }
-
         setNeedsLayout()
         layoutIfNeeded()
         activateTab(tab: 0)

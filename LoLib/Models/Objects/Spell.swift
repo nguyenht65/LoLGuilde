@@ -12,8 +12,6 @@ struct Spell: Codable {
     let cooldownBurn: String
     let cost: [Int]
     let costBurn: String
-//    let effect: [[Double]?]
-//    let effectBurn: [String?]
     let costType: String
     let maxammo: String
     let range: [Int]
@@ -30,8 +28,6 @@ struct Spell: Codable {
         case cooldownBurn = "cooldownBurn"
         case cost = "cost"
         case costBurn = "costBurn"
-//        case effect = "effect"
-//        case effectBurn = "effectBurn"
         case costType = "costType"
         case maxammo = "maxammo"
         case range = "range"

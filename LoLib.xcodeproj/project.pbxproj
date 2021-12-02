@@ -14,6 +14,7 @@
 		36272AAB273AFE3F00AE5205 /* SkinsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36272AA9273AFE3F00AE5205 /* SkinsCell.xib */; };
 		362EFFF7273864E2005945C5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362EFFF6273864E2005945C5 /* ProgressView.swift */; };
 		362EFFF9273864F2005945C5 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362EFFF8273864F2005945C5 /* ProgressView.xib */; };
+		363348E127591D7000AA8C07 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363348E027591D7000AA8C07 /* BaseNavigationController.swift */; };
 		363FEDD0273037F600A1B6BE /* SpellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FEDCE273037F600A1B6BE /* SpellsViewController.swift */; };
 		363FEDD1273037F600A1B6BE /* SpellsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363FEDCF273037F600A1B6BE /* SpellsViewController.xib */; };
 		3644BCB72735BFA300E8E435 /* NSObjectExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3644BCB62735BFA300E8E435 /* NSObjectExtentions.swift */; };
@@ -111,6 +112,7 @@
 		36272AA9273AFE3F00AE5205 /* SkinsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinsCell.xib; sourceTree = "<group>"; };
 		362EFFF6273864E2005945C5 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		362EFFF8273864F2005945C5 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
+		363348E027591D7000AA8C07 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		363FEDCE273037F600A1B6BE /* SpellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewController.swift; sourceTree = "<group>"; };
 		363FEDCF273037F600A1B6BE /* SpellsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsViewController.xib; sourceTree = "<group>"; };
 		3644BCB62735BFA300E8E435 /* NSObjectExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtentions.swift; sourceTree = "<group>"; };
@@ -329,7 +331,7 @@
 			children = (
 				3654D776271FE64C00BBB9EB /* AppDelegate */,
 				3654D77B271FE9C400BBB9EB /* Controllers */,
-				3654D778271FE6FA00BBB9EB /* Services */,
+				36BB5D76272AA01A00001491 /* Network */,
 				3654D777271FE6EB00BBB9EB /* Models */,
 				368CD669272DD4D900A1FC9F /* Helper */,
 				3654D77A271FE71D00BBB9EB /* Resources */,
@@ -352,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				36BEA659272FDCD100B75B39 /* TabBar */,
-				36BB5D76272AA01A00001491 /* Networking */,
 				3654D78F271FF17F00BBB9EB /* Objects */,
 			);
 			path = Models;
@@ -394,6 +395,7 @@
 				3654D77D271FEA1100BBB9EB /* BaseViewController.swift */,
 				3654D781271FEACA00BBB9EB /* BaseTabBarController.swift */,
 				36DB67DE2734512F0063F6DB /* BaseView.swift */,
+				363348E027591D7000AA8C07 /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -571,14 +573,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		36BB5D76272AA01A00001491 /* Networking */ = {
+		36BB5D76272AA01A00001491 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				3654D778271FE6FA00BBB9EB /* Services */,
 				36BB5D77272AA03300001491 /* Networking.swift */,
 				36BB5D79272AA04400001491 /* NetworkingResult.swift */,
 				36BB5D7B272AA05000001491 /* NetworkingError.swift */,
 			);
-			path = Networking;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		36BEA659272FDCD100B75B39 /* TabBar */ = {
@@ -820,6 +823,7 @@
 				3657135E272FF79100F44595 /* Info.swift in Sources */,
 				362EFFF7273864E2005945C5 /* ProgressView.swift in Sources */,
 				36DB67CC2733C8D00063F6DB /* SpellsCell.swift in Sources */,
+				363348E127591D7000AA8C07 /* BaseNavigationController.swift in Sources */,
 				36DB67D52734509B0063F6DB /* LoreView.swift in Sources */,
 				36574F21272935D000C27774 /* ChampionsCell.swift in Sources */,
 				36571363272FFA1500F44595 /* ItemsCell.swift in Sources */,

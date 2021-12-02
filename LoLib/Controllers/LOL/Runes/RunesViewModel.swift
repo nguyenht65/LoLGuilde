@@ -20,7 +20,6 @@ class RunesViewModel: RunesViewModelProtocol {
     var runes = BehaviorRelay<[Rune]>(value: [])
     
     private func processRunes(_ newRunes: [Rune]) {
-        // update API
         DispatchQueue.main.async {
             self.runes.accept(newRunes)
         }

@@ -61,5 +61,31 @@ extension Champion {
     var placeholderImage: String {
         return Image.LoadingImage.square.rawValue
     }
+}
 
+extension Champion {
+//    func getStatus(championStatusValue: ChampionStatusValue) -> String {
+//        switch championStatusValue {
+//        case .health:
+//            return "\(stats.hp)(\(stats.hpperlevel))"
+//        case .healthRegen:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.hpregen)(\(item.stats.hpregenperlevel))")
+//        case .mana:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.mp)(\(item.stats.mpperlevel))")
+//        case .manaRegen:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.mpregen)(\(item.stats.mpregenperlevel))")
+//        case .attackDamage:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.attackdamage)(\(item.stats.attackdamageperlevel))")
+//        case .attackSpeed:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.attackspeed)(\(item.stats.attackspeedperlevel))")
+//        case .armor:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.armor)(\(item.stats.armorperlevel))")
+//        case .spellBlock:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.spellblock)(\(item.stats.spellblockperlevel))")
+//        case .attackRange:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.attackrange)")
+//        case .moveSpeed:
+//            statusValueLabel.text?.append(contentsOf: "\(item.stats.movespeed )")
+//        }
+//    }
 }

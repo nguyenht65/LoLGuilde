@@ -98,7 +98,6 @@ extension ChampionsViewController {
         let window = SceneDelegate.shared().window
         let bottomPadding = window?.safeAreaInsets.bottom ?? 0
         let newBottomViewPadding = keyboardSize.height - bottomPadding
-//        championsTableView.contentInset.bottom = newBottomViewPadding
         bottomViewConstraint.constant = newBottomViewPadding
         searchBar.setShowsCancelButton(true, animated: true)
     }

@@ -74,7 +74,7 @@ class EachStatusView: BaseView {
         case .simulator(.iPhoneSE):
             statusLabel.font = .systemFont(ofSize: 12)
             statusValueLabel.font = .systemFont(ofSize: 10)
-            break // You're running on the iPad Air 2 simulator
+            break 
         default:
             break
         }
