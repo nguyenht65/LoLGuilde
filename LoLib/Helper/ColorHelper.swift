@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum Color: String, CaseIterable {
+enum ColorHelper: String, CaseIterable {
     case textColor = "textColor"
     case backgroundColor = "backgroundColor"
 }
