@@ -49,12 +49,6 @@
 		36664F2B273C153300355C0D /* PrecisionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F2A273C153300355C0D /* PrecisionView.xib */; };
 		36664F31273C15B900355C0D /* DominationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F30273C15B900355C0D /* DominationView.swift */; };
 		36664F33273C15C300355C0D /* DominationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F32273C15C300355C0D /* DominationView.xib */; };
-		36664F35273C15DC00355C0D /* SorceryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F34273C15DC00355C0D /* SorceryView.swift */; };
-		36664F37273C15E700355C0D /* SorceryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F36273C15E700355C0D /* SorceryView.xib */; };
-		36664F39273C15FA00355C0D /* ResolveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F38273C15FA00355C0D /* ResolveView.swift */; };
-		36664F3D273C161300355C0D /* ResolveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F3C273C161300355C0D /* ResolveView.xib */; };
-		36664F3F273C162800355C0D /* InspirationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F3E273C162800355C0D /* InspirationView.swift */; };
-		36664F41273C163400355C0D /* InspirationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F40273C163400355C0D /* InspirationView.xib */; };
 		36664F43273C5B8900355C0D /* RunesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F42273C5B8900355C0D /* RunesViewModel.swift */; };
 		36664F49273C617A00355C0D /* Rune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F48273C617A00355C0D /* Rune.swift */; };
 		3668387D274238CE00B4332B /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668387C274238CE00B4332B /* ItemsDetailView.swift */; };
@@ -154,12 +148,6 @@
 		36664F2A273C153300355C0D /* PrecisionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrecisionView.xib; sourceTree = "<group>"; };
 		36664F30273C15B900355C0D /* DominationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominationView.swift; sourceTree = "<group>"; };
 		36664F32273C15C300355C0D /* DominationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DominationView.xib; sourceTree = "<group>"; };
-		36664F34273C15DC00355C0D /* SorceryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorceryView.swift; sourceTree = "<group>"; };
-		36664F36273C15E700355C0D /* SorceryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SorceryView.xib; sourceTree = "<group>"; };
-		36664F38273C15FA00355C0D /* ResolveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolveView.swift; sourceTree = "<group>"; };
-		36664F3C273C161300355C0D /* ResolveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResolveView.xib; sourceTree = "<group>"; };
-		36664F3E273C162800355C0D /* InspirationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationView.swift; sourceTree = "<group>"; };
-		36664F40273C163400355C0D /* InspirationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InspirationView.xib; sourceTree = "<group>"; };
 		36664F42273C5B8900355C0D /* RunesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunesViewModel.swift; sourceTree = "<group>"; };
 		36664F48273C617A00355C0D /* Rune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rune.swift; sourceTree = "<group>"; };
 		3668387C274238CE00B4332B /* ItemsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDetailView.swift; sourceTree = "<group>"; };
@@ -463,9 +451,6 @@
 		36574F0C27291A9800C27774 /* Runes */ = {
 			isa = PBXGroup;
 			children = (
-				36664F2F273C158600355C0D /* Inspiration */,
-				36664F2E273C157500355C0D /* Resolve */,
-				36664F2D273C156E00355C0D /* Sorcery */,
 				36664F2C273C156400355C0D /* Domination */,
 				36664F25273C150000355C0D /* Precision */,
 				3676111027581E7700BD0EBE /* BaseRune */,
@@ -512,34 +497,6 @@
 				36664F32273C15C300355C0D /* DominationView.xib */,
 			);
 			path = Domination;
-			sourceTree = "<group>";
-		};
-		36664F2D273C156E00355C0D /* Sorcery */ = {
-			isa = PBXGroup;
-			children = (
-				36664F34273C15DC00355C0D /* SorceryView.swift */,
-				36664F36273C15E700355C0D /* SorceryView.xib */,
-			);
-			path = Sorcery;
-			sourceTree = "<group>";
-		};
-		36664F2E273C157500355C0D /* Resolve */ = {
-			isa = PBXGroup;
-			children = (
-				36664F38273C15FA00355C0D /* ResolveView.swift */,
-				36664F3C273C161300355C0D /* ResolveView.xib */,
-			);
-			path = Resolve;
-			sourceTree = "<group>";
-		};
-		36664F2F273C158600355C0D /* Inspiration */ = {
-			isa = PBXGroup;
-			children = (
-				36664F3E273C162800355C0D /* InspirationView.swift */,
-				36664F40273C163400355C0D /* InspirationView.xib */,
-			);
-			name = Inspiration;
-			path = "Ínpiration";
 			sourceTree = "<group>";
 		};
 		366838802742399800B4332B /* RunesDetail */ = {
@@ -756,9 +713,7 @@
 				36574F042729022100C27774 /* ChampionsViewController.xib in Resources */,
 				36272AAB273AFE3F00AE5205 /* SkinsCell.xib in Resources */,
 				36272AA6273AFDC500AE5205 /* SkinsView.xib in Resources */,
-				36664F41273C163400355C0D /* InspirationView.xib in Resources */,
 				362EFFF9273864F2005945C5 /* ProgressView.xib in Resources */,
-				36664F37273C15E700355C0D /* SorceryView.xib in Resources */,
 				3654D76F271FE42400BBB9EB /* LaunchScreen.storyboard in Resources */,
 				36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */,
 				36BEA662272FF4A200B75B39 /* ChampionInfoViewController.xib in Resources */,
@@ -777,7 +732,6 @@
 				3668388827424C8600B4332B /* SpellsDetailView.xib in Resources */,
 				367611022757564000BD0EBE /* TipsViewController.xib in Resources */,
 				3676111627581F6700BD0EBE /* BaseRuneView.xib in Resources */,
-				36664F3D273C161300355C0D /* ResolveView.xib in Resources */,
 				36453ABA27331CE000F7413A /* GeneralView.xib in Resources */,
 				36574F1027291AAF00C27774 /* RunesViewController.xib in Resources */,
 				369ECD6F273A54FE00192332 /* SkillsCell.xib in Resources */,
@@ -874,18 +828,15 @@
 				367611012757564000BD0EBE /* TipsViewController.swift in Sources */,
 				369ECD6E273A54FE00192332 /* SkillsCell.swift in Sources */,
 				36D03667274E20AF0053FC19 /* ItemsServices.swift in Sources */,
-				36664F39273C15FA00355C0D /* ResolveView.swift in Sources */,
 				36BEA661272FF4A200B75B39 /* ChampionInfoViewController.swift in Sources */,
 				3644BCB72735BFA300E8E435 /* NSObjectExtentions.swift in Sources */,
 				36664F27273C151C00355C0D /* PrecisionView.swift in Sources */,
 				36BEA65B272FDCF600B75B39 /* TabBarItem.swift in Sources */,
-				36664F35273C15DC00355C0D /* SorceryView.swift in Sources */,
 				36DB67D32734508E0063F6DB /* SkillsView.swift in Sources */,
 				368CD66B272DD52C00A1FC9F /* FileHelper.swift in Sources */,
 				36574F0F27291AAF00C27774 /* RunesViewController.swift in Sources */,
 				3622CF7C272949D5005912CD /* Champion.swift in Sources */,
 				36BB5D7C272AA05000001491 /* NetworkingError.swift in Sources */,
-				36664F3F273C162800355C0D /* InspirationView.swift in Sources */,
 				36272AAA273AFE3F00AE5205 /* SkinsCell.swift in Sources */,
 				36BB5D7A272AA04400001491 /* NetworkingResult.swift in Sources */,
 				369ECD75273A6A3900192332 /* StringExtentions.swift in Sources */,
