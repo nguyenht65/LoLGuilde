@@ -15,7 +15,7 @@ class BaseNavigationController: UINavigationController {
     }
 
     func setupUI() {
-        UINavigationBar.appearance().backgroundColor = UIColor(named: ColorHelper.backgroundColor.rawValue)
-        UINavigationBar.appearance().barTintColor = UIColor(named: ColorHelper.backgroundColor.rawValue)
+        UINavigationBar.appearance().backgroundColor = UIColor(named: StyleHelper.backgroundColor.rawValue)
+        UINavigationBar.appearance().barTintColor = UIColor(named: StyleHelper.backgroundColor.rawValue)
     }
 }

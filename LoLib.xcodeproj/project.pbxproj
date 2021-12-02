@@ -60,7 +60,7 @@
 		3668388827424C8600B4332B /* SpellsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3668388727424C8600B4332B /* SpellsDetailView.xib */; };
 		367611012757564000BD0EBE /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367610FF2757564000BD0EBE /* TipsViewController.swift */; };
 		367611022757564000BD0EBE /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367611002757564000BD0EBE /* TipsViewController.xib */; };
-		3676110D2757668B00BD0EBE /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676110C2757668B00BD0EBE /* ColorHelper.swift */; };
+		3676110D2757668B00BD0EBE /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676110C2757668B00BD0EBE /* StyleHelper.swift */; };
 		3676110F2757F56E00BD0EBE /* UITableViewCellExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676110E2757F56E00BD0EBE /* UITableViewCellExtentions.swift */; };
 		3676111227581EF400BD0EBE /* BaseRuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676111127581EF400BD0EBE /* BaseRuneView.swift */; };
 		3676111627581F6700BD0EBE /* BaseRuneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3676111527581F6700BD0EBE /* BaseRuneView.xib */; };
@@ -160,7 +160,7 @@
 		3668388727424C8600B4332B /* SpellsDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellsDetailView.xib; sourceTree = "<group>"; };
 		367610FF2757564000BD0EBE /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		367611002757564000BD0EBE /* TipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
-		3676110C2757668B00BD0EBE /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		3676110C2757668B00BD0EBE /* StyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
 		3676110E2757F56E00BD0EBE /* UITableViewCellExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtentions.swift; sourceTree = "<group>"; };
 		3676111127581EF400BD0EBE /* BaseRuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRuneView.swift; sourceTree = "<group>"; };
 		3676111527581F6700BD0EBE /* BaseRuneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseRuneView.xib; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 			children = (
 				3654D776271FE64C00BBB9EB /* AppDelegate */,
 				3654D77B271FE9C400BBB9EB /* Controllers */,
-				36BB5D76272AA01A00001491 /* Network */,
+				36BEA659272FDCD100B75B39 /* TabBar */,
 				3654D777271FE6EB00BBB9EB /* Models */,
 				368CD669272DD4D900A1FC9F /* Helper */,
 				3654D77A271FE71D00BBB9EB /* Resources */,
@@ -353,7 +353,7 @@
 		3654D777271FE6EB00BBB9EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				36BEA659272FDCD100B75B39 /* TabBar */,
+				36BB5D76272AA01A00001491 /* Network */,
 				3654D78F271FF17F00BBB9EB /* Objects */,
 			);
 			path = Models;
@@ -533,7 +533,7 @@
 			children = (
 				368CD66A272DD52C00A1FC9F /* FileHelper.swift */,
 				36BEA657272FCF7A00B75B39 /* ScreenHelper.swift */,
-				3676110C2757668B00BD0EBE /* ColorHelper.swift */,
+				3676110C2757668B00BD0EBE /* StyleHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -853,7 +853,7 @@
 				36571360272FF79F00F44595 /* Stats.swift in Sources */,
 				3676111227581EF400BD0EBE /* BaseRuneView.swift in Sources */,
 				365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */,
-				3676110D2757668B00BD0EBE /* ColorHelper.swift in Sources */,
+				3676110D2757668B00BD0EBE /* StyleHelper.swift in Sources */,
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
 				3654D786271FEB7500BBB9EB /* SplashViewController.swift in Sources */,
 				36664F21273C115600355C0D /* EachRuneView.swift in Sources */,

@@ -52,7 +52,7 @@ class ChampionInfoViewController: BaseViewController {
 
     override func setupUI() {
         title = "Champion Info"
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: ColorHelper.textColor.rawValue)]
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: StyleHelper.textColor.rawValue)]
         segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key: Any], for: .normal)
         segmentedControl.setTitleTextAttributes(titleTextAttributes as [NSAttributedString.Key: Any], for: .selected)
     }

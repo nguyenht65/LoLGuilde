@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UITableView {
+
     func dequeueCell<T: UITableViewCell>(_ aClass: T.Type) -> T {
             let className = String(describing: aClass)
             guard let cell = dequeueReusableCell(withIdentifier: className) as? T else {
