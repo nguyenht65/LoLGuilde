@@ -5,11 +5,15 @@
 //  Created by Bang on 24/11/2021.
 //
 
-import Foundation
-
 import RxSwift
 
-struct ItemsServices {
+protocol ItemsServicesProtocol {
+    func getItems() -> Observable<[Item]>
+    func saveItemsToCache(_ newItems: [Item])
+    func getItemsFromCache() -> [Item]
+}
+
+struct ItemsServices: ItemsServicesProtocol {
 
     private let itemsFileURL = FileHelper.cachedFileURL("items.json")
 

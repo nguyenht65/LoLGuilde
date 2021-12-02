@@ -6,9 +6,14 @@
 //
 
 import RxSwift
-import RxRelay
 
-struct ChampionsServices {
+protocol ChampionsServicesProtocol {
+    func getChampions() -> Observable<[Champion]>
+    func saveChampionToCache(_ newChampions: [Champion])
+    func getChampionsFromCache() -> [Champion]
+}
+
+struct ChampionsServices: ChampionsServicesProtocol {
 
     private let championsFileURL = FileHelper.cachedFileURL("champions.json")
 

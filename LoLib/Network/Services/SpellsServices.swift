@@ -7,7 +7,13 @@
 
 import RxSwift
 
-struct SpellsServices {
+protocol SpellsServicesProtocol {
+    func getSpells() -> Observable<[Spell]>
+    func saveSpellsToCache(_ newSpells: [Spell])
+    func getSpellsFromCache() -> [Spell]
+}
+
+struct SpellsServices: SpellsServicesProtocol {
 
     private let spellsFileURL = FileHelper.cachedFileURL("spells.json")
 

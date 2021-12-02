@@ -7,7 +7,13 @@
 
 import RxSwift
 
-struct RunesServices {
+protocol RunesServicesProtocol {
+    func getRunes() -> Observable<[Rune]>
+    func saveRunesToCache(_ newRunes: [Rune])
+    func getRunesFromCache() -> [Rune]
+}
+
+struct RunesServices: RunesServicesProtocol {
 
     private let runesFileURL = FileHelper.cachedFileURL("runes.json")
 
