@@ -234,7 +234,7 @@
 				36574F0C27291A9800C27774 /* Runes */,
 				36574F052729030300C27774 /* Items */,
 				36574F00272901F800C27774 /* Champions */,
-				36574F0A27290F3E00C27774 /* TabBarController.swift */,
+				36BEA659272FDCD100B75B39 /* TabBar */,
 			);
 			path = LOL;
 			sourceTree = "<group>";
@@ -331,7 +331,6 @@
 			children = (
 				3654D776271FE64C00BBB9EB /* AppDelegate */,
 				3654D77B271FE9C400BBB9EB /* Controllers */,
-				36BEA659272FDCD100B75B39 /* TabBar */,
 				3654D777271FE6EB00BBB9EB /* Models */,
 				368CD669272DD4D900A1FC9F /* Helper */,
 				3654D77A271FE71D00BBB9EB /* Resources */,
@@ -587,6 +586,7 @@
 		36BEA659272FDCD100B75B39 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				36574F0A27290F3E00C27774 /* TabBarController.swift */,
 				36BEA65A272FDCF600B75B39 /* TabBarItem.swift */,
 				36BEA65C272FDDCD00B75B39 /* CustomTabBar.swift */,
 			);
