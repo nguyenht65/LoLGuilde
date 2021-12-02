@@ -25,6 +25,7 @@ struct TabBarItem {
     lazy var spellsViewController: UIViewController = {
         return SpellsViewController(spellsViewModel: SpellsViewModel())
     }()
+
 }
 
 enum TabItem: String, CaseIterable {
@@ -51,13 +52,13 @@ enum TabItem: String, CaseIterable {
     var icon: UIImage {
         switch self {
         case .champions:
-            return UIImage(named: Image.TopicImage.icon.rawValue)!
+            return UIImage(named: Image.TopicImage.champion.rawValue)!
         case .items:
-            return UIImage(named: Image.TopicImage.icon.rawValue)!
+            return UIImage(named: Image.TopicImage.item.rawValue)!
         case .runes:
-            return UIImage(named: Image.TopicImage.icon.rawValue)!
+            return UIImage(named: Image.TopicImage.rune.rawValue)!
         case .spells:
-            return UIImage(named: Image.TopicImage.icon.rawValue)!
+            return UIImage(named: Image.TopicImage.spell.rawValue)!
         }
     }
 
