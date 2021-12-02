@@ -39,10 +39,8 @@ class ItemsViewController: BaseViewController {
     }
 
     override func setupData() {
-        viewModel.readItemsFromCache()
-        viewModel.loadAPI()
+        viewModel.loadData()
         bindViewModel()
-
     }
 
     func bindViewModel() {

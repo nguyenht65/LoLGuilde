@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxRelay
+import Reachability
 
 protocol RunesViewModelProtocol {
     func loadAPI()
@@ -18,7 +19,8 @@ class RunesViewModel: RunesViewModelProtocol {
     private let disposeBag = DisposeBag()
     let runesServices = RunesServices()
     var runes = BehaviorRelay<[Rune]>(value: [])
-    
+    let reachability = try! Reachability()
+
     private func processRunes(_ newRunes: [Rune]) {
         DispatchQueue.main.async {
             self.runes.accept(newRunes)
@@ -41,5 +43,23 @@ class RunesViewModel: RunesViewModelProtocol {
     func readRunesFromCache() {
         let listRunes = runesServices.getRunesFromCache()
         self.runes.accept(listRunes)
+    }
+
+    func loadData() {
+        reachability.whenReachable = { [weak self] reachability in
+            let connection = reachability.connection
+            if connection == .wifi || connection == .cellular {
+                self?.loadAPI()
+            }
+        }
+        reachability.whenUnreachable = { [weak self] _ in
+            self?.readRunesFromCache()
+        }
+
+        do {
+            try self.reachability.startNotifier()
+        } catch {
+            fatalError("Unable to start notifier")
+        }
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxRelay
 import RxCocoa
+import Reachability
 
 protocol ChampionsViewModelProtocol {
     func loadAPI()
@@ -20,6 +21,7 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
     private let championsServices = ChampionsServices()
     var champions = BehaviorRelay<[Champion]>(value: [])
     var searchResults = BehaviorRelay<[Champion]>(value: [])
+    let reachability = try! Reachability()
 
     private func processChampions(_ newChampions: [Champion]) {
         // update API
@@ -66,5 +68,23 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
     func readChampionsFromCache() {
         let listChampions = championsServices.getChampionsFromCache()
         self.champions.accept(listChampions)
+    }
+
+    func loadData() {
+        reachability.whenReachable = { [weak self] reachability in
+            let connection = reachability.connection
+            if connection == .wifi || connection == .cellular {
+                self?.loadAPI()
+            }
+        }
+        reachability.whenUnreachable = { [weak self] _ in
+            self?.readChampionsFromCache()
+        }
+
+        do {
+            try self.reachability.startNotifier()
+        } catch {
+            fatalError("Unable to start notifier")
+        }
     }
 }

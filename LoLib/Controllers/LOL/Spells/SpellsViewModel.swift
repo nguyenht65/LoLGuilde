@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxRelay
 import RxCocoa
+import Reachability
 
 protocol SpellsViewModelProtocol {
     func loadAPI()
@@ -19,6 +20,7 @@ class SpellsViewModel: SpellsViewModelProtocol {
     private let disposeBag = DisposeBag()
     private let spellsServices = SpellsServices()
     var spells = BehaviorRelay<[Spell]>(value: [])
+    let reachability = try! Reachability()
 
     private func processSpells(_ newSpells: [Spell]) {
         // update API
@@ -43,5 +45,23 @@ class SpellsViewModel: SpellsViewModelProtocol {
     func readSpellsFromCache() {
         let listSpells = spellsServices.getSpellsFromCache()
         self.spells.accept(listSpells)
+    }
+
+    func loadData() {
+        reachability.whenReachable = { [weak self] reachability in
+            let connection = reachability.connection
+            if connection == .wifi || connection == .cellular {
+                self?.loadAPI()
+            }
+        }
+        reachability.whenUnreachable = { [weak self] _ in
+            self?.readSpellsFromCache()
+        }
+
+        do {
+            try self.reachability.startNotifier()
+        } catch {
+            fatalError("Unable to start notifier")
+        }
     }
 }

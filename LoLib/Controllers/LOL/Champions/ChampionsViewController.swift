@@ -40,12 +40,11 @@ class ChampionsViewController: BaseViewController {
     }
 
     override func setupData() {
-        viewModel.readChampionsFromCache()
-        viewModel.loadAPI()
+        viewModel.loadData()
         bindViewModel()
     }
 
-    func bindViewModel() {
+    private func bindViewModel() {
         viewModel.searchResults
             .asObservable()
             .bind(to: championsTableView.rx.items(cellIdentifier: ChampionsCell.className, cellType: ChampionsCell.self)) {
@@ -62,7 +61,7 @@ class ChampionsViewController: BaseViewController {
         registerKeyboardNotifications()
     }
 
-    func onSearching() {
+    private func onSearching() {
         viewModel.search(searchBar: searchBar)
     }
 

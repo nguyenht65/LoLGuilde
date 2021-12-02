@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxRelay
 import RxCocoa
+import Reachability
 
 protocol ItemsViewModelProtocol {
     func loadAPI()
@@ -20,6 +21,7 @@ class ItemsViewModel: ItemsViewModelProtocol {
     private let itemsServices = ItemsServices()
     var items = BehaviorRelay<[Item]>(value: [])
     var searchResults = BehaviorRelay<[Item]>(value: [])
+    let reachability = try! Reachability()
 
     private func processItems(_ newItems: [Item]) {
         // update API
@@ -45,6 +47,24 @@ class ItemsViewModel: ItemsViewModelProtocol {
     func readItemsFromCache() {
         let listItems = itemsServices.getItemsFromCache()
         self.items.accept(listItems)
+    }
+
+    func loadData() {
+        reachability.whenReachable = { [weak self] reachability in
+            let connection = reachability.connection
+            if connection == .wifi || connection == .cellular {
+                self?.loadAPI()
+            }
+        }
+        reachability.whenUnreachable = { [weak self] _ in
+            self?.readItemsFromCache()
+        }
+
+        do {
+            try self.reachability.startNotifier()
+        } catch {
+            fatalError("Unable to start notifier")
+        }
     }
 
     func search(searchBar: UISearchBar) {

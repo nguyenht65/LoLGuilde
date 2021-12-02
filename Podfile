@@ -11,4 +11,5 @@ target 'LoLib' do
   pod 'SDWebImage', '~> 5.0'
   pod 'DeviceKit', '~> 4.0'
   pod 'SwiftLint'
+  pod 'ReachabilitySwift'
 end
