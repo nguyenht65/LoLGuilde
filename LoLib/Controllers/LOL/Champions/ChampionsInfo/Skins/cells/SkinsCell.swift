@@ -27,6 +27,6 @@ class SkinsCell: UITableViewCell {
         let skinNumber = item.skins[index].num
         let imageFormat = item.skins[index].imageFormat
         let urlImage = skinImage + skinId + String(skinNumber) + imageFormat
-        skinsImageView.setImageUrl(with: urlImage, placeHolder: UIImage(named: Image.LoadingImage.rectangle.rawValue))
+        skinsImageView.setImageUrl(with: urlImage, placeHolder: Image.LoadingImage.rectangle.rawValue)
     }
 }
