@@ -28,9 +28,9 @@ class SkillsCell: UITableViewCell {
 
     func setupData(item: Champion, index: Int) {
         nameLabel.text = item.spells[index].name
-        costLabel.text = "Cost: \(item.spells[index].costBurn) \(item.partype)"
-        cooldownLabel.text = "Cooldown: \(item.spells[index].cooldownBurn)s"
-        rangeLabel.text = "Range: \(item.spells[index].rangeBurn)"
+        costLabel.text = "\(StringConstant.cost)\(item.spells[index].costBurn) \(item.partype)"
+        cooldownLabel.text = "\(StringConstant.cooldown)\(item.spells[index].cooldownBurn)\(StringConstant.second)"
+        rangeLabel.text = "\(StringConstant.range)\(item.spells[index].rangeBurn)"
         descriptionLabel.text = item.spells[index].description.htmlToString
         let urlImage = item.spells[index].urlImage
         skillImageView.setImageUrl(with: urlImage)

@@ -49,7 +49,7 @@ class SpellsDetailView: BaseView {
 
     func setupData(item: Spell) {
         nameLabel.text = item.name
-        cooldownLabel.text = "Cooldown: \(item.cooldownBurn)s"
+        cooldownLabel.text = "\(StringConstant.cooldown)\(item.cooldownBurn)\(StringConstant.second)"
         descriptionTextView.text = item.description.htmlToString
         spellsImageView.setImageUrl(with: item.urlImage)
     }

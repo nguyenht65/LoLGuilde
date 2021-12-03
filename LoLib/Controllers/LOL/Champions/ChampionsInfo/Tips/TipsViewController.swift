@@ -21,10 +21,10 @@ class TipsViewController: BaseViewController {
     }
 
     override func setupData() {
-        let allyTips = "Ally tips: \n"
-        let enemyTips = "\nEnemy tips: \n"
+        let allyTips = StringConstant.allyTips
+        let enemyTips = StringConstant.enemyTips
         if champion.allytips.isEmpty && champion.enemytips.isEmpty {
-            tipsTextView.text = "   - There are currently no tips for this hero!"
+            tipsTextView.text = StringConstant.noTips
         } else {
             // ally tips
             if !champion.allytips.isEmpty {

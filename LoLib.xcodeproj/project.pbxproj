@@ -74,6 +74,7 @@
 		369ECD73273A599C00192332 /* PassiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369ECD71273A599C00192332 /* PassiveCell.xib */; };
 		369ECD75273A6A3900192332 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369ECD74273A6A3900192332 /* StringExtentions.swift */; };
 		36ACA9632759F86E00DAAEEA /* UIImageViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACA9622759F86E00DAAEEA /* UIImageViewExtentions.swift */; };
+		36ACA966275A012000DAAEEA /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACA965275A012000DAAEEA /* StringConstant.swift */; };
 		36BB5D752729F13400001491 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D742729F13400001491 /* Image.swift */; };
 		36BB5D78272AA03300001491 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D77272AA03300001491 /* Networking.swift */; };
 		36BB5D7A272AA04400001491 /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB5D79272AA04400001491 /* NetworkingResult.swift */; };
@@ -174,6 +175,7 @@
 		369ECD71273A599C00192332 /* PassiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassiveCell.xib; sourceTree = "<group>"; };
 		369ECD74273A6A3900192332 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		36ACA9622759F86E00DAAEEA /* UIImageViewExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtentions.swift; sourceTree = "<group>"; };
+		36ACA965275A012000DAAEEA /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
 		36BB5D742729F13400001491 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		36BB5D77272AA03300001491 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		36BB5D79272AA04400001491 /* NetworkingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				3654D776271FE64C00BBB9EB /* AppDelegate */,
+				36ACA967275A02D400DAAEEA /* Define */,
 				3654D77B271FE9C400BBB9EB /* Controllers */,
 				3654D777271FE6EB00BBB9EB /* Models */,
 				368CD669272DD4D900A1FC9F /* Helper */,
@@ -571,6 +574,22 @@
 				369ECD71273A599C00192332 /* PassiveCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		36ACA964275A00ED00DAAEEA /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				36ACA965275A012000DAAEEA /* StringConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		36ACA967275A02D400DAAEEA /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				36ACA964275A00ED00DAAEEA /* Constant */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 		36BB5D76272AA01A00001491 /* Network */ = {
@@ -866,6 +885,7 @@
 				36DB67E727345A940063F6DB /* Passive.swift in Sources */,
 				3668388227423A9C00B4332B /* RunesDetailView.swift in Sources */,
 				36664F49273C617A00355C0D /* Rune.swift in Sources */,
+				36ACA966275A012000DAAEEA /* StringConstant.swift in Sources */,
 				36664F31273C15B900355C0D /* DominationView.swift in Sources */,
 				36574F082729031A00C27774 /* ItemsViewController.swift in Sources */,
 				36453ABC27331DC000F7413A /* UIViewExtentions.swift in Sources */,

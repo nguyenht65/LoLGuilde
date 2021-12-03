@@ -28,7 +28,9 @@ class ItemsDetailView: BaseView {
     
     func setupData(item: Item) {
         nameLabel.text = item.name
-        goldLabel.text = "$\(item.gold.total) - $\(item.gold.sell)"
+        let buyPrice = StringConstant.dolar + String(item.gold.total)
+        let sellPrice = StringConstant.dolar + String(item.gold.sell)
+        goldLabel.text = "\(buyPrice) - \(sellPrice)"
         descriptionTextView.text = item.description.htmlToString
         itemsImageView.setImageUrl(with: item.urlImage)
     }
