@@ -14,9 +14,13 @@ import Reachability
 class SpellsViewModel {
 
     private let disposeBag = DisposeBag()
-    private let spellsServices = SpellsServices()
+    private let spellsServices: SpellsServicesProtocol
     var spells = BehaviorRelay<[Spell]>(value: [])
     let reachability = try! Reachability()
+
+    init(service: SpellsServicesProtocol) {
+        self.spellsServices = service
+    }
 
     private func processSpells(_ newSpells: [Spell]) {
         // update API

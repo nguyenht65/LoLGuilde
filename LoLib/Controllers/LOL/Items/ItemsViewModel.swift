@@ -14,10 +14,14 @@ import Reachability
 class ItemsViewModel {
 
     private let disposeBag = DisposeBag()
-    private let itemsServices = ItemsServices()
+    private let itemsServices: ItemsServicesProtocol
     var items = BehaviorRelay<[Item]>(value: [])
     var searchResults = BehaviorRelay<[Item]>(value: [])
     let reachability = try! Reachability()
+
+    init(service: ItemsServicesProtocol) {
+        self.itemsServices = service
+    }
 
     private func processItems(_ newItems: [Item]) {
         // update API

@@ -13,9 +13,13 @@ import Reachability
 class RunesViewModel {
 
     private let disposeBag = DisposeBag()
-    let runesServices = RunesServices()
+    let runesServices: RunesServicesProtocol
     var runes = BehaviorRelay<[Rune]>(value: [])
     let reachability = try! Reachability()
+
+    init(service: RunesServicesProtocol) {
+        self.runesServices = service
+    }
 
     private func processRunes(_ newRunes: [Rune]) {
         DispatchQueue.main.async {

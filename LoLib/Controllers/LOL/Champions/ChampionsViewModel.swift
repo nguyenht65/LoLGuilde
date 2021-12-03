@@ -14,10 +14,14 @@ import Reachability
 class ChampionsViewModel {
 
     private let disposeBag = DisposeBag()
-    private let championsServices = ChampionsServices()
+    private let championsServices: ChampionsServicesProtocol
     var champions = BehaviorRelay<[Champion]>(value: [])
     var searchResults = BehaviorRelay<[Champion]>(value: [])
     let reachability = try! Reachability()
+
+    init(service: ChampionsServicesProtocol) {
+        self.championsServices = service
+    }
 
     private func processChampions(_ newChampions: [Champion]) {
         // update API

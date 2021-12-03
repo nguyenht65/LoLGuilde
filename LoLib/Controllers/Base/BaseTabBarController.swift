@@ -13,20 +13,21 @@ class BaseTabBarController: UITabBarController {
     var tabBarHeight: CGFloat = 65.0
 
     lazy var championsViewController: UIViewController = {
-        let navigationController = BaseNavigationController(rootViewController: ChampionsViewController(championsViewModel: ChampionsViewModel()))
+        let rootViewController = ChampionsViewController(championsServices: ChampionsServices())
+        let navigationController = BaseNavigationController(rootViewController: rootViewController)
         return navigationController
     }()
 
     lazy var itemsViewController: UIViewController = {
-        return ItemsViewController(itemsViewModel: ItemsViewModel())
+        return ItemsViewController(itemsServices: ItemsServices())
     }()
 
     lazy var runesViewController: UIViewController = {
-        return RunesViewController(runesViewModel: RunesViewModel())
+        return RunesViewController(runesServices: RunesServices())
     }()
 
     lazy var spellsViewController: UIViewController = {
-        return SpellsViewController(spellsViewModel: SpellsViewModel())
+        return SpellsViewController(spellsServices: SpellsServices())
     }()
 
     override func viewDidLoad() {

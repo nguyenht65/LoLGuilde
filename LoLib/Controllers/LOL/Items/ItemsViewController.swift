@@ -18,8 +18,8 @@ class ItemsViewController: BaseViewController {
     private var viewModel: ItemsViewModel
     lazy var itemsDetailView = ItemsDetailView()
 
-    init(itemsViewModel: ItemsViewModel) {
-        self.viewModel = itemsViewModel
+    init(itemsServices: ItemsServicesProtocol) {
+        self.viewModel = ItemsViewModel(service: itemsServices)
         super.init(nibName: ItemsViewController.className, bundle: .main)
     }
 

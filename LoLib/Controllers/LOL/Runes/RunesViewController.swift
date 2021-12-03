@@ -53,8 +53,8 @@ class RunesViewController: BaseViewController {
         return view
     }()
 
-    init(runesViewModel: RunesViewModel) {
-        self.viewModel = runesViewModel
+    init(runesServices: RunesServicesProtocol) {
+        self.viewModel = RunesViewModel(service: runesServices)
         super.init(nibName: RunesViewController.className, bundle: .main)
     }
 

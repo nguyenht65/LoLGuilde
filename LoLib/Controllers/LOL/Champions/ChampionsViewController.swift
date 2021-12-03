@@ -19,8 +19,8 @@ class ChampionsViewController: BaseViewController {
     private var viewModel: ChampionsViewModel
     private let disposeBag = DisposeBag()
 
-    init(championsViewModel: ChampionsViewModel) {
-        self.viewModel = championsViewModel
+    init(championsServices: ChampionsServicesProtocol) {
+        self.viewModel = ChampionsViewModel(service: championsServices)
         super.init(nibName: ChampionsViewController.className, bundle: .main)
     }
 

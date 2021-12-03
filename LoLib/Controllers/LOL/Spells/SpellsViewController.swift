@@ -16,8 +16,8 @@ class SpellsViewController: BaseViewController {
     private var viewModel: SpellsViewModel
     private lazy var spellsDetailView = SpellsDetailView()
 
-    init(spellsViewModel: SpellsViewModel) {
-        self.viewModel = spellsViewModel
+    init(spellsServices: SpellsServicesProtocol) {
+        self.viewModel = SpellsViewModel(service: spellsServices)
         super.init(nibName: SpellsViewController.className, bundle: .main)
     }
 
