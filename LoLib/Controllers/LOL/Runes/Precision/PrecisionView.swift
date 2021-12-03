@@ -28,6 +28,9 @@ class PrecisionView: BaseView {
     @IBOutlet weak var nameTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var nameBottomConstraint: NSLayoutConstraint!
     
+    private var runeViews: [EachRuneView] {
+        return [slot11View, slot12View, slot13View, slot14View, slot21View, slot22View, slot23View, slot31View, slot32View, slot33View, slot41View, slot42View, slot43View]
+    }
     private var rune: Rune!
 
     private lazy var runesDetailView: RunesDetailView = {
@@ -89,19 +92,9 @@ class PrecisionView: BaseView {
     }
 
     func setupAction() {
-        slot11View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot12View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot13View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot14View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot21View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot22View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot23View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot31View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot32View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot33View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot41View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot42View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        slot43View.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        runeViews.forEach { rune in
+            rune.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        }
     }
 
     @objc func buttonAction(sender: UIButton!) {
