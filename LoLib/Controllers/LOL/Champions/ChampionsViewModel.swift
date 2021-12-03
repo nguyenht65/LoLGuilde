@@ -11,7 +11,7 @@ import RxRelay
 import RxCocoa
 import Reachability
 
-class ChampionsViewModel: ChampionsViewModelProtocol {
+class ChampionsViewModel {
 
     private let disposeBag = DisposeBag()
     private let championsServices = ChampionsServices()
