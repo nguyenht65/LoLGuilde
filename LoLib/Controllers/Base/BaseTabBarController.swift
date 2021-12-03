@@ -12,6 +12,23 @@ class BaseTabBarController: UITabBarController {
     var customTabBar: CustomTabBar!
     var tabBarHeight: CGFloat = 65.0
 
+    lazy var championsViewController: UIViewController = {
+        let navigationController = BaseNavigationController(rootViewController: ChampionsViewController(championsViewModel: ChampionsViewModel()))
+        return navigationController
+    }()
+
+    lazy var itemsViewController: UIViewController = {
+        return ItemsViewController(itemsViewModel: ItemsViewModel())
+    }()
+
+    lazy var runesViewController: UIViewController = {
+        return RunesViewController(runesViewModel: RunesViewModel())
+    }()
+
+    lazy var spellsViewController: UIViewController = {
+        return SpellsViewController(spellsViewModel: SpellsViewModel())
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadTabBar()
@@ -24,6 +41,19 @@ class BaseTabBarController: UITabBarController {
             self.viewControllers = viewControllers
         })
         selectedIndex = 0 // Set default selected index is first index
+    }
+
+    func getViewController(item: TabItem) -> UIViewController {
+        switch item {
+        case .champions:
+            return championsViewController
+        case .items:
+            return itemsViewController
+        case .runes:
+            return runesViewController
+        case .spells:
+            return spellsViewController
+        }
     }
 
     func setupCustomTabMenu(_ menuItems: [TabItem], completion: @escaping ([UIViewController]) -> Void) {
@@ -48,7 +78,8 @@ class BaseTabBarController: UITabBarController {
         ])
         // Add each view controller
         menuItems.forEach({
-            controllers.append($0.viewController)
+            let controller = getViewController(item: $0)
+            controllers.append(controller)
         })
 
         view.layoutIfNeeded()
@@ -57,5 +88,30 @@ class BaseTabBarController: UITabBarController {
 
     func changeTab(tab: Int) {
         self.selectedIndex = tab
+    }
+}
+
+enum TabItem: String, CaseIterable {
+
+    case champions = "champions"
+    case items = "items"
+    case runes = "runes"
+    case spells = "spells"
+
+    var icon: UIImage {
+        switch self {
+        case .champions:
+            return UIImage(named: Image.TopicImage.champion.rawValue)!
+        case .items:
+            return UIImage(named: Image.TopicImage.item.rawValue)!
+        case .runes:
+            return UIImage(named: Image.TopicImage.rune.rawValue)!
+        case .spells:
+            return UIImage(named: Image.TopicImage.spell.rawValue)!
+        }
+    }
+
+    var displayTitle: String {
+        return self.rawValue.capitalized(with: nil)
     }
 }
