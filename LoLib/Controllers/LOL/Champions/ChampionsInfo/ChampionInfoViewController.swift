@@ -66,7 +66,7 @@ class ChampionInfoViewController: BaseViewController {
         } else {
             tag2Label.text = ""
         }
-        championImageView.sd_setImage(with: URL(string: champion.urlImage), placeholderImage: UIImage(named: champion.placeholderImage))
+        championImageView.setImageUrl(with: champion.urlImage)
     }
 
     override func viewWillAppear(_ animated: Bool) {

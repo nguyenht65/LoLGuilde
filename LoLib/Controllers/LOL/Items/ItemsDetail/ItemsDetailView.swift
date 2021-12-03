@@ -30,6 +30,6 @@ class ItemsDetailView: BaseView {
         nameLabel.text = item.name
         goldLabel.text = "$\(item.gold.total) - $\(item.gold.sell)"
         descriptionTextView.text = item.description.htmlToString
-        itemsImageView.sd_setImage(with: URL(string: item.urlImage), placeholderImage: UIImage(named: item.placeholderImage))
+        itemsImageView.setImageUrl(with: item.urlImage)
     }
 }

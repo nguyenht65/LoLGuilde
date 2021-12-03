@@ -21,7 +21,7 @@ class ItemsCell: UICollectionViewCell {
     }
 
     func setupData(item: Item) {
-        itemImageView.sd_setImage(with: URL(string: item.urlImage), placeholderImage: UIImage(named: item.placeholderImage))
+        itemsImageView.setImageUrl(with: item.urlImage)
         itemNameLabel.text = item.name
         if item.into?.isEmpty != nil && item.from?.isEmpty != nil {
             itemImageView.layer.borderColor = UIColor.systemYellow.cgColor

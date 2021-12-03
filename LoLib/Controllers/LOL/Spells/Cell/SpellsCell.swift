@@ -22,7 +22,7 @@ class SpellsCell: UICollectionViewCell {
 
     func setupData(item: Spell) {
         spellNameLabel.text = item.name
-        spellImageView.sd_setImage(with: URL(string: item.urlImage), placeholderImage: UIImage(named: item.placeholderImage))
+        spellsImageView.setImageUrl(with: item.urlImage)
         spellImageView.layer.borderColor = UIColor.white.cgColor
     }
 

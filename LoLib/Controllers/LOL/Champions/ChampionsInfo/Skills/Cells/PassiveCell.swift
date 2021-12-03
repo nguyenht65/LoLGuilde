@@ -27,7 +27,7 @@ class PassiveCell: UITableViewCell {
         nameLabel.text = item.passive.name
         descriptionTextView.text = item.passive.description.htmlToString
         let urlImage = item.passive.urlImage
-        passiveImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: item.placeholderImage))
+        passiveImageView.setImageUrl(with: urlImage)
     }
 
     func setupUI() {

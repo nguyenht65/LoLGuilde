@@ -33,7 +33,7 @@ class SkillsCell: UITableViewCell {
         rangeLabel.text = "Range: \(item.spells[index].rangeBurn)"
         descriptionLabel.text = item.spells[index].description.htmlToString
         let urlImage = item.spells[index].urlImage
-        skillImageView.sd_setImage(with: URL(string: urlImage), placeholderImage: UIImage(named: item.placeholderImage))
+        skillImageView.setImageUrl(with: urlImage)
     }
 
     func setupUI() {
