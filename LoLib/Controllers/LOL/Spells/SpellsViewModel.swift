@@ -11,11 +11,7 @@ import RxRelay
 import RxCocoa
 import Reachability
 
-protocol SpellsViewModelProtocol {
-    func loadAPI()
-}
-
-class SpellsViewModel: SpellsViewModelProtocol {
+class SpellsViewModel {
 
     private let disposeBag = DisposeBag()
     private let spellsServices = SpellsServices()
@@ -48,6 +44,11 @@ class SpellsViewModel: SpellsViewModelProtocol {
     }
 
     func loadData() {
+        do {
+            try self.reachability.startNotifier()
+        } catch {
+            fatalError("Unable to start notifier")
+        }
         reachability.whenReachable = { [weak self] reachability in
             let connection = reachability.connection
             if connection == .wifi || connection == .cellular {
@@ -56,12 +57,6 @@ class SpellsViewModel: SpellsViewModelProtocol {
         }
         reachability.whenUnreachable = { [weak self] _ in
             self?.readSpellsFromCache()
-        }
-
-        do {
-            try self.reachability.startNotifier()
-        } catch {
-            fatalError("Unable to start notifier")
         }
     }
 }

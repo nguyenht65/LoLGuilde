@@ -11,10 +11,6 @@ import RxRelay
 import RxCocoa
 import Reachability
 
-protocol ChampionsViewModelProtocol {
-    func loadAPI()
-}
-
 class ChampionsViewModel: ChampionsViewModelProtocol {
 
     private let disposeBag = DisposeBag()
@@ -71,6 +67,11 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
     }
 
     func loadData() {
+        do {
+            try self.reachability.startNotifier()
+        } catch {
+            fatalError("Unable to start notifier")
+        }
         reachability.whenReachable = { [weak self] reachability in
             let connection = reachability.connection
             if connection == .wifi || connection == .cellular {
@@ -79,12 +80,6 @@ class ChampionsViewModel: ChampionsViewModelProtocol {
         }
         reachability.whenUnreachable = { [weak self] _ in
             self?.readChampionsFromCache()
-        }
-
-        do {
-            try self.reachability.startNotifier()
-        } catch {
-            fatalError("Unable to start notifier")
         }
     }
 }

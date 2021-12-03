@@ -10,11 +10,7 @@ import RxSwift
 import RxRelay
 import Reachability
 
-protocol RunesViewModelProtocol {
-    func loadAPI()
-}
-
-class RunesViewModel: RunesViewModelProtocol {
+class RunesViewModel {
 
     private let disposeBag = DisposeBag()
     let runesServices = RunesServices()
@@ -46,6 +42,11 @@ class RunesViewModel: RunesViewModelProtocol {
     }
 
     func loadData() {
+        do {
+            try self.reachability.startNotifier()
+        } catch {
+            fatalError("Unable to start notifier")
+        }
         reachability.whenReachable = { [weak self] reachability in
             let connection = reachability.connection
             if connection == .wifi || connection == .cellular {
@@ -54,12 +55,6 @@ class RunesViewModel: RunesViewModelProtocol {
         }
         reachability.whenUnreachable = { [weak self] _ in
             self?.readRunesFromCache()
-        }
-
-        do {
-            try self.reachability.startNotifier()
-        } catch {
-            fatalError("Unable to start notifier")
         }
     }
 }

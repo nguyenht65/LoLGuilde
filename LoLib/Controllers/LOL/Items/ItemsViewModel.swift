@@ -11,11 +11,7 @@ import RxRelay
 import RxCocoa
 import Reachability
 
-protocol ItemsViewModelProtocol {
-    func loadAPI()
-}
-
-class ItemsViewModel: ItemsViewModelProtocol {
+class ItemsViewModel {
 
     private let disposeBag = DisposeBag()
     private let itemsServices = ItemsServices()
@@ -50,6 +46,11 @@ class ItemsViewModel: ItemsViewModelProtocol {
     }
 
     func loadData() {
+        do {
+            try self.reachability.startNotifier()
+        } catch {
+            fatalError("Unable to start notifier")
+        }
         reachability.whenReachable = { [weak self] reachability in
             let connection = reachability.connection
             if connection == .wifi || connection == .cellular {
@@ -58,12 +59,6 @@ class ItemsViewModel: ItemsViewModelProtocol {
         }
         reachability.whenUnreachable = { [weak self] _ in
             self?.readItemsFromCache()
-        }
-
-        do {
-            try self.reachability.startNotifier()
-        } catch {
-            fatalError("Unable to start notifier")
         }
     }
 
@@ -89,24 +84,23 @@ class ItemsViewModel: ItemsViewModelProtocol {
             if item.name.uppercased().contains(query.uppercased()) {
                 listItems.append(item)
             }
-            if item.into?.isEmpty != nil && item.from?.isEmpty != nil && "yellow".contains(query.lowercased()) {
+            if item.into?.isEmpty != nil && item.from?.isEmpty != nil && TypeColor.middle.rawValue.contains(query.lowercased()) {
                 // middle items (items that can be both combined into other items and be combined by other items)
                 listItems.append(item)
             }
-            if item.into?.isEmpty != nil && item.from?.isEmpty == nil && "gray".contains(query.lowercased()) {
+            if item.into?.isEmpty != nil && item.from?.isEmpty == nil && TypeColor.component.rawValue.contains(query.lowercased()) {
                 // component items (items can be combined into other items)
                 listItems.append(item)
             }
-            if item.into?.isEmpty == nil && item.from?.isEmpty != nil && "pink".contains(query.lowercased()) {
+            if item.into?.isEmpty == nil && item.from?.isEmpty != nil && TypeColor.completed.rawValue.contains(query.lowercased()) {
                 // completed items (item that only be conbined from other items)
                 listItems.append(item)
             }
-            if item.into?.isEmpty == nil && item.from?.isEmpty == nil && "mint".contains(query.lowercased()) {
+            if item.into?.isEmpty == nil && item.from?.isEmpty == nil && TypeColor.unique.rawValue.contains(query.lowercased()) {
                 // unique items
                 listItems.append(item)
             }
         }
         return Observable.of(listItems)
     }
-
 }

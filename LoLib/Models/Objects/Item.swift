@@ -35,3 +35,10 @@ extension Item {
         return Image.LoadingImage.square.rawValue
     }
 }
+
+enum TypeColor: String {
+    case middle = "yellow"
+    case unique = "mint"
+    case component = "gray"
+    case completed = "red"
+}

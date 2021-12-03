@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChampionInfoViewController: BaseViewController {
+class ChampionInfoViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

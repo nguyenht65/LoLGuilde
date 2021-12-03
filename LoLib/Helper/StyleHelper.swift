@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum StyleHelper: String, CaseIterable {
+enum StyleHelper: String {
     case textColor = "textColor"
     case backgroundColor = "backgroundColor"
 }
