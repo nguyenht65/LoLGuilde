@@ -11,9 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RuneTypeView" customModule="LoLib" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImageView" destination="gcq-U1-Un7" id="owv-40-PvD"/>
-                <outlet property="nameBottomConstraint" destination="gcq-U1-Un7" id="F03-ZS-Oj0"/>
+                <outlet property="nameBottomConstraint" destination="sVe-MW-9ba" id="GxC-2A-0J4"/>
                 <outlet property="nameLabel" destination="Nbd-Gu-Zt1" id="hdg-44-fem"/>
-                <outlet property="nameTopConstraint" destination="zJD-Dk-kFq" id="Kdk-X7-Esr"/>
+                <outlet property="nameTopConstraint" destination="zJD-Dk-kFq" id="c6T-QU-wJt"/>
                 <outlet property="slot1StackView" destination="Abm-uG-WYf" id="Py4-y0-GkZ"/>
                 <outlet property="slot1View" destination="2Mi-bZ-Dii" id="SAE-bH-Fef"/>
                 <outlet property="slot2StackView" destination="sg5-CB-LC3" id="UMf-og-xJP"/>
