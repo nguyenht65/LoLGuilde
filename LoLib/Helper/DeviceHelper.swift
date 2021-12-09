@@ -33,13 +33,13 @@ struct DeviceHelper {
 
     func isLargeDevice() -> Bool {
         switch device {
-        case .iPhoneXSMax:
+        case .iPhoneXSMax, .simulator(.iPhoneXSMax):
             return true
-        case .iPhone11ProMax:
+        case .iPhone11ProMax, .simulator(.iPhone11ProMax):
             return true
-        case .iPhone12ProMax:
+        case .iPhone12ProMax, .simulator(.iPhone12ProMax):
             return true
-        case .iPhone13ProMax:
+        case .iPhone13ProMax, .simulator(.iPhone13ProMax):
             return true
         default:
             return false
