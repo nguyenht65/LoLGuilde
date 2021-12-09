@@ -46,10 +46,6 @@
 		365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B2BB42731153B0012C667 /* ItemsViewModel.swift */; };
 		36664F21273C115600355C0D /* EachRuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F20273C115600355C0D /* EachRuneView.swift */; };
 		36664F23273C116600355C0D /* EachRuneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F22273C116600355C0D /* EachRuneView.xib */; };
-		36664F27273C151C00355C0D /* PrecisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F26273C151C00355C0D /* PrecisionView.swift */; };
-		36664F2B273C153300355C0D /* PrecisionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F2A273C153300355C0D /* PrecisionView.xib */; };
-		36664F31273C15B900355C0D /* DominationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F30273C15B900355C0D /* DominationView.swift */; };
-		36664F33273C15C300355C0D /* DominationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36664F32273C15C300355C0D /* DominationView.xib */; };
 		36664F43273C5B8900355C0D /* RunesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F42273C5B8900355C0D /* RunesViewModel.swift */; };
 		36664F49273C617A00355C0D /* Rune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36664F48273C617A00355C0D /* Rune.swift */; };
 		3668387D274238CE00B4332B /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668387C274238CE00B4332B /* ItemsDetailView.swift */; };
@@ -62,8 +58,6 @@
 		367611022757564000BD0EBE /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 367611002757564000BD0EBE /* TipsViewController.xib */; };
 		3676110D2757668B00BD0EBE /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676110C2757668B00BD0EBE /* StyleHelper.swift */; };
 		3676110F2757F56E00BD0EBE /* UITableViewCellExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676110E2757F56E00BD0EBE /* UITableViewCellExtentions.swift */; };
-		3676111227581EF400BD0EBE /* BaseRuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676111127581EF400BD0EBE /* BaseRuneView.swift */; };
-		3676111627581F6700BD0EBE /* BaseRuneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3676111527581F6700BD0EBE /* BaseRuneView.xib */; };
 		368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */; };
 		368CD66B272DD52C00A1FC9F /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66A272DD52C00A1FC9F /* FileHelper.swift */; };
 		368CD674272DDAC500A1FC9F /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */; };
@@ -97,6 +91,8 @@
 		36DB67DF2734512F0063F6DB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67DE2734512F0063F6DB /* BaseView.swift */; };
 		36DB67E527345A820063F6DB /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E427345A820063F6DB /* Skin.swift */; };
 		36DB67E727345A940063F6DB /* Passive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E627345A940063F6DB /* Passive.swift */; };
+		36E2E8C72761A17C000F3167 /* RuneTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2E8C62761A17C000F3167 /* RuneTypeView.swift */; };
+		36E2E8C92761A188000F3167 /* RuneTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E2E8C82761A188000F3167 /* RuneTypeView.xib */; };
 		36E6344327391D960055E566 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6344227391D960055E566 /* StatusView.swift */; };
 		36E6344627391DA90055E566 /* StatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344527391DA90055E566 /* StatusView.xib */; };
 		36E6344C27391E530055E566 /* EachStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344B27391E530055E566 /* EachStatusView.xib */; };
@@ -147,10 +143,6 @@
 		365B2BB42731153B0012C667 /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
 		36664F20273C115600355C0D /* EachRuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachRuneView.swift; sourceTree = "<group>"; };
 		36664F22273C116600355C0D /* EachRuneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachRuneView.xib; sourceTree = "<group>"; };
-		36664F26273C151C00355C0D /* PrecisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecisionView.swift; sourceTree = "<group>"; };
-		36664F2A273C153300355C0D /* PrecisionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrecisionView.xib; sourceTree = "<group>"; };
-		36664F30273C15B900355C0D /* DominationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominationView.swift; sourceTree = "<group>"; };
-		36664F32273C15C300355C0D /* DominationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DominationView.xib; sourceTree = "<group>"; };
 		36664F42273C5B8900355C0D /* RunesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunesViewModel.swift; sourceTree = "<group>"; };
 		36664F48273C617A00355C0D /* Rune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rune.swift; sourceTree = "<group>"; };
 		3668387C274238CE00B4332B /* ItemsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDetailView.swift; sourceTree = "<group>"; };
@@ -163,8 +155,6 @@
 		367611002757564000BD0EBE /* TipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
 		3676110C2757668B00BD0EBE /* StyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
 		3676110E2757F56E00BD0EBE /* UITableViewCellExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtentions.swift; sourceTree = "<group>"; };
-		3676111127581EF400BD0EBE /* BaseRuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRuneView.swift; sourceTree = "<group>"; };
-		3676111527581F6700BD0EBE /* BaseRuneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseRuneView.xib; sourceTree = "<group>"; };
 		368CD667272DD21900A1FC9F /* ChampionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewModel.swift; sourceTree = "<group>"; };
 		368CD66A272DD52C00A1FC9F /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		368CD66E272DDAC500A1FC9F /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
@@ -198,6 +188,8 @@
 		36DB67DE2734512F0063F6DB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		36DB67E427345A820063F6DB /* Skin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
 		36DB67E627345A940063F6DB /* Passive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passive.swift; sourceTree = "<group>"; };
+		36E2E8C62761A17C000F3167 /* RuneTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneTypeView.swift; sourceTree = "<group>"; };
+		36E2E8C82761A188000F3167 /* RuneTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneTypeView.xib; sourceTree = "<group>"; };
 		36E6344227391D960055E566 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		36E6344527391DA90055E566 /* StatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusView.xib; sourceTree = "<group>"; };
 		36E6344B27391E530055E566 /* EachStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachStatusView.xib; sourceTree = "<group>"; };
@@ -455,10 +447,7 @@
 		36574F0C27291A9800C27774 /* Runes */ = {
 			isa = PBXGroup;
 			children = (
-				36664F2C273C156400355C0D /* Domination */,
-				36664F25273C150000355C0D /* Precision */,
-				3676111027581E7700BD0EBE /* BaseRune */,
-				366838802742399800B4332B /* RunesDetail */,
+				36E2E8C52761A162000F3167 /* RuneType */,
 				36664F24273C126500355C0D /* EachRune */,
 				36574F0D27291AAF00C27774 /* RunesViewController.swift */,
 				36574F0E27291AAF00C27774 /* RunesViewController.xib */,
@@ -485,24 +474,6 @@
 			path = EachRune;
 			sourceTree = "<group>";
 		};
-		36664F25273C150000355C0D /* Precision */ = {
-			isa = PBXGroup;
-			children = (
-				36664F26273C151C00355C0D /* PrecisionView.swift */,
-				36664F2A273C153300355C0D /* PrecisionView.xib */,
-			);
-			path = Precision;
-			sourceTree = "<group>";
-		};
-		36664F2C273C156400355C0D /* Domination */ = {
-			isa = PBXGroup;
-			children = (
-				36664F30273C15B900355C0D /* DominationView.swift */,
-				36664F32273C15C300355C0D /* DominationView.xib */,
-			);
-			path = Domination;
-			sourceTree = "<group>";
-		};
 		366838802742399800B4332B /* RunesDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,15 +490,6 @@
 				367611002757564000BD0EBE /* TipsViewController.xib */,
 			);
 			path = Tips;
-			sourceTree = "<group>";
-		};
-		3676111027581E7700BD0EBE /* BaseRune */ = {
-			isa = PBXGroup;
-			children = (
-				3676111127581EF400BD0EBE /* BaseRuneView.swift */,
-				3676111527581F6700BD0EBE /* BaseRuneView.xib */,
-			);
-			path = BaseRune;
 			sourceTree = "<group>";
 		};
 		368CD669272DD4D900A1FC9F /* Helper */ = {
@@ -644,6 +606,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		36E2E8C52761A162000F3167 /* RuneType */ = {
+			isa = PBXGroup;
+			children = (
+				366838802742399800B4332B /* RunesDetail */,
+				36E2E8C62761A17C000F3167 /* RuneTypeView.swift */,
+				36E2E8C82761A188000F3167 /* RuneTypeView.xib */,
+			);
+			path = RuneType;
+			sourceTree = "<group>";
+		};
 		36E6344927391DFB0055E566 /* EachStatus */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,7 +703,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36664F33273C15C300355C0D /* DominationView.xib in Resources */,
 				36574F042729022100C27774 /* ChampionsViewController.xib in Resources */,
 				36272AAB273AFE3F00AE5205 /* SkinsCell.xib in Resources */,
 				36272AA6273AFDC500AE5205 /* SkinsView.xib in Resources */,
@@ -740,7 +711,6 @@
 				36DB67CD2733C8D00063F6DB /* SpellsCell.xib in Resources */,
 				36BEA662272FF4A200B75B39 /* ChampionInfoViewController.xib in Resources */,
 				36574F22272935D000C27774 /* ChampionsCell.xib in Resources */,
-				36664F2B273C153300355C0D /* PrecisionView.xib in Resources */,
 				3668388427423AC300B4332B /* RunesDetailView.xib in Resources */,
 				369ECD73273A599C00192332 /* PassiveCell.xib in Resources */,
 				36571364272FFA1500F44595 /* ItemsCell.xib in Resources */,
@@ -753,8 +723,8 @@
 				3654D787271FEB7500BBB9EB /* SplashViewController.xib in Resources */,
 				3668388827424C8600B4332B /* SpellsDetailView.xib in Resources */,
 				367611022757564000BD0EBE /* TipsViewController.xib in Resources */,
-				3676111627581F6700BD0EBE /* BaseRuneView.xib in Resources */,
 				36453ABA27331CE000F7413A /* GeneralView.xib in Resources */,
+				36E2E8C92761A188000F3167 /* RuneTypeView.xib in Resources */,
 				36574F1027291AAF00C27774 /* RunesViewController.xib in Resources */,
 				369ECD6F273A54FE00192332 /* SkillsCell.xib in Resources */,
 				36664F23273C116600355C0D /* EachRuneView.xib in Resources */,
@@ -833,6 +803,7 @@
 				36DB67D12733D2450063F6DB /* Spell.swift in Sources */,
 				3668387D274238CE00B4332B /* ItemsDetailView.swift in Sources */,
 				36F329C7274DB9DE00DB5CBB /* ChampionsServices.swift in Sources */,
+				36E2E8C72761A17C000F3167 /* RuneTypeView.swift in Sources */,
 				3654D77E271FEA1100BBB9EB /* BaseViewController.swift in Sources */,
 				36664F43273C5B8900355C0D /* RunesViewModel.swift in Sources */,
 				369ECD72273A599C00192332 /* PassiveCell.swift in Sources */,
@@ -853,7 +824,6 @@
 				36D03667274E20AF0053FC19 /* ItemsServices.swift in Sources */,
 				36BEA661272FF4A200B75B39 /* ChampionInfoViewController.swift in Sources */,
 				3644BCB72735BFA300E8E435 /* NSObjectExtentions.swift in Sources */,
-				36664F27273C151C00355C0D /* PrecisionView.swift in Sources */,
 				36DB67D32734508E0063F6DB /* SkillsView.swift in Sources */,
 				368CD66B272DD52C00A1FC9F /* FileHelper.swift in Sources */,
 				36574F0F27291AAF00C27774 /* RunesViewController.swift in Sources */,
@@ -869,7 +839,6 @@
 				36E6344E27391E600055E566 /* EachStatusView.swift in Sources */,
 				36272AA4273AFDBE00AE5205 /* SkinsView.swift in Sources */,
 				36571360272FF79F00F44595 /* Stats.swift in Sources */,
-				3676111227581EF400BD0EBE /* BaseRuneView.swift in Sources */,
 				365B2BB52731153B0012C667 /* ItemsViewModel.swift in Sources */,
 				3676110D2757668B00BD0EBE /* StyleHelper.swift in Sources */,
 				368CD668272DD21900A1FC9F /* ChampionsViewModel.swift in Sources */,
@@ -886,7 +855,6 @@
 				3668388227423A9C00B4332B /* RunesDetailView.swift in Sources */,
 				36664F49273C617A00355C0D /* Rune.swift in Sources */,
 				36ACA966275A012000DAAEEA /* StringConstant.swift in Sources */,
-				36664F31273C15B900355C0D /* DominationView.swift in Sources */,
 				36574F082729031A00C27774 /* ItemsViewController.swift in Sources */,
 				36453ABC27331DC000F7413A /* UIViewExtentions.swift in Sources */,
 				36DB67CF2733CB870063F6DB /* SpellsViewModel.swift in Sources */,

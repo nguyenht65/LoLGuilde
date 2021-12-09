@@ -7,23 +7,12 @@
 
 import UIKit
 
-@IBDesignable
 class EachRuneView: BaseView {
 
     @IBOutlet weak var runeImage: UIImageView!
     @IBOutlet weak var imageButton: UIButton!
 
     private var tagValue: Int = 0
-
-    @IBInspectable
-    var buttonTag: Int {
-        get {
-            return tagValue
-        } set(newValue) {
-            tagValue = newValue
-            imageButton.tag = tagValue
-        }
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
