@@ -23,6 +23,7 @@ class RuneTypeView: BaseView {
     @IBOutlet weak var nameTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var nameBottomConstraint: NSLayoutConstraint!
 
+    private let maxRuneInSlot: Int = 4
     private var buttonTags: [Int] = []
     private var tempIndex: Int = 0
     private var rune: Rune!
@@ -63,7 +64,7 @@ class RuneTypeView: BaseView {
         self.rune = rune
     }
 
-    fileprivate func createSubView(_ item: Rune, _ stackView: UIStackView, _ slotView: EachRuneView, _ slotIndex: Int) {
+    private func createRuneView(_ item: Rune, _ stackView: UIStackView, _ slotView: EachRuneView, _ slotIndex: Int) {
         for _ in 0 ..< item.slots[slotIndex].runes.count - 1 {
             stackView.addArrangedSubview(EachRuneView(frame: slotView.bounds))
         }
@@ -80,7 +81,7 @@ class RuneTypeView: BaseView {
             buttonTags.append(tempIndex)
             view.imageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         }
-        if stackView.arrangedSubviews.count < 4 {
+        if stackView.arrangedSubviews.count < maxRuneInSlot {
             tempIndex = tempIndex + 1
             buttonTags.append(tempIndex)
         }
@@ -88,10 +89,10 @@ class RuneTypeView: BaseView {
 
     func setupUI(item: Rune) {
         nameLabel.text = item.name
-        createSubView(item, slot1StackView, slot1View, 0)
-        createSubView(item, slot2StackView, slot2View, 1)
-        createSubView(item, slot3StackView, slot3View, 2)
-        createSubView(item, slot4StackView, slot4View, 3)
+        createRuneView(item, slot1StackView, slot1View, 0)
+        createRuneView(item, slot2StackView, slot2View, 1)
+        createRuneView(item, slot3StackView, slot3View, 2)
+        createRuneView(item, slot4StackView, slot4View, 3)
     }
 
     @objc func buttonAction(sender: UIButton!) {
@@ -136,3 +137,4 @@ class RuneTypeView: BaseView {
         self.addSubview(runesDetailView)
     }
 }
+
