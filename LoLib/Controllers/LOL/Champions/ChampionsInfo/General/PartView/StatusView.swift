@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import DeviceKit
 
 class StatusView: BaseView {
 
@@ -36,13 +35,8 @@ class StatusView: BaseView {
     }
 
     private func setDeviceConstraint() {
-        let device = Device.current
-        switch device {
-        case .simulator(.iPhoneSE):
+        if DeviceHelper().isSmallDevice() {
             statusViewHeightConstraint.constant = 30
-            break
-        default:
-            break
         }
     }
 

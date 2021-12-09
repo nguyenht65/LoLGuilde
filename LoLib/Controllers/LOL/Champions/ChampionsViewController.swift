@@ -7,7 +7,6 @@
 
 import UIKit
 import RxSwift
-import SDWebImage
 import RxRelay
 
 class ChampionsViewController: BaseViewController {

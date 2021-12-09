@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import DeviceKit
 
 enum ChampionPropertyValues: Int {
     case attack = 0
@@ -74,13 +73,8 @@ class ProgressView: BaseView {
     }
 
     private func setDeviceConstraint() {
-        let device = Device.current
-        switch device {
-        case .simulator(.iPhoneSE):
+        if DeviceHelper().isSmallDevice() {
             infoLabel.font = .systemFont(ofSize: 13)
-            break
-        default:
-            break
         }
     }
 

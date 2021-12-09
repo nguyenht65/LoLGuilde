@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
-import DeviceKit
 
 class ItemsCell: UICollectionViewCell {
 
@@ -42,14 +40,9 @@ class ItemsCell: UICollectionViewCell {
     }
 
     private func setDeviceConstraint() {
-        let device = Device.current
-        switch device {
-        case .simulator(.iPhoneSE):
+        if DeviceHelper().isSmallDevice() {
             imageViewHeightConstraint.constant = 30
             itemNameLabel.font = .systemFont(ofSize: 11)
-            break
-        default:
-            break
         }
     }
 }

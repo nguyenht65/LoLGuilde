@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import DeviceKit
 
 enum ChampionStatusValue: Int {
     case health = 0
@@ -69,14 +68,9 @@ class EachStatusView: BaseView {
     }
 
     private func setDeviceConstraint() {
-        let device = Device.current
-        switch device {
-        case .simulator(.iPhoneSE):
+        if DeviceHelper().isSmallDevice() {
             statusLabel.font = .systemFont(ofSize: 12)
             statusValueLabel.font = .systemFont(ofSize: 10)
-            break 
-        default:
-            break
         }
     }
 

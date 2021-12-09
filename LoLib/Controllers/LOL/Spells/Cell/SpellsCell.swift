@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
-import DeviceKit
 
 class SpellsCell: UICollectionViewCell {
 
@@ -34,16 +32,8 @@ class SpellsCell: UICollectionViewCell {
     }
 
     private func setDeviceConstraint() {
-        let device = Device.current
-        switch device {
-        case .simulator(.iPhoneSE):
+        if DeviceHelper().isSmallDevice() {
             imageHeightConstraint.constant = 30
-            break
-        case .simulator(.iPhoneSE2), .simulator(.iPhone6s):
-            imageHeightConstraint.constant = 40
-            break
-        default:
-            break
         }
     }
 

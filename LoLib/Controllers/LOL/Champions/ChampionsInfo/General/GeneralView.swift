@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import DeviceKit
 
 class GeneralView: BaseView {
 
@@ -26,13 +25,8 @@ class GeneralView: BaseView {
     }
 
     private func setDeviceConstraint() {
-        let device = Device.current
-        switch device {
-        case .simulator(.iPhoneSE):
+        if DeviceHelper().isSmallDevice() {
             progressHeightConstraint.constant = 30
-            break // You're running on the iPad Air 2 simulator
-        default:
-            break
         }
     }
 

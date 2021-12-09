@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import DeviceKit
 
 class RuneTypeView: BaseView {
     
@@ -49,14 +48,9 @@ class RuneTypeView: BaseView {
     }
 
     private func setDeviceConstraint() {
-        let device = Device.current
-        switch device {
-        case .simulator(.iPhoneSE):
+        if DeviceHelper().isSmallDevice() {
             nameTopConstraint.constant = 20
             nameBottomConstraint.constant = 30
-            break
-        default:
-            break
         }
     }
 

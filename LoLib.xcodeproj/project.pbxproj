@@ -93,6 +93,7 @@
 		36DB67E727345A940063F6DB /* Passive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB67E627345A940063F6DB /* Passive.swift */; };
 		36E2E8C72761A17C000F3167 /* RuneTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2E8C62761A17C000F3167 /* RuneTypeView.swift */; };
 		36E2E8C92761A188000F3167 /* RuneTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E2E8C82761A188000F3167 /* RuneTypeView.xib */; };
+		36E2E8CD2761B1FD000F3167 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2E8CC2761B1FD000F3167 /* DeviceHelper.swift */; };
 		36E6344327391D960055E566 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6344227391D960055E566 /* StatusView.swift */; };
 		36E6344627391DA90055E566 /* StatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344527391DA90055E566 /* StatusView.xib */; };
 		36E6344C27391E530055E566 /* EachStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E6344B27391E530055E566 /* EachStatusView.xib */; };
@@ -190,6 +191,7 @@
 		36DB67E627345A940063F6DB /* Passive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passive.swift; sourceTree = "<group>"; };
 		36E2E8C62761A17C000F3167 /* RuneTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneTypeView.swift; sourceTree = "<group>"; };
 		36E2E8C82761A188000F3167 /* RuneTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneTypeView.xib; sourceTree = "<group>"; };
+		36E2E8CC2761B1FD000F3167 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		36E6344227391D960055E566 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		36E6344527391DA90055E566 /* StatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusView.xib; sourceTree = "<group>"; };
 		36E6344B27391E530055E566 /* EachStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachStatusView.xib; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 				368CD66A272DD52C00A1FC9F /* FileHelper.swift */,
 				36BEA657272FCF7A00B75B39 /* ScreenHelper.swift */,
 				3676110C2757668B00BD0EBE /* StyleHelper.swift */,
+				36E2E8CC2761B1FD000F3167 /* DeviceHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -821,6 +824,7 @@
 				3654D763271FE42300BBB9EB /* AppDelegate.swift in Sources */,
 				367611012757564000BD0EBE /* TipsViewController.swift in Sources */,
 				369ECD6E273A54FE00192332 /* SkillsCell.swift in Sources */,
+				36E2E8CD2761B1FD000F3167 /* DeviceHelper.swift in Sources */,
 				36D03667274E20AF0053FC19 /* ItemsServices.swift in Sources */,
 				36BEA661272FF4A200B75B39 /* ChampionInfoViewController.swift in Sources */,
 				3644BCB72735BFA300E8E435 /* NSObjectExtentions.swift in Sources */,
