@@ -16,6 +16,8 @@ class RuneTypeView: BaseView {
     @IBOutlet weak var nameBottomConstraint: NSLayoutConstraint!
 
     private var rune: Rune
+    private var firstRowHeight = 60.0
+    private var anotherRowHeight = 50.0
 
     private lazy var runesDetailView: RunesDetailView = {
         let screenSize = self.layer.bounds.size
@@ -60,11 +62,12 @@ class RuneTypeView: BaseView {
             stackView.distribution = .fillEqually
             stackView.spacing = 30
             stackView.translatesAutoresizingMaskIntoConstraints = false
-            let runeWidth = slotIndex == 0 ? 56.0 : 50.0
+            let runeHeightConstant = slotIndex == 0 ? firstRowHeight : anotherRowHeight
             for runeIndex in 0 ..< rune.slots[slotIndex].runes.count {
-                let runeView = EachRuneView(frame: CGRect(x: 0, y: 0, width: runeWidth, height: runeWidth))
-                runeView.heightAnchor.constraint(equalToConstant: runeWidth).isActive = true
-                runeView.widthAnchor.constraint(equalToConstant: runeWidth).isActive = true
+                let runeFrame = CGRect(x: 0, y: 0, width: runeHeightConstant, height: runeHeightConstant)
+                let runeView = EachRuneView(frame: runeFrame)
+                runeView.heightAnchor.constraint(equalToConstant: runeHeightConstant).isActive = true
+                runeView.widthAnchor.constraint(equalToConstant: runeHeightConstant).isActive = true
                 runeView.setupUI(item: rune, slotsIndex: slotIndex, runeIndex: runeIndex)
                 runeView.onPress = { [weak self] in
                     guard let self = self else { return }
@@ -82,6 +85,7 @@ class RuneTypeView: BaseView {
         if DeviceHelper().isSmallDevice() {
             nameTopConstraint.constant = 20
             nameBottomConstraint.constant = 30
+            self.firstRowHeight = 56
         }
     }
 
