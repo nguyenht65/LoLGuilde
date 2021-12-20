@@ -16,12 +16,12 @@ class RuneTypeView: BaseView {
     @IBOutlet weak var nameBottomConstraint: NSLayoutConstraint!
 
     private var rune: Rune
-
-    private lazy var screenSize: CGRect = UIScreen.main.bounds
+    private let screenSize: CGRect = UIScreen.main.bounds
 
     private lazy var runesDetailView: RunesDetailView = {
-        let view = RunesDetailView(frame: CGRect(x: 0, y: 0, width: screenSize.width * 3 / 4, height: screenSize.height * 4 / 9))
-        view.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
+        let layer = self.layer.bounds.size
+        let view = RunesDetailView(frame: CGRect(x: 0, y: 0, width: layer.width * 3 / 4, height: layer.height * 4 / 9))
+        view.center = CGPoint(x: layer.width / 2, y: layer.height / 2)
         return view
     }()
 
@@ -49,13 +49,16 @@ class RuneTypeView: BaseView {
     }
 
     private func setupUI() {
-        setDeviceConstraint()
+        let screenHeight = screenSize.height
         nameLabel.text = rune.name
         setupRuneView()
+        nameTopConstraint.constant = screenHeight / 18
+        nameBottomConstraint.constant = screenHeight / 15
     }
 
     private func setupRuneView() {
         let screenWidth = screenSize.width
+        print(UIScreen.main.bounds)
         for slotIndex in 0 ..< rune.slots.count {
             let stackView = UIStackView()
             stackView.alignment = .fill
@@ -78,13 +81,6 @@ class RuneTypeView: BaseView {
                 stackView.addArrangedSubview(runeView)
             }
             runesStackView.addArrangedSubview(stackView)
-        }
-    }
-
-    private func setDeviceConstraint() {
-        if DeviceHelper().isSmallDevice() {
-            nameTopConstraint.constant = 20
-            nameBottomConstraint.constant = 30
         }
     }
 
