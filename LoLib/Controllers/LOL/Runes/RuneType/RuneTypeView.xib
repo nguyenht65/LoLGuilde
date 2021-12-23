@@ -34,15 +34,30 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="es2-TJ-r1b" userLabel="Rune View">
                     <rect key="frame" x="0.0" y="184" width="414" height="412"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="56" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="5vu-hh-MeQ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        </stackView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-gm-XOC">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="412"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="56" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="5vu-hh-MeQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="s4x-cK-6V2" firstAttribute="bottom" secondItem="5vu-hh-MeQ" secondAttribute="bottom" id="1CX-JE-lln"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5vu-hh-MeQ" secondAttribute="bottom" id="Kd1-hc-sGs"/>
+                                <constraint firstItem="5vu-hh-MeQ" firstAttribute="top" secondItem="s4x-cK-6V2" secondAttribute="top" id="OWh-H6-aoF"/>
+                                <constraint firstItem="5vu-hh-MeQ" firstAttribute="width" secondItem="WYd-mt-AGM" secondAttribute="width" id="QhA-jc-Gau"/>
+                                <constraint firstItem="5vu-hh-MeQ" firstAttribute="leading" secondItem="s4x-cK-6V2" secondAttribute="leading" id="gQs-n5-HP9"/>
+                                <constraint firstItem="s4x-cK-6V2" firstAttribute="trailing" secondItem="5vu-hh-MeQ" secondAttribute="trailing" id="oN4-CW-LYT"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="s4x-cK-6V2"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="WYd-mt-AGM"/>
+                        </scrollView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="5vu-hh-MeQ" secondAttribute="trailing" id="R4H-hK-Flm"/>
-                        <constraint firstItem="5vu-hh-MeQ" firstAttribute="top" secondItem="es2-TJ-r1b" secondAttribute="top" id="UIX-P6-Vo3"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5vu-hh-MeQ" secondAttribute="bottom" id="mpy-HM-qza"/>
-                        <constraint firstItem="5vu-hh-MeQ" firstAttribute="leading" secondItem="es2-TJ-r1b" secondAttribute="leading" id="nav-Eh-nct"/>
+                        <constraint firstItem="dxG-gm-XOC" firstAttribute="top" secondItem="es2-TJ-r1b" secondAttribute="top" id="F6d-aE-IeY"/>
+                        <constraint firstAttribute="trailing" secondItem="dxG-gm-XOC" secondAttribute="trailing" id="ZES-Ln-kP7"/>
+                        <constraint firstItem="dxG-gm-XOC" firstAttribute="leading" secondItem="es2-TJ-r1b" secondAttribute="leading" id="cEs-fW-3eo"/>
+                        <constraint firstAttribute="bottom" secondItem="dxG-gm-XOC" secondAttribute="bottom" id="l9Y-Vx-ClG"/>
                     </constraints>
                 </view>
             </subviews>
