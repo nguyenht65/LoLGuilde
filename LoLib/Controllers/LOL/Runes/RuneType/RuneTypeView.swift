@@ -16,7 +16,15 @@ class RuneTypeView: BaseView {
     @IBOutlet weak var nameBottomConstraint: NSLayoutConstraint!
 
     private var rune: Rune
-    private let screenSize: CGRect = UIScreen.main.bounds
+    private let maxNumberOfRune: Int = 4
+
+    private lazy var screenWidth: CGFloat = {
+        return UIScreen.main.bounds.width
+    }()
+
+    private lazy var screenHeight: CGFloat = {
+        return UIScreen.main.bounds.height
+    }()
 
     private lazy var runesDetailView: RunesDetailView = {
         let layer = self.layer.bounds.size
@@ -49,38 +57,37 @@ class RuneTypeView: BaseView {
     }
 
     private func setupUI() {
-        let screenHeight = screenSize.height
         nameLabel.text = rune.name
-        setupRuneView()
+        runesStackView.spacing = screenHeight / 22
         nameTopConstraint.constant = screenHeight / 18
         nameBottomConstraint.constant = screenHeight / 15
+        setupRuneView()
     }
 
     private func setupRuneView() {
-        let screenWidth = screenSize.width
-        print(UIScreen.main.bounds)
         for slotIndex in 0 ..< rune.slots.count {
-            let stackView = UIStackView()
-            stackView.alignment = .fill
-            stackView.distribution = .fillEqually
-            stackView.spacing = 30
-            stackView.translatesAutoresizingMaskIntoConstraints = false
+            let horizontalStackView = UIStackView()
+            horizontalStackView.axis = .horizontal
+            horizontalStackView.alignment = .fill
+            horizontalStackView.distribution = .fillEqually
+            horizontalStackView.spacing = screenHeight / 29
+            horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
             let runeHeightConstant = slotIndex == 0 ? (screenWidth / 6) : (screenWidth / 7)
             for runeIndex in 0 ..< rune.slots[slotIndex].runes.count {
                 let runeFrame = CGRect(x: 0, y: 0, width: runeHeightConstant, height: runeHeightConstant)
                 let runeView = EachRuneView(frame: runeFrame)
                 runeView.heightAnchor.constraint(equalToConstant: runeHeightConstant).isActive = true
                 runeView.widthAnchor.constraint(equalToConstant: runeHeightConstant).isActive = true
-                runeView.setupUI(item: rune, slotsIndex: slotIndex, runeIndex: runeIndex)
-                runeView.onPress = { [weak self] in
-                    guard let self = self else { return }
-                    self.runesDetailView.removeFromSuperview()
-                    self.runesDetailView.setupData(item: self.rune, slotsIndex: slotIndex, runeIndex: runeIndex)
-                    self.addSubview(self.runesDetailView)
-                }
-                stackView.addArrangedSubview(runeView)
+//                runeView.setupUI(item: rune, slotsIndex: slotIndex, runeIndex: runeIndex)
+//                runeView.onPress = { [weak self] in
+//                    guard let self = self else { return }
+//                    self.runesDetailView.removeFromSuperview()
+//                    self.runesDetailView.setupData(item: self.rune, slotsIndex: slotIndex, runeIndex: runeIndex)
+//                    self.addSubview(self.runesDetailView)
+//                }
+                horizontalStackView.addArrangedSubview(runeView)
             }
-            runesStackView.addArrangedSubview(stackView)
+            runesStackView.addArrangedSubview(horizontalStackView)
         }
     }
 
