@@ -16,7 +16,7 @@ class RuneTypeView: BaseView {
     @IBOutlet weak var nameBottomConstraint: NSLayoutConstraint!
 
     private var rune: Rune
-    private let maxNumberOfRune: Int = 4
+    private var maxNumberOfRune: Int
 
     private lazy var runesDetailView: RunesDetailView = {
         let layer = self.layer.bounds.size
@@ -25,13 +25,15 @@ class RuneTypeView: BaseView {
         return view
     }()
 
-    init(frame: CGRect, rune: Rune) {
+    init(frame: CGRect, rune: Rune, maxNumberOfRune: Int) {
         self.rune = rune
+        self.maxNumberOfRune = maxNumberOfRune
         super.init(frame: frame)
     }
 
-    init?(coder: NSCoder, rune: Rune) {
+    init?(coder: NSCoder, rune: Rune, maxNumberOfRune: Int) {
         self.rune = rune
+        self.maxNumberOfRune = maxNumberOfRune
         super.init(coder: coder)
     }
 
@@ -61,13 +63,11 @@ class RuneTypeView: BaseView {
             let runeHeightConstant = slotIndex == 0 ? (screenWidth / 6) : (screenWidth / 7)
             let numberOfRuneInSlot = rune.slots[slotIndex].runes.count
             if numberOfRuneInSlot > maxNumberOfRune {
-                let verticalStackView = UIStackView()
-                setupVerticleStackView(verticalStackView)
+                let verticalStackView = getVerticleStackView()
                 let numberOfRowDouble = ceil(Double(numberOfRuneInSlot) / Double(maxNumberOfRune))
                 let numberOfRowInt = Int(numberOfRowDouble)
                 for row in 0 ..< numberOfRowInt {
-                    let horizontalStackView = UIStackView()
-                    setupHorizontalStackView(horizontalStackView)
+                    let horizontalStackView = getHorizontalStackView()
                     for runeIndex in 0 ..< maxNumberOfRune {
                         if row * maxNumberOfRune + runeIndex >= numberOfRuneInSlot {
                             break
@@ -78,8 +78,7 @@ class RuneTypeView: BaseView {
                 }
                 runesStackView.addArrangedSubview(verticalStackView)
             } else {
-                let horizontalStackView = UIStackView()
-                setupHorizontalStackView(horizontalStackView)
+                let horizontalStackView = getHorizontalStackView()
                 for runeIndex in 0 ..< numberOfRuneInSlot {
                     createRunes(runeHeightConstant, slotIndex, runeIndex, horizontalStackView)
                 }
@@ -88,23 +87,27 @@ class RuneTypeView: BaseView {
         }
     }
 
-    private func setupHorizontalStackView(_ horizontalStackView: UIStackView) {
-        horizontalStackView.axis = .horizontal
-        horizontalStackView.alignment = .fill
-        horizontalStackView.distribution = .fillEqually
-        horizontalStackView.spacing = screenHeight / 29
-        horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
+    private func getHorizontalStackView() -> UIStackView {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = screenHeight / 29
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
     }
     
-    private func setupVerticleStackView(_ verticalStackView: UIStackView) {
-        verticalStackView.axis = .vertical
-        verticalStackView.alignment = .center
-        verticalStackView.distribution = .fill
-        verticalStackView.spacing = screenHeight / 22
-        verticalStackView.translatesAutoresizingMaskIntoConstraints = false
+    private func getVerticleStackView() -> UIStackView {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.spacing = screenHeight / 22
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
     }
 
-    private func createRunes(_ runeHeightConstant: CGFloat, _ slotIndex: Int, _ runeIndex: Int, _ horizontalStackView: UIStackView) {
+    private func createRunes(_ runeHeightConstant: CGFloat, _ slotIndex: Int, _ runeIndex: Int, _ stackView: UIStackView) {
         let runeFrame = CGRect(x: 0, y: 0, width: runeHeightConstant, height: runeHeightConstant)
         let runeView = EachRuneView(frame: runeFrame)
         runeView.heightAnchor.constraint(equalToConstant: runeHeightConstant).isActive = true
@@ -116,7 +119,7 @@ class RuneTypeView: BaseView {
             self.runesDetailView.setupData(item: self.rune, slotsIndex: slotIndex, runeIndex: runeIndex)
             self.addSubview(self.runesDetailView)
         }
-        horizontalStackView.addArrangedSubview(runeView)
+        stackView.addArrangedSubview(runeView)
     }
 
     func closeDetailView() {

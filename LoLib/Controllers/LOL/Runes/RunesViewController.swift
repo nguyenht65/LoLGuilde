@@ -19,31 +19,31 @@ class RunesViewController: BaseViewController {
 
     private lazy var precisionView: RuneTypeView = {
         let rune = viewModel.runes.value[2]
-        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune)
+        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune, maxNumberOfRune: 4)
         view.backgroundImageView.image = UIImage(named: Image.RuneBackground.precision.rawValue)
         return view
     }()
     private lazy var dominationView: RuneTypeView = {
         let rune = viewModel.runes.value[0]
-        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune)
+        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune, maxNumberOfRune: 4)
         view.backgroundImageView.image = UIImage(named: Image.RuneBackground.domination.rawValue)
         return view
     }()
     private lazy var sorceryView: RuneTypeView = {
         let rune = viewModel.runes.value[4]
-        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune)
+        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune, maxNumberOfRune: 4)
         view.backgroundImageView.image = UIImage(named: Image.RuneBackground.sorcery.rawValue)
         return view
     }()
     private lazy var resolveView: RuneTypeView = {
         let rune = viewModel.runes.value[3]
-        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune)
+        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune, maxNumberOfRune: 4)
         view.backgroundImageView.image = UIImage(named: Image.RuneBackground.resolve.rawValue)
         return view
     }()
     private lazy var inspirationView: RuneTypeView = {
         let rune = viewModel.runes.value[1]
-        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune)
+        let view = RuneTypeView(frame: runesStackView.bounds, rune: rune, maxNumberOfRune: 4)
         view.backgroundImageView.image = UIImage(named: Image.RuneBackground.inspiration.rawValue)
         return view
     }()
