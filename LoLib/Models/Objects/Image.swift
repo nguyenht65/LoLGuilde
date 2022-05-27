@@ -6,8 +6,10 @@ struct Image: Codable {
     let group: String
 
     enum EndPoint {
-        static let baseURL: String = "https://nguyenht65.github.io/LOLResources/lol/img/"
-        static let baseURL2: String = "https://nguyenht65.github.io/LOLResources/img/"
+//        static let baseURL: String = "https://nguyenht65.github.io/LOLResources/lol/img/"
+//        static let baseURL2: String = "https://nguyenht65.github.io/LOLResources/img/"
+        static let baseURL = "https://ddragon.leagueoflegends.com/cdn/\(GameVersion.version)/img/"
+        static let baseURL2: String = "https://ddragon.leagueoflegends.com/cdn/img/"
 
         case passive
         case spell

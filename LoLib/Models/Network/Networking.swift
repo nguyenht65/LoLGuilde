@@ -9,11 +9,16 @@
 import Foundation
 import RxSwift
 
+final class GameVersion {
+    static let version: String = "12.10.1"
+}
+
 final class Networking {
 
     // MARK: - Endpoint
     enum EndPoint {
-        static let baseUrlString = "https://nguyenht65.github.io/LOLResources/lol/data"
+//        static let baseUrlString = "https://nguyenht65.github.io/LOLResources/lol/data"
+        static let baseUrlString = "https://ddragon.leagueoflegends.com/cdn/\(GameVersion.version)/data"
         static let language = "/en_US"
 
         static var baseURL: URL {
