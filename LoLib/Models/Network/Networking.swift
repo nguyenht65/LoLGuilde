@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 final class GameVersion {
-    static let version: String = "12.11.1"
+    static let version: String = "12.13.1"
 }
 
 final class Networking {
